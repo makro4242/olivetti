@@ -1,0 +1,26 @@
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\bin\Debug\Olivetti.exe.config
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\bin\Debug\Olivetti.exe
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\bin\Debug\Olivetti.pdb
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\obj\Debug\Olivetti.csprojResolveAssemblyReference.cache
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\obj\Debug\Olivetti.frmAnaForm.resources
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\obj\Debug\Olivetti.Properties.Resources.resources
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\obj\Debug\Olivetti.csproj.GenerateResource.Cache
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\obj\Debug\Olivetti.exe
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\obj\Debug\Olivetti.pdb
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\obj\Debug\Olivetti.frmAyarlar.resources
+d:\users\admin\documents\visual studio 2013\Projects\Olivetti\Olivetti\obj\Debug\Olivetti.exe.licenses
+D:\Users\Admin\Documents\Visual Studio 2013\Projects\Olivetti\Olivetti\obj\Debug\Olivetti.frmKasalar.resources
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\bin\Debug\Olivetti.exe.config
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.exe
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.pdb
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\bin\Debug\Olivetti.exe
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\bin\Debug\Olivetti.pdb
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.frmAnaForm.resources
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.frmAyarlar.resources
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.frmKasalar.resources
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.Properties.Resources.resources
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.csproj.GenerateResource.Cache
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.exe.licenses
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\bin\Debug\EntityFramework.dll
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\bin\Debug\EntityFramework.xml
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.csprojResolveAssemblyReference.cache

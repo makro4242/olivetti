@@ -1,0 +1,2352 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ETA_DENEME_2016Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.DEPSTKKART' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DEPSTKKART">
+    <Key>
+      <PropertyRef Name="DEPSTKSTKKOD" />
+      <PropertyRef Name="DEPSTKDEPOKOD" />
+      <PropertyRef Name="DEPSTKOZKOD1" />
+      <PropertyRef Name="DEPSTKOZKOD2" />
+      <PropertyRef Name="DEPSTKOZKOD3" />
+      <PropertyRef Name="DEPSTKOZKOD4" />
+      <PropertyRef Name="DEPSTKOZKOD5" />
+      <PropertyRef Name="DEPSTKACIK1" />
+      <PropertyRef Name="DEPSTKACIK2" />
+      <PropertyRef Name="DEPSTKACIK3" />
+      <PropertyRef Name="DEPSTKACIK4" />
+      <PropertyRef Name="DEPSTKACIK5" />
+      <PropertyRef Name="DEPSTKBAKIYE" />
+      <PropertyRef Name="DEPSTKBAKIYE2" />
+      <PropertyRef Name="DEPSTKBAKIYE3" />
+      <PropertyRef Name="DEPSTKBAKIYE4" />
+      <PropertyRef Name="DEPSTKBAKIYE5" />
+      <PropertyRef Name="DEPSTKYAOFIYAT" />
+      <PropertyRef Name="DEPSTKKRITIKSEVIYE" />
+      <PropertyRef Name="DEPSTKOPTIMALSEVIYE" />
+      <PropertyRef Name="DEPSTKBOLKODU" />
+      <PropertyRef Name="DEPSTKREYKODU" />
+      <PropertyRef Name="DEPSTKRAFKODU" />
+      <PropertyRef Name="DEPSTKCALFLAG" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE2" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE3" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE4" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE5" />
+      <PropertyRef Name="DEPSTKREZGIRSIPMIK" />
+      <PropertyRef Name="DEPSTKREZGIRSIPTUT" />
+      <PropertyRef Name="DEPSTKREZCIKSIPMIK" />
+      <PropertyRef Name="DEPSTKREZCIKSIPTUT" />
+      <PropertyRef Name="DEPSTKREZGIRURTMIK" />
+      <PropertyRef Name="DEPSTKREZGIRURTTUT" />
+      <PropertyRef Name="DEPSTKREZCIKURTMIK" />
+      <PropertyRef Name="DEPSTKREZCIKURTTUT" />
+    </Key>
+    <Property Name="DEPSTKSTKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="DEPSTKDEPOKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="DEPSTKOZKOD1" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DEPSTKOZKOD2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DEPSTKOZKOD3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DEPSTKOZKOD4" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DEPSTKOZKOD5" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DEPSTKACIK1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="DEPSTKACIK2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="DEPSTKACIK3" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="DEPSTKACIK4" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="DEPSTKACIK5" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKYAOFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKKRITIKSEVIYE" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOPTIMALSEVIYE" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBOLKODU" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="DEPSTKREYKODU" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="DEPSTKRAFKODU" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="DEPSTKCALFLAG" Type="int" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZGIRSIPMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZGIRSIPTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZCIKSIPMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZCIKSIPTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZGIRURTMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZGIRURTTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZCIKURTMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZCIKURTTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.FATFIS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FATFIS">
+    <Key>
+      <PropertyRef Name="FATFISTAR" />
+      <PropertyRef Name="FATFISREFNO" />
+      <PropertyRef Name="FATFISTIPI" />
+      <PropertyRef Name="FATFISGCFLAG" />
+      <PropertyRef Name="FATFISKAYONC" />
+      <PropertyRef Name="FATFISIPTALFLAG" />
+      <PropertyRef Name="FATFISKAYNAK" />
+      <PropertyRef Name="FATFISSTKREFNO" />
+      <PropertyRef Name="FATFISCARREFNO" />
+      <PropertyRef Name="FATFISMUHREFNO" />
+      <PropertyRef Name="FATFISKASREFNO" />
+      <PropertyRef Name="FATFISBANREFNO" />
+      <PropertyRef Name="FATFISKAPFLAG" />
+      <PropertyRef Name="FATFISBASFLAG" />
+      <PropertyRef Name="FATFISOZELFIS" />
+      <PropertyRef Name="FATFISDEPOFLAG" />
+      <PropertyRef Name="FATFISIADEFLAG" />
+      <PropertyRef Name="FATFISKDVDAHILFLAG" />
+      <PropertyRef Name="FATFISTEVKIFATFLAG" />
+      <PropertyRef Name="FATFISANADEPO" />
+      <PropertyRef Name="FATFISPARTIKOD" />
+      <PropertyRef Name="FATFISODEMEKOD" />
+      <PropertyRef Name="FATFISSATKOD" />
+      <PropertyRef Name="FATFISMASMER" />
+      <PropertyRef Name="FATFISCARKOD" />
+      <PropertyRef Name="FATFISCARUNVAN" />
+      <PropertyRef Name="FATFISADRESNO" />
+      <PropertyRef Name="FATFISADRES1" />
+      <PropertyRef Name="FATFISADRES2" />
+      <PropertyRef Name="FATFISADRES3" />
+      <PropertyRef Name="FATFISPOSTAKOD" />
+      <PropertyRef Name="FATFISULKE" />
+      <PropertyRef Name="FATFISIL" />
+      <PropertyRef Name="FATFISILCE" />
+      <PropertyRef Name="FATFISVERDAIRE" />
+      <PropertyRef Name="FATFISVERHESNO" />
+      <PropertyRef Name="FATFISSAAT" />
+      <PropertyRef Name="FATFISVADETAR" />
+      <PropertyRef Name="FATFISKDVVADETAR" />
+      <PropertyRef Name="FATFISIRSTAR" />
+      <PropertyRef Name="FATFISIRSNO" />
+      <PropertyRef Name="FATFISEVRAKNO1" />
+      <PropertyRef Name="FATFISEVRAKNO2" />
+      <PropertyRef Name="FATFISEVRAKNO3" />
+      <PropertyRef Name="FATFISOZKOD1" />
+      <PropertyRef Name="FATFISOZKOD2" />
+      <PropertyRef Name="FATFISOZKOD3" />
+      <PropertyRef Name="FATFISACIKLAMA1" />
+      <PropertyRef Name="FATFISACIKLAMA2" />
+      <PropertyRef Name="FATFISACIKLAMA3" />
+      <PropertyRef Name="FATFISHAZKOD" />
+      <PropertyRef Name="FATFISHAZTAR" />
+      <PropertyRef Name="FATFISHAZNOT" />
+      <PropertyRef Name="FATFISKONTKOD" />
+      <PropertyRef Name="FATFISKONTTAR" />
+      <PropertyRef Name="FATFISKONTNOT" />
+      <PropertyRef Name="FATFISONAYKOD" />
+      <PropertyRef Name="FATFISONAYTAR" />
+      <PropertyRef Name="FATFISONAYNOT" />
+      <PropertyRef Name="FATFISKDVORANI" />
+      <PropertyRef Name="FATFISMALTOP" />
+      <PropertyRef Name="FATFISKALINDYTOP" />
+      <PropertyRef Name="FATFISKALINDTTOP" />
+      <PropertyRef Name="FATFISSATINDTOP" />
+      <PropertyRef Name="FATFISGENINDTOP" />
+      <PropertyRef Name="FATFISSATMASTOP" />
+      <PropertyRef Name="FATFISGENMASTOP" />
+      <PropertyRef Name="FATFISBRUTTOPLAM" />
+      <PropertyRef Name="FATFISKDVMATRAHI" />
+      <PropertyRef Name="FATFISKDVTUTARI" />
+      <PropertyRef Name="FATFISARATOPLAM" />
+      <PropertyRef Name="FATFISKDVALTIINDTOP" />
+      <PropertyRef Name="FATFISKDVALTIEKTOP" />
+      <PropertyRef Name="FATFISGENTOPLAM" />
+      <PropertyRef Name="FATFISTEVTUTAR" />
+      <PropertyRef Name="FATFISDOVTAR" />
+      <PropertyRef Name="FATFISDOVKOD" />
+      <PropertyRef Name="FATFISDOVTUR" />
+      <PropertyRef Name="FATFISDOVKUR" />
+      <PropertyRef Name="FATFISGENDOVTOP" />
+      <PropertyRef Name="FATFISTEVNO" />
+      <PropertyRef Name="FATFISTEVORAN" />
+      <PropertyRef Name="FATFISSEVNO" />
+      <PropertyRef Name="FATFISISYKOD" />
+      <PropertyRef Name="FATFISOTVFLAG" />
+      <PropertyRef Name="FATFISOTVKDVBLOKAJ" />
+      <PropertyRef Name="FATFISTOPOTV" />
+      <PropertyRef Name="FATFISTOPOTUT" />
+      <PropertyRef Name="FATFISTCKIMLIKNO" />
+      <PropertyRef Name="FATFISTRNTAR" />
+      <PropertyRef Name="FATFISTRNREFNO" />
+      <PropertyRef Name="FATFISTRNTIPI" />
+      <PropertyRef Name="FATFISEFATFLAG" />
+      <PropertyRef Name="FATFISEKVERGIINDTOP" />
+      <PropertyRef Name="FATFISEKVERGIILVTOP" />
+      <PropertyRef Name="FATFISEKVERGITOP" />
+    </Key>
+    <Property Name="FATFISTAR" Type="datetime" Nullable="false" />
+    <Property Name="FATFISREFNO" Type="int" Nullable="false" />
+    <Property Name="FATFISTIPI" Type="int" Nullable="false" />
+    <Property Name="FATFISGCFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISKAYONC" Type="int" Nullable="false" />
+    <Property Name="FATFISIPTALFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISKAYNAK" Type="int" Nullable="false" />
+    <Property Name="FATFISSTKREFNO" Type="int" Nullable="false" />
+    <Property Name="FATFISCARREFNO" Type="int" Nullable="false" />
+    <Property Name="FATFISMUHREFNO" Type="int" Nullable="false" />
+    <Property Name="FATFISKASREFNO" Type="int" Nullable="false" />
+    <Property Name="FATFISBANREFNO" Type="int" Nullable="false" />
+    <Property Name="FATFISKAPFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISBASFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISOZELFIS" Type="int" Nullable="false" />
+    <Property Name="FATFISDEPOFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISIADEFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISKDVDAHILFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISTEVKIFATFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISANADEPO" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISPARTIKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISODEMEKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISSATKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISMASMER" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISCARKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISCARUNVAN" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISADRESNO" Type="int" Nullable="false" />
+    <Property Name="FATFISADRES1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISADRES2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISADRES3" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISPOSTAKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISULKE" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISIL" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISILCE" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISVERDAIRE" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISVERHESNO" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISSAAT" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="FATFISVADETAR" Type="datetime" Nullable="false" />
+    <Property Name="FATFISKDVVADETAR" Type="datetime" Nullable="false" />
+    <Property Name="FATFISIRSTAR" Type="datetime" Nullable="false" />
+    <Property Name="FATFISIRSNO" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISEVRAKNO1" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISEVRAKNO2" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISEVRAKNO3" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISOZKOD1" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FATFISOZKOD2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FATFISOZKOD3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FATFISACIKLAMA1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISACIKLAMA2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISACIKLAMA3" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISHAZKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISHAZTAR" Type="datetime" Nullable="false" />
+    <Property Name="FATFISHAZNOT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISKONTKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISKONTTAR" Type="datetime" Nullable="false" />
+    <Property Name="FATFISKONTNOT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISONAYKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISONAYTAR" Type="datetime" Nullable="false" />
+    <Property Name="FATFISONAYNOT" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFISKDVORANI" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISMALTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKALINDYTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKALINDTTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISSATINDTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISGENINDTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISSATMASTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISGENMASTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISBRUTTOPLAM" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKDVMATRAHI" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKDVTUTARI" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISARATOPLAM" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKDVALTIINDTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKDVALTIEKTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISGENTOPLAM" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISTEVTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISDOVTAR" Type="datetime" Nullable="false" />
+    <Property Name="FATFISDOVKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FATFISDOVTUR" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FATFISDOVKUR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISGENDOVTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISTEVNO" Type="int" Nullable="false" />
+    <Property Name="FATFISTEVORAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISSEVNO" Type="int" Nullable="false" />
+    <Property Name="FATFISISYKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFISOTVFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISOTVKDVBLOKAJ" Type="int" Nullable="false" />
+    <Property Name="FATFISTOPOTV" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISTOPOTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISTCKIMLIKNO" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="FATFISTRNTAR" Type="datetime" Nullable="false" />
+    <Property Name="FATFISTRNREFNO" Type="int" Nullable="false" />
+    <Property Name="FATFISTRNTIPI" Type="int" Nullable="false" />
+    <Property Name="FATFISEFATFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFISEKVERGIINDTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISEKVERGIILVTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISEKVERGITOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.FATFISTIP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FATFISTIP">
+    <Key>
+      <PropertyRef Name="FATFTMODUL" />
+      <PropertyRef Name="FATFTNO" />
+      <PropertyRef Name="FATFTKOD" />
+      <PropertyRef Name="FATFTACIKLAMA" />
+      <PropertyRef Name="FATFTONAY" />
+      <PropertyRef Name="FATFTEVRAKNO" />
+      <PropertyRef Name="FATFTDIZDOS" />
+      <PropertyRef Name="FATFTMUHGRUP" />
+      <PropertyRef Name="FATFTSTKFTNO" />
+      <PropertyRef Name="FATFTCARFTNO" />
+      <PropertyRef Name="FATFTMUHFTNO" />
+      <PropertyRef Name="FATFTKASFTNO" />
+      <PropertyRef Name="FATFTBANFTNO" />
+      <PropertyRef Name="FATFTKDVDAHIL" />
+      <PropertyRef Name="FATFTKAPALI" />
+      <PropertyRef Name="FATFTTEVNO" />
+      <PropertyRef Name="FATFTISLGRPNO" />
+      <PropertyRef Name="FATFTCARMUHGRUP" />
+      <PropertyRef Name="FATFTMAXSATIR" />
+      <PropertyRef Name="FATFTOTVFLAG" />
+      <PropertyRef Name="FATFTKDVOTVBLOKAJ" />
+      <PropertyRef Name="FATFTEEVRAKNO" />
+    </Key>
+    <Property Name="FATFTMODUL" Type="int" Nullable="false" />
+    <Property Name="FATFTNO" Type="int" Nullable="false" />
+    <Property Name="FATFTKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFTACIKLAMA" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATFTONAY" Type="int" Nullable="false" />
+    <Property Name="FATFTEVRAKNO" Type="int" Nullable="false" />
+    <Property Name="FATFTDIZDOS" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFTMUHGRUP" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFTSTKFTNO" Type="int" Nullable="false" />
+    <Property Name="FATFTCARFTNO" Type="int" Nullable="false" />
+    <Property Name="FATFTMUHFTNO" Type="int" Nullable="false" />
+    <Property Name="FATFTKASFTNO" Type="int" Nullable="false" />
+    <Property Name="FATFTBANFTNO" Type="int" Nullable="false" />
+    <Property Name="FATFTKDVDAHIL" Type="int" Nullable="false" />
+    <Property Name="FATFTKAPALI" Type="int" Nullable="false" />
+    <Property Name="FATFTTEVNO" Type="int" Nullable="false" />
+    <Property Name="FATFTISLGRPNO" Type="int" Nullable="false" />
+    <Property Name="FATFTCARMUHGRUP" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATFTMAXSATIR" Type="int" Nullable="false" />
+    <Property Name="FATFTOTVFLAG" Type="int" Nullable="false" />
+    <Property Name="FATFTKDVOTVBLOKAJ" Type="int" Nullable="false" />
+    <Property Name="FATFTEEVRAKNO" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.FATFISTOPLAM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FATFISTOPLAM">
+    <Key>
+      <PropertyRef Name="FFTTAR" />
+      <PropertyRef Name="FFTREFNO" />
+      <PropertyRef Name="FFTTIPI" />
+      <PropertyRef Name="FFTGCFLAG" />
+      <PropertyRef Name="FFTKAYONC" />
+      <PropertyRef Name="FFTIPTALFLAG" />
+      <PropertyRef Name="FFTKAYNAK" />
+      <PropertyRef Name="FFTIADEFLAG" />
+      <PropertyRef Name="FFTKDVDAHILFLAG" />
+      <PropertyRef Name="FFTCARKOD" />
+      <PropertyRef Name="FFTEVRAKNO1" />
+      <PropertyRef Name="FFTEVRAKNO2" />
+      <PropertyRef Name="FFTEVRAKNO3" />
+      <PropertyRef Name="FFTKONU" />
+      <PropertyRef Name="FFTBASLIK" />
+      <PropertyRef Name="FFTTUTAR" />
+      <PropertyRef Name="FFTONCELIK" />
+      <PropertyRef Name="FFTFORMUL" />
+      <PropertyRef Name="FFTMATRAH" />
+      <PropertyRef Name="FFTORAN" />
+      <PropertyRef Name="FFTKDVORAN" />
+      <PropertyRef Name="FFTDOVKOD" />
+      <PropertyRef Name="FFTDOVTUR" />
+      <PropertyRef Name="FFTDOVTUTAR" />
+      <PropertyRef Name="FFTVADETAR" />
+      <PropertyRef Name="FFTTAMSAYI1" />
+      <PropertyRef Name="FFTTAMSAYI2" />
+      <PropertyRef Name="FFTTAMSAYI3" />
+      <PropertyRef Name="FFTKOSUL" />
+      <PropertyRef Name="FFTACIKLAMA1" />
+      <PropertyRef Name="FFTSAYI1" />
+      <PropertyRef Name="FFTVADESAYI" />
+      <PropertyRef Name="FFTKARTKOD" />
+      <PropertyRef Name="FFTEFATFLAG" />
+    </Key>
+    <Property Name="FFTTAR" Type="datetime" Nullable="false" />
+    <Property Name="FFTREFNO" Type="int" Nullable="false" />
+    <Property Name="FFTTIPI" Type="int" Nullable="false" />
+    <Property Name="FFTGCFLAG" Type="int" Nullable="false" />
+    <Property Name="FFTKAYONC" Type="int" Nullable="false" />
+    <Property Name="FFTIPTALFLAG" Type="int" Nullable="false" />
+    <Property Name="FFTKAYNAK" Type="int" Nullable="false" />
+    <Property Name="FFTIADEFLAG" Type="int" Nullable="false" />
+    <Property Name="FFTKDVDAHILFLAG" Type="int" Nullable="false" />
+    <Property Name="FFTCARKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FFTEVRAKNO1" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FFTEVRAKNO2" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FFTEVRAKNO3" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FFTKONU" Type="int" Nullable="false" />
+    <Property Name="FFTBASLIK" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FFTTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTONCELIK" Type="int" Nullable="false" />
+    <Property Name="FFTFORMUL" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FFTMATRAH" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTORAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTKDVORAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTDOVKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FFTDOVTUR" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FFTDOVTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTVADETAR" Type="datetime" Nullable="false" />
+    <Property Name="FFTTAMSAYI1" Type="int" Nullable="false" />
+    <Property Name="FFTTAMSAYI2" Type="int" Nullable="false" />
+    <Property Name="FFTTAMSAYI3" Type="int" Nullable="false" />
+    <Property Name="FFTKOSUL" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FFTACIKLAMA1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FFTSAYI1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTVADESAYI" Type="int" Nullable="false" />
+    <Property Name="FFTKARTKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FFTEFATFLAG" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.FATHAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="FATHAR">
+    <Key>
+      <PropertyRef Name="FATHARTAR" />
+      <PropertyRef Name="FATHARREFNO" />
+      <PropertyRef Name="FATHARTIPI" />
+      <PropertyRef Name="FATHARGCFLAG" />
+      <PropertyRef Name="FATHARKAYONC" />
+      <PropertyRef Name="FATHARIPTALFLAG" />
+      <PropertyRef Name="FATHARKAYNAK" />
+      <PropertyRef Name="FATHARIADE" />
+      <PropertyRef Name="FATHARCARKOD" />
+      <PropertyRef Name="FATHARSIRANO" />
+      <PropertyRef Name="FATHARKODTIP" />
+      <PropertyRef Name="FATHARSTKKOD" />
+      <PropertyRef Name="FATHARSTKCINS" />
+      <PropertyRef Name="FATHARSTKBRM" />
+      <PropertyRef Name="FATHARDEPOKOD" />
+      <PropertyRef Name="FATHARBARKOD" />
+      <PropertyRef Name="FATHAROZDESKOD" />
+      <PropertyRef Name="FATHARBENZERKOD" />
+      <PropertyRef Name="FATHARMIKTAR" />
+      <PropertyRef Name="FATHARMIKTAR2" />
+      <PropertyRef Name="FATHARMIKTAR3" />
+      <PropertyRef Name="FATHARMIKTAR4" />
+      <PropertyRef Name="FATHARMIKTAR5" />
+      <PropertyRef Name="FATHARFIYTIP" />
+      <PropertyRef Name="FATHARFIYAT" />
+      <PropertyRef Name="FATHARTUTAR" />
+      <PropertyRef Name="FATHARDOVKOD" />
+      <PropertyRef Name="FATHARDOVTUR" />
+      <PropertyRef Name="FATHARDOVTUTAR" />
+      <PropertyRef Name="FATHAROZKOD" />
+      <PropertyRef Name="FATHARACIKLAMA" />
+      <PropertyRef Name="FATHARKDVYUZ" />
+      <PropertyRef Name="FATHARISKYUZ1" />
+      <PropertyRef Name="FATHARISKYUZ2" />
+      <PropertyRef Name="FATHARISKYUZ3" />
+      <PropertyRef Name="FATHARISKYUZ4" />
+      <PropertyRef Name="FATHARISKYUZ5" />
+      <PropertyRef Name="FATHARISKYTUT1" />
+      <PropertyRef Name="FATHARISKYTUT2" />
+      <PropertyRef Name="FATHARISKYTUT3" />
+      <PropertyRef Name="FATHARISKYTUT4" />
+      <PropertyRef Name="FATHARISKYTUT5" />
+      <PropertyRef Name="FATHARISKGTUT1" />
+      <PropertyRef Name="FATHARISKGTUT2" />
+      <PropertyRef Name="FATHARISKGTUT3" />
+      <PropertyRef Name="FATHARISKGTUT4" />
+      <PropertyRef Name="FATHARISKGTUT5" />
+      <PropertyRef Name="FATHARDIGERIND" />
+      <PropertyRef Name="FATHARTOPLAMIND" />
+      <PropertyRef Name="FATHARKDVMATRAH" />
+      <PropertyRef Name="FATHARKDVTUTAR" />
+      <PropertyRef Name="FATHARTOPLAMTUT" />
+      <PropertyRef Name="FATHARVADETAR" />
+      <PropertyRef Name="FATHARACIKLAMA1" />
+      <PropertyRef Name="FATHARACIKLAMA2" />
+      <PropertyRef Name="FATHARACIKLAMA3" />
+      <PropertyRef Name="FATHARPARTINO" />
+      <PropertyRef Name="FATHARMASMER" />
+      <PropertyRef Name="FATHARSERINO1" />
+      <PropertyRef Name="FATHARSERINO2" />
+      <PropertyRef Name="FATHARRB1" />
+      <PropertyRef Name="FATHARRB2" />
+      <PropertyRef Name="FATHARRB3" />
+      <PropertyRef Name="FATHARRB4" />
+      <PropertyRef Name="FATHARRB5" />
+      <PropertyRef Name="FATHARSATKOD" />
+      <PropertyRef Name="FATHARODEMEKOD" />
+      <PropertyRef Name="FATHARTOPLAMMAS" />
+      <PropertyRef Name="FATHARNETTUTAR" />
+      <PropertyRef Name="FATHARNETFIYAT" />
+      <PropertyRef Name="FATHARMALIYET" />
+      <PropertyRef Name="FATHAROTVMATRAH" />
+      <PropertyRef Name="FATHAROTVORAN" />
+      <PropertyRef Name="FATHAROTVFIYAT" />
+      <PropertyRef Name="FATHARTOPOTV" />
+      <PropertyRef Name="FATHAROTVTUTAR" />
+      <PropertyRef Name="FATHARMUHKOD" />
+      <PropertyRef Name="FATHARMUHYANIND" />
+      <PropertyRef Name="FATHARMUHYANMAS" />
+      <PropertyRef Name="FATHARDOVFIYAT" />
+      <PropertyRef Name="FATHAREBTEN" />
+      <PropertyRef Name="FATHAREBTBOY" />
+      <PropertyRef Name="FATHAREBTYUK" />
+      <PropertyRef Name="FATHAREBTHCM" />
+      <PropertyRef Name="FATHAREBTAGR" />
+      <PropertyRef Name="FATHAREKCHAR1" />
+      <PropertyRef Name="FATHAREKCHAR2" />
+      <PropertyRef Name="FATHAREKINT1" />
+      <PropertyRef Name="FATHAREKINT2" />
+      <PropertyRef Name="FATHAREKDATE1" />
+      <PropertyRef Name="FATHAREKDATE2" />
+      <PropertyRef Name="FATHAREKTUT1" />
+      <PropertyRef Name="FATHAREKTUT2" />
+      <PropertyRef Name="FATHAREKMIK1" />
+      <PropertyRef Name="FATHAREKMIK2" />
+      <PropertyRef Name="FATHAREKDOVTUT1" />
+      <PropertyRef Name="FATHAREKDOVTUT2" />
+      <PropertyRef Name="FATHAREKORAN1" />
+      <PropertyRef Name="FATHAREKORAN2" />
+      <PropertyRef Name="FATHARDOVKUR" />
+      <PropertyRef Name="FATHAREFATFLAG" />
+      <PropertyRef Name="FATHAROTVVERKOD" />
+      <PropertyRef Name="FATHAREKVERGI" />
+    </Key>
+    <Property Name="FATHARTAR" Type="datetime" Nullable="false" />
+    <Property Name="FATHARREFNO" Type="int" Nullable="false" />
+    <Property Name="FATHARTIPI" Type="int" Nullable="false" />
+    <Property Name="FATHARGCFLAG" Type="int" Nullable="false" />
+    <Property Name="FATHARKAYONC" Type="int" Nullable="false" />
+    <Property Name="FATHARIPTALFLAG" Type="int" Nullable="false" />
+    <Property Name="FATHARKAYNAK" Type="int" Nullable="false" />
+    <Property Name="FATHARIADE" Type="int" Nullable="false" />
+    <Property Name="FATHARCARKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARSIRANO" Type="int" Nullable="false" />
+    <Property Name="FATHARKODTIP" Type="int" Nullable="false" />
+    <Property Name="FATHARSTKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARSTKCINS" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATHARSTKBRM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FATHARDEPOKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARBARKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHAROZDESKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARBENZERKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARMIKTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARMIKTAR2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARMIKTAR3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARMIKTAR4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARMIKTAR5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARFIYTIP" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="FATHARFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARDOVKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FATHARDOVTUR" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FATHARDOVTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAROZKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FATHARACIKLAMA" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATHARKDVYUZ" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYUZ1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYUZ2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYUZ3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYUZ4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYUZ5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYTUT1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYTUT2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYTUT3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYTUT4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKYTUT5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKGTUT1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKGTUT2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKGTUT3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKGTUT4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARISKGTUT5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARDIGERIND" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARTOPLAMIND" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARKDVMATRAH" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARKDVTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARTOPLAMTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARVADETAR" Type="datetime" Nullable="false" />
+    <Property Name="FATHARACIKLAMA1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATHARACIKLAMA2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATHARACIKLAMA3" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATHARPARTINO" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARMASMER" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARSERINO1" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARSERINO2" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARRB1" Type="int" Nullable="false" />
+    <Property Name="FATHARRB2" Type="int" Nullable="false" />
+    <Property Name="FATHARRB3" Type="int" Nullable="false" />
+    <Property Name="FATHARRB4" Type="int" Nullable="false" />
+    <Property Name="FATHARRB5" Type="int" Nullable="false" />
+    <Property Name="FATHARSATKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARODEMEKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARTOPLAMMAS" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARNETTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARNETFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARMALIYET" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAROTVMATRAH" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAROTVORAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAROTVFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARTOPOTV" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAROTVTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARMUHKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHARMUHYANIND" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARMUHYANMAS" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARDOVFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREBTEN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREBTBOY" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREBTYUK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREBTHCM" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREBTAGR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREKCHAR1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATHAREKCHAR2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="FATHAREKINT1" Type="int" Nullable="false" />
+    <Property Name="FATHAREKINT2" Type="int" Nullable="false" />
+    <Property Name="FATHAREKDATE1" Type="datetime" Nullable="false" />
+    <Property Name="FATHAREKDATE2" Type="datetime" Nullable="false" />
+    <Property Name="FATHAREKTUT1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREKTUT2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREKMIK1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREKMIK2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREKDOVTUT1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREKDOVTUT2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREKORAN1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREKORAN2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHARDOVKUR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATHAREFATFLAG" Type="int" Nullable="false" />
+    <Property Name="FATHAROTVVERKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="FATHAREKVERGI" Type="varchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.HARREFNO' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="HARREFNO">
+    <Key>
+      <PropertyRef Name="HARREFMODUL" />
+      <PropertyRef Name="HARREFKONU" />
+      <PropertyRef Name="HARREFDEGER" />
+    </Key>
+    <Property Name="HARREFMODUL" Type="int" Nullable="false" />
+    <Property Name="HARREFKONU" Type="int" Nullable="false" />
+    <Property Name="HARREFDEGER" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.SIRKETLOG' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="SIRKETLOG">
+    <Key>
+      <PropertyRef Name="SIRLOGMODUL" />
+      <PropertyRef Name="SIRLOGKONU" />
+      <PropertyRef Name="SIRLOGKYTTIPI" />
+      <PropertyRef Name="SIRLOGKYTKODU" />
+      <PropertyRef Name="SIRLOGKYTKODU2" />
+      <PropertyRef Name="SIRLOGKYTREFNO" />
+      <PropertyRef Name="SIRLOGKYTREFNO2" />
+      <PropertyRef Name="SIRLOGILKKULKOD" />
+      <PropertyRef Name="SIRLOGILKTAR" />
+      <PropertyRef Name="SIRLOGSONKULKOD" />
+      <PropertyRef Name="SIRLOGSONTAR" />
+      <PropertyRef Name="SIRLOGMUHINT1" />
+      <PropertyRef Name="SIRLOGMUHINT2" />
+      <PropertyRef Name="SIRLOGMUHINT3" />
+      <PropertyRef Name="SIRLOGMUHINT4" />
+      <PropertyRef Name="SIRLOGMUHINT5" />
+      <PropertyRef Name="SIRLOGMUHNUM1" />
+      <PropertyRef Name="SIRLOGMUHNUM2" />
+      <PropertyRef Name="SIRLOGMUHNUM3" />
+      <PropertyRef Name="SIRLOGMUHNUM4" />
+      <PropertyRef Name="SIRLOGMUHNUM5" />
+      <PropertyRef Name="SIRLOGMUHTAR1" />
+      <PropertyRef Name="SIRLOGMUHTAR2" />
+      <PropertyRef Name="SIRLOGMUHTAR3" />
+      <PropertyRef Name="SIRLOGMUHTAR4" />
+      <PropertyRef Name="SIRLOGMUHTAR5" />
+      <PropertyRef Name="SIRLOGMUHACK1" />
+      <PropertyRef Name="SIRLOGMUHACK2" />
+      <PropertyRef Name="SIRLOGMUHACK3" />
+      <PropertyRef Name="SIRLOGMUHACK4" />
+      <PropertyRef Name="SIRLOGMUHACK5" />
+    </Key>
+    <Property Name="SIRLOGMODUL" Type="int" Nullable="false" />
+    <Property Name="SIRLOGKONU" Type="int" Nullable="false" />
+    <Property Name="SIRLOGKYTTIPI" Type="int" Nullable="false" />
+    <Property Name="SIRLOGKYTKODU" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="SIRLOGKYTKODU2" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="SIRLOGKYTREFNO" Type="int" Nullable="false" />
+    <Property Name="SIRLOGKYTREFNO2" Type="int" Nullable="false" />
+    <Property Name="SIRLOGILKKULKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="SIRLOGILKTAR" Type="datetime" Nullable="false" />
+    <Property Name="SIRLOGSONKULKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="SIRLOGSONTAR" Type="datetime" Nullable="false" />
+    <Property Name="SIRLOGMUHINT1" Type="int" Nullable="false" />
+    <Property Name="SIRLOGMUHINT2" Type="int" Nullable="false" />
+    <Property Name="SIRLOGMUHINT3" Type="int" Nullable="false" />
+    <Property Name="SIRLOGMUHINT4" Type="int" Nullable="false" />
+    <Property Name="SIRLOGMUHINT5" Type="int" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHTAR1" Type="datetime" Nullable="false" />
+    <Property Name="SIRLOGMUHTAR2" Type="datetime" Nullable="false" />
+    <Property Name="SIRLOGMUHTAR3" Type="datetime" Nullable="false" />
+    <Property Name="SIRLOGMUHTAR4" Type="datetime" Nullable="false" />
+    <Property Name="SIRLOGMUHTAR5" Type="datetime" Nullable="false" />
+    <Property Name="SIRLOGMUHACK1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="SIRLOGMUHACK2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="SIRLOGMUHACK3" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="SIRLOGMUHACK4" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="SIRLOGMUHACK5" Type="varchar" MaxLength="80" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKBARKOD' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKBARKOD">
+    <Key>
+      <PropertyRef Name="STKBARKOD" />
+      <PropertyRef Name="STKBARSTKKOD" />
+      <PropertyRef Name="STKBARBRMNO" />
+      <PropertyRef Name="STKBARKATSAYI" />
+      <PropertyRef Name="STKBARTIP" />
+      <PropertyRef Name="STKBARYAPINO" />
+      <PropertyRef Name="STKBARBOYUT1" />
+      <PropertyRef Name="STKBARBOYUT2" />
+      <PropertyRef Name="STKBARBOYUT3" />
+      <PropertyRef Name="STKBARBOYUT4" />
+      <PropertyRef Name="STKBARBOYUT5" />
+      <PropertyRef Name="STKBARFIYTIP" />
+      <PropertyRef Name="STKBARITEMNO" />
+    </Key>
+    <Property Name="STKBARKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKBARSTKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKBARBRMNO" Type="int" Nullable="false" />
+    <Property Name="STKBARKATSAYI" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBARTIP" Type="int" Nullable="false" />
+    <Property Name="STKBARYAPINO" Type="int" Nullable="false" />
+    <Property Name="STKBARBOYUT1" Type="int" Nullable="false" />
+    <Property Name="STKBARBOYUT2" Type="int" Nullable="false" />
+    <Property Name="STKBARBOYUT3" Type="int" Nullable="false" />
+    <Property Name="STKBARBOYUT4" Type="int" Nullable="false" />
+    <Property Name="STKBARBOYUT5" Type="int" Nullable="false" />
+    <Property Name="STKBARFIYTIP" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="STKBARITEMNO" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKBIRIM' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKBIRIM">
+    <Key>
+      <PropertyRef Name="STKBIRIMKOD" />
+      <PropertyRef Name="STKBIRIMAD" />
+      <PropertyRef Name="STKBIRIMCARPAN" />
+      <PropertyRef Name="STKBIRIMBOLEN" />
+    </Key>
+    <Property Name="STKBIRIMKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKBIRIMAD" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKBIRIMCARPAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBIRIMBOLEN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKBOYFIYAT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKBOYFIYAT">
+    <Key>
+      <PropertyRef Name="STKBOYFIYSTKKOD" />
+      <PropertyRef Name="STKBOYFIYDEPKOD" />
+      <PropertyRef Name="STKBOYFIYBOYUT1" />
+      <PropertyRef Name="STKBOYFIYBOYUT2" />
+      <PropertyRef Name="STKBOYFIYBOYUT3" />
+      <PropertyRef Name="STKBOYFIYBOYUT4" />
+      <PropertyRef Name="STKBOYFIYBOYUT5" />
+      <PropertyRef Name="STKBOYFIYNO" />
+      <PropertyRef Name="STKBOYFIYTUTAR" />
+    </Key>
+    <Property Name="STKBOYFIYSTKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKBOYFIYDEPKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKBOYFIYBOYUT1" Type="int" Nullable="false" />
+    <Property Name="STKBOYFIYBOYUT2" Type="int" Nullable="false" />
+    <Property Name="STKBOYFIYBOYUT3" Type="int" Nullable="false" />
+    <Property Name="STKBOYFIYBOYUT4" Type="int" Nullable="false" />
+    <Property Name="STKBOYFIYBOYUT5" Type="int" Nullable="false" />
+    <Property Name="STKBOYFIYNO" Type="int" Nullable="false" />
+    <Property Name="STKBOYFIYTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKBOYUT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKBOYUT">
+    <Key>
+      <PropertyRef Name="STKBOYSTOKKOD" />
+      <PropertyRef Name="STKBOYDEPOKOD" />
+      <PropertyRef Name="STKBOYBOYUT1" />
+      <PropertyRef Name="STKBOYBOYUT2" />
+      <PropertyRef Name="STKBOYBOYUT3" />
+      <PropertyRef Name="STKBOYBOYUT4" />
+      <PropertyRef Name="STKBOYBOYUT5" />
+      <PropertyRef Name="STKBOYDEVIR" />
+      <PropertyRef Name="STKBOYGIREN" />
+      <PropertyRef Name="STKBOYCIKAN" />
+      <PropertyRef Name="STKBOYBAKIYE" />
+      <PropertyRef Name="STKBOYACIKLAMA" />
+      <PropertyRef Name="STKBOYOZELKOD" />
+      <PropertyRef Name="STKBOYGIRSIPMIK" />
+      <PropertyRef Name="STKBOYCIKSIPMIK" />
+      <PropertyRef Name="STKBOYGIRURTMIK" />
+      <PropertyRef Name="STKBOYCIKURTMIK" />
+    </Key>
+    <Property Name="STKBOYSTOKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKBOYDEPOKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKBOYBOYUT1" Type="int" Nullable="false" />
+    <Property Name="STKBOYBOYUT2" Type="int" Nullable="false" />
+    <Property Name="STKBOYBOYUT3" Type="int" Nullable="false" />
+    <Property Name="STKBOYBOYUT4" Type="int" Nullable="false" />
+    <Property Name="STKBOYBOYUT5" Type="int" Nullable="false" />
+    <Property Name="STKBOYDEVIR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBOYGIREN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBOYCIKAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBOYBAKIYE" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBOYACIKLAMA" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKBOYOZELKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKBOYGIRSIPMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBOYCIKSIPMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBOYGIRURTMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBOYCIKURTMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKDETAY' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKDETAY">
+    <Key>
+      <PropertyRef Name="STKDETBKOD" />
+      <PropertyRef Name="STKDETSKOD" />
+      <PropertyRef Name="STKDETTIP" />
+      <PropertyRef Name="STKDETITEMNO" />
+    </Key>
+    <Property Name="STKDETBKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKDETSKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKDETTIP" Type="int" Nullable="false" />
+    <Property Name="STKDETITEMNO" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKFIS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKFIS">
+    <Key>
+      <PropertyRef Name="STKFISTAR" />
+      <PropertyRef Name="STKFISREFNO" />
+      <PropertyRef Name="STKFISTIPI" />
+      <PropertyRef Name="STKFISGCFLAG" />
+      <PropertyRef Name="STKFISKAYONC" />
+      <PropertyRef Name="STKFISDEPO" />
+      <PropertyRef Name="STKFISOZELFIS" />
+      <PropertyRef Name="STKFISIADE" />
+      <PropertyRef Name="STKFISKAYNAK" />
+      <PropertyRef Name="STKFISCARKOD" />
+      <PropertyRef Name="STKFISREFNO2" />
+      <PropertyRef Name="STKFISANADEPO" />
+      <PropertyRef Name="STKFISKARDEPO" />
+      <PropertyRef Name="STKFISOZKOD1" />
+      <PropertyRef Name="STKFISOZKOD2" />
+      <PropertyRef Name="STKFISOZKOD3" />
+      <PropertyRef Name="STKFISACIKLAMA1" />
+      <PropertyRef Name="STKFISACIKLAMA2" />
+      <PropertyRef Name="STKFISACIKLAMA3" />
+      <PropertyRef Name="STKFISEVRAKNO1" />
+      <PropertyRef Name="STKFISEVRAKNO2" />
+      <PropertyRef Name="STKFISEVRAKNO3" />
+      <PropertyRef Name="STKFISDOVTAR" />
+      <PropertyRef Name="STKFISPARTIKOD" />
+      <PropertyRef Name="STKFISMASMER" />
+      <PropertyRef Name="STKFISTOPBTUT" />
+      <PropertyRef Name="STKFISTOPISK" />
+      <PropertyRef Name="STKFISTOPNTUT" />
+      <PropertyRef Name="STKFISTOPKDV" />
+      <PropertyRef Name="STKFISTOPKTUT" />
+      <PropertyRef Name="STKFISSEVNO" />
+      <PropertyRef Name="STKFISISYKOD" />
+      <PropertyRef Name="STKFISOTVFLAG" />
+      <PropertyRef Name="STKFISTOPOTV" />
+      <PropertyRef Name="STKFISTOPOTUT" />
+      <PropertyRef Name="STKFISDOVKOD" />
+      <PropertyRef Name="STKFISDOVTUR" />
+      <PropertyRef Name="STKFISDOVKUR" />
+      <PropertyRef Name="STKFISDOVTOP" />
+      <PropertyRef Name="STKFISTRNTAR" />
+      <PropertyRef Name="STKFISTRNREFNO" />
+      <PropertyRef Name="STKFISTRNTIPI" />
+    </Key>
+    <Property Name="STKFISTAR" Type="datetime" Nullable="false" />
+    <Property Name="STKFISREFNO" Type="int" Nullable="false" />
+    <Property Name="STKFISTIPI" Type="int" Nullable="false" />
+    <Property Name="STKFISGCFLAG" Type="int" Nullable="false" />
+    <Property Name="STKFISKAYONC" Type="int" Nullable="false" />
+    <Property Name="STKFISDEPO" Type="int" Nullable="false" />
+    <Property Name="STKFISOZELFIS" Type="int" Nullable="false" />
+    <Property Name="STKFISIADE" Type="int" Nullable="false" />
+    <Property Name="STKFISKAYNAK" Type="int" Nullable="false" />
+    <Property Name="STKFISCARKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFISREFNO2" Type="int" Nullable="false" />
+    <Property Name="STKFISANADEPO" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFISKARDEPO" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFISOZKOD1" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKFISOZKOD2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKFISOZKOD3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKFISACIKLAMA1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKFISACIKLAMA2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKFISACIKLAMA3" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKFISEVRAKNO1" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFISEVRAKNO2" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFISEVRAKNO3" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFISDOVTAR" Type="datetime" Nullable="false" />
+    <Property Name="STKFISPARTIKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFISMASMER" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFISTOPBTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPISK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPNTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPKDV" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPKTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISSEVNO" Type="int" Nullable="false" />
+    <Property Name="STKFISISYKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFISOTVFLAG" Type="int" Nullable="false" />
+    <Property Name="STKFISTOPOTV" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPOTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISDOVKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKFISDOVTUR" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKFISDOVKUR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISDOVTOP" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTRNTAR" Type="datetime" Nullable="false" />
+    <Property Name="STKFISTRNREFNO" Type="int" Nullable="false" />
+    <Property Name="STKFISTRNTIPI" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKFISTIP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKFISTIP">
+    <Key>
+      <PropertyRef Name="STKFTMODUL" />
+      <PropertyRef Name="STKFTNO" />
+      <PropertyRef Name="STKFTKOD" />
+      <PropertyRef Name="STKFTACIKLAMA" />
+      <PropertyRef Name="STKFTONAY" />
+      <PropertyRef Name="STKFTEVRAKNO" />
+      <PropertyRef Name="STKFTDIZDOS" />
+      <PropertyRef Name="STKFTFIYTIP" />
+      <PropertyRef Name="STKFTMAXSATIR" />
+      <PropertyRef Name="STKFTOTVFLAG" />
+    </Key>
+    <Property Name="STKFTMODUL" Type="int" Nullable="false" />
+    <Property Name="STKFTNO" Type="int" Nullable="false" />
+    <Property Name="STKFTKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFTACIKLAMA" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKFTONAY" Type="int" Nullable="false" />
+    <Property Name="STKFTEVRAKNO" Type="int" Nullable="false" />
+    <Property Name="STKFTDIZDOS" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFTFIYTIP" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="STKFTMAXSATIR" Type="int" Nullable="false" />
+    <Property Name="STKFTOTVFLAG" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKFIYAT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKFIYAT">
+    <Key>
+      <PropertyRef Name="STKFIYSTKKOD" />
+      <PropertyRef Name="STKFIYDEPKOD" />
+      <PropertyRef Name="STKFIYNO" />
+      <PropertyRef Name="STKFIYITEMNO" />
+      <PropertyRef Name="STKFIYTUTAR" />
+      <PropertyRef Name="STKFIYDOVKOD" />
+      <PropertyRef Name="STKFIYDOVTUR" />
+      <PropertyRef Name="STKFIYISKYUZ1" />
+      <PropertyRef Name="STKFIYISKYUZ2" />
+      <PropertyRef Name="STKFIYISKYUZ3" />
+      <PropertyRef Name="STKFIYISKYUZ4" />
+      <PropertyRef Name="STKFIYISKYUZ5" />
+      <PropertyRef Name="STKFIYISKTUT1" />
+      <PropertyRef Name="STKFIYISKTUT2" />
+      <PropertyRef Name="STKFIYISKTUT3" />
+      <PropertyRef Name="STKFIYISKTUT4" />
+      <PropertyRef Name="STKFIYISKTUT5" />
+      <PropertyRef Name="STKFIYKDVNO" />
+      <PropertyRef Name="STKFIYKDVFLAG" />
+      <PropertyRef Name="STKFIYODEGUN" />
+      <PropertyRef Name="STKFIYBASTAR" />
+      <PropertyRef Name="STKFIYBASSAAT" />
+      <PropertyRef Name="STKFIYBITTAR" />
+      <PropertyRef Name="STKFIYBITSAAT" />
+      <PropertyRef Name="STKFIYKONTFLAG" />
+      <PropertyRef Name="STKFIYODEKOD" />
+    </Key>
+    <Property Name="STKFIYSTKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFIYDEPKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFIYNO" Type="int" Nullable="false" />
+    <Property Name="STKFIYITEMNO" Type="int" Nullable="false" />
+    <Property Name="STKFIYTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYDOVKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKFIYDOVTUR" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKFIYISKYUZ1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKYUZ2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKYUZ3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKYUZ4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKYUZ5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKDVNO" Type="int" Nullable="false" />
+    <Property Name="STKFIYKDVFLAG" Type="int" Nullable="false" />
+    <Property Name="STKFIYODEGUN" Type="int" Nullable="false" />
+    <Property Name="STKFIYBASTAR" Type="datetime" Nullable="false" />
+    <Property Name="STKFIYBASSAAT" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="STKFIYBITTAR" Type="datetime" Nullable="false" />
+    <Property Name="STKFIYBITSAAT" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="STKFIYKONTFLAG" Type="int" Nullable="false" />
+    <Property Name="STKFIYODEKOD" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKFIYTIP' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKFIYTIP">
+    <Key>
+      <PropertyRef Name="STKFTFIYNO" />
+      <PropertyRef Name="STKFTFIYADI" />
+      <PropertyRef Name="STKFTFIYACK" />
+      <PropertyRef Name="STKFTFIYTIPI" />
+      <PropertyRef Name="STKFTFIYDOVKOD" />
+      <PropertyRef Name="STKFTFIYDOVTUR" />
+      <PropertyRef Name="STKFTFIYISKYUZ1" />
+      <PropertyRef Name="STKFTFIYISKYUZ2" />
+      <PropertyRef Name="STKFTFIYISKYUZ3" />
+      <PropertyRef Name="STKFTFIYISKYUZ4" />
+      <PropertyRef Name="STKFTFIYISKYUZ5" />
+      <PropertyRef Name="STKFTFIYKDVNO" />
+      <PropertyRef Name="STKFTFIYKDVFLAG" />
+      <PropertyRef Name="STKFTFIYODEGUN" />
+      <PropertyRef Name="STKFTFIYBASTAR" />
+      <PropertyRef Name="STKFTFIYBASSAAT" />
+      <PropertyRef Name="STKFTFIYBITTAR" />
+      <PropertyRef Name="STKFTFIYBITSAAT" />
+      <PropertyRef Name="STKFTFIYKONTFLAG" />
+      <PropertyRef Name="STKFTFIYDEPO" />
+      <PropertyRef Name="STKFTFIYKULFLAG" />
+    </Key>
+    <Property Name="STKFTFIYNO" Type="int" Nullable="false" />
+    <Property Name="STKFTFIYADI" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKFTFIYACK" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKFTFIYTIPI" Type="int" Nullable="false" />
+    <Property Name="STKFTFIYDOVKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKFTFIYDOVTUR" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYKDVNO" Type="int" Nullable="false" />
+    <Property Name="STKFTFIYKDVFLAG" Type="int" Nullable="false" />
+    <Property Name="STKFTFIYODEGUN" Type="int" Nullable="false" />
+    <Property Name="STKFTFIYBASTAR" Type="datetime" Nullable="false" />
+    <Property Name="STKFTFIYBASSAAT" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="STKFTFIYBITTAR" Type="datetime" Nullable="false" />
+    <Property Name="STKFTFIYBITSAAT" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="STKFTFIYKONTFLAG" Type="int" Nullable="false" />
+    <Property Name="STKFTFIYDEPO" Type="int" Nullable="false" />
+    <Property Name="STKFTFIYKULFLAG" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKHAR' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKHAR">
+    <Key>
+      <PropertyRef Name="STKHARTAR" />
+      <PropertyRef Name="STKHARREFNO" />
+      <PropertyRef Name="STKHARTIPI" />
+      <PropertyRef Name="STKHARGCFLAG" />
+      <PropertyRef Name="STKHARKAYONC" />
+      <PropertyRef Name="STKHARDEPO" />
+      <PropertyRef Name="STKHAROZELFIS" />
+      <PropertyRef Name="STKHARIADE" />
+      <PropertyRef Name="STKHARKAYNAK" />
+      <PropertyRef Name="STKHARCARKOD" />
+      <PropertyRef Name="STKHARREFNO2" />
+      <PropertyRef Name="STKHARANADEPO" />
+      <PropertyRef Name="STKHARKARDEPO" />
+      <PropertyRef Name="STKHARSTKKOD" />
+      <PropertyRef Name="STKHARSTKCINS" />
+      <PropertyRef Name="STKHARSTKBRM" />
+      <PropertyRef Name="STKHARBARKOD" />
+      <PropertyRef Name="STKHAROZDESKOD" />
+      <PropertyRef Name="STKHARBENZERKOD" />
+      <PropertyRef Name="STKHARMIKTAR" />
+      <PropertyRef Name="STKHARMIKTAR2" />
+      <PropertyRef Name="STKHARMIKTAR3" />
+      <PropertyRef Name="STKHARMIKTAR4" />
+      <PropertyRef Name="STKHARMIKTAR5" />
+      <PropertyRef Name="STKHARFIYAT" />
+      <PropertyRef Name="STKHARTUTAR" />
+      <PropertyRef Name="STKHARDOVKOD" />
+      <PropertyRef Name="STKHARDOVTUR" />
+      <PropertyRef Name="STKHARDOVTUTAR" />
+      <PropertyRef Name="STKHAROZKOD" />
+      <PropertyRef Name="STKHARACIKLAMA" />
+      <PropertyRef Name="STKHARKDVYUZ" />
+      <PropertyRef Name="STKHARISKYUZ1" />
+      <PropertyRef Name="STKHARISKYUZ2" />
+      <PropertyRef Name="STKHARISKYUZ3" />
+      <PropertyRef Name="STKHARISKYUZ4" />
+      <PropertyRef Name="STKHARISKYUZ5" />
+      <PropertyRef Name="STKHARISKYTUT1" />
+      <PropertyRef Name="STKHARISKYTUT2" />
+      <PropertyRef Name="STKHARISKYTUT3" />
+      <PropertyRef Name="STKHARISKYTUT4" />
+      <PropertyRef Name="STKHARISKYTUT5" />
+      <PropertyRef Name="STKHARISKGTUT1" />
+      <PropertyRef Name="STKHARISKGTUT2" />
+      <PropertyRef Name="STKHARISKGTUT3" />
+      <PropertyRef Name="STKHARISKGTUT4" />
+      <PropertyRef Name="STKHARISKGTUT5" />
+      <PropertyRef Name="STKHARDIGERIND" />
+      <PropertyRef Name="STKHARTOPLAMIND" />
+      <PropertyRef Name="STKHARKDVMATRAH" />
+      <PropertyRef Name="STKHARKDVTUTAR" />
+      <PropertyRef Name="STKHARTOPLAMTUT" />
+      <PropertyRef Name="STKHARVADETAR" />
+      <PropertyRef Name="STKHARACIKLAMA1" />
+      <PropertyRef Name="STKHARACIKLAMA2" />
+      <PropertyRef Name="STKHARACIKLAMA3" />
+      <PropertyRef Name="STKHARPARTINO" />
+      <PropertyRef Name="STKHARMASMER" />
+      <PropertyRef Name="STKHARSERINO1" />
+      <PropertyRef Name="STKHARSERINO2" />
+      <PropertyRef Name="STKHARRB1" />
+      <PropertyRef Name="STKHARRB2" />
+      <PropertyRef Name="STKHARRB3" />
+      <PropertyRef Name="STKHARRB4" />
+      <PropertyRef Name="STKHARRB5" />
+      <PropertyRef Name="STKHARFIYTIP" />
+      <PropertyRef Name="STKHARSIRANO" />
+      <PropertyRef Name="STKHARTOPLAMMAS" />
+      <PropertyRef Name="STKHARNETTUTAR" />
+      <PropertyRef Name="STKHARNETFIYAT" />
+      <PropertyRef Name="STKHARMALIYET" />
+      <PropertyRef Name="STKHAROTVMATRAH" />
+      <PropertyRef Name="STKHAROTVORAN" />
+      <PropertyRef Name="STKHAROTVFIYAT" />
+      <PropertyRef Name="STKHARTOPOTV" />
+      <PropertyRef Name="STKHAROTVTUTAR" />
+      <PropertyRef Name="STKHARDOVFIYAT" />
+      <PropertyRef Name="STKHAREBTEN" />
+      <PropertyRef Name="STKHAREBTBOY" />
+      <PropertyRef Name="STKHAREBTYUK" />
+      <PropertyRef Name="STKHAREBTHCM" />
+      <PropertyRef Name="STKHAREBTAGR" />
+      <PropertyRef Name="STKHAREKCHAR1" />
+      <PropertyRef Name="STKHAREKCHAR2" />
+      <PropertyRef Name="STKHAREKINT1" />
+      <PropertyRef Name="STKHAREKINT2" />
+      <PropertyRef Name="STKHAREKDATE1" />
+      <PropertyRef Name="STKHAREKDATE2" />
+      <PropertyRef Name="STKHAREKTUT1" />
+      <PropertyRef Name="STKHAREKTUT2" />
+      <PropertyRef Name="STKHAREKMIK1" />
+      <PropertyRef Name="STKHAREKMIK2" />
+      <PropertyRef Name="STKHAREKDOVTUT1" />
+      <PropertyRef Name="STKHAREKDOVTUT2" />
+      <PropertyRef Name="STKHAREKORAN1" />
+      <PropertyRef Name="STKHAREKORAN2" />
+      <PropertyRef Name="STKHARDOVKUR" />
+    </Key>
+    <Property Name="STKHARTAR" Type="datetime" Nullable="false" />
+    <Property Name="STKHARREFNO" Type="int" Nullable="false" />
+    <Property Name="STKHARTIPI" Type="int" Nullable="false" />
+    <Property Name="STKHARGCFLAG" Type="int" Nullable="false" />
+    <Property Name="STKHARKAYONC" Type="int" Nullable="false" />
+    <Property Name="STKHARDEPO" Type="int" Nullable="false" />
+    <Property Name="STKHAROZELFIS" Type="int" Nullable="false" />
+    <Property Name="STKHARIADE" Type="int" Nullable="false" />
+    <Property Name="STKHARKAYNAK" Type="int" Nullable="false" />
+    <Property Name="STKHARCARKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARREFNO2" Type="int" Nullable="false" />
+    <Property Name="STKHARANADEPO" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARKARDEPO" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARSTKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARSTKCINS" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKHARSTKBRM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKHARBARKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHAROZDESKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARBENZERKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARMIKTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMIKTAR2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMIKTAR3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMIKTAR4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMIKTAR5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARDOVKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKHARDOVTUR" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKHARDOVTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROZKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKHARACIKLAMA" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKHARKDVYUZ" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARDIGERIND" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARTOPLAMIND" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARKDVMATRAH" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARKDVTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARTOPLAMTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARVADETAR" Type="datetime" Nullable="false" />
+    <Property Name="STKHARACIKLAMA1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKHARACIKLAMA2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKHARACIKLAMA3" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKHARPARTINO" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARMASMER" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARSERINO1" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARSERINO2" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKHARRB1" Type="int" Nullable="false" />
+    <Property Name="STKHARRB2" Type="int" Nullable="false" />
+    <Property Name="STKHARRB3" Type="int" Nullable="false" />
+    <Property Name="STKHARRB4" Type="int" Nullable="false" />
+    <Property Name="STKHARRB5" Type="int" Nullable="false" />
+    <Property Name="STKHARFIYTIP" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="STKHARSIRANO" Type="int" Nullable="false" />
+    <Property Name="STKHARTOPLAMMAS" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARNETTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARNETFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMALIYET" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROTVMATRAH" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROTVORAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROTVFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARTOPOTV" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROTVTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARDOVFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTEN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTBOY" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTYUK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTHCM" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTAGR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKCHAR1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKHAREKCHAR2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKHAREKINT1" Type="int" Nullable="false" />
+    <Property Name="STKHAREKINT2" Type="int" Nullable="false" />
+    <Property Name="STKHAREKDATE1" Type="datetime" Nullable="false" />
+    <Property Name="STKHAREKDATE2" Type="datetime" Nullable="false" />
+    <Property Name="STKHAREKTUT1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKTUT2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKMIK1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKMIK2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKDOVTUT1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKDOVTUT2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKORAN1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKORAN2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARDOVKUR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKKART' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKKART">
+    <Key>
+      <PropertyRef Name="STKKOD" />
+      <PropertyRef Name="STKCINSI" />
+      <PropertyRef Name="STKCINSI2" />
+      <PropertyRef Name="STKCINSI3" />
+      <PropertyRef Name="STKBIRIM" />
+      <PropertyRef Name="STKBIRIM2" />
+      <PropertyRef Name="STKBRM2CAR" />
+      <PropertyRef Name="STKBRM2BOL" />
+      <PropertyRef Name="STKBIRIM3" />
+      <PropertyRef Name="STKBRM3CAR" />
+      <PropertyRef Name="STKBRM3BOL" />
+      <PropertyRef Name="STKBIRIM4" />
+      <PropertyRef Name="STKBRM4CAR" />
+      <PropertyRef Name="STKBRM4BOL" />
+      <PropertyRef Name="STKBIRIM5" />
+      <PropertyRef Name="STKBRM5CAR" />
+      <PropertyRef Name="STKBRM5BOL" />
+      <PropertyRef Name="STKOZKOD1" />
+      <PropertyRef Name="STKOZKOD2" />
+      <PropertyRef Name="STKOZKOD3" />
+      <PropertyRef Name="STKOZKOD4" />
+      <PropertyRef Name="STKOZKOD5" />
+      <PropertyRef Name="STKKARTTIP1" />
+      <PropertyRef Name="STKKARTTIP2" />
+      <PropertyRef Name="STKKARTTIP3" />
+      <PropertyRef Name="STKKARTTIP4" />
+      <PropertyRef Name="STKKARTTIP5" />
+      <PropertyRef Name="STKKARTTIP6" />
+      <PropertyRef Name="STKKARTTIP7" />
+      <PropertyRef Name="STKKARTTIP8" />
+      <PropertyRef Name="STKKARTTIP9" />
+      <PropertyRef Name="STKKARTTIP10" />
+      <PropertyRef Name="STKKARTTIP11" />
+      <PropertyRef Name="STKKARTTIP12" />
+      <PropertyRef Name="STKKARTTIP13" />
+      <PropertyRef Name="STKKARTTIP14" />
+      <PropertyRef Name="STKBAKIYE" />
+      <PropertyRef Name="STKBAKIYE2" />
+      <PropertyRef Name="STKBAKIYE3" />
+      <PropertyRef Name="STKBAKIYE4" />
+      <PropertyRef Name="STKBAKIYE5" />
+      <PropertyRef Name="STKYAOFIYAT" />
+      <PropertyRef Name="STKACIK1" />
+      <PropertyRef Name="STKACIK2" />
+      <PropertyRef Name="STKACIK3" />
+      <PropertyRef Name="STKACIK4" />
+      <PropertyRef Name="STKACIK5" />
+      <PropertyRef Name="STKGENKDVNO" />
+      <PropertyRef Name="STKGENISK1" />
+      <PropertyRef Name="STKGENISK2" />
+      <PropertyRef Name="STKGENISK3" />
+      <PropertyRef Name="STKGENISK4" />
+      <PropertyRef Name="STKGENISK5" />
+      <PropertyRef Name="STKKRITIKSEVIYE" />
+      <PropertyRef Name="STKOPTIMALSEVIYE" />
+      <PropertyRef Name="STKODEGUN" />
+      <PropertyRef Name="STKPROKOD" />
+      <PropertyRef Name="STKSYFTARIHI" />
+      <PropertyRef Name="STKSYFSAATI" />
+      <PropertyRef Name="STKBOZULMASURESI" />
+      <PropertyRef Name="STKKULLANIMSURESI" />
+      <PropertyRef Name="STKEKSAHA1" />
+      <PropertyRef Name="STKEKSAHA2" />
+      <PropertyRef Name="STKEUAFIYAT" />
+      <PropertyRef Name="STKEPAFIYAT" />
+      <PropertyRef Name="STKEUSFIYAT" />
+      <PropertyRef Name="STKEPSFIYAT" />
+      <PropertyRef Name="STKURTSNKOD" />
+      <PropertyRef Name="STKURTBRTIP" />
+      <PropertyRef Name="STKBOLKODU" />
+      <PropertyRef Name="STKREYKODU" />
+      <PropertyRef Name="STKRAFKODU" />
+      <PropertyRef Name="STKCALFLAG" />
+      <PropertyRef Name="STKINDKONT" />
+      <PropertyRef Name="STKFIYDEGALFLAG" />
+      <PropertyRef Name="STKFIYDEGSATFLAG" />
+      <PropertyRef Name="STKIADEALFLAG" />
+      <PropertyRef Name="STKIADESATFLAG" />
+      <PropertyRef Name="STKMIKKONTALFLAG" />
+      <PropertyRef Name="STKMIKKONTALMIN" />
+      <PropertyRef Name="STKMIKKONTALMAX" />
+      <PropertyRef Name="STKMIKKONTSATFLAG" />
+      <PropertyRef Name="STKMIKKONTSATMIN" />
+      <PropertyRef Name="STKMIKKONTSATMAX" />
+      <PropertyRef Name="STKFIYKONTALFLAG" />
+      <PropertyRef Name="STKFIYKONTALMIN" />
+      <PropertyRef Name="STKFIYKONTALMAX" />
+      <PropertyRef Name="STKFIYKONTSATFLAG" />
+      <PropertyRef Name="STKFIYKONTSATMIN" />
+      <PropertyRef Name="STKFIYKONTSATMAX" />
+      <PropertyRef Name="STKOTOGIRFIY" />
+      <PropertyRef Name="STKOTOCIKFIY" />
+      <PropertyRef Name="STKDOVKOD1" />
+      <PropertyRef Name="STKDOVTUR1" />
+      <PropertyRef Name="STKDOVKOD2" />
+      <PropertyRef Name="STKDOVTUR2" />
+      <PropertyRef Name="STKDOVKOD3" />
+      <PropertyRef Name="STKDOVTUR3" />
+      <PropertyRef Name="STKDOVKOD4" />
+      <PropertyRef Name="STKDOVTUR4" />
+      <PropertyRef Name="STKDOVKOD5" />
+      <PropertyRef Name="STKDOVTUR5" />
+      <PropertyRef Name="STKURUNSOR" />
+      <PropertyRef Name="STKURETKOD" />
+      <PropertyRef Name="STKURETADI" />
+      <PropertyRef Name="STKTEDARIKKOD" />
+      <PropertyRef Name="STKTEDARIKADI" />
+      <PropertyRef Name="STKKALKONTKOD" />
+      <PropertyRef Name="STKSN1EVRAKNO" />
+      <PropertyRef Name="STKSN2EVRAKNO" />
+      <PropertyRef Name="STKGRUPKOD" />
+      <PropertyRef Name="STKSEVNO" />
+      <PropertyRef Name="STKOZELBAKIYE" />
+      <PropertyRef Name="STKOZELBAKIYE2" />
+      <PropertyRef Name="STKOZELBAKIYE3" />
+      <PropertyRef Name="STKOZELBAKIYE4" />
+      <PropertyRef Name="STKOZELBAKIYE5" />
+      <PropertyRef Name="STKREZGIRSIPMIK" />
+      <PropertyRef Name="STKREZGIRSIPTUT" />
+      <PropertyRef Name="STKREZCIKSIPMIK" />
+      <PropertyRef Name="STKREZCIKSIPTUT" />
+      <PropertyRef Name="STKREZGIRURTMIK" />
+      <PropertyRef Name="STKREZGIRURTTUT" />
+      <PropertyRef Name="STKREZCIKURTMIK" />
+      <PropertyRef Name="STKREZCIKURTTUT" />
+      <PropertyRef Name="STKOTVORAN" />
+      <PropertyRef Name="STKOTVTUTAR" />
+      <PropertyRef Name="STKFIREORAN" />
+      <PropertyRef Name="STKKARORAN" />
+      <PropertyRef Name="STKPARTIEVRAKNO" />
+      <PropertyRef Name="STKOTVVERGIKOD" />
+      <PropertyRef Name="STKEKVERGIKOD" />
+      <PropertyRef Name="STKURESTKKOD" />
+      <PropertyRef Name="STKTEDSTKKOD" />
+      <PropertyRef Name="STKEKCHAR1" />
+      <PropertyRef Name="STKEKCHAR2" />
+      <PropertyRef Name="STKEKINT1" />
+      <PropertyRef Name="STKEKINT2" />
+      <PropertyRef Name="STKEKDATE1" />
+      <PropertyRef Name="STKEKDATE2" />
+      <PropertyRef Name="STKEKDBL1" />
+      <PropertyRef Name="STKEKDBL2" />
+    </Key>
+    <Property Name="STKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKCINSI" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKCINSI2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKCINSI3" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKBIRIM" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKBIRIM2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKBRM2CAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBRM2BOL" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBIRIM3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKBRM3CAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBRM3BOL" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBIRIM4" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKBRM4CAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBRM4BOL" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBIRIM5" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKBRM5CAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBRM5BOL" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZKOD1" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKOZKOD2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKOZKOD3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKOZKOD4" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKOZKOD5" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKKARTTIP1" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP2" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP3" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP4" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP5" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP6" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP7" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP8" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP9" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP10" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP11" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP12" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP13" Type="int" Nullable="false" />
+    <Property Name="STKKARTTIP14" Type="int" Nullable="false" />
+    <Property Name="STKBAKIYE" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBAKIYE2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBAKIYE3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBAKIYE4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBAKIYE5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKYAOFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKACIK1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKACIK2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKACIK3" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKACIK4" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKACIK5" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKGENKDVNO" Type="int" Nullable="false" />
+    <Property Name="STKGENISK1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKGENISK2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKGENISK3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKGENISK4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKGENISK5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKKRITIKSEVIYE" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOPTIMALSEVIYE" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKODEGUN" Type="int" Nullable="false" />
+    <Property Name="STKPROKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKSYFTARIHI" Type="datetime" Nullable="false" />
+    <Property Name="STKSYFSAATI" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="STKBOZULMASURESI" Type="int" Nullable="false" />
+    <Property Name="STKKULLANIMSURESI" Type="int" Nullable="false" />
+    <Property Name="STKEKSAHA1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEKSAHA2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEUAFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEPAFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEUSFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEPSFIYAT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKURTSNKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKURTBRTIP" Type="int" Nullable="false" />
+    <Property Name="STKBOLKODU" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKREYKODU" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKRAFKODU" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKCALFLAG" Type="int" Nullable="false" />
+    <Property Name="STKINDKONT" Type="int" Nullable="false" />
+    <Property Name="STKFIYDEGALFLAG" Type="int" Nullable="false" />
+    <Property Name="STKFIYDEGSATFLAG" Type="int" Nullable="false" />
+    <Property Name="STKIADEALFLAG" Type="int" Nullable="false" />
+    <Property Name="STKIADESATFLAG" Type="int" Nullable="false" />
+    <Property Name="STKMIKKONTALFLAG" Type="int" Nullable="false" />
+    <Property Name="STKMIKKONTALMIN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKMIKKONTALMAX" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKMIKKONTSATFLAG" Type="int" Nullable="false" />
+    <Property Name="STKMIKKONTSATMIN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKMIKKONTSATMAX" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKONTALFLAG" Type="int" Nullable="false" />
+    <Property Name="STKFIYKONTALMIN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKONTALMAX" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKONTSATFLAG" Type="int" Nullable="false" />
+    <Property Name="STKFIYKONTSATMIN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKONTSATMAX" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOTOGIRFIY" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="STKOTOCIKFIY" Type="varchar" MaxLength="7" Nullable="false" />
+    <Property Name="STKDOVKOD1" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKDOVTUR1" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKDOVKOD2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKDOVTUR2" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKDOVKOD3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKDOVTUR3" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKDOVKOD4" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKDOVTUR4" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKDOVKOD5" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKDOVTUR5" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKURUNSOR" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKURETKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKURETADI" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKTEDARIKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKTEDARIKADI" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKKALKONTKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKSN1EVRAKNO" Type="int" Nullable="false" />
+    <Property Name="STKSN2EVRAKNO" Type="int" Nullable="false" />
+    <Property Name="STKGRUPKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKSEVNO" Type="int" Nullable="false" />
+    <Property Name="STKOZELBAKIYE" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZELBAKIYE2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZELBAKIYE3" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZELBAKIYE4" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZELBAKIYE5" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZGIRSIPMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZGIRSIPTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZCIKSIPMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZCIKSIPTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZGIRURTMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZGIRURTTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZCIKURTMIK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZCIKURTTUT" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOTVORAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOTVTUTAR" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIREORAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKKARORAN" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKPARTIEVRAKNO" Type="int" Nullable="false" />
+    <Property Name="STKOTVVERGIKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKEKVERGIKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKURESTKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKTEDSTKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKEKCHAR1" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKEKCHAR2" Type="varchar" MaxLength="80" Nullable="false" />
+    <Property Name="STKEKINT1" Type="int" Nullable="false" />
+    <Property Name="STKEKINT2" Type="int" Nullable="false" />
+    <Property Name="STKEKDATE1" Type="datetime" Nullable="false" />
+    <Property Name="STKEKDATE2" Type="datetime" Nullable="false" />
+    <Property Name="STKEKDBL1" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEKDBL2" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'ETA_DENEME_2016.dbo.STKMIZDEGER' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="STKMIZDEGER">
+    <Key>
+      <PropertyRef Name="STKKOD" />
+      <PropertyRef Name="STKYIL" />
+      <PropertyRef Name="STKAY" />
+      <PropertyRef Name="STKRAKTIP" />
+      <PropertyRef Name="STKDOVKOD" />
+      <PropertyRef Name="STKBORC" />
+      <PropertyRef Name="STKALACAK" />
+      <PropertyRef Name="STKDEPO" />
+    </Key>
+    <Property Name="STKKOD" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="STKYIL" Type="int" Nullable="false" />
+    <Property Name="STKAY" Type="int" Nullable="false" />
+    <Property Name="STKRAKTIP" Type="int" Nullable="false" />
+    <Property Name="STKDOVKOD" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="STKBORC" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKALACAK" Type="numeric" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKDEPO" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ETA_DENEME_2016ModelStoreContainer">
+    <EntitySet Name="DEPSTKKART" EntityType="Self.DEPSTKKART" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[DEPSTKKART].[DEPSTKSTKKOD] AS [DEPSTKSTKKOD], 
+[DEPSTKKART].[DEPSTKDEPOKOD] AS [DEPSTKDEPOKOD], 
+[DEPSTKKART].[DEPSTKOZKOD1] AS [DEPSTKOZKOD1], 
+[DEPSTKKART].[DEPSTKOZKOD2] AS [DEPSTKOZKOD2], 
+[DEPSTKKART].[DEPSTKOZKOD3] AS [DEPSTKOZKOD3], 
+[DEPSTKKART].[DEPSTKOZKOD4] AS [DEPSTKOZKOD4], 
+[DEPSTKKART].[DEPSTKOZKOD5] AS [DEPSTKOZKOD5], 
+[DEPSTKKART].[DEPSTKACIK1] AS [DEPSTKACIK1], 
+[DEPSTKKART].[DEPSTKACIK2] AS [DEPSTKACIK2], 
+[DEPSTKKART].[DEPSTKACIK3] AS [DEPSTKACIK3], 
+[DEPSTKKART].[DEPSTKACIK4] AS [DEPSTKACIK4], 
+[DEPSTKKART].[DEPSTKACIK5] AS [DEPSTKACIK5], 
+[DEPSTKKART].[DEPSTKBAKIYE] AS [DEPSTKBAKIYE], 
+[DEPSTKKART].[DEPSTKBAKIYE2] AS [DEPSTKBAKIYE2], 
+[DEPSTKKART].[DEPSTKBAKIYE3] AS [DEPSTKBAKIYE3], 
+[DEPSTKKART].[DEPSTKBAKIYE4] AS [DEPSTKBAKIYE4], 
+[DEPSTKKART].[DEPSTKBAKIYE5] AS [DEPSTKBAKIYE5], 
+[DEPSTKKART].[DEPSTKYAOFIYAT] AS [DEPSTKYAOFIYAT], 
+[DEPSTKKART].[DEPSTKKRITIKSEVIYE] AS [DEPSTKKRITIKSEVIYE], 
+[DEPSTKKART].[DEPSTKOPTIMALSEVIYE] AS [DEPSTKOPTIMALSEVIYE], 
+[DEPSTKKART].[DEPSTKBOLKODU] AS [DEPSTKBOLKODU], 
+[DEPSTKKART].[DEPSTKREYKODU] AS [DEPSTKREYKODU], 
+[DEPSTKKART].[DEPSTKRAFKODU] AS [DEPSTKRAFKODU], 
+[DEPSTKKART].[DEPSTKCALFLAG] AS [DEPSTKCALFLAG], 
+[DEPSTKKART].[DEPSTKOZELBAKIYE] AS [DEPSTKOZELBAKIYE], 
+[DEPSTKKART].[DEPSTKOZELBAKIYE2] AS [DEPSTKOZELBAKIYE2], 
+[DEPSTKKART].[DEPSTKOZELBAKIYE3] AS [DEPSTKOZELBAKIYE3], 
+[DEPSTKKART].[DEPSTKOZELBAKIYE4] AS [DEPSTKOZELBAKIYE4], 
+[DEPSTKKART].[DEPSTKOZELBAKIYE5] AS [DEPSTKOZELBAKIYE5], 
+[DEPSTKKART].[DEPSTKREZGIRSIPMIK] AS [DEPSTKREZGIRSIPMIK], 
+[DEPSTKKART].[DEPSTKREZGIRSIPTUT] AS [DEPSTKREZGIRSIPTUT], 
+[DEPSTKKART].[DEPSTKREZCIKSIPMIK] AS [DEPSTKREZCIKSIPMIK], 
+[DEPSTKKART].[DEPSTKREZCIKSIPTUT] AS [DEPSTKREZCIKSIPTUT], 
+[DEPSTKKART].[DEPSTKREZGIRURTMIK] AS [DEPSTKREZGIRURTMIK], 
+[DEPSTKKART].[DEPSTKREZGIRURTTUT] AS [DEPSTKREZGIRURTTUT], 
+[DEPSTKKART].[DEPSTKREZCIKURTMIK] AS [DEPSTKREZCIKURTMIK], 
+[DEPSTKKART].[DEPSTKREZCIKURTTUT] AS [DEPSTKREZCIKURTTUT]
+FROM [dbo].[DEPSTKKART] AS [DEPSTKKART]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FATFIS" EntityType="Self.FATFIS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[FATFIS].[FATFISTAR] AS [FATFISTAR], 
+[FATFIS].[FATFISREFNO] AS [FATFISREFNO], 
+[FATFIS].[FATFISTIPI] AS [FATFISTIPI], 
+[FATFIS].[FATFISGCFLAG] AS [FATFISGCFLAG], 
+[FATFIS].[FATFISKAYONC] AS [FATFISKAYONC], 
+[FATFIS].[FATFISIPTALFLAG] AS [FATFISIPTALFLAG], 
+[FATFIS].[FATFISKAYNAK] AS [FATFISKAYNAK], 
+[FATFIS].[FATFISSTKREFNO] AS [FATFISSTKREFNO], 
+[FATFIS].[FATFISCARREFNO] AS [FATFISCARREFNO], 
+[FATFIS].[FATFISMUHREFNO] AS [FATFISMUHREFNO], 
+[FATFIS].[FATFISKASREFNO] AS [FATFISKASREFNO], 
+[FATFIS].[FATFISBANREFNO] AS [FATFISBANREFNO], 
+[FATFIS].[FATFISKAPFLAG] AS [FATFISKAPFLAG], 
+[FATFIS].[FATFISBASFLAG] AS [FATFISBASFLAG], 
+[FATFIS].[FATFISOZELFIS] AS [FATFISOZELFIS], 
+[FATFIS].[FATFISDEPOFLAG] AS [FATFISDEPOFLAG], 
+[FATFIS].[FATFISIADEFLAG] AS [FATFISIADEFLAG], 
+[FATFIS].[FATFISKDVDAHILFLAG] AS [FATFISKDVDAHILFLAG], 
+[FATFIS].[FATFISTEVKIFATFLAG] AS [FATFISTEVKIFATFLAG], 
+[FATFIS].[FATFISANADEPO] AS [FATFISANADEPO], 
+[FATFIS].[FATFISPARTIKOD] AS [FATFISPARTIKOD], 
+[FATFIS].[FATFISODEMEKOD] AS [FATFISODEMEKOD], 
+[FATFIS].[FATFISSATKOD] AS [FATFISSATKOD], 
+[FATFIS].[FATFISMASMER] AS [FATFISMASMER], 
+[FATFIS].[FATFISCARKOD] AS [FATFISCARKOD], 
+[FATFIS].[FATFISCARUNVAN] AS [FATFISCARUNVAN], 
+[FATFIS].[FATFISADRESNO] AS [FATFISADRESNO], 
+[FATFIS].[FATFISADRES1] AS [FATFISADRES1], 
+[FATFIS].[FATFISADRES2] AS [FATFISADRES2], 
+[FATFIS].[FATFISADRES3] AS [FATFISADRES3], 
+[FATFIS].[FATFISPOSTAKOD] AS [FATFISPOSTAKOD], 
+[FATFIS].[FATFISULKE] AS [FATFISULKE], 
+[FATFIS].[FATFISIL] AS [FATFISIL], 
+[FATFIS].[FATFISILCE] AS [FATFISILCE], 
+[FATFIS].[FATFISVERDAIRE] AS [FATFISVERDAIRE], 
+[FATFIS].[FATFISVERHESNO] AS [FATFISVERHESNO], 
+[FATFIS].[FATFISSAAT] AS [FATFISSAAT], 
+[FATFIS].[FATFISVADETAR] AS [FATFISVADETAR], 
+[FATFIS].[FATFISKDVVADETAR] AS [FATFISKDVVADETAR], 
+[FATFIS].[FATFISIRSTAR] AS [FATFISIRSTAR], 
+[FATFIS].[FATFISIRSNO] AS [FATFISIRSNO], 
+[FATFIS].[FATFISEVRAKNO1] AS [FATFISEVRAKNO1], 
+[FATFIS].[FATFISEVRAKNO2] AS [FATFISEVRAKNO2], 
+[FATFIS].[FATFISEVRAKNO3] AS [FATFISEVRAKNO3], 
+[FATFIS].[FATFISOZKOD1] AS [FATFISOZKOD1], 
+[FATFIS].[FATFISOZKOD2] AS [FATFISOZKOD2], 
+[FATFIS].[FATFISOZKOD3] AS [FATFISOZKOD3], 
+[FATFIS].[FATFISACIKLAMA1] AS [FATFISACIKLAMA1], 
+[FATFIS].[FATFISACIKLAMA2] AS [FATFISACIKLAMA2], 
+[FATFIS].[FATFISACIKLAMA3] AS [FATFISACIKLAMA3], 
+[FATFIS].[FATFISHAZKOD] AS [FATFISHAZKOD], 
+[FATFIS].[FATFISHAZTAR] AS [FATFISHAZTAR], 
+[FATFIS].[FATFISHAZNOT] AS [FATFISHAZNOT], 
+[FATFIS].[FATFISKONTKOD] AS [FATFISKONTKOD], 
+[FATFIS].[FATFISKONTTAR] AS [FATFISKONTTAR], 
+[FATFIS].[FATFISKONTNOT] AS [FATFISKONTNOT], 
+[FATFIS].[FATFISONAYKOD] AS [FATFISONAYKOD], 
+[FATFIS].[FATFISONAYTAR] AS [FATFISONAYTAR], 
+[FATFIS].[FATFISONAYNOT] AS [FATFISONAYNOT], 
+[FATFIS].[FATFISKDVORANI] AS [FATFISKDVORANI], 
+[FATFIS].[FATFISMALTOP] AS [FATFISMALTOP], 
+[FATFIS].[FATFISKALINDYTOP] AS [FATFISKALINDYTOP], 
+[FATFIS].[FATFISKALINDTTOP] AS [FATFISKALINDTTOP], 
+[FATFIS].[FATFISSATINDTOP] AS [FATFISSATINDTOP], 
+[FATFIS].[FATFISGENINDTOP] AS [FATFISGENINDTOP], 
+[FATFIS].[FATFISSATMASTOP] AS [FATFISSATMASTOP], 
+[FATFIS].[FATFISGENMASTOP] AS [FATFISGENMASTOP], 
+[FATFIS].[FATFISBRUTTOPLAM] AS [FATFISBRUTTOPLAM], 
+[FATFIS].[FATFISKDVMATRAHI] AS [FATFISKDVMATRAHI], 
+[FATFIS].[FATFISKDVTUTARI] AS [FATFISKDVTUTARI], 
+[FATFIS].[FATFISARATOPLAM] AS [FATFISARATOPLAM], 
+[FATFIS].[FATFISKDVALTIINDTOP] AS [FATFISKDVALTIINDTOP], 
+[FATFIS].[FATFISKDVALTIEKTOP] AS [FATFISKDVALTIEKTOP], 
+[FATFIS].[FATFISGENTOPLAM] AS [FATFISGENTOPLAM], 
+[FATFIS].[FATFISTEVTUTAR] AS [FATFISTEVTUTAR], 
+[FATFIS].[FATFISDOVTAR] AS [FATFISDOVTAR], 
+[FATFIS].[FATFISDOVKOD] AS [FATFISDOVKOD], 
+[FATFIS].[FATFISDOVTUR] AS [FATFISDOVTUR], 
+[FATFIS].[FATFISDOVKUR] AS [FATFISDOVKUR], 
+[FATFIS].[FATFISGENDOVTOP] AS [FATFISGENDOVTOP], 
+[FATFIS].[FATFISTEVNO] AS [FATFISTEVNO], 
+[FATFIS].[FATFISTEVORAN] AS [FATFISTEVORAN], 
+[FATFIS].[FATFISSEVNO] AS [FATFISSEVNO], 
+[FATFIS].[FATFISISYKOD] AS [FATFISISYKOD], 
+[FATFIS].[FATFISOTVFLAG] AS [FATFISOTVFLAG], 
+[FATFIS].[FATFISOTVKDVBLOKAJ] AS [FATFISOTVKDVBLOKAJ], 
+[FATFIS].[FATFISTOPOTV] AS [FATFISTOPOTV], 
+[FATFIS].[FATFISTOPOTUT] AS [FATFISTOPOTUT], 
+[FATFIS].[FATFISTCKIMLIKNO] AS [FATFISTCKIMLIKNO], 
+[FATFIS].[FATFISTRNTAR] AS [FATFISTRNTAR], 
+[FATFIS].[FATFISTRNREFNO] AS [FATFISTRNREFNO], 
+[FATFIS].[FATFISTRNTIPI] AS [FATFISTRNTIPI], 
+[FATFIS].[FATFISEFATFLAG] AS [FATFISEFATFLAG], 
+[FATFIS].[FATFISEKVERGIINDTOP] AS [FATFISEKVERGIINDTOP], 
+[FATFIS].[FATFISEKVERGIILVTOP] AS [FATFISEKVERGIILVTOP], 
+[FATFIS].[FATFISEKVERGITOP] AS [FATFISEKVERGITOP]
+FROM [dbo].[FATFIS] AS [FATFIS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FATFISTIP" EntityType="Self.FATFISTIP" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[FATFISTIP].[FATFTMODUL] AS [FATFTMODUL], 
+[FATFISTIP].[FATFTNO] AS [FATFTNO], 
+[FATFISTIP].[FATFTKOD] AS [FATFTKOD], 
+[FATFISTIP].[FATFTACIKLAMA] AS [FATFTACIKLAMA], 
+[FATFISTIP].[FATFTONAY] AS [FATFTONAY], 
+[FATFISTIP].[FATFTEVRAKNO] AS [FATFTEVRAKNO], 
+[FATFISTIP].[FATFTDIZDOS] AS [FATFTDIZDOS], 
+[FATFISTIP].[FATFTMUHGRUP] AS [FATFTMUHGRUP], 
+[FATFISTIP].[FATFTSTKFTNO] AS [FATFTSTKFTNO], 
+[FATFISTIP].[FATFTCARFTNO] AS [FATFTCARFTNO], 
+[FATFISTIP].[FATFTMUHFTNO] AS [FATFTMUHFTNO], 
+[FATFISTIP].[FATFTKASFTNO] AS [FATFTKASFTNO], 
+[FATFISTIP].[FATFTBANFTNO] AS [FATFTBANFTNO], 
+[FATFISTIP].[FATFTKDVDAHIL] AS [FATFTKDVDAHIL], 
+[FATFISTIP].[FATFTKAPALI] AS [FATFTKAPALI], 
+[FATFISTIP].[FATFTTEVNO] AS [FATFTTEVNO], 
+[FATFISTIP].[FATFTISLGRPNO] AS [FATFTISLGRPNO], 
+[FATFISTIP].[FATFTCARMUHGRUP] AS [FATFTCARMUHGRUP], 
+[FATFISTIP].[FATFTMAXSATIR] AS [FATFTMAXSATIR], 
+[FATFISTIP].[FATFTOTVFLAG] AS [FATFTOTVFLAG], 
+[FATFISTIP].[FATFTKDVOTVBLOKAJ] AS [FATFTKDVOTVBLOKAJ], 
+[FATFISTIP].[FATFTEEVRAKNO] AS [FATFTEEVRAKNO]
+FROM [dbo].[FATFISTIP] AS [FATFISTIP]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FATFISTOPLAM" EntityType="Self.FATFISTOPLAM" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[FATFISTOPLAM].[FFTTAR] AS [FFTTAR], 
+[FATFISTOPLAM].[FFTREFNO] AS [FFTREFNO], 
+[FATFISTOPLAM].[FFTTIPI] AS [FFTTIPI], 
+[FATFISTOPLAM].[FFTGCFLAG] AS [FFTGCFLAG], 
+[FATFISTOPLAM].[FFTKAYONC] AS [FFTKAYONC], 
+[FATFISTOPLAM].[FFTIPTALFLAG] AS [FFTIPTALFLAG], 
+[FATFISTOPLAM].[FFTKAYNAK] AS [FFTKAYNAK], 
+[FATFISTOPLAM].[FFTIADEFLAG] AS [FFTIADEFLAG], 
+[FATFISTOPLAM].[FFTKDVDAHILFLAG] AS [FFTKDVDAHILFLAG], 
+[FATFISTOPLAM].[FFTCARKOD] AS [FFTCARKOD], 
+[FATFISTOPLAM].[FFTEVRAKNO1] AS [FFTEVRAKNO1], 
+[FATFISTOPLAM].[FFTEVRAKNO2] AS [FFTEVRAKNO2], 
+[FATFISTOPLAM].[FFTEVRAKNO3] AS [FFTEVRAKNO3], 
+[FATFISTOPLAM].[FFTKONU] AS [FFTKONU], 
+[FATFISTOPLAM].[FFTBASLIK] AS [FFTBASLIK], 
+[FATFISTOPLAM].[FFTTUTAR] AS [FFTTUTAR], 
+[FATFISTOPLAM].[FFTONCELIK] AS [FFTONCELIK], 
+[FATFISTOPLAM].[FFTFORMUL] AS [FFTFORMUL], 
+[FATFISTOPLAM].[FFTMATRAH] AS [FFTMATRAH], 
+[FATFISTOPLAM].[FFTORAN] AS [FFTORAN], 
+[FATFISTOPLAM].[FFTKDVORAN] AS [FFTKDVORAN], 
+[FATFISTOPLAM].[FFTDOVKOD] AS [FFTDOVKOD], 
+[FATFISTOPLAM].[FFTDOVTUR] AS [FFTDOVTUR], 
+[FATFISTOPLAM].[FFTDOVTUTAR] AS [FFTDOVTUTAR], 
+[FATFISTOPLAM].[FFTVADETAR] AS [FFTVADETAR], 
+[FATFISTOPLAM].[FFTTAMSAYI1] AS [FFTTAMSAYI1], 
+[FATFISTOPLAM].[FFTTAMSAYI2] AS [FFTTAMSAYI2], 
+[FATFISTOPLAM].[FFTTAMSAYI3] AS [FFTTAMSAYI3], 
+[FATFISTOPLAM].[FFTKOSUL] AS [FFTKOSUL], 
+[FATFISTOPLAM].[FFTACIKLAMA1] AS [FFTACIKLAMA1], 
+[FATFISTOPLAM].[FFTSAYI1] AS [FFTSAYI1], 
+[FATFISTOPLAM].[FFTVADESAYI] AS [FFTVADESAYI], 
+[FATFISTOPLAM].[FFTKARTKOD] AS [FFTKARTKOD], 
+[FATFISTOPLAM].[FFTEFATFLAG] AS [FFTEFATFLAG]
+FROM [dbo].[FATFISTOPLAM] AS [FATFISTOPLAM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="FATHAR" EntityType="Self.FATHAR" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[FATHAR].[FATHARTAR] AS [FATHARTAR], 
+[FATHAR].[FATHARREFNO] AS [FATHARREFNO], 
+[FATHAR].[FATHARTIPI] AS [FATHARTIPI], 
+[FATHAR].[FATHARGCFLAG] AS [FATHARGCFLAG], 
+[FATHAR].[FATHARKAYONC] AS [FATHARKAYONC], 
+[FATHAR].[FATHARIPTALFLAG] AS [FATHARIPTALFLAG], 
+[FATHAR].[FATHARKAYNAK] AS [FATHARKAYNAK], 
+[FATHAR].[FATHARIADE] AS [FATHARIADE], 
+[FATHAR].[FATHARCARKOD] AS [FATHARCARKOD], 
+[FATHAR].[FATHARSIRANO] AS [FATHARSIRANO], 
+[FATHAR].[FATHARKODTIP] AS [FATHARKODTIP], 
+[FATHAR].[FATHARSTKKOD] AS [FATHARSTKKOD], 
+[FATHAR].[FATHARSTKCINS] AS [FATHARSTKCINS], 
+[FATHAR].[FATHARSTKBRM] AS [FATHARSTKBRM], 
+[FATHAR].[FATHARDEPOKOD] AS [FATHARDEPOKOD], 
+[FATHAR].[FATHARBARKOD] AS [FATHARBARKOD], 
+[FATHAR].[FATHAROZDESKOD] AS [FATHAROZDESKOD], 
+[FATHAR].[FATHARBENZERKOD] AS [FATHARBENZERKOD], 
+[FATHAR].[FATHARMIKTAR] AS [FATHARMIKTAR], 
+[FATHAR].[FATHARMIKTAR2] AS [FATHARMIKTAR2], 
+[FATHAR].[FATHARMIKTAR3] AS [FATHARMIKTAR3], 
+[FATHAR].[FATHARMIKTAR4] AS [FATHARMIKTAR4], 
+[FATHAR].[FATHARMIKTAR5] AS [FATHARMIKTAR5], 
+[FATHAR].[FATHARFIYTIP] AS [FATHARFIYTIP], 
+[FATHAR].[FATHARFIYAT] AS [FATHARFIYAT], 
+[FATHAR].[FATHARTUTAR] AS [FATHARTUTAR], 
+[FATHAR].[FATHARDOVKOD] AS [FATHARDOVKOD], 
+[FATHAR].[FATHARDOVTUR] AS [FATHARDOVTUR], 
+[FATHAR].[FATHARDOVTUTAR] AS [FATHARDOVTUTAR], 
+[FATHAR].[FATHAROZKOD] AS [FATHAROZKOD], 
+[FATHAR].[FATHARACIKLAMA] AS [FATHARACIKLAMA], 
+[FATHAR].[FATHARKDVYUZ] AS [FATHARKDVYUZ], 
+[FATHAR].[FATHARISKYUZ1] AS [FATHARISKYUZ1], 
+[FATHAR].[FATHARISKYUZ2] AS [FATHARISKYUZ2], 
+[FATHAR].[FATHARISKYUZ3] AS [FATHARISKYUZ3], 
+[FATHAR].[FATHARISKYUZ4] AS [FATHARISKYUZ4], 
+[FATHAR].[FATHARISKYUZ5] AS [FATHARISKYUZ5], 
+[FATHAR].[FATHARISKYTUT1] AS [FATHARISKYTUT1], 
+[FATHAR].[FATHARISKYTUT2] AS [FATHARISKYTUT2], 
+[FATHAR].[FATHARISKYTUT3] AS [FATHARISKYTUT3], 
+[FATHAR].[FATHARISKYTUT4] AS [FATHARISKYTUT4], 
+[FATHAR].[FATHARISKYTUT5] AS [FATHARISKYTUT5], 
+[FATHAR].[FATHARISKGTUT1] AS [FATHARISKGTUT1], 
+[FATHAR].[FATHARISKGTUT2] AS [FATHARISKGTUT2], 
+[FATHAR].[FATHARISKGTUT3] AS [FATHARISKGTUT3], 
+[FATHAR].[FATHARISKGTUT4] AS [FATHARISKGTUT4], 
+[FATHAR].[FATHARISKGTUT5] AS [FATHARISKGTUT5], 
+[FATHAR].[FATHARDIGERIND] AS [FATHARDIGERIND], 
+[FATHAR].[FATHARTOPLAMIND] AS [FATHARTOPLAMIND], 
+[FATHAR].[FATHARKDVMATRAH] AS [FATHARKDVMATRAH], 
+[FATHAR].[FATHARKDVTUTAR] AS [FATHARKDVTUTAR], 
+[FATHAR].[FATHARTOPLAMTUT] AS [FATHARTOPLAMTUT], 
+[FATHAR].[FATHARVADETAR] AS [FATHARVADETAR], 
+[FATHAR].[FATHARACIKLAMA1] AS [FATHARACIKLAMA1], 
+[FATHAR].[FATHARACIKLAMA2] AS [FATHARACIKLAMA2], 
+[FATHAR].[FATHARACIKLAMA3] AS [FATHARACIKLAMA3], 
+[FATHAR].[FATHARPARTINO] AS [FATHARPARTINO], 
+[FATHAR].[FATHARMASMER] AS [FATHARMASMER], 
+[FATHAR].[FATHARSERINO1] AS [FATHARSERINO1], 
+[FATHAR].[FATHARSERINO2] AS [FATHARSERINO2], 
+[FATHAR].[FATHARRB1] AS [FATHARRB1], 
+[FATHAR].[FATHARRB2] AS [FATHARRB2], 
+[FATHAR].[FATHARRB3] AS [FATHARRB3], 
+[FATHAR].[FATHARRB4] AS [FATHARRB4], 
+[FATHAR].[FATHARRB5] AS [FATHARRB5], 
+[FATHAR].[FATHARSATKOD] AS [FATHARSATKOD], 
+[FATHAR].[FATHARODEMEKOD] AS [FATHARODEMEKOD], 
+[FATHAR].[FATHARTOPLAMMAS] AS [FATHARTOPLAMMAS], 
+[FATHAR].[FATHARNETTUTAR] AS [FATHARNETTUTAR], 
+[FATHAR].[FATHARNETFIYAT] AS [FATHARNETFIYAT], 
+[FATHAR].[FATHARMALIYET] AS [FATHARMALIYET], 
+[FATHAR].[FATHAROTVMATRAH] AS [FATHAROTVMATRAH], 
+[FATHAR].[FATHAROTVORAN] AS [FATHAROTVORAN], 
+[FATHAR].[FATHAROTVFIYAT] AS [FATHAROTVFIYAT], 
+[FATHAR].[FATHARTOPOTV] AS [FATHARTOPOTV], 
+[FATHAR].[FATHAROTVTUTAR] AS [FATHAROTVTUTAR], 
+[FATHAR].[FATHARMUHKOD] AS [FATHARMUHKOD], 
+[FATHAR].[FATHARMUHYANIND] AS [FATHARMUHYANIND], 
+[FATHAR].[FATHARMUHYANMAS] AS [FATHARMUHYANMAS], 
+[FATHAR].[FATHARDOVFIYAT] AS [FATHARDOVFIYAT], 
+[FATHAR].[FATHAREBTEN] AS [FATHAREBTEN], 
+[FATHAR].[FATHAREBTBOY] AS [FATHAREBTBOY], 
+[FATHAR].[FATHAREBTYUK] AS [FATHAREBTYUK], 
+[FATHAR].[FATHAREBTHCM] AS [FATHAREBTHCM], 
+[FATHAR].[FATHAREBTAGR] AS [FATHAREBTAGR], 
+[FATHAR].[FATHAREKCHAR1] AS [FATHAREKCHAR1], 
+[FATHAR].[FATHAREKCHAR2] AS [FATHAREKCHAR2], 
+[FATHAR].[FATHAREKINT1] AS [FATHAREKINT1], 
+[FATHAR].[FATHAREKINT2] AS [FATHAREKINT2], 
+[FATHAR].[FATHAREKDATE1] AS [FATHAREKDATE1], 
+[FATHAR].[FATHAREKDATE2] AS [FATHAREKDATE2], 
+[FATHAR].[FATHAREKTUT1] AS [FATHAREKTUT1], 
+[FATHAR].[FATHAREKTUT2] AS [FATHAREKTUT2], 
+[FATHAR].[FATHAREKMIK1] AS [FATHAREKMIK1], 
+[FATHAR].[FATHAREKMIK2] AS [FATHAREKMIK2], 
+[FATHAR].[FATHAREKDOVTUT1] AS [FATHAREKDOVTUT1], 
+[FATHAR].[FATHAREKDOVTUT2] AS [FATHAREKDOVTUT2], 
+[FATHAR].[FATHAREKORAN1] AS [FATHAREKORAN1], 
+[FATHAR].[FATHAREKORAN2] AS [FATHAREKORAN2], 
+[FATHAR].[FATHARDOVKUR] AS [FATHARDOVKUR], 
+[FATHAR].[FATHAREFATFLAG] AS [FATHAREFATFLAG], 
+[FATHAR].[FATHAROTVVERKOD] AS [FATHAROTVVERKOD], 
+[FATHAR].[FATHAREKVERGI] AS [FATHAREKVERGI]
+FROM [dbo].[FATHAR] AS [FATHAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="HARREFNO" EntityType="Self.HARREFNO" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[HARREFNO].[HARREFMODUL] AS [HARREFMODUL], 
+[HARREFNO].[HARREFKONU] AS [HARREFKONU], 
+[HARREFNO].[HARREFDEGER] AS [HARREFDEGER]
+FROM [dbo].[HARREFNO] AS [HARREFNO]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="SIRKETLOG" EntityType="Self.SIRKETLOG" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[SIRKETLOG].[SIRLOGMODUL] AS [SIRLOGMODUL], 
+[SIRKETLOG].[SIRLOGKONU] AS [SIRLOGKONU], 
+[SIRKETLOG].[SIRLOGKYTTIPI] AS [SIRLOGKYTTIPI], 
+[SIRKETLOG].[SIRLOGKYTKODU] AS [SIRLOGKYTKODU], 
+[SIRKETLOG].[SIRLOGKYTKODU2] AS [SIRLOGKYTKODU2], 
+[SIRKETLOG].[SIRLOGKYTREFNO] AS [SIRLOGKYTREFNO], 
+[SIRKETLOG].[SIRLOGKYTREFNO2] AS [SIRLOGKYTREFNO2], 
+[SIRKETLOG].[SIRLOGILKKULKOD] AS [SIRLOGILKKULKOD], 
+[SIRKETLOG].[SIRLOGILKTAR] AS [SIRLOGILKTAR], 
+[SIRKETLOG].[SIRLOGSONKULKOD] AS [SIRLOGSONKULKOD], 
+[SIRKETLOG].[SIRLOGSONTAR] AS [SIRLOGSONTAR], 
+[SIRKETLOG].[SIRLOGMUHINT1] AS [SIRLOGMUHINT1], 
+[SIRKETLOG].[SIRLOGMUHINT2] AS [SIRLOGMUHINT2], 
+[SIRKETLOG].[SIRLOGMUHINT3] AS [SIRLOGMUHINT3], 
+[SIRKETLOG].[SIRLOGMUHINT4] AS [SIRLOGMUHINT4], 
+[SIRKETLOG].[SIRLOGMUHINT5] AS [SIRLOGMUHINT5], 
+[SIRKETLOG].[SIRLOGMUHNUM1] AS [SIRLOGMUHNUM1], 
+[SIRKETLOG].[SIRLOGMUHNUM2] AS [SIRLOGMUHNUM2], 
+[SIRKETLOG].[SIRLOGMUHNUM3] AS [SIRLOGMUHNUM3], 
+[SIRKETLOG].[SIRLOGMUHNUM4] AS [SIRLOGMUHNUM4], 
+[SIRKETLOG].[SIRLOGMUHNUM5] AS [SIRLOGMUHNUM5], 
+[SIRKETLOG].[SIRLOGMUHTAR1] AS [SIRLOGMUHTAR1], 
+[SIRKETLOG].[SIRLOGMUHTAR2] AS [SIRLOGMUHTAR2], 
+[SIRKETLOG].[SIRLOGMUHTAR3] AS [SIRLOGMUHTAR3], 
+[SIRKETLOG].[SIRLOGMUHTAR4] AS [SIRLOGMUHTAR4], 
+[SIRKETLOG].[SIRLOGMUHTAR5] AS [SIRLOGMUHTAR5], 
+[SIRKETLOG].[SIRLOGMUHACK1] AS [SIRLOGMUHACK1], 
+[SIRKETLOG].[SIRLOGMUHACK2] AS [SIRLOGMUHACK2], 
+[SIRKETLOG].[SIRLOGMUHACK3] AS [SIRLOGMUHACK3], 
+[SIRKETLOG].[SIRLOGMUHACK4] AS [SIRLOGMUHACK4], 
+[SIRKETLOG].[SIRLOGMUHACK5] AS [SIRLOGMUHACK5]
+FROM [dbo].[SIRKETLOG] AS [SIRKETLOG]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKBARKOD" EntityType="Self.STKBARKOD" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKBARKOD].[STKBARKOD] AS [STKBARKOD], 
+[STKBARKOD].[STKBARSTKKOD] AS [STKBARSTKKOD], 
+[STKBARKOD].[STKBARBRMNO] AS [STKBARBRMNO], 
+[STKBARKOD].[STKBARKATSAYI] AS [STKBARKATSAYI], 
+[STKBARKOD].[STKBARTIP] AS [STKBARTIP], 
+[STKBARKOD].[STKBARYAPINO] AS [STKBARYAPINO], 
+[STKBARKOD].[STKBARBOYUT1] AS [STKBARBOYUT1], 
+[STKBARKOD].[STKBARBOYUT2] AS [STKBARBOYUT2], 
+[STKBARKOD].[STKBARBOYUT3] AS [STKBARBOYUT3], 
+[STKBARKOD].[STKBARBOYUT4] AS [STKBARBOYUT4], 
+[STKBARKOD].[STKBARBOYUT5] AS [STKBARBOYUT5], 
+[STKBARKOD].[STKBARFIYTIP] AS [STKBARFIYTIP], 
+[STKBARKOD].[STKBARITEMNO] AS [STKBARITEMNO]
+FROM [dbo].[STKBARKOD] AS [STKBARKOD]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKBIRIM" EntityType="Self.STKBIRIM" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKBIRIM].[STKBIRIMKOD] AS [STKBIRIMKOD], 
+[STKBIRIM].[STKBIRIMAD] AS [STKBIRIMAD], 
+[STKBIRIM].[STKBIRIMCARPAN] AS [STKBIRIMCARPAN], 
+[STKBIRIM].[STKBIRIMBOLEN] AS [STKBIRIMBOLEN]
+FROM [dbo].[STKBIRIM] AS [STKBIRIM]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKBOYFIYAT" EntityType="Self.STKBOYFIYAT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKBOYFIYAT].[STKBOYFIYSTKKOD] AS [STKBOYFIYSTKKOD], 
+[STKBOYFIYAT].[STKBOYFIYDEPKOD] AS [STKBOYFIYDEPKOD], 
+[STKBOYFIYAT].[STKBOYFIYBOYUT1] AS [STKBOYFIYBOYUT1], 
+[STKBOYFIYAT].[STKBOYFIYBOYUT2] AS [STKBOYFIYBOYUT2], 
+[STKBOYFIYAT].[STKBOYFIYBOYUT3] AS [STKBOYFIYBOYUT3], 
+[STKBOYFIYAT].[STKBOYFIYBOYUT4] AS [STKBOYFIYBOYUT4], 
+[STKBOYFIYAT].[STKBOYFIYBOYUT5] AS [STKBOYFIYBOYUT5], 
+[STKBOYFIYAT].[STKBOYFIYNO] AS [STKBOYFIYNO], 
+[STKBOYFIYAT].[STKBOYFIYTUTAR] AS [STKBOYFIYTUTAR]
+FROM [dbo].[STKBOYFIYAT] AS [STKBOYFIYAT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKBOYUT" EntityType="Self.STKBOYUT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKBOYUT].[STKBOYSTOKKOD] AS [STKBOYSTOKKOD], 
+[STKBOYUT].[STKBOYDEPOKOD] AS [STKBOYDEPOKOD], 
+[STKBOYUT].[STKBOYBOYUT1] AS [STKBOYBOYUT1], 
+[STKBOYUT].[STKBOYBOYUT2] AS [STKBOYBOYUT2], 
+[STKBOYUT].[STKBOYBOYUT3] AS [STKBOYBOYUT3], 
+[STKBOYUT].[STKBOYBOYUT4] AS [STKBOYBOYUT4], 
+[STKBOYUT].[STKBOYBOYUT5] AS [STKBOYBOYUT5], 
+[STKBOYUT].[STKBOYDEVIR] AS [STKBOYDEVIR], 
+[STKBOYUT].[STKBOYGIREN] AS [STKBOYGIREN], 
+[STKBOYUT].[STKBOYCIKAN] AS [STKBOYCIKAN], 
+[STKBOYUT].[STKBOYBAKIYE] AS [STKBOYBAKIYE], 
+[STKBOYUT].[STKBOYACIKLAMA] AS [STKBOYACIKLAMA], 
+[STKBOYUT].[STKBOYOZELKOD] AS [STKBOYOZELKOD], 
+[STKBOYUT].[STKBOYGIRSIPMIK] AS [STKBOYGIRSIPMIK], 
+[STKBOYUT].[STKBOYCIKSIPMIK] AS [STKBOYCIKSIPMIK], 
+[STKBOYUT].[STKBOYGIRURTMIK] AS [STKBOYGIRURTMIK], 
+[STKBOYUT].[STKBOYCIKURTMIK] AS [STKBOYCIKURTMIK]
+FROM [dbo].[STKBOYUT] AS [STKBOYUT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKDETAY" EntityType="Self.STKDETAY" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKDETAY].[STKDETBKOD] AS [STKDETBKOD], 
+[STKDETAY].[STKDETSKOD] AS [STKDETSKOD], 
+[STKDETAY].[STKDETTIP] AS [STKDETTIP], 
+[STKDETAY].[STKDETITEMNO] AS [STKDETITEMNO]
+FROM [dbo].[STKDETAY] AS [STKDETAY]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKFIS" EntityType="Self.STKFIS" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKFIS].[STKFISTAR] AS [STKFISTAR], 
+[STKFIS].[STKFISREFNO] AS [STKFISREFNO], 
+[STKFIS].[STKFISTIPI] AS [STKFISTIPI], 
+[STKFIS].[STKFISGCFLAG] AS [STKFISGCFLAG], 
+[STKFIS].[STKFISKAYONC] AS [STKFISKAYONC], 
+[STKFIS].[STKFISDEPO] AS [STKFISDEPO], 
+[STKFIS].[STKFISOZELFIS] AS [STKFISOZELFIS], 
+[STKFIS].[STKFISIADE] AS [STKFISIADE], 
+[STKFIS].[STKFISKAYNAK] AS [STKFISKAYNAK], 
+[STKFIS].[STKFISCARKOD] AS [STKFISCARKOD], 
+[STKFIS].[STKFISREFNO2] AS [STKFISREFNO2], 
+[STKFIS].[STKFISANADEPO] AS [STKFISANADEPO], 
+[STKFIS].[STKFISKARDEPO] AS [STKFISKARDEPO], 
+[STKFIS].[STKFISOZKOD1] AS [STKFISOZKOD1], 
+[STKFIS].[STKFISOZKOD2] AS [STKFISOZKOD2], 
+[STKFIS].[STKFISOZKOD3] AS [STKFISOZKOD3], 
+[STKFIS].[STKFISACIKLAMA1] AS [STKFISACIKLAMA1], 
+[STKFIS].[STKFISACIKLAMA2] AS [STKFISACIKLAMA2], 
+[STKFIS].[STKFISACIKLAMA3] AS [STKFISACIKLAMA3], 
+[STKFIS].[STKFISEVRAKNO1] AS [STKFISEVRAKNO1], 
+[STKFIS].[STKFISEVRAKNO2] AS [STKFISEVRAKNO2], 
+[STKFIS].[STKFISEVRAKNO3] AS [STKFISEVRAKNO3], 
+[STKFIS].[STKFISDOVTAR] AS [STKFISDOVTAR], 
+[STKFIS].[STKFISPARTIKOD] AS [STKFISPARTIKOD], 
+[STKFIS].[STKFISMASMER] AS [STKFISMASMER], 
+[STKFIS].[STKFISTOPBTUT] AS [STKFISTOPBTUT], 
+[STKFIS].[STKFISTOPISK] AS [STKFISTOPISK], 
+[STKFIS].[STKFISTOPNTUT] AS [STKFISTOPNTUT], 
+[STKFIS].[STKFISTOPKDV] AS [STKFISTOPKDV], 
+[STKFIS].[STKFISTOPKTUT] AS [STKFISTOPKTUT], 
+[STKFIS].[STKFISSEVNO] AS [STKFISSEVNO], 
+[STKFIS].[STKFISISYKOD] AS [STKFISISYKOD], 
+[STKFIS].[STKFISOTVFLAG] AS [STKFISOTVFLAG], 
+[STKFIS].[STKFISTOPOTV] AS [STKFISTOPOTV], 
+[STKFIS].[STKFISTOPOTUT] AS [STKFISTOPOTUT], 
+[STKFIS].[STKFISDOVKOD] AS [STKFISDOVKOD], 
+[STKFIS].[STKFISDOVTUR] AS [STKFISDOVTUR], 
+[STKFIS].[STKFISDOVKUR] AS [STKFISDOVKUR], 
+[STKFIS].[STKFISDOVTOP] AS [STKFISDOVTOP], 
+[STKFIS].[STKFISTRNTAR] AS [STKFISTRNTAR], 
+[STKFIS].[STKFISTRNREFNO] AS [STKFISTRNREFNO], 
+[STKFIS].[STKFISTRNTIPI] AS [STKFISTRNTIPI]
+FROM [dbo].[STKFIS] AS [STKFIS]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKFISTIP" EntityType="Self.STKFISTIP" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKFISTIP].[STKFTMODUL] AS [STKFTMODUL], 
+[STKFISTIP].[STKFTNO] AS [STKFTNO], 
+[STKFISTIP].[STKFTKOD] AS [STKFTKOD], 
+[STKFISTIP].[STKFTACIKLAMA] AS [STKFTACIKLAMA], 
+[STKFISTIP].[STKFTONAY] AS [STKFTONAY], 
+[STKFISTIP].[STKFTEVRAKNO] AS [STKFTEVRAKNO], 
+[STKFISTIP].[STKFTDIZDOS] AS [STKFTDIZDOS], 
+[STKFISTIP].[STKFTFIYTIP] AS [STKFTFIYTIP], 
+[STKFISTIP].[STKFTMAXSATIR] AS [STKFTMAXSATIR], 
+[STKFISTIP].[STKFTOTVFLAG] AS [STKFTOTVFLAG]
+FROM [dbo].[STKFISTIP] AS [STKFISTIP]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKFIYAT" EntityType="Self.STKFIYAT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKFIYAT].[STKFIYSTKKOD] AS [STKFIYSTKKOD], 
+[STKFIYAT].[STKFIYDEPKOD] AS [STKFIYDEPKOD], 
+[STKFIYAT].[STKFIYNO] AS [STKFIYNO], 
+[STKFIYAT].[STKFIYITEMNO] AS [STKFIYITEMNO], 
+[STKFIYAT].[STKFIYTUTAR] AS [STKFIYTUTAR], 
+[STKFIYAT].[STKFIYDOVKOD] AS [STKFIYDOVKOD], 
+[STKFIYAT].[STKFIYDOVTUR] AS [STKFIYDOVTUR], 
+[STKFIYAT].[STKFIYISKYUZ1] AS [STKFIYISKYUZ1], 
+[STKFIYAT].[STKFIYISKYUZ2] AS [STKFIYISKYUZ2], 
+[STKFIYAT].[STKFIYISKYUZ3] AS [STKFIYISKYUZ3], 
+[STKFIYAT].[STKFIYISKYUZ4] AS [STKFIYISKYUZ4], 
+[STKFIYAT].[STKFIYISKYUZ5] AS [STKFIYISKYUZ5], 
+[STKFIYAT].[STKFIYISKTUT1] AS [STKFIYISKTUT1], 
+[STKFIYAT].[STKFIYISKTUT2] AS [STKFIYISKTUT2], 
+[STKFIYAT].[STKFIYISKTUT3] AS [STKFIYISKTUT3], 
+[STKFIYAT].[STKFIYISKTUT4] AS [STKFIYISKTUT4], 
+[STKFIYAT].[STKFIYISKTUT5] AS [STKFIYISKTUT5], 
+[STKFIYAT].[STKFIYKDVNO] AS [STKFIYKDVNO], 
+[STKFIYAT].[STKFIYKDVFLAG] AS [STKFIYKDVFLAG], 
+[STKFIYAT].[STKFIYODEGUN] AS [STKFIYODEGUN], 
+[STKFIYAT].[STKFIYBASTAR] AS [STKFIYBASTAR], 
+[STKFIYAT].[STKFIYBASSAAT] AS [STKFIYBASSAAT], 
+[STKFIYAT].[STKFIYBITTAR] AS [STKFIYBITTAR], 
+[STKFIYAT].[STKFIYBITSAAT] AS [STKFIYBITSAAT], 
+[STKFIYAT].[STKFIYKONTFLAG] AS [STKFIYKONTFLAG], 
+[STKFIYAT].[STKFIYODEKOD] AS [STKFIYODEKOD]
+FROM [dbo].[STKFIYAT] AS [STKFIYAT]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKFIYTIP" EntityType="Self.STKFIYTIP" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKFIYTIP].[STKFTFIYNO] AS [STKFTFIYNO], 
+[STKFIYTIP].[STKFTFIYADI] AS [STKFTFIYADI], 
+[STKFIYTIP].[STKFTFIYACK] AS [STKFTFIYACK], 
+[STKFIYTIP].[STKFTFIYTIPI] AS [STKFTFIYTIPI], 
+[STKFIYTIP].[STKFTFIYDOVKOD] AS [STKFTFIYDOVKOD], 
+[STKFIYTIP].[STKFTFIYDOVTUR] AS [STKFTFIYDOVTUR], 
+[STKFIYTIP].[STKFTFIYISKYUZ1] AS [STKFTFIYISKYUZ1], 
+[STKFIYTIP].[STKFTFIYISKYUZ2] AS [STKFTFIYISKYUZ2], 
+[STKFIYTIP].[STKFTFIYISKYUZ3] AS [STKFTFIYISKYUZ3], 
+[STKFIYTIP].[STKFTFIYISKYUZ4] AS [STKFTFIYISKYUZ4], 
+[STKFIYTIP].[STKFTFIYISKYUZ5] AS [STKFTFIYISKYUZ5], 
+[STKFIYTIP].[STKFTFIYKDVNO] AS [STKFTFIYKDVNO], 
+[STKFIYTIP].[STKFTFIYKDVFLAG] AS [STKFTFIYKDVFLAG], 
+[STKFIYTIP].[STKFTFIYODEGUN] AS [STKFTFIYODEGUN], 
+[STKFIYTIP].[STKFTFIYBASTAR] AS [STKFTFIYBASTAR], 
+[STKFIYTIP].[STKFTFIYBASSAAT] AS [STKFTFIYBASSAAT], 
+[STKFIYTIP].[STKFTFIYBITTAR] AS [STKFTFIYBITTAR], 
+[STKFIYTIP].[STKFTFIYBITSAAT] AS [STKFTFIYBITSAAT], 
+[STKFIYTIP].[STKFTFIYKONTFLAG] AS [STKFTFIYKONTFLAG], 
+[STKFIYTIP].[STKFTFIYDEPO] AS [STKFTFIYDEPO], 
+[STKFIYTIP].[STKFTFIYKULFLAG] AS [STKFTFIYKULFLAG]
+FROM [dbo].[STKFIYTIP] AS [STKFIYTIP]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKHAR" EntityType="Self.STKHAR" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKHAR].[STKHARTAR] AS [STKHARTAR], 
+[STKHAR].[STKHARREFNO] AS [STKHARREFNO], 
+[STKHAR].[STKHARTIPI] AS [STKHARTIPI], 
+[STKHAR].[STKHARGCFLAG] AS [STKHARGCFLAG], 
+[STKHAR].[STKHARKAYONC] AS [STKHARKAYONC], 
+[STKHAR].[STKHARDEPO] AS [STKHARDEPO], 
+[STKHAR].[STKHAROZELFIS] AS [STKHAROZELFIS], 
+[STKHAR].[STKHARIADE] AS [STKHARIADE], 
+[STKHAR].[STKHARKAYNAK] AS [STKHARKAYNAK], 
+[STKHAR].[STKHARCARKOD] AS [STKHARCARKOD], 
+[STKHAR].[STKHARREFNO2] AS [STKHARREFNO2], 
+[STKHAR].[STKHARANADEPO] AS [STKHARANADEPO], 
+[STKHAR].[STKHARKARDEPO] AS [STKHARKARDEPO], 
+[STKHAR].[STKHARSTKKOD] AS [STKHARSTKKOD], 
+[STKHAR].[STKHARSTKCINS] AS [STKHARSTKCINS], 
+[STKHAR].[STKHARSTKBRM] AS [STKHARSTKBRM], 
+[STKHAR].[STKHARBARKOD] AS [STKHARBARKOD], 
+[STKHAR].[STKHAROZDESKOD] AS [STKHAROZDESKOD], 
+[STKHAR].[STKHARBENZERKOD] AS [STKHARBENZERKOD], 
+[STKHAR].[STKHARMIKTAR] AS [STKHARMIKTAR], 
+[STKHAR].[STKHARMIKTAR2] AS [STKHARMIKTAR2], 
+[STKHAR].[STKHARMIKTAR3] AS [STKHARMIKTAR3], 
+[STKHAR].[STKHARMIKTAR4] AS [STKHARMIKTAR4], 
+[STKHAR].[STKHARMIKTAR5] AS [STKHARMIKTAR5], 
+[STKHAR].[STKHARFIYAT] AS [STKHARFIYAT], 
+[STKHAR].[STKHARTUTAR] AS [STKHARTUTAR], 
+[STKHAR].[STKHARDOVKOD] AS [STKHARDOVKOD], 
+[STKHAR].[STKHARDOVTUR] AS [STKHARDOVTUR], 
+[STKHAR].[STKHARDOVTUTAR] AS [STKHARDOVTUTAR], 
+[STKHAR].[STKHAROZKOD] AS [STKHAROZKOD], 
+[STKHAR].[STKHARACIKLAMA] AS [STKHARACIKLAMA], 
+[STKHAR].[STKHARKDVYUZ] AS [STKHARKDVYUZ], 
+[STKHAR].[STKHARISKYUZ1] AS [STKHARISKYUZ1], 
+[STKHAR].[STKHARISKYUZ2] AS [STKHARISKYUZ2], 
+[STKHAR].[STKHARISKYUZ3] AS [STKHARISKYUZ3], 
+[STKHAR].[STKHARISKYUZ4] AS [STKHARISKYUZ4], 
+[STKHAR].[STKHARISKYUZ5] AS [STKHARISKYUZ5], 
+[STKHAR].[STKHARISKYTUT1] AS [STKHARISKYTUT1], 
+[STKHAR].[STKHARISKYTUT2] AS [STKHARISKYTUT2], 
+[STKHAR].[STKHARISKYTUT3] AS [STKHARISKYTUT3], 
+[STKHAR].[STKHARISKYTUT4] AS [STKHARISKYTUT4], 
+[STKHAR].[STKHARISKYTUT5] AS [STKHARISKYTUT5], 
+[STKHAR].[STKHARISKGTUT1] AS [STKHARISKGTUT1], 
+[STKHAR].[STKHARISKGTUT2] AS [STKHARISKGTUT2], 
+[STKHAR].[STKHARISKGTUT3] AS [STKHARISKGTUT3], 
+[STKHAR].[STKHARISKGTUT4] AS [STKHARISKGTUT4], 
+[STKHAR].[STKHARISKGTUT5] AS [STKHARISKGTUT5], 
+[STKHAR].[STKHARDIGERIND] AS [STKHARDIGERIND], 
+[STKHAR].[STKHARTOPLAMIND] AS [STKHARTOPLAMIND], 
+[STKHAR].[STKHARKDVMATRAH] AS [STKHARKDVMATRAH], 
+[STKHAR].[STKHARKDVTUTAR] AS [STKHARKDVTUTAR], 
+[STKHAR].[STKHARTOPLAMTUT] AS [STKHARTOPLAMTUT], 
+[STKHAR].[STKHARVADETAR] AS [STKHARVADETAR], 
+[STKHAR].[STKHARACIKLAMA1] AS [STKHARACIKLAMA1], 
+[STKHAR].[STKHARACIKLAMA2] AS [STKHARACIKLAMA2], 
+[STKHAR].[STKHARACIKLAMA3] AS [STKHARACIKLAMA3], 
+[STKHAR].[STKHARPARTINO] AS [STKHARPARTINO], 
+[STKHAR].[STKHARMASMER] AS [STKHARMASMER], 
+[STKHAR].[STKHARSERINO1] AS [STKHARSERINO1], 
+[STKHAR].[STKHARSERINO2] AS [STKHARSERINO2], 
+[STKHAR].[STKHARRB1] AS [STKHARRB1], 
+[STKHAR].[STKHARRB2] AS [STKHARRB2], 
+[STKHAR].[STKHARRB3] AS [STKHARRB3], 
+[STKHAR].[STKHARRB4] AS [STKHARRB4], 
+[STKHAR].[STKHARRB5] AS [STKHARRB5], 
+[STKHAR].[STKHARFIYTIP] AS [STKHARFIYTIP], 
+[STKHAR].[STKHARSIRANO] AS [STKHARSIRANO], 
+[STKHAR].[STKHARTOPLAMMAS] AS [STKHARTOPLAMMAS], 
+[STKHAR].[STKHARNETTUTAR] AS [STKHARNETTUTAR], 
+[STKHAR].[STKHARNETFIYAT] AS [STKHARNETFIYAT], 
+[STKHAR].[STKHARMALIYET] AS [STKHARMALIYET], 
+[STKHAR].[STKHAROTVMATRAH] AS [STKHAROTVMATRAH], 
+[STKHAR].[STKHAROTVORAN] AS [STKHAROTVORAN], 
+[STKHAR].[STKHAROTVFIYAT] AS [STKHAROTVFIYAT], 
+[STKHAR].[STKHARTOPOTV] AS [STKHARTOPOTV], 
+[STKHAR].[STKHAROTVTUTAR] AS [STKHAROTVTUTAR], 
+[STKHAR].[STKHARDOVFIYAT] AS [STKHARDOVFIYAT], 
+[STKHAR].[STKHAREBTEN] AS [STKHAREBTEN], 
+[STKHAR].[STKHAREBTBOY] AS [STKHAREBTBOY], 
+[STKHAR].[STKHAREBTYUK] AS [STKHAREBTYUK], 
+[STKHAR].[STKHAREBTHCM] AS [STKHAREBTHCM], 
+[STKHAR].[STKHAREBTAGR] AS [STKHAREBTAGR], 
+[STKHAR].[STKHAREKCHAR1] AS [STKHAREKCHAR1], 
+[STKHAR].[STKHAREKCHAR2] AS [STKHAREKCHAR2], 
+[STKHAR].[STKHAREKINT1] AS [STKHAREKINT1], 
+[STKHAR].[STKHAREKINT2] AS [STKHAREKINT2], 
+[STKHAR].[STKHAREKDATE1] AS [STKHAREKDATE1], 
+[STKHAR].[STKHAREKDATE2] AS [STKHAREKDATE2], 
+[STKHAR].[STKHAREKTUT1] AS [STKHAREKTUT1], 
+[STKHAR].[STKHAREKTUT2] AS [STKHAREKTUT2], 
+[STKHAR].[STKHAREKMIK1] AS [STKHAREKMIK1], 
+[STKHAR].[STKHAREKMIK2] AS [STKHAREKMIK2], 
+[STKHAR].[STKHAREKDOVTUT1] AS [STKHAREKDOVTUT1], 
+[STKHAR].[STKHAREKDOVTUT2] AS [STKHAREKDOVTUT2], 
+[STKHAR].[STKHAREKORAN1] AS [STKHAREKORAN1], 
+[STKHAR].[STKHAREKORAN2] AS [STKHAREKORAN2], 
+[STKHAR].[STKHARDOVKUR] AS [STKHARDOVKUR]
+FROM [dbo].[STKHAR] AS [STKHAR]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKKART" EntityType="Self.STKKART" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKKART].[STKKOD] AS [STKKOD], 
+[STKKART].[STKCINSI] AS [STKCINSI], 
+[STKKART].[STKCINSI2] AS [STKCINSI2], 
+[STKKART].[STKCINSI3] AS [STKCINSI3], 
+[STKKART].[STKBIRIM] AS [STKBIRIM], 
+[STKKART].[STKBIRIM2] AS [STKBIRIM2], 
+[STKKART].[STKBRM2CAR] AS [STKBRM2CAR], 
+[STKKART].[STKBRM2BOL] AS [STKBRM2BOL], 
+[STKKART].[STKBIRIM3] AS [STKBIRIM3], 
+[STKKART].[STKBRM3CAR] AS [STKBRM3CAR], 
+[STKKART].[STKBRM3BOL] AS [STKBRM3BOL], 
+[STKKART].[STKBIRIM4] AS [STKBIRIM4], 
+[STKKART].[STKBRM4CAR] AS [STKBRM4CAR], 
+[STKKART].[STKBRM4BOL] AS [STKBRM4BOL], 
+[STKKART].[STKBIRIM5] AS [STKBIRIM5], 
+[STKKART].[STKBRM5CAR] AS [STKBRM5CAR], 
+[STKKART].[STKBRM5BOL] AS [STKBRM5BOL], 
+[STKKART].[STKOZKOD1] AS [STKOZKOD1], 
+[STKKART].[STKOZKOD2] AS [STKOZKOD2], 
+[STKKART].[STKOZKOD3] AS [STKOZKOD3], 
+[STKKART].[STKOZKOD4] AS [STKOZKOD4], 
+[STKKART].[STKOZKOD5] AS [STKOZKOD5], 
+[STKKART].[STKKARTTIP1] AS [STKKARTTIP1], 
+[STKKART].[STKKARTTIP2] AS [STKKARTTIP2], 
+[STKKART].[STKKARTTIP3] AS [STKKARTTIP3], 
+[STKKART].[STKKARTTIP4] AS [STKKARTTIP4], 
+[STKKART].[STKKARTTIP5] AS [STKKARTTIP5], 
+[STKKART].[STKKARTTIP6] AS [STKKARTTIP6], 
+[STKKART].[STKKARTTIP7] AS [STKKARTTIP7], 
+[STKKART].[STKKARTTIP8] AS [STKKARTTIP8], 
+[STKKART].[STKKARTTIP9] AS [STKKARTTIP9], 
+[STKKART].[STKKARTTIP10] AS [STKKARTTIP10], 
+[STKKART].[STKKARTTIP11] AS [STKKARTTIP11], 
+[STKKART].[STKKARTTIP12] AS [STKKARTTIP12], 
+[STKKART].[STKKARTTIP13] AS [STKKARTTIP13], 
+[STKKART].[STKKARTTIP14] AS [STKKARTTIP14], 
+[STKKART].[STKBAKIYE] AS [STKBAKIYE], 
+[STKKART].[STKBAKIYE2] AS [STKBAKIYE2], 
+[STKKART].[STKBAKIYE3] AS [STKBAKIYE3], 
+[STKKART].[STKBAKIYE4] AS [STKBAKIYE4], 
+[STKKART].[STKBAKIYE5] AS [STKBAKIYE5], 
+[STKKART].[STKYAOFIYAT] AS [STKYAOFIYAT], 
+[STKKART].[STKACIK1] AS [STKACIK1], 
+[STKKART].[STKACIK2] AS [STKACIK2], 
+[STKKART].[STKACIK3] AS [STKACIK3], 
+[STKKART].[STKACIK4] AS [STKACIK4], 
+[STKKART].[STKACIK5] AS [STKACIK5], 
+[STKKART].[STKGENKDVNO] AS [STKGENKDVNO], 
+[STKKART].[STKGENISK1] AS [STKGENISK1], 
+[STKKART].[STKGENISK2] AS [STKGENISK2], 
+[STKKART].[STKGENISK3] AS [STKGENISK3], 
+[STKKART].[STKGENISK4] AS [STKGENISK4], 
+[STKKART].[STKGENISK5] AS [STKGENISK5], 
+[STKKART].[STKKRITIKSEVIYE] AS [STKKRITIKSEVIYE], 
+[STKKART].[STKOPTIMALSEVIYE] AS [STKOPTIMALSEVIYE], 
+[STKKART].[STKODEGUN] AS [STKODEGUN], 
+[STKKART].[STKPROKOD] AS [STKPROKOD], 
+[STKKART].[STKSYFTARIHI] AS [STKSYFTARIHI], 
+[STKKART].[STKSYFSAATI] AS [STKSYFSAATI], 
+[STKKART].[STKBOZULMASURESI] AS [STKBOZULMASURESI], 
+[STKKART].[STKKULLANIMSURESI] AS [STKKULLANIMSURESI], 
+[STKKART].[STKEKSAHA1] AS [STKEKSAHA1], 
+[STKKART].[STKEKSAHA2] AS [STKEKSAHA2], 
+[STKKART].[STKEUAFIYAT] AS [STKEUAFIYAT], 
+[STKKART].[STKEPAFIYAT] AS [STKEPAFIYAT], 
+[STKKART].[STKEUSFIYAT] AS [STKEUSFIYAT], 
+[STKKART].[STKEPSFIYAT] AS [STKEPSFIYAT], 
+[STKKART].[STKURTSNKOD] AS [STKURTSNKOD], 
+[STKKART].[STKURTBRTIP] AS [STKURTBRTIP], 
+[STKKART].[STKBOLKODU] AS [STKBOLKODU], 
+[STKKART].[STKREYKODU] AS [STKREYKODU], 
+[STKKART].[STKRAFKODU] AS [STKRAFKODU], 
+[STKKART].[STKCALFLAG] AS [STKCALFLAG], 
+[STKKART].[STKINDKONT] AS [STKINDKONT], 
+[STKKART].[STKFIYDEGALFLAG] AS [STKFIYDEGALFLAG], 
+[STKKART].[STKFIYDEGSATFLAG] AS [STKFIYDEGSATFLAG], 
+[STKKART].[STKIADEALFLAG] AS [STKIADEALFLAG], 
+[STKKART].[STKIADESATFLAG] AS [STKIADESATFLAG], 
+[STKKART].[STKMIKKONTALFLAG] AS [STKMIKKONTALFLAG], 
+[STKKART].[STKMIKKONTALMIN] AS [STKMIKKONTALMIN], 
+[STKKART].[STKMIKKONTALMAX] AS [STKMIKKONTALMAX], 
+[STKKART].[STKMIKKONTSATFLAG] AS [STKMIKKONTSATFLAG], 
+[STKKART].[STKMIKKONTSATMIN] AS [STKMIKKONTSATMIN], 
+[STKKART].[STKMIKKONTSATMAX] AS [STKMIKKONTSATMAX], 
+[STKKART].[STKFIYKONTALFLAG] AS [STKFIYKONTALFLAG], 
+[STKKART].[STKFIYKONTALMIN] AS [STKFIYKONTALMIN], 
+[STKKART].[STKFIYKONTALMAX] AS [STKFIYKONTALMAX], 
+[STKKART].[STKFIYKONTSATFLAG] AS [STKFIYKONTSATFLAG], 
+[STKKART].[STKFIYKONTSATMIN] AS [STKFIYKONTSATMIN], 
+[STKKART].[STKFIYKONTSATMAX] AS [STKFIYKONTSATMAX], 
+[STKKART].[STKOTOGIRFIY] AS [STKOTOGIRFIY], 
+[STKKART].[STKOTOCIKFIY] AS [STKOTOCIKFIY], 
+[STKKART].[STKDOVKOD1] AS [STKDOVKOD1], 
+[STKKART].[STKDOVTUR1] AS [STKDOVTUR1], 
+[STKKART].[STKDOVKOD2] AS [STKDOVKOD2], 
+[STKKART].[STKDOVTUR2] AS [STKDOVTUR2], 
+[STKKART].[STKDOVKOD3] AS [STKDOVKOD3], 
+[STKKART].[STKDOVTUR3] AS [STKDOVTUR3], 
+[STKKART].[STKDOVKOD4] AS [STKDOVKOD4], 
+[STKKART].[STKDOVTUR4] AS [STKDOVTUR4], 
+[STKKART].[STKDOVKOD5] AS [STKDOVKOD5], 
+[STKKART].[STKDOVTUR5] AS [STKDOVTUR5], 
+[STKKART].[STKURUNSOR] AS [STKURUNSOR], 
+[STKKART].[STKURETKOD] AS [STKURETKOD], 
+[STKKART].[STKURETADI] AS [STKURETADI], 
+[STKKART].[STKTEDARIKKOD] AS [STKTEDARIKKOD], 
+[STKKART].[STKTEDARIKADI] AS [STKTEDARIKADI], 
+[STKKART].[STKKALKONTKOD] AS [STKKALKONTKOD], 
+[STKKART].[STKSN1EVRAKNO] AS [STKSN1EVRAKNO], 
+[STKKART].[STKSN2EVRAKNO] AS [STKSN2EVRAKNO], 
+[STKKART].[STKGRUPKOD] AS [STKGRUPKOD], 
+[STKKART].[STKSEVNO] AS [STKSEVNO], 
+[STKKART].[STKOZELBAKIYE] AS [STKOZELBAKIYE], 
+[STKKART].[STKOZELBAKIYE2] AS [STKOZELBAKIYE2], 
+[STKKART].[STKOZELBAKIYE3] AS [STKOZELBAKIYE3], 
+[STKKART].[STKOZELBAKIYE4] AS [STKOZELBAKIYE4], 
+[STKKART].[STKOZELBAKIYE5] AS [STKOZELBAKIYE5], 
+[STKKART].[STKREZGIRSIPMIK] AS [STKREZGIRSIPMIK], 
+[STKKART].[STKREZGIRSIPTUT] AS [STKREZGIRSIPTUT], 
+[STKKART].[STKREZCIKSIPMIK] AS [STKREZCIKSIPMIK], 
+[STKKART].[STKREZCIKSIPTUT] AS [STKREZCIKSIPTUT], 
+[STKKART].[STKREZGIRURTMIK] AS [STKREZGIRURTMIK], 
+[STKKART].[STKREZGIRURTTUT] AS [STKREZGIRURTTUT], 
+[STKKART].[STKREZCIKURTMIK] AS [STKREZCIKURTMIK], 
+[STKKART].[STKREZCIKURTTUT] AS [STKREZCIKURTTUT], 
+[STKKART].[STKOTVORAN] AS [STKOTVORAN], 
+[STKKART].[STKOTVTUTAR] AS [STKOTVTUTAR], 
+[STKKART].[STKFIREORAN] AS [STKFIREORAN], 
+[STKKART].[STKKARORAN] AS [STKKARORAN], 
+[STKKART].[STKPARTIEVRAKNO] AS [STKPARTIEVRAKNO], 
+[STKKART].[STKOTVVERGIKOD] AS [STKOTVVERGIKOD], 
+[STKKART].[STKEKVERGIKOD] AS [STKEKVERGIKOD], 
+[STKKART].[STKURESTKKOD] AS [STKURESTKKOD], 
+[STKKART].[STKTEDSTKKOD] AS [STKTEDSTKKOD], 
+[STKKART].[STKEKCHAR1] AS [STKEKCHAR1], 
+[STKKART].[STKEKCHAR2] AS [STKEKCHAR2], 
+[STKKART].[STKEKINT1] AS [STKEKINT1], 
+[STKKART].[STKEKINT2] AS [STKEKINT2], 
+[STKKART].[STKEKDATE1] AS [STKEKDATE1], 
+[STKKART].[STKEKDATE2] AS [STKEKDATE2], 
+[STKKART].[STKEKDBL1] AS [STKEKDBL1], 
+[STKKART].[STKEKDBL2] AS [STKEKDBL2]
+FROM [dbo].[STKKART] AS [STKKART]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="STKMIZDEGER" EntityType="Self.STKMIZDEGER" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+[STKMIZDEGER].[STKKOD] AS [STKKOD], 
+[STKMIZDEGER].[STKYIL] AS [STKYIL], 
+[STKMIZDEGER].[STKAY] AS [STKAY], 
+[STKMIZDEGER].[STKRAKTIP] AS [STKRAKTIP], 
+[STKMIZDEGER].[STKDOVKOD] AS [STKDOVKOD], 
+[STKMIZDEGER].[STKBORC] AS [STKBORC], 
+[STKMIZDEGER].[STKALACAK] AS [STKALACAK], 
+[STKMIZDEGER].[STKDEPO] AS [STKDEPO]
+FROM [dbo].[STKMIZDEGER] AS [STKMIZDEGER]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>

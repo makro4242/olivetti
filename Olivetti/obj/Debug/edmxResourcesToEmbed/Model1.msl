@@ -1,0 +1,838 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ETA_DENEME_2016ModelStoreContainer" CdmEntityContainer="ETA_DENEME_2016Entities">
+    <EntitySetMapping Name="DEPSTKKART">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.DEPSTKKART">
+        <MappingFragment StoreEntitySet="DEPSTKKART">
+          <ScalarProperty Name="DEPSTKSTKKOD" ColumnName="DEPSTKSTKKOD" />
+          <ScalarProperty Name="DEPSTKDEPOKOD" ColumnName="DEPSTKDEPOKOD" />
+          <ScalarProperty Name="DEPSTKOZKOD1" ColumnName="DEPSTKOZKOD1" />
+          <ScalarProperty Name="DEPSTKOZKOD2" ColumnName="DEPSTKOZKOD2" />
+          <ScalarProperty Name="DEPSTKOZKOD3" ColumnName="DEPSTKOZKOD3" />
+          <ScalarProperty Name="DEPSTKOZKOD4" ColumnName="DEPSTKOZKOD4" />
+          <ScalarProperty Name="DEPSTKOZKOD5" ColumnName="DEPSTKOZKOD5" />
+          <ScalarProperty Name="DEPSTKACIK1" ColumnName="DEPSTKACIK1" />
+          <ScalarProperty Name="DEPSTKACIK2" ColumnName="DEPSTKACIK2" />
+          <ScalarProperty Name="DEPSTKACIK3" ColumnName="DEPSTKACIK3" />
+          <ScalarProperty Name="DEPSTKACIK4" ColumnName="DEPSTKACIK4" />
+          <ScalarProperty Name="DEPSTKACIK5" ColumnName="DEPSTKACIK5" />
+          <ScalarProperty Name="DEPSTKBAKIYE" ColumnName="DEPSTKBAKIYE" />
+          <ScalarProperty Name="DEPSTKBAKIYE2" ColumnName="DEPSTKBAKIYE2" />
+          <ScalarProperty Name="DEPSTKBAKIYE3" ColumnName="DEPSTKBAKIYE3" />
+          <ScalarProperty Name="DEPSTKBAKIYE4" ColumnName="DEPSTKBAKIYE4" />
+          <ScalarProperty Name="DEPSTKBAKIYE5" ColumnName="DEPSTKBAKIYE5" />
+          <ScalarProperty Name="DEPSTKYAOFIYAT" ColumnName="DEPSTKYAOFIYAT" />
+          <ScalarProperty Name="DEPSTKKRITIKSEVIYE" ColumnName="DEPSTKKRITIKSEVIYE" />
+          <ScalarProperty Name="DEPSTKOPTIMALSEVIYE" ColumnName="DEPSTKOPTIMALSEVIYE" />
+          <ScalarProperty Name="DEPSTKBOLKODU" ColumnName="DEPSTKBOLKODU" />
+          <ScalarProperty Name="DEPSTKREYKODU" ColumnName="DEPSTKREYKODU" />
+          <ScalarProperty Name="DEPSTKRAFKODU" ColumnName="DEPSTKRAFKODU" />
+          <ScalarProperty Name="DEPSTKCALFLAG" ColumnName="DEPSTKCALFLAG" />
+          <ScalarProperty Name="DEPSTKOZELBAKIYE" ColumnName="DEPSTKOZELBAKIYE" />
+          <ScalarProperty Name="DEPSTKOZELBAKIYE2" ColumnName="DEPSTKOZELBAKIYE2" />
+          <ScalarProperty Name="DEPSTKOZELBAKIYE3" ColumnName="DEPSTKOZELBAKIYE3" />
+          <ScalarProperty Name="DEPSTKOZELBAKIYE4" ColumnName="DEPSTKOZELBAKIYE4" />
+          <ScalarProperty Name="DEPSTKOZELBAKIYE5" ColumnName="DEPSTKOZELBAKIYE5" />
+          <ScalarProperty Name="DEPSTKREZGIRSIPMIK" ColumnName="DEPSTKREZGIRSIPMIK" />
+          <ScalarProperty Name="DEPSTKREZGIRSIPTUT" ColumnName="DEPSTKREZGIRSIPTUT" />
+          <ScalarProperty Name="DEPSTKREZCIKSIPMIK" ColumnName="DEPSTKREZCIKSIPMIK" />
+          <ScalarProperty Name="DEPSTKREZCIKSIPTUT" ColumnName="DEPSTKREZCIKSIPTUT" />
+          <ScalarProperty Name="DEPSTKREZGIRURTMIK" ColumnName="DEPSTKREZGIRURTMIK" />
+          <ScalarProperty Name="DEPSTKREZGIRURTTUT" ColumnName="DEPSTKREZGIRURTTUT" />
+          <ScalarProperty Name="DEPSTKREZCIKURTMIK" ColumnName="DEPSTKREZCIKURTMIK" />
+          <ScalarProperty Name="DEPSTKREZCIKURTTUT" ColumnName="DEPSTKREZCIKURTTUT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FATFIS">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.FATFIS">
+        <MappingFragment StoreEntitySet="FATFIS">
+          <ScalarProperty Name="FATFISTAR" ColumnName="FATFISTAR" />
+          <ScalarProperty Name="FATFISREFNO" ColumnName="FATFISREFNO" />
+          <ScalarProperty Name="FATFISTIPI" ColumnName="FATFISTIPI" />
+          <ScalarProperty Name="FATFISGCFLAG" ColumnName="FATFISGCFLAG" />
+          <ScalarProperty Name="FATFISKAYONC" ColumnName="FATFISKAYONC" />
+          <ScalarProperty Name="FATFISIPTALFLAG" ColumnName="FATFISIPTALFLAG" />
+          <ScalarProperty Name="FATFISKAYNAK" ColumnName="FATFISKAYNAK" />
+          <ScalarProperty Name="FATFISSTKREFNO" ColumnName="FATFISSTKREFNO" />
+          <ScalarProperty Name="FATFISCARREFNO" ColumnName="FATFISCARREFNO" />
+          <ScalarProperty Name="FATFISMUHREFNO" ColumnName="FATFISMUHREFNO" />
+          <ScalarProperty Name="FATFISKASREFNO" ColumnName="FATFISKASREFNO" />
+          <ScalarProperty Name="FATFISBANREFNO" ColumnName="FATFISBANREFNO" />
+          <ScalarProperty Name="FATFISKAPFLAG" ColumnName="FATFISKAPFLAG" />
+          <ScalarProperty Name="FATFISBASFLAG" ColumnName="FATFISBASFLAG" />
+          <ScalarProperty Name="FATFISOZELFIS" ColumnName="FATFISOZELFIS" />
+          <ScalarProperty Name="FATFISDEPOFLAG" ColumnName="FATFISDEPOFLAG" />
+          <ScalarProperty Name="FATFISIADEFLAG" ColumnName="FATFISIADEFLAG" />
+          <ScalarProperty Name="FATFISKDVDAHILFLAG" ColumnName="FATFISKDVDAHILFLAG" />
+          <ScalarProperty Name="FATFISTEVKIFATFLAG" ColumnName="FATFISTEVKIFATFLAG" />
+          <ScalarProperty Name="FATFISANADEPO" ColumnName="FATFISANADEPO" />
+          <ScalarProperty Name="FATFISPARTIKOD" ColumnName="FATFISPARTIKOD" />
+          <ScalarProperty Name="FATFISODEMEKOD" ColumnName="FATFISODEMEKOD" />
+          <ScalarProperty Name="FATFISSATKOD" ColumnName="FATFISSATKOD" />
+          <ScalarProperty Name="FATFISMASMER" ColumnName="FATFISMASMER" />
+          <ScalarProperty Name="FATFISCARKOD" ColumnName="FATFISCARKOD" />
+          <ScalarProperty Name="FATFISCARUNVAN" ColumnName="FATFISCARUNVAN" />
+          <ScalarProperty Name="FATFISADRESNO" ColumnName="FATFISADRESNO" />
+          <ScalarProperty Name="FATFISADRES1" ColumnName="FATFISADRES1" />
+          <ScalarProperty Name="FATFISADRES2" ColumnName="FATFISADRES2" />
+          <ScalarProperty Name="FATFISADRES3" ColumnName="FATFISADRES3" />
+          <ScalarProperty Name="FATFISPOSTAKOD" ColumnName="FATFISPOSTAKOD" />
+          <ScalarProperty Name="FATFISULKE" ColumnName="FATFISULKE" />
+          <ScalarProperty Name="FATFISIL" ColumnName="FATFISIL" />
+          <ScalarProperty Name="FATFISILCE" ColumnName="FATFISILCE" />
+          <ScalarProperty Name="FATFISVERDAIRE" ColumnName="FATFISVERDAIRE" />
+          <ScalarProperty Name="FATFISVERHESNO" ColumnName="FATFISVERHESNO" />
+          <ScalarProperty Name="FATFISSAAT" ColumnName="FATFISSAAT" />
+          <ScalarProperty Name="FATFISVADETAR" ColumnName="FATFISVADETAR" />
+          <ScalarProperty Name="FATFISKDVVADETAR" ColumnName="FATFISKDVVADETAR" />
+          <ScalarProperty Name="FATFISIRSTAR" ColumnName="FATFISIRSTAR" />
+          <ScalarProperty Name="FATFISIRSNO" ColumnName="FATFISIRSNO" />
+          <ScalarProperty Name="FATFISEVRAKNO1" ColumnName="FATFISEVRAKNO1" />
+          <ScalarProperty Name="FATFISEVRAKNO2" ColumnName="FATFISEVRAKNO2" />
+          <ScalarProperty Name="FATFISEVRAKNO3" ColumnName="FATFISEVRAKNO3" />
+          <ScalarProperty Name="FATFISOZKOD1" ColumnName="FATFISOZKOD1" />
+          <ScalarProperty Name="FATFISOZKOD2" ColumnName="FATFISOZKOD2" />
+          <ScalarProperty Name="FATFISOZKOD3" ColumnName="FATFISOZKOD3" />
+          <ScalarProperty Name="FATFISACIKLAMA1" ColumnName="FATFISACIKLAMA1" />
+          <ScalarProperty Name="FATFISACIKLAMA2" ColumnName="FATFISACIKLAMA2" />
+          <ScalarProperty Name="FATFISACIKLAMA3" ColumnName="FATFISACIKLAMA3" />
+          <ScalarProperty Name="FATFISHAZKOD" ColumnName="FATFISHAZKOD" />
+          <ScalarProperty Name="FATFISHAZTAR" ColumnName="FATFISHAZTAR" />
+          <ScalarProperty Name="FATFISHAZNOT" ColumnName="FATFISHAZNOT" />
+          <ScalarProperty Name="FATFISKONTKOD" ColumnName="FATFISKONTKOD" />
+          <ScalarProperty Name="FATFISKONTTAR" ColumnName="FATFISKONTTAR" />
+          <ScalarProperty Name="FATFISKONTNOT" ColumnName="FATFISKONTNOT" />
+          <ScalarProperty Name="FATFISONAYKOD" ColumnName="FATFISONAYKOD" />
+          <ScalarProperty Name="FATFISONAYTAR" ColumnName="FATFISONAYTAR" />
+          <ScalarProperty Name="FATFISONAYNOT" ColumnName="FATFISONAYNOT" />
+          <ScalarProperty Name="FATFISKDVORANI" ColumnName="FATFISKDVORANI" />
+          <ScalarProperty Name="FATFISMALTOP" ColumnName="FATFISMALTOP" />
+          <ScalarProperty Name="FATFISKALINDYTOP" ColumnName="FATFISKALINDYTOP" />
+          <ScalarProperty Name="FATFISKALINDTTOP" ColumnName="FATFISKALINDTTOP" />
+          <ScalarProperty Name="FATFISSATINDTOP" ColumnName="FATFISSATINDTOP" />
+          <ScalarProperty Name="FATFISGENINDTOP" ColumnName="FATFISGENINDTOP" />
+          <ScalarProperty Name="FATFISSATMASTOP" ColumnName="FATFISSATMASTOP" />
+          <ScalarProperty Name="FATFISGENMASTOP" ColumnName="FATFISGENMASTOP" />
+          <ScalarProperty Name="FATFISBRUTTOPLAM" ColumnName="FATFISBRUTTOPLAM" />
+          <ScalarProperty Name="FATFISKDVMATRAHI" ColumnName="FATFISKDVMATRAHI" />
+          <ScalarProperty Name="FATFISKDVTUTARI" ColumnName="FATFISKDVTUTARI" />
+          <ScalarProperty Name="FATFISARATOPLAM" ColumnName="FATFISARATOPLAM" />
+          <ScalarProperty Name="FATFISKDVALTIINDTOP" ColumnName="FATFISKDVALTIINDTOP" />
+          <ScalarProperty Name="FATFISKDVALTIEKTOP" ColumnName="FATFISKDVALTIEKTOP" />
+          <ScalarProperty Name="FATFISGENTOPLAM" ColumnName="FATFISGENTOPLAM" />
+          <ScalarProperty Name="FATFISTEVTUTAR" ColumnName="FATFISTEVTUTAR" />
+          <ScalarProperty Name="FATFISDOVTAR" ColumnName="FATFISDOVTAR" />
+          <ScalarProperty Name="FATFISDOVKOD" ColumnName="FATFISDOVKOD" />
+          <ScalarProperty Name="FATFISDOVTUR" ColumnName="FATFISDOVTUR" />
+          <ScalarProperty Name="FATFISDOVKUR" ColumnName="FATFISDOVKUR" />
+          <ScalarProperty Name="FATFISGENDOVTOP" ColumnName="FATFISGENDOVTOP" />
+          <ScalarProperty Name="FATFISTEVNO" ColumnName="FATFISTEVNO" />
+          <ScalarProperty Name="FATFISTEVORAN" ColumnName="FATFISTEVORAN" />
+          <ScalarProperty Name="FATFISSEVNO" ColumnName="FATFISSEVNO" />
+          <ScalarProperty Name="FATFISISYKOD" ColumnName="FATFISISYKOD" />
+          <ScalarProperty Name="FATFISOTVFLAG" ColumnName="FATFISOTVFLAG" />
+          <ScalarProperty Name="FATFISOTVKDVBLOKAJ" ColumnName="FATFISOTVKDVBLOKAJ" />
+          <ScalarProperty Name="FATFISTOPOTV" ColumnName="FATFISTOPOTV" />
+          <ScalarProperty Name="FATFISTOPOTUT" ColumnName="FATFISTOPOTUT" />
+          <ScalarProperty Name="FATFISTCKIMLIKNO" ColumnName="FATFISTCKIMLIKNO" />
+          <ScalarProperty Name="FATFISTRNTAR" ColumnName="FATFISTRNTAR" />
+          <ScalarProperty Name="FATFISTRNREFNO" ColumnName="FATFISTRNREFNO" />
+          <ScalarProperty Name="FATFISTRNTIPI" ColumnName="FATFISTRNTIPI" />
+          <ScalarProperty Name="FATFISEFATFLAG" ColumnName="FATFISEFATFLAG" />
+          <ScalarProperty Name="FATFISEKVERGIINDTOP" ColumnName="FATFISEKVERGIINDTOP" />
+          <ScalarProperty Name="FATFISEKVERGIILVTOP" ColumnName="FATFISEKVERGIILVTOP" />
+          <ScalarProperty Name="FATFISEKVERGITOP" ColumnName="FATFISEKVERGITOP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FATFISTIP">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.FATFISTIP">
+        <MappingFragment StoreEntitySet="FATFISTIP">
+          <ScalarProperty Name="FATFTMODUL" ColumnName="FATFTMODUL" />
+          <ScalarProperty Name="FATFTNO" ColumnName="FATFTNO" />
+          <ScalarProperty Name="FATFTKOD" ColumnName="FATFTKOD" />
+          <ScalarProperty Name="FATFTACIKLAMA" ColumnName="FATFTACIKLAMA" />
+          <ScalarProperty Name="FATFTONAY" ColumnName="FATFTONAY" />
+          <ScalarProperty Name="FATFTEVRAKNO" ColumnName="FATFTEVRAKNO" />
+          <ScalarProperty Name="FATFTDIZDOS" ColumnName="FATFTDIZDOS" />
+          <ScalarProperty Name="FATFTMUHGRUP" ColumnName="FATFTMUHGRUP" />
+          <ScalarProperty Name="FATFTSTKFTNO" ColumnName="FATFTSTKFTNO" />
+          <ScalarProperty Name="FATFTCARFTNO" ColumnName="FATFTCARFTNO" />
+          <ScalarProperty Name="FATFTMUHFTNO" ColumnName="FATFTMUHFTNO" />
+          <ScalarProperty Name="FATFTKASFTNO" ColumnName="FATFTKASFTNO" />
+          <ScalarProperty Name="FATFTBANFTNO" ColumnName="FATFTBANFTNO" />
+          <ScalarProperty Name="FATFTKDVDAHIL" ColumnName="FATFTKDVDAHIL" />
+          <ScalarProperty Name="FATFTKAPALI" ColumnName="FATFTKAPALI" />
+          <ScalarProperty Name="FATFTTEVNO" ColumnName="FATFTTEVNO" />
+          <ScalarProperty Name="FATFTISLGRPNO" ColumnName="FATFTISLGRPNO" />
+          <ScalarProperty Name="FATFTCARMUHGRUP" ColumnName="FATFTCARMUHGRUP" />
+          <ScalarProperty Name="FATFTMAXSATIR" ColumnName="FATFTMAXSATIR" />
+          <ScalarProperty Name="FATFTOTVFLAG" ColumnName="FATFTOTVFLAG" />
+          <ScalarProperty Name="FATFTKDVOTVBLOKAJ" ColumnName="FATFTKDVOTVBLOKAJ" />
+          <ScalarProperty Name="FATFTEEVRAKNO" ColumnName="FATFTEEVRAKNO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FATFISTOPLAM">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.FATFISTOPLAM">
+        <MappingFragment StoreEntitySet="FATFISTOPLAM">
+          <ScalarProperty Name="FFTTAR" ColumnName="FFTTAR" />
+          <ScalarProperty Name="FFTREFNO" ColumnName="FFTREFNO" />
+          <ScalarProperty Name="FFTTIPI" ColumnName="FFTTIPI" />
+          <ScalarProperty Name="FFTGCFLAG" ColumnName="FFTGCFLAG" />
+          <ScalarProperty Name="FFTKAYONC" ColumnName="FFTKAYONC" />
+          <ScalarProperty Name="FFTIPTALFLAG" ColumnName="FFTIPTALFLAG" />
+          <ScalarProperty Name="FFTKAYNAK" ColumnName="FFTKAYNAK" />
+          <ScalarProperty Name="FFTIADEFLAG" ColumnName="FFTIADEFLAG" />
+          <ScalarProperty Name="FFTKDVDAHILFLAG" ColumnName="FFTKDVDAHILFLAG" />
+          <ScalarProperty Name="FFTCARKOD" ColumnName="FFTCARKOD" />
+          <ScalarProperty Name="FFTEVRAKNO1" ColumnName="FFTEVRAKNO1" />
+          <ScalarProperty Name="FFTEVRAKNO2" ColumnName="FFTEVRAKNO2" />
+          <ScalarProperty Name="FFTEVRAKNO3" ColumnName="FFTEVRAKNO3" />
+          <ScalarProperty Name="FFTKONU" ColumnName="FFTKONU" />
+          <ScalarProperty Name="FFTBASLIK" ColumnName="FFTBASLIK" />
+          <ScalarProperty Name="FFTTUTAR" ColumnName="FFTTUTAR" />
+          <ScalarProperty Name="FFTONCELIK" ColumnName="FFTONCELIK" />
+          <ScalarProperty Name="FFTFORMUL" ColumnName="FFTFORMUL" />
+          <ScalarProperty Name="FFTMATRAH" ColumnName="FFTMATRAH" />
+          <ScalarProperty Name="FFTORAN" ColumnName="FFTORAN" />
+          <ScalarProperty Name="FFTKDVORAN" ColumnName="FFTKDVORAN" />
+          <ScalarProperty Name="FFTDOVKOD" ColumnName="FFTDOVKOD" />
+          <ScalarProperty Name="FFTDOVTUR" ColumnName="FFTDOVTUR" />
+          <ScalarProperty Name="FFTDOVTUTAR" ColumnName="FFTDOVTUTAR" />
+          <ScalarProperty Name="FFTVADETAR" ColumnName="FFTVADETAR" />
+          <ScalarProperty Name="FFTTAMSAYI1" ColumnName="FFTTAMSAYI1" />
+          <ScalarProperty Name="FFTTAMSAYI2" ColumnName="FFTTAMSAYI2" />
+          <ScalarProperty Name="FFTTAMSAYI3" ColumnName="FFTTAMSAYI3" />
+          <ScalarProperty Name="FFTKOSUL" ColumnName="FFTKOSUL" />
+          <ScalarProperty Name="FFTACIKLAMA1" ColumnName="FFTACIKLAMA1" />
+          <ScalarProperty Name="FFTSAYI1" ColumnName="FFTSAYI1" />
+          <ScalarProperty Name="FFTVADESAYI" ColumnName="FFTVADESAYI" />
+          <ScalarProperty Name="FFTKARTKOD" ColumnName="FFTKARTKOD" />
+          <ScalarProperty Name="FFTEFATFLAG" ColumnName="FFTEFATFLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HARREFNO">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.HARREFNO">
+        <MappingFragment StoreEntitySet="HARREFNO">
+          <ScalarProperty Name="HARREFMODUL" ColumnName="HARREFMODUL" />
+          <ScalarProperty Name="HARREFKONU" ColumnName="HARREFKONU" />
+          <ScalarProperty Name="HARREFDEGER" ColumnName="HARREFDEGER" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SIRKETLOG">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.SIRKETLOG">
+        <MappingFragment StoreEntitySet="SIRKETLOG">
+          <ScalarProperty Name="SIRLOGMODUL" ColumnName="SIRLOGMODUL" />
+          <ScalarProperty Name="SIRLOGKONU" ColumnName="SIRLOGKONU" />
+          <ScalarProperty Name="SIRLOGKYTTIPI" ColumnName="SIRLOGKYTTIPI" />
+          <ScalarProperty Name="SIRLOGKYTKODU" ColumnName="SIRLOGKYTKODU" />
+          <ScalarProperty Name="SIRLOGKYTKODU2" ColumnName="SIRLOGKYTKODU2" />
+          <ScalarProperty Name="SIRLOGKYTREFNO" ColumnName="SIRLOGKYTREFNO" />
+          <ScalarProperty Name="SIRLOGKYTREFNO2" ColumnName="SIRLOGKYTREFNO2" />
+          <ScalarProperty Name="SIRLOGILKKULKOD" ColumnName="SIRLOGILKKULKOD" />
+          <ScalarProperty Name="SIRLOGILKTAR" ColumnName="SIRLOGILKTAR" />
+          <ScalarProperty Name="SIRLOGSONKULKOD" ColumnName="SIRLOGSONKULKOD" />
+          <ScalarProperty Name="SIRLOGSONTAR" ColumnName="SIRLOGSONTAR" />
+          <ScalarProperty Name="SIRLOGMUHINT1" ColumnName="SIRLOGMUHINT1" />
+          <ScalarProperty Name="SIRLOGMUHINT2" ColumnName="SIRLOGMUHINT2" />
+          <ScalarProperty Name="SIRLOGMUHINT3" ColumnName="SIRLOGMUHINT3" />
+          <ScalarProperty Name="SIRLOGMUHINT4" ColumnName="SIRLOGMUHINT4" />
+          <ScalarProperty Name="SIRLOGMUHINT5" ColumnName="SIRLOGMUHINT5" />
+          <ScalarProperty Name="SIRLOGMUHNUM1" ColumnName="SIRLOGMUHNUM1" />
+          <ScalarProperty Name="SIRLOGMUHNUM2" ColumnName="SIRLOGMUHNUM2" />
+          <ScalarProperty Name="SIRLOGMUHNUM3" ColumnName="SIRLOGMUHNUM3" />
+          <ScalarProperty Name="SIRLOGMUHNUM4" ColumnName="SIRLOGMUHNUM4" />
+          <ScalarProperty Name="SIRLOGMUHNUM5" ColumnName="SIRLOGMUHNUM5" />
+          <ScalarProperty Name="SIRLOGMUHTAR1" ColumnName="SIRLOGMUHTAR1" />
+          <ScalarProperty Name="SIRLOGMUHTAR2" ColumnName="SIRLOGMUHTAR2" />
+          <ScalarProperty Name="SIRLOGMUHTAR3" ColumnName="SIRLOGMUHTAR3" />
+          <ScalarProperty Name="SIRLOGMUHTAR4" ColumnName="SIRLOGMUHTAR4" />
+          <ScalarProperty Name="SIRLOGMUHTAR5" ColumnName="SIRLOGMUHTAR5" />
+          <ScalarProperty Name="SIRLOGMUHACK1" ColumnName="SIRLOGMUHACK1" />
+          <ScalarProperty Name="SIRLOGMUHACK2" ColumnName="SIRLOGMUHACK2" />
+          <ScalarProperty Name="SIRLOGMUHACK3" ColumnName="SIRLOGMUHACK3" />
+          <ScalarProperty Name="SIRLOGMUHACK4" ColumnName="SIRLOGMUHACK4" />
+          <ScalarProperty Name="SIRLOGMUHACK5" ColumnName="SIRLOGMUHACK5" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKFIS">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKFIS">
+        <MappingFragment StoreEntitySet="STKFIS">
+          <ScalarProperty Name="STKFISTAR" ColumnName="STKFISTAR" />
+          <ScalarProperty Name="STKFISREFNO" ColumnName="STKFISREFNO" />
+          <ScalarProperty Name="STKFISTIPI" ColumnName="STKFISTIPI" />
+          <ScalarProperty Name="STKFISGCFLAG" ColumnName="STKFISGCFLAG" />
+          <ScalarProperty Name="STKFISKAYONC" ColumnName="STKFISKAYONC" />
+          <ScalarProperty Name="STKFISDEPO" ColumnName="STKFISDEPO" />
+          <ScalarProperty Name="STKFISOZELFIS" ColumnName="STKFISOZELFIS" />
+          <ScalarProperty Name="STKFISIADE" ColumnName="STKFISIADE" />
+          <ScalarProperty Name="STKFISKAYNAK" ColumnName="STKFISKAYNAK" />
+          <ScalarProperty Name="STKFISCARKOD" ColumnName="STKFISCARKOD" />
+          <ScalarProperty Name="STKFISREFNO2" ColumnName="STKFISREFNO2" />
+          <ScalarProperty Name="STKFISANADEPO" ColumnName="STKFISANADEPO" />
+          <ScalarProperty Name="STKFISKARDEPO" ColumnName="STKFISKARDEPO" />
+          <ScalarProperty Name="STKFISOZKOD1" ColumnName="STKFISOZKOD1" />
+          <ScalarProperty Name="STKFISOZKOD2" ColumnName="STKFISOZKOD2" />
+          <ScalarProperty Name="STKFISOZKOD3" ColumnName="STKFISOZKOD3" />
+          <ScalarProperty Name="STKFISACIKLAMA1" ColumnName="STKFISACIKLAMA1" />
+          <ScalarProperty Name="STKFISACIKLAMA2" ColumnName="STKFISACIKLAMA2" />
+          <ScalarProperty Name="STKFISACIKLAMA3" ColumnName="STKFISACIKLAMA3" />
+          <ScalarProperty Name="STKFISEVRAKNO1" ColumnName="STKFISEVRAKNO1" />
+          <ScalarProperty Name="STKFISEVRAKNO2" ColumnName="STKFISEVRAKNO2" />
+          <ScalarProperty Name="STKFISEVRAKNO3" ColumnName="STKFISEVRAKNO3" />
+          <ScalarProperty Name="STKFISDOVTAR" ColumnName="STKFISDOVTAR" />
+          <ScalarProperty Name="STKFISPARTIKOD" ColumnName="STKFISPARTIKOD" />
+          <ScalarProperty Name="STKFISMASMER" ColumnName="STKFISMASMER" />
+          <ScalarProperty Name="STKFISTOPBTUT" ColumnName="STKFISTOPBTUT" />
+          <ScalarProperty Name="STKFISTOPISK" ColumnName="STKFISTOPISK" />
+          <ScalarProperty Name="STKFISTOPNTUT" ColumnName="STKFISTOPNTUT" />
+          <ScalarProperty Name="STKFISTOPKDV" ColumnName="STKFISTOPKDV" />
+          <ScalarProperty Name="STKFISTOPKTUT" ColumnName="STKFISTOPKTUT" />
+          <ScalarProperty Name="STKFISSEVNO" ColumnName="STKFISSEVNO" />
+          <ScalarProperty Name="STKFISISYKOD" ColumnName="STKFISISYKOD" />
+          <ScalarProperty Name="STKFISOTVFLAG" ColumnName="STKFISOTVFLAG" />
+          <ScalarProperty Name="STKFISTOPOTV" ColumnName="STKFISTOPOTV" />
+          <ScalarProperty Name="STKFISTOPOTUT" ColumnName="STKFISTOPOTUT" />
+          <ScalarProperty Name="STKFISDOVKOD" ColumnName="STKFISDOVKOD" />
+          <ScalarProperty Name="STKFISDOVTUR" ColumnName="STKFISDOVTUR" />
+          <ScalarProperty Name="STKFISDOVKUR" ColumnName="STKFISDOVKUR" />
+          <ScalarProperty Name="STKFISDOVTOP" ColumnName="STKFISDOVTOP" />
+          <ScalarProperty Name="STKFISTRNTAR" ColumnName="STKFISTRNTAR" />
+          <ScalarProperty Name="STKFISTRNREFNO" ColumnName="STKFISTRNREFNO" />
+          <ScalarProperty Name="STKFISTRNTIPI" ColumnName="STKFISTRNTIPI" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKFISTIP">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKFISTIP">
+        <MappingFragment StoreEntitySet="STKFISTIP">
+          <ScalarProperty Name="STKFTMODUL" ColumnName="STKFTMODUL" />
+          <ScalarProperty Name="STKFTNO" ColumnName="STKFTNO" />
+          <ScalarProperty Name="STKFTKOD" ColumnName="STKFTKOD" />
+          <ScalarProperty Name="STKFTACIKLAMA" ColumnName="STKFTACIKLAMA" />
+          <ScalarProperty Name="STKFTONAY" ColumnName="STKFTONAY" />
+          <ScalarProperty Name="STKFTEVRAKNO" ColumnName="STKFTEVRAKNO" />
+          <ScalarProperty Name="STKFTDIZDOS" ColumnName="STKFTDIZDOS" />
+          <ScalarProperty Name="STKFTFIYTIP" ColumnName="STKFTFIYTIP" />
+          <ScalarProperty Name="STKFTMAXSATIR" ColumnName="STKFTMAXSATIR" />
+          <ScalarProperty Name="STKFTOTVFLAG" ColumnName="STKFTOTVFLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKFIYAT">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKFIYAT">
+        <MappingFragment StoreEntitySet="STKFIYAT">
+          <ScalarProperty Name="STKFIYSTKKOD" ColumnName="STKFIYSTKKOD" />
+          <ScalarProperty Name="STKFIYDEPKOD" ColumnName="STKFIYDEPKOD" />
+          <ScalarProperty Name="STKFIYNO" ColumnName="STKFIYNO" />
+          <ScalarProperty Name="STKFIYITEMNO" ColumnName="STKFIYITEMNO" />
+          <ScalarProperty Name="STKFIYTUTAR" ColumnName="STKFIYTUTAR" />
+          <ScalarProperty Name="STKFIYDOVKOD" ColumnName="STKFIYDOVKOD" />
+          <ScalarProperty Name="STKFIYDOVTUR" ColumnName="STKFIYDOVTUR" />
+          <ScalarProperty Name="STKFIYISKYUZ1" ColumnName="STKFIYISKYUZ1" />
+          <ScalarProperty Name="STKFIYISKYUZ2" ColumnName="STKFIYISKYUZ2" />
+          <ScalarProperty Name="STKFIYISKYUZ3" ColumnName="STKFIYISKYUZ3" />
+          <ScalarProperty Name="STKFIYISKYUZ4" ColumnName="STKFIYISKYUZ4" />
+          <ScalarProperty Name="STKFIYISKYUZ5" ColumnName="STKFIYISKYUZ5" />
+          <ScalarProperty Name="STKFIYISKTUT1" ColumnName="STKFIYISKTUT1" />
+          <ScalarProperty Name="STKFIYISKTUT2" ColumnName="STKFIYISKTUT2" />
+          <ScalarProperty Name="STKFIYISKTUT3" ColumnName="STKFIYISKTUT3" />
+          <ScalarProperty Name="STKFIYISKTUT4" ColumnName="STKFIYISKTUT4" />
+          <ScalarProperty Name="STKFIYISKTUT5" ColumnName="STKFIYISKTUT5" />
+          <ScalarProperty Name="STKFIYKDVNO" ColumnName="STKFIYKDVNO" />
+          <ScalarProperty Name="STKFIYKDVFLAG" ColumnName="STKFIYKDVFLAG" />
+          <ScalarProperty Name="STKFIYODEGUN" ColumnName="STKFIYODEGUN" />
+          <ScalarProperty Name="STKFIYBASTAR" ColumnName="STKFIYBASTAR" />
+          <ScalarProperty Name="STKFIYBASSAAT" ColumnName="STKFIYBASSAAT" />
+          <ScalarProperty Name="STKFIYBITTAR" ColumnName="STKFIYBITTAR" />
+          <ScalarProperty Name="STKFIYBITSAAT" ColumnName="STKFIYBITSAAT" />
+          <ScalarProperty Name="STKFIYKONTFLAG" ColumnName="STKFIYKONTFLAG" />
+          <ScalarProperty Name="STKFIYODEKOD" ColumnName="STKFIYODEKOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKFIYTIP">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKFIYTIP">
+        <MappingFragment StoreEntitySet="STKFIYTIP">
+          <ScalarProperty Name="STKFTFIYNO" ColumnName="STKFTFIYNO" />
+          <ScalarProperty Name="STKFTFIYADI" ColumnName="STKFTFIYADI" />
+          <ScalarProperty Name="STKFTFIYACK" ColumnName="STKFTFIYACK" />
+          <ScalarProperty Name="STKFTFIYTIPI" ColumnName="STKFTFIYTIPI" />
+          <ScalarProperty Name="STKFTFIYDOVKOD" ColumnName="STKFTFIYDOVKOD" />
+          <ScalarProperty Name="STKFTFIYDOVTUR" ColumnName="STKFTFIYDOVTUR" />
+          <ScalarProperty Name="STKFTFIYISKYUZ1" ColumnName="STKFTFIYISKYUZ1" />
+          <ScalarProperty Name="STKFTFIYISKYUZ2" ColumnName="STKFTFIYISKYUZ2" />
+          <ScalarProperty Name="STKFTFIYISKYUZ3" ColumnName="STKFTFIYISKYUZ3" />
+          <ScalarProperty Name="STKFTFIYISKYUZ4" ColumnName="STKFTFIYISKYUZ4" />
+          <ScalarProperty Name="STKFTFIYISKYUZ5" ColumnName="STKFTFIYISKYUZ5" />
+          <ScalarProperty Name="STKFTFIYKDVNO" ColumnName="STKFTFIYKDVNO" />
+          <ScalarProperty Name="STKFTFIYKDVFLAG" ColumnName="STKFTFIYKDVFLAG" />
+          <ScalarProperty Name="STKFTFIYODEGUN" ColumnName="STKFTFIYODEGUN" />
+          <ScalarProperty Name="STKFTFIYBASTAR" ColumnName="STKFTFIYBASTAR" />
+          <ScalarProperty Name="STKFTFIYBASSAAT" ColumnName="STKFTFIYBASSAAT" />
+          <ScalarProperty Name="STKFTFIYBITTAR" ColumnName="STKFTFIYBITTAR" />
+          <ScalarProperty Name="STKFTFIYBITSAAT" ColumnName="STKFTFIYBITSAAT" />
+          <ScalarProperty Name="STKFTFIYKONTFLAG" ColumnName="STKFTFIYKONTFLAG" />
+          <ScalarProperty Name="STKFTFIYDEPO" ColumnName="STKFTFIYDEPO" />
+          <ScalarProperty Name="STKFTFIYKULFLAG" ColumnName="STKFTFIYKULFLAG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKHAR">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKHAR">
+        <MappingFragment StoreEntitySet="STKHAR">
+          <ScalarProperty Name="STKHARTAR" ColumnName="STKHARTAR" />
+          <ScalarProperty Name="STKHARREFNO" ColumnName="STKHARREFNO" />
+          <ScalarProperty Name="STKHARTIPI" ColumnName="STKHARTIPI" />
+          <ScalarProperty Name="STKHARGCFLAG" ColumnName="STKHARGCFLAG" />
+          <ScalarProperty Name="STKHARKAYONC" ColumnName="STKHARKAYONC" />
+          <ScalarProperty Name="STKHARDEPO" ColumnName="STKHARDEPO" />
+          <ScalarProperty Name="STKHAROZELFIS" ColumnName="STKHAROZELFIS" />
+          <ScalarProperty Name="STKHARIADE" ColumnName="STKHARIADE" />
+          <ScalarProperty Name="STKHARKAYNAK" ColumnName="STKHARKAYNAK" />
+          <ScalarProperty Name="STKHARCARKOD" ColumnName="STKHARCARKOD" />
+          <ScalarProperty Name="STKHARREFNO2" ColumnName="STKHARREFNO2" />
+          <ScalarProperty Name="STKHARANADEPO" ColumnName="STKHARANADEPO" />
+          <ScalarProperty Name="STKHARKARDEPO" ColumnName="STKHARKARDEPO" />
+          <ScalarProperty Name="STKHARSTKKOD" ColumnName="STKHARSTKKOD" />
+          <ScalarProperty Name="STKHARSTKCINS" ColumnName="STKHARSTKCINS" />
+          <ScalarProperty Name="STKHARSTKBRM" ColumnName="STKHARSTKBRM" />
+          <ScalarProperty Name="STKHARBARKOD" ColumnName="STKHARBARKOD" />
+          <ScalarProperty Name="STKHAROZDESKOD" ColumnName="STKHAROZDESKOD" />
+          <ScalarProperty Name="STKHARBENZERKOD" ColumnName="STKHARBENZERKOD" />
+          <ScalarProperty Name="STKHARMIKTAR" ColumnName="STKHARMIKTAR" />
+          <ScalarProperty Name="STKHARMIKTAR2" ColumnName="STKHARMIKTAR2" />
+          <ScalarProperty Name="STKHARMIKTAR3" ColumnName="STKHARMIKTAR3" />
+          <ScalarProperty Name="STKHARMIKTAR4" ColumnName="STKHARMIKTAR4" />
+          <ScalarProperty Name="STKHARMIKTAR5" ColumnName="STKHARMIKTAR5" />
+          <ScalarProperty Name="STKHARFIYAT" ColumnName="STKHARFIYAT" />
+          <ScalarProperty Name="STKHARTUTAR" ColumnName="STKHARTUTAR" />
+          <ScalarProperty Name="STKHARDOVKOD" ColumnName="STKHARDOVKOD" />
+          <ScalarProperty Name="STKHARDOVTUR" ColumnName="STKHARDOVTUR" />
+          <ScalarProperty Name="STKHARDOVTUTAR" ColumnName="STKHARDOVTUTAR" />
+          <ScalarProperty Name="STKHAROZKOD" ColumnName="STKHAROZKOD" />
+          <ScalarProperty Name="STKHARACIKLAMA" ColumnName="STKHARACIKLAMA" />
+          <ScalarProperty Name="STKHARKDVYUZ" ColumnName="STKHARKDVYUZ" />
+          <ScalarProperty Name="STKHARISKYUZ1" ColumnName="STKHARISKYUZ1" />
+          <ScalarProperty Name="STKHARISKYUZ2" ColumnName="STKHARISKYUZ2" />
+          <ScalarProperty Name="STKHARISKYUZ3" ColumnName="STKHARISKYUZ3" />
+          <ScalarProperty Name="STKHARISKYUZ4" ColumnName="STKHARISKYUZ4" />
+          <ScalarProperty Name="STKHARISKYUZ5" ColumnName="STKHARISKYUZ5" />
+          <ScalarProperty Name="STKHARISKYTUT1" ColumnName="STKHARISKYTUT1" />
+          <ScalarProperty Name="STKHARISKYTUT2" ColumnName="STKHARISKYTUT2" />
+          <ScalarProperty Name="STKHARISKYTUT3" ColumnName="STKHARISKYTUT3" />
+          <ScalarProperty Name="STKHARISKYTUT4" ColumnName="STKHARISKYTUT4" />
+          <ScalarProperty Name="STKHARISKYTUT5" ColumnName="STKHARISKYTUT5" />
+          <ScalarProperty Name="STKHARISKGTUT1" ColumnName="STKHARISKGTUT1" />
+          <ScalarProperty Name="STKHARISKGTUT2" ColumnName="STKHARISKGTUT2" />
+          <ScalarProperty Name="STKHARISKGTUT3" ColumnName="STKHARISKGTUT3" />
+          <ScalarProperty Name="STKHARISKGTUT4" ColumnName="STKHARISKGTUT4" />
+          <ScalarProperty Name="STKHARISKGTUT5" ColumnName="STKHARISKGTUT5" />
+          <ScalarProperty Name="STKHARDIGERIND" ColumnName="STKHARDIGERIND" />
+          <ScalarProperty Name="STKHARTOPLAMIND" ColumnName="STKHARTOPLAMIND" />
+          <ScalarProperty Name="STKHARKDVMATRAH" ColumnName="STKHARKDVMATRAH" />
+          <ScalarProperty Name="STKHARKDVTUTAR" ColumnName="STKHARKDVTUTAR" />
+          <ScalarProperty Name="STKHARTOPLAMTUT" ColumnName="STKHARTOPLAMTUT" />
+          <ScalarProperty Name="STKHARVADETAR" ColumnName="STKHARVADETAR" />
+          <ScalarProperty Name="STKHARACIKLAMA1" ColumnName="STKHARACIKLAMA1" />
+          <ScalarProperty Name="STKHARACIKLAMA2" ColumnName="STKHARACIKLAMA2" />
+          <ScalarProperty Name="STKHARACIKLAMA3" ColumnName="STKHARACIKLAMA3" />
+          <ScalarProperty Name="STKHARPARTINO" ColumnName="STKHARPARTINO" />
+          <ScalarProperty Name="STKHARMASMER" ColumnName="STKHARMASMER" />
+          <ScalarProperty Name="STKHARSERINO1" ColumnName="STKHARSERINO1" />
+          <ScalarProperty Name="STKHARSERINO2" ColumnName="STKHARSERINO2" />
+          <ScalarProperty Name="STKHARRB1" ColumnName="STKHARRB1" />
+          <ScalarProperty Name="STKHARRB2" ColumnName="STKHARRB2" />
+          <ScalarProperty Name="STKHARRB3" ColumnName="STKHARRB3" />
+          <ScalarProperty Name="STKHARRB4" ColumnName="STKHARRB4" />
+          <ScalarProperty Name="STKHARRB5" ColumnName="STKHARRB5" />
+          <ScalarProperty Name="STKHARFIYTIP" ColumnName="STKHARFIYTIP" />
+          <ScalarProperty Name="STKHARSIRANO" ColumnName="STKHARSIRANO" />
+          <ScalarProperty Name="STKHARTOPLAMMAS" ColumnName="STKHARTOPLAMMAS" />
+          <ScalarProperty Name="STKHARNETTUTAR" ColumnName="STKHARNETTUTAR" />
+          <ScalarProperty Name="STKHARNETFIYAT" ColumnName="STKHARNETFIYAT" />
+          <ScalarProperty Name="STKHARMALIYET" ColumnName="STKHARMALIYET" />
+          <ScalarProperty Name="STKHAROTVMATRAH" ColumnName="STKHAROTVMATRAH" />
+          <ScalarProperty Name="STKHAROTVORAN" ColumnName="STKHAROTVORAN" />
+          <ScalarProperty Name="STKHAROTVFIYAT" ColumnName="STKHAROTVFIYAT" />
+          <ScalarProperty Name="STKHARTOPOTV" ColumnName="STKHARTOPOTV" />
+          <ScalarProperty Name="STKHAROTVTUTAR" ColumnName="STKHAROTVTUTAR" />
+          <ScalarProperty Name="STKHARDOVFIYAT" ColumnName="STKHARDOVFIYAT" />
+          <ScalarProperty Name="STKHAREBTEN" ColumnName="STKHAREBTEN" />
+          <ScalarProperty Name="STKHAREBTBOY" ColumnName="STKHAREBTBOY" />
+          <ScalarProperty Name="STKHAREBTYUK" ColumnName="STKHAREBTYUK" />
+          <ScalarProperty Name="STKHAREBTHCM" ColumnName="STKHAREBTHCM" />
+          <ScalarProperty Name="STKHAREBTAGR" ColumnName="STKHAREBTAGR" />
+          <ScalarProperty Name="STKHAREKCHAR1" ColumnName="STKHAREKCHAR1" />
+          <ScalarProperty Name="STKHAREKCHAR2" ColumnName="STKHAREKCHAR2" />
+          <ScalarProperty Name="STKHAREKINT1" ColumnName="STKHAREKINT1" />
+          <ScalarProperty Name="STKHAREKINT2" ColumnName="STKHAREKINT2" />
+          <ScalarProperty Name="STKHAREKDATE1" ColumnName="STKHAREKDATE1" />
+          <ScalarProperty Name="STKHAREKDATE2" ColumnName="STKHAREKDATE2" />
+          <ScalarProperty Name="STKHAREKTUT1" ColumnName="STKHAREKTUT1" />
+          <ScalarProperty Name="STKHAREKTUT2" ColumnName="STKHAREKTUT2" />
+          <ScalarProperty Name="STKHAREKMIK1" ColumnName="STKHAREKMIK1" />
+          <ScalarProperty Name="STKHAREKMIK2" ColumnName="STKHAREKMIK2" />
+          <ScalarProperty Name="STKHAREKDOVTUT1" ColumnName="STKHAREKDOVTUT1" />
+          <ScalarProperty Name="STKHAREKDOVTUT2" ColumnName="STKHAREKDOVTUT2" />
+          <ScalarProperty Name="STKHAREKORAN1" ColumnName="STKHAREKORAN1" />
+          <ScalarProperty Name="STKHAREKORAN2" ColumnName="STKHAREKORAN2" />
+          <ScalarProperty Name="STKHARDOVKUR" ColumnName="STKHARDOVKUR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKKART">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKKART">
+        <MappingFragment StoreEntitySet="STKKART">
+          <ScalarProperty Name="STKKOD" ColumnName="STKKOD" />
+          <ScalarProperty Name="STKCINSI" ColumnName="STKCINSI" />
+          <ScalarProperty Name="STKCINSI2" ColumnName="STKCINSI2" />
+          <ScalarProperty Name="STKCINSI3" ColumnName="STKCINSI3" />
+          <ScalarProperty Name="STKBIRIM" ColumnName="STKBIRIM" />
+          <ScalarProperty Name="STKBIRIM2" ColumnName="STKBIRIM2" />
+          <ScalarProperty Name="STKBRM2CAR" ColumnName="STKBRM2CAR" />
+          <ScalarProperty Name="STKBRM2BOL" ColumnName="STKBRM2BOL" />
+          <ScalarProperty Name="STKBIRIM3" ColumnName="STKBIRIM3" />
+          <ScalarProperty Name="STKBRM3CAR" ColumnName="STKBRM3CAR" />
+          <ScalarProperty Name="STKBRM3BOL" ColumnName="STKBRM3BOL" />
+          <ScalarProperty Name="STKBIRIM4" ColumnName="STKBIRIM4" />
+          <ScalarProperty Name="STKBRM4CAR" ColumnName="STKBRM4CAR" />
+          <ScalarProperty Name="STKBRM4BOL" ColumnName="STKBRM4BOL" />
+          <ScalarProperty Name="STKBIRIM5" ColumnName="STKBIRIM5" />
+          <ScalarProperty Name="STKBRM5CAR" ColumnName="STKBRM5CAR" />
+          <ScalarProperty Name="STKBRM5BOL" ColumnName="STKBRM5BOL" />
+          <ScalarProperty Name="STKOZKOD1" ColumnName="STKOZKOD1" />
+          <ScalarProperty Name="STKOZKOD2" ColumnName="STKOZKOD2" />
+          <ScalarProperty Name="STKOZKOD3" ColumnName="STKOZKOD3" />
+          <ScalarProperty Name="STKOZKOD4" ColumnName="STKOZKOD4" />
+          <ScalarProperty Name="STKOZKOD5" ColumnName="STKOZKOD5" />
+          <ScalarProperty Name="STKKARTTIP1" ColumnName="STKKARTTIP1" />
+          <ScalarProperty Name="STKKARTTIP2" ColumnName="STKKARTTIP2" />
+          <ScalarProperty Name="STKKARTTIP3" ColumnName="STKKARTTIP3" />
+          <ScalarProperty Name="STKKARTTIP4" ColumnName="STKKARTTIP4" />
+          <ScalarProperty Name="STKKARTTIP5" ColumnName="STKKARTTIP5" />
+          <ScalarProperty Name="STKKARTTIP6" ColumnName="STKKARTTIP6" />
+          <ScalarProperty Name="STKKARTTIP7" ColumnName="STKKARTTIP7" />
+          <ScalarProperty Name="STKKARTTIP8" ColumnName="STKKARTTIP8" />
+          <ScalarProperty Name="STKKARTTIP9" ColumnName="STKKARTTIP9" />
+          <ScalarProperty Name="STKKARTTIP10" ColumnName="STKKARTTIP10" />
+          <ScalarProperty Name="STKKARTTIP11" ColumnName="STKKARTTIP11" />
+          <ScalarProperty Name="STKKARTTIP12" ColumnName="STKKARTTIP12" />
+          <ScalarProperty Name="STKKARTTIP13" ColumnName="STKKARTTIP13" />
+          <ScalarProperty Name="STKKARTTIP14" ColumnName="STKKARTTIP14" />
+          <ScalarProperty Name="STKBAKIYE" ColumnName="STKBAKIYE" />
+          <ScalarProperty Name="STKBAKIYE2" ColumnName="STKBAKIYE2" />
+          <ScalarProperty Name="STKBAKIYE3" ColumnName="STKBAKIYE3" />
+          <ScalarProperty Name="STKBAKIYE4" ColumnName="STKBAKIYE4" />
+          <ScalarProperty Name="STKBAKIYE5" ColumnName="STKBAKIYE5" />
+          <ScalarProperty Name="STKYAOFIYAT" ColumnName="STKYAOFIYAT" />
+          <ScalarProperty Name="STKACIK1" ColumnName="STKACIK1" />
+          <ScalarProperty Name="STKACIK2" ColumnName="STKACIK2" />
+          <ScalarProperty Name="STKACIK3" ColumnName="STKACIK3" />
+          <ScalarProperty Name="STKACIK4" ColumnName="STKACIK4" />
+          <ScalarProperty Name="STKACIK5" ColumnName="STKACIK5" />
+          <ScalarProperty Name="STKGENKDVNO" ColumnName="STKGENKDVNO" />
+          <ScalarProperty Name="STKGENISK1" ColumnName="STKGENISK1" />
+          <ScalarProperty Name="STKGENISK2" ColumnName="STKGENISK2" />
+          <ScalarProperty Name="STKGENISK3" ColumnName="STKGENISK3" />
+          <ScalarProperty Name="STKGENISK4" ColumnName="STKGENISK4" />
+          <ScalarProperty Name="STKGENISK5" ColumnName="STKGENISK5" />
+          <ScalarProperty Name="STKKRITIKSEVIYE" ColumnName="STKKRITIKSEVIYE" />
+          <ScalarProperty Name="STKOPTIMALSEVIYE" ColumnName="STKOPTIMALSEVIYE" />
+          <ScalarProperty Name="STKODEGUN" ColumnName="STKODEGUN" />
+          <ScalarProperty Name="STKPROKOD" ColumnName="STKPROKOD" />
+          <ScalarProperty Name="STKSYFTARIHI" ColumnName="STKSYFTARIHI" />
+          <ScalarProperty Name="STKSYFSAATI" ColumnName="STKSYFSAATI" />
+          <ScalarProperty Name="STKBOZULMASURESI" ColumnName="STKBOZULMASURESI" />
+          <ScalarProperty Name="STKKULLANIMSURESI" ColumnName="STKKULLANIMSURESI" />
+          <ScalarProperty Name="STKEKSAHA1" ColumnName="STKEKSAHA1" />
+          <ScalarProperty Name="STKEKSAHA2" ColumnName="STKEKSAHA2" />
+          <ScalarProperty Name="STKEUAFIYAT" ColumnName="STKEUAFIYAT" />
+          <ScalarProperty Name="STKEPAFIYAT" ColumnName="STKEPAFIYAT" />
+          <ScalarProperty Name="STKEUSFIYAT" ColumnName="STKEUSFIYAT" />
+          <ScalarProperty Name="STKEPSFIYAT" ColumnName="STKEPSFIYAT" />
+          <ScalarProperty Name="STKURTSNKOD" ColumnName="STKURTSNKOD" />
+          <ScalarProperty Name="STKURTBRTIP" ColumnName="STKURTBRTIP" />
+          <ScalarProperty Name="STKBOLKODU" ColumnName="STKBOLKODU" />
+          <ScalarProperty Name="STKREYKODU" ColumnName="STKREYKODU" />
+          <ScalarProperty Name="STKRAFKODU" ColumnName="STKRAFKODU" />
+          <ScalarProperty Name="STKCALFLAG" ColumnName="STKCALFLAG" />
+          <ScalarProperty Name="STKINDKONT" ColumnName="STKINDKONT" />
+          <ScalarProperty Name="STKFIYDEGALFLAG" ColumnName="STKFIYDEGALFLAG" />
+          <ScalarProperty Name="STKFIYDEGSATFLAG" ColumnName="STKFIYDEGSATFLAG" />
+          <ScalarProperty Name="STKIADEALFLAG" ColumnName="STKIADEALFLAG" />
+          <ScalarProperty Name="STKIADESATFLAG" ColumnName="STKIADESATFLAG" />
+          <ScalarProperty Name="STKMIKKONTALFLAG" ColumnName="STKMIKKONTALFLAG" />
+          <ScalarProperty Name="STKMIKKONTALMIN" ColumnName="STKMIKKONTALMIN" />
+          <ScalarProperty Name="STKMIKKONTALMAX" ColumnName="STKMIKKONTALMAX" />
+          <ScalarProperty Name="STKMIKKONTSATFLAG" ColumnName="STKMIKKONTSATFLAG" />
+          <ScalarProperty Name="STKMIKKONTSATMIN" ColumnName="STKMIKKONTSATMIN" />
+          <ScalarProperty Name="STKMIKKONTSATMAX" ColumnName="STKMIKKONTSATMAX" />
+          <ScalarProperty Name="STKFIYKONTALFLAG" ColumnName="STKFIYKONTALFLAG" />
+          <ScalarProperty Name="STKFIYKONTALMIN" ColumnName="STKFIYKONTALMIN" />
+          <ScalarProperty Name="STKFIYKONTALMAX" ColumnName="STKFIYKONTALMAX" />
+          <ScalarProperty Name="STKFIYKONTSATFLAG" ColumnName="STKFIYKONTSATFLAG" />
+          <ScalarProperty Name="STKFIYKONTSATMIN" ColumnName="STKFIYKONTSATMIN" />
+          <ScalarProperty Name="STKFIYKONTSATMAX" ColumnName="STKFIYKONTSATMAX" />
+          <ScalarProperty Name="STKOTOGIRFIY" ColumnName="STKOTOGIRFIY" />
+          <ScalarProperty Name="STKOTOCIKFIY" ColumnName="STKOTOCIKFIY" />
+          <ScalarProperty Name="STKDOVKOD1" ColumnName="STKDOVKOD1" />
+          <ScalarProperty Name="STKDOVTUR1" ColumnName="STKDOVTUR1" />
+          <ScalarProperty Name="STKDOVKOD2" ColumnName="STKDOVKOD2" />
+          <ScalarProperty Name="STKDOVTUR2" ColumnName="STKDOVTUR2" />
+          <ScalarProperty Name="STKDOVKOD3" ColumnName="STKDOVKOD3" />
+          <ScalarProperty Name="STKDOVTUR3" ColumnName="STKDOVTUR3" />
+          <ScalarProperty Name="STKDOVKOD4" ColumnName="STKDOVKOD4" />
+          <ScalarProperty Name="STKDOVTUR4" ColumnName="STKDOVTUR4" />
+          <ScalarProperty Name="STKDOVKOD5" ColumnName="STKDOVKOD5" />
+          <ScalarProperty Name="STKDOVTUR5" ColumnName="STKDOVTUR5" />
+          <ScalarProperty Name="STKURUNSOR" ColumnName="STKURUNSOR" />
+          <ScalarProperty Name="STKURETKOD" ColumnName="STKURETKOD" />
+          <ScalarProperty Name="STKURETADI" ColumnName="STKURETADI" />
+          <ScalarProperty Name="STKTEDARIKKOD" ColumnName="STKTEDARIKKOD" />
+          <ScalarProperty Name="STKTEDARIKADI" ColumnName="STKTEDARIKADI" />
+          <ScalarProperty Name="STKKALKONTKOD" ColumnName="STKKALKONTKOD" />
+          <ScalarProperty Name="STKSN1EVRAKNO" ColumnName="STKSN1EVRAKNO" />
+          <ScalarProperty Name="STKSN2EVRAKNO" ColumnName="STKSN2EVRAKNO" />
+          <ScalarProperty Name="STKGRUPKOD" ColumnName="STKGRUPKOD" />
+          <ScalarProperty Name="STKSEVNO" ColumnName="STKSEVNO" />
+          <ScalarProperty Name="STKOZELBAKIYE" ColumnName="STKOZELBAKIYE" />
+          <ScalarProperty Name="STKOZELBAKIYE2" ColumnName="STKOZELBAKIYE2" />
+          <ScalarProperty Name="STKOZELBAKIYE3" ColumnName="STKOZELBAKIYE3" />
+          <ScalarProperty Name="STKOZELBAKIYE4" ColumnName="STKOZELBAKIYE4" />
+          <ScalarProperty Name="STKOZELBAKIYE5" ColumnName="STKOZELBAKIYE5" />
+          <ScalarProperty Name="STKREZGIRSIPMIK" ColumnName="STKREZGIRSIPMIK" />
+          <ScalarProperty Name="STKREZGIRSIPTUT" ColumnName="STKREZGIRSIPTUT" />
+          <ScalarProperty Name="STKREZCIKSIPMIK" ColumnName="STKREZCIKSIPMIK" />
+          <ScalarProperty Name="STKREZCIKSIPTUT" ColumnName="STKREZCIKSIPTUT" />
+          <ScalarProperty Name="STKREZGIRURTMIK" ColumnName="STKREZGIRURTMIK" />
+          <ScalarProperty Name="STKREZGIRURTTUT" ColumnName="STKREZGIRURTTUT" />
+          <ScalarProperty Name="STKREZCIKURTMIK" ColumnName="STKREZCIKURTMIK" />
+          <ScalarProperty Name="STKREZCIKURTTUT" ColumnName="STKREZCIKURTTUT" />
+          <ScalarProperty Name="STKOTVORAN" ColumnName="STKOTVORAN" />
+          <ScalarProperty Name="STKOTVTUTAR" ColumnName="STKOTVTUTAR" />
+          <ScalarProperty Name="STKFIREORAN" ColumnName="STKFIREORAN" />
+          <ScalarProperty Name="STKKARORAN" ColumnName="STKKARORAN" />
+          <ScalarProperty Name="STKPARTIEVRAKNO" ColumnName="STKPARTIEVRAKNO" />
+          <ScalarProperty Name="STKOTVVERGIKOD" ColumnName="STKOTVVERGIKOD" />
+          <ScalarProperty Name="STKEKVERGIKOD" ColumnName="STKEKVERGIKOD" />
+          <ScalarProperty Name="STKURESTKKOD" ColumnName="STKURESTKKOD" />
+          <ScalarProperty Name="STKTEDSTKKOD" ColumnName="STKTEDSTKKOD" />
+          <ScalarProperty Name="STKEKCHAR1" ColumnName="STKEKCHAR1" />
+          <ScalarProperty Name="STKEKCHAR2" ColumnName="STKEKCHAR2" />
+          <ScalarProperty Name="STKEKINT1" ColumnName="STKEKINT1" />
+          <ScalarProperty Name="STKEKINT2" ColumnName="STKEKINT2" />
+          <ScalarProperty Name="STKEKDATE1" ColumnName="STKEKDATE1" />
+          <ScalarProperty Name="STKEKDATE2" ColumnName="STKEKDATE2" />
+          <ScalarProperty Name="STKEKDBL1" ColumnName="STKEKDBL1" />
+          <ScalarProperty Name="STKEKDBL2" ColumnName="STKEKDBL2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKMIZDEGER">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKMIZDEGER">
+        <MappingFragment StoreEntitySet="STKMIZDEGER">
+          <ScalarProperty Name="STKKOD" ColumnName="STKKOD" />
+          <ScalarProperty Name="STKYIL" ColumnName="STKYIL" />
+          <ScalarProperty Name="STKAY" ColumnName="STKAY" />
+          <ScalarProperty Name="STKRAKTIP" ColumnName="STKRAKTIP" />
+          <ScalarProperty Name="STKDOVKOD" ColumnName="STKDOVKOD" />
+          <ScalarProperty Name="STKBORC" ColumnName="STKBORC" />
+          <ScalarProperty Name="STKALACAK" ColumnName="STKALACAK" />
+          <ScalarProperty Name="STKDEPO" ColumnName="STKDEPO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FATHAR">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.FATHAR">
+        <MappingFragment StoreEntitySet="FATHAR">
+          <ScalarProperty Name="FATHAREKVERGI" ColumnName="FATHAREKVERGI" />
+          <ScalarProperty Name="FATHAROTVVERKOD" ColumnName="FATHAROTVVERKOD" />
+          <ScalarProperty Name="FATHAREFATFLAG" ColumnName="FATHAREFATFLAG" />
+          <ScalarProperty Name="FATHARDOVKUR" ColumnName="FATHARDOVKUR" />
+          <ScalarProperty Name="FATHAREKORAN2" ColumnName="FATHAREKORAN2" />
+          <ScalarProperty Name="FATHAREKORAN1" ColumnName="FATHAREKORAN1" />
+          <ScalarProperty Name="FATHAREKDOVTUT2" ColumnName="FATHAREKDOVTUT2" />
+          <ScalarProperty Name="FATHAREKDOVTUT1" ColumnName="FATHAREKDOVTUT1" />
+          <ScalarProperty Name="FATHAREKMIK2" ColumnName="FATHAREKMIK2" />
+          <ScalarProperty Name="FATHAREKMIK1" ColumnName="FATHAREKMIK1" />
+          <ScalarProperty Name="FATHAREKTUT2" ColumnName="FATHAREKTUT2" />
+          <ScalarProperty Name="FATHAREKTUT1" ColumnName="FATHAREKTUT1" />
+          <ScalarProperty Name="FATHAREKDATE2" ColumnName="FATHAREKDATE2" />
+          <ScalarProperty Name="FATHAREKDATE1" ColumnName="FATHAREKDATE1" />
+          <ScalarProperty Name="FATHAREKINT2" ColumnName="FATHAREKINT2" />
+          <ScalarProperty Name="FATHAREKINT1" ColumnName="FATHAREKINT1" />
+          <ScalarProperty Name="FATHAREKCHAR2" ColumnName="FATHAREKCHAR2" />
+          <ScalarProperty Name="FATHAREKCHAR1" ColumnName="FATHAREKCHAR1" />
+          <ScalarProperty Name="FATHAREBTAGR" ColumnName="FATHAREBTAGR" />
+          <ScalarProperty Name="FATHAREBTHCM" ColumnName="FATHAREBTHCM" />
+          <ScalarProperty Name="FATHAREBTYUK" ColumnName="FATHAREBTYUK" />
+          <ScalarProperty Name="FATHAREBTBOY" ColumnName="FATHAREBTBOY" />
+          <ScalarProperty Name="FATHAREBTEN" ColumnName="FATHAREBTEN" />
+          <ScalarProperty Name="FATHARDOVFIYAT" ColumnName="FATHARDOVFIYAT" />
+          <ScalarProperty Name="FATHARMUHYANMAS" ColumnName="FATHARMUHYANMAS" />
+          <ScalarProperty Name="FATHARMUHYANIND" ColumnName="FATHARMUHYANIND" />
+          <ScalarProperty Name="FATHARMUHKOD" ColumnName="FATHARMUHKOD" />
+          <ScalarProperty Name="FATHAROTVTUTAR" ColumnName="FATHAROTVTUTAR" />
+          <ScalarProperty Name="FATHARTOPOTV" ColumnName="FATHARTOPOTV" />
+          <ScalarProperty Name="FATHAROTVFIYAT" ColumnName="FATHAROTVFIYAT" />
+          <ScalarProperty Name="FATHAROTVORAN" ColumnName="FATHAROTVORAN" />
+          <ScalarProperty Name="FATHAROTVMATRAH" ColumnName="FATHAROTVMATRAH" />
+          <ScalarProperty Name="FATHARMALIYET" ColumnName="FATHARMALIYET" />
+          <ScalarProperty Name="FATHARNETFIYAT" ColumnName="FATHARNETFIYAT" />
+          <ScalarProperty Name="FATHARNETTUTAR" ColumnName="FATHARNETTUTAR" />
+          <ScalarProperty Name="FATHARTOPLAMMAS" ColumnName="FATHARTOPLAMMAS" />
+          <ScalarProperty Name="FATHARODEMEKOD" ColumnName="FATHARODEMEKOD" />
+          <ScalarProperty Name="FATHARSATKOD" ColumnName="FATHARSATKOD" />
+          <ScalarProperty Name="FATHARRB5" ColumnName="FATHARRB5" />
+          <ScalarProperty Name="FATHARRB4" ColumnName="FATHARRB4" />
+          <ScalarProperty Name="FATHARRB3" ColumnName="FATHARRB3" />
+          <ScalarProperty Name="FATHARRB2" ColumnName="FATHARRB2" />
+          <ScalarProperty Name="FATHARRB1" ColumnName="FATHARRB1" />
+          <ScalarProperty Name="FATHARSERINO2" ColumnName="FATHARSERINO2" />
+          <ScalarProperty Name="FATHARSERINO1" ColumnName="FATHARSERINO1" />
+          <ScalarProperty Name="FATHARMASMER" ColumnName="FATHARMASMER" />
+          <ScalarProperty Name="FATHARPARTINO" ColumnName="FATHARPARTINO" />
+          <ScalarProperty Name="FATHARACIKLAMA3" ColumnName="FATHARACIKLAMA3" />
+          <ScalarProperty Name="FATHARACIKLAMA2" ColumnName="FATHARACIKLAMA2" />
+          <ScalarProperty Name="FATHARACIKLAMA1" ColumnName="FATHARACIKLAMA1" />
+          <ScalarProperty Name="FATHARVADETAR" ColumnName="FATHARVADETAR" />
+          <ScalarProperty Name="FATHARTOPLAMTUT" ColumnName="FATHARTOPLAMTUT" />
+          <ScalarProperty Name="FATHARKDVTUTAR" ColumnName="FATHARKDVTUTAR" />
+          <ScalarProperty Name="FATHARKDVMATRAH" ColumnName="FATHARKDVMATRAH" />
+          <ScalarProperty Name="FATHARTOPLAMIND" ColumnName="FATHARTOPLAMIND" />
+          <ScalarProperty Name="FATHARDIGERIND" ColumnName="FATHARDIGERIND" />
+          <ScalarProperty Name="FATHARISKGTUT5" ColumnName="FATHARISKGTUT5" />
+          <ScalarProperty Name="FATHARISKGTUT4" ColumnName="FATHARISKGTUT4" />
+          <ScalarProperty Name="FATHARISKGTUT3" ColumnName="FATHARISKGTUT3" />
+          <ScalarProperty Name="FATHARISKGTUT2" ColumnName="FATHARISKGTUT2" />
+          <ScalarProperty Name="FATHARISKGTUT1" ColumnName="FATHARISKGTUT1" />
+          <ScalarProperty Name="FATHARISKYTUT5" ColumnName="FATHARISKYTUT5" />
+          <ScalarProperty Name="FATHARISKYTUT4" ColumnName="FATHARISKYTUT4" />
+          <ScalarProperty Name="FATHARISKYTUT3" ColumnName="FATHARISKYTUT3" />
+          <ScalarProperty Name="FATHARISKYTUT2" ColumnName="FATHARISKYTUT2" />
+          <ScalarProperty Name="FATHARISKYTUT1" ColumnName="FATHARISKYTUT1" />
+          <ScalarProperty Name="FATHARISKYUZ5" ColumnName="FATHARISKYUZ5" />
+          <ScalarProperty Name="FATHARISKYUZ4" ColumnName="FATHARISKYUZ4" />
+          <ScalarProperty Name="FATHARISKYUZ3" ColumnName="FATHARISKYUZ3" />
+          <ScalarProperty Name="FATHARISKYUZ2" ColumnName="FATHARISKYUZ2" />
+          <ScalarProperty Name="FATHARISKYUZ1" ColumnName="FATHARISKYUZ1" />
+          <ScalarProperty Name="FATHARKDVYUZ" ColumnName="FATHARKDVYUZ" />
+          <ScalarProperty Name="FATHARACIKLAMA" ColumnName="FATHARACIKLAMA" />
+          <ScalarProperty Name="FATHAROZKOD" ColumnName="FATHAROZKOD" />
+          <ScalarProperty Name="FATHARDOVTUTAR" ColumnName="FATHARDOVTUTAR" />
+          <ScalarProperty Name="FATHARDOVTUR" ColumnName="FATHARDOVTUR" />
+          <ScalarProperty Name="FATHARDOVKOD" ColumnName="FATHARDOVKOD" />
+          <ScalarProperty Name="FATHARTUTAR" ColumnName="FATHARTUTAR" />
+          <ScalarProperty Name="FATHARFIYAT" ColumnName="FATHARFIYAT" />
+          <ScalarProperty Name="FATHARFIYTIP" ColumnName="FATHARFIYTIP" />
+          <ScalarProperty Name="FATHARMIKTAR5" ColumnName="FATHARMIKTAR5" />
+          <ScalarProperty Name="FATHARMIKTAR4" ColumnName="FATHARMIKTAR4" />
+          <ScalarProperty Name="FATHARMIKTAR3" ColumnName="FATHARMIKTAR3" />
+          <ScalarProperty Name="FATHARMIKTAR2" ColumnName="FATHARMIKTAR2" />
+          <ScalarProperty Name="FATHARMIKTAR" ColumnName="FATHARMIKTAR" />
+          <ScalarProperty Name="FATHARBENZERKOD" ColumnName="FATHARBENZERKOD" />
+          <ScalarProperty Name="FATHAROZDESKOD" ColumnName="FATHAROZDESKOD" />
+          <ScalarProperty Name="FATHARBARKOD" ColumnName="FATHARBARKOD" />
+          <ScalarProperty Name="FATHARDEPOKOD" ColumnName="FATHARDEPOKOD" />
+          <ScalarProperty Name="FATHARSTKBRM" ColumnName="FATHARSTKBRM" />
+          <ScalarProperty Name="FATHARSTKCINS" ColumnName="FATHARSTKCINS" />
+          <ScalarProperty Name="FATHARSTKKOD" ColumnName="FATHARSTKKOD" />
+          <ScalarProperty Name="FATHARKODTIP" ColumnName="FATHARKODTIP" />
+          <ScalarProperty Name="FATHARSIRANO" ColumnName="FATHARSIRANO" />
+          <ScalarProperty Name="FATHARCARKOD" ColumnName="FATHARCARKOD" />
+          <ScalarProperty Name="FATHARIADE" ColumnName="FATHARIADE" />
+          <ScalarProperty Name="FATHARKAYNAK" ColumnName="FATHARKAYNAK" />
+          <ScalarProperty Name="FATHARIPTALFLAG" ColumnName="FATHARIPTALFLAG" />
+          <ScalarProperty Name="FATHARKAYONC" ColumnName="FATHARKAYONC" />
+          <ScalarProperty Name="FATHARGCFLAG" ColumnName="FATHARGCFLAG" />
+          <ScalarProperty Name="FATHARTIPI" ColumnName="FATHARTIPI" />
+          <ScalarProperty Name="FATHARREFNO" ColumnName="FATHARREFNO" />
+          <ScalarProperty Name="FATHARTAR" ColumnName="FATHARTAR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKBARKOD">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKBARKOD">
+        <MappingFragment StoreEntitySet="STKBARKOD">
+          <ScalarProperty Name="STKBARITEMNO" ColumnName="STKBARITEMNO" />
+          <ScalarProperty Name="STKBARFIYTIP" ColumnName="STKBARFIYTIP" />
+          <ScalarProperty Name="STKBARBOYUT5" ColumnName="STKBARBOYUT5" />
+          <ScalarProperty Name="STKBARBOYUT4" ColumnName="STKBARBOYUT4" />
+          <ScalarProperty Name="STKBARBOYUT3" ColumnName="STKBARBOYUT3" />
+          <ScalarProperty Name="STKBARBOYUT2" ColumnName="STKBARBOYUT2" />
+          <ScalarProperty Name="STKBARBOYUT1" ColumnName="STKBARBOYUT1" />
+          <ScalarProperty Name="STKBARYAPINO" ColumnName="STKBARYAPINO" />
+          <ScalarProperty Name="STKBARTIP" ColumnName="STKBARTIP" />
+          <ScalarProperty Name="STKBARKATSAYI" ColumnName="STKBARKATSAYI" />
+          <ScalarProperty Name="STKBARBRMNO" ColumnName="STKBARBRMNO" />
+          <ScalarProperty Name="STKBARSTKKOD" ColumnName="STKBARSTKKOD" />
+          <ScalarProperty Name="STKBARKOD1" ColumnName="STKBARKOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKBIRIM">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKBIRIM">
+        <MappingFragment StoreEntitySet="STKBIRIM">
+          <ScalarProperty Name="STKBIRIMBOLEN" ColumnName="STKBIRIMBOLEN" />
+          <ScalarProperty Name="STKBIRIMCARPAN" ColumnName="STKBIRIMCARPAN" />
+          <ScalarProperty Name="STKBIRIMAD" ColumnName="STKBIRIMAD" />
+          <ScalarProperty Name="STKBIRIMKOD" ColumnName="STKBIRIMKOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKBOYFIYAT">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKBOYFIYAT">
+        <MappingFragment StoreEntitySet="STKBOYFIYAT">
+          <ScalarProperty Name="STKBOYFIYTUTAR" ColumnName="STKBOYFIYTUTAR" />
+          <ScalarProperty Name="STKBOYFIYNO" ColumnName="STKBOYFIYNO" />
+          <ScalarProperty Name="STKBOYFIYBOYUT5" ColumnName="STKBOYFIYBOYUT5" />
+          <ScalarProperty Name="STKBOYFIYBOYUT4" ColumnName="STKBOYFIYBOYUT4" />
+          <ScalarProperty Name="STKBOYFIYBOYUT3" ColumnName="STKBOYFIYBOYUT3" />
+          <ScalarProperty Name="STKBOYFIYBOYUT2" ColumnName="STKBOYFIYBOYUT2" />
+          <ScalarProperty Name="STKBOYFIYBOYUT1" ColumnName="STKBOYFIYBOYUT1" />
+          <ScalarProperty Name="STKBOYFIYDEPKOD" ColumnName="STKBOYFIYDEPKOD" />
+          <ScalarProperty Name="STKBOYFIYSTKKOD" ColumnName="STKBOYFIYSTKKOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKBOYUT">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKBOYUT">
+        <MappingFragment StoreEntitySet="STKBOYUT">
+          <ScalarProperty Name="STKBOYCIKURTMIK" ColumnName="STKBOYCIKURTMIK" />
+          <ScalarProperty Name="STKBOYGIRURTMIK" ColumnName="STKBOYGIRURTMIK" />
+          <ScalarProperty Name="STKBOYCIKSIPMIK" ColumnName="STKBOYCIKSIPMIK" />
+          <ScalarProperty Name="STKBOYGIRSIPMIK" ColumnName="STKBOYGIRSIPMIK" />
+          <ScalarProperty Name="STKBOYOZELKOD" ColumnName="STKBOYOZELKOD" />
+          <ScalarProperty Name="STKBOYACIKLAMA" ColumnName="STKBOYACIKLAMA" />
+          <ScalarProperty Name="STKBOYBAKIYE" ColumnName="STKBOYBAKIYE" />
+          <ScalarProperty Name="STKBOYCIKAN" ColumnName="STKBOYCIKAN" />
+          <ScalarProperty Name="STKBOYGIREN" ColumnName="STKBOYGIREN" />
+          <ScalarProperty Name="STKBOYDEVIR" ColumnName="STKBOYDEVIR" />
+          <ScalarProperty Name="STKBOYBOYUT5" ColumnName="STKBOYBOYUT5" />
+          <ScalarProperty Name="STKBOYBOYUT4" ColumnName="STKBOYBOYUT4" />
+          <ScalarProperty Name="STKBOYBOYUT3" ColumnName="STKBOYBOYUT3" />
+          <ScalarProperty Name="STKBOYBOYUT2" ColumnName="STKBOYBOYUT2" />
+          <ScalarProperty Name="STKBOYBOYUT1" ColumnName="STKBOYBOYUT1" />
+          <ScalarProperty Name="STKBOYDEPOKOD" ColumnName="STKBOYDEPOKOD" />
+          <ScalarProperty Name="STKBOYSTOKKOD" ColumnName="STKBOYSTOKKOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="STKDETAY">
+      <EntityTypeMapping TypeName="ETA_DENEME_2016Model.STKDETAY">
+        <MappingFragment StoreEntitySet="STKDETAY">
+          <ScalarProperty Name="STKDETITEMNO" ColumnName="STKDETITEMNO" />
+          <ScalarProperty Name="STKDETTIP" ColumnName="STKDETTIP" />
+          <ScalarProperty Name="STKDETSKOD" ColumnName="STKDETSKOD" />
+          <ScalarProperty Name="STKDETBKOD" ColumnName="STKDETBKOD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

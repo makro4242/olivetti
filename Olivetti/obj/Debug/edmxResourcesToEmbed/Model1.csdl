@@ -1,0 +1,1538 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ETA_DENEME_2016Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="DEPSTKKART">
+    <Key>
+      <PropertyRef Name="DEPSTKSTKKOD" />
+      <PropertyRef Name="DEPSTKDEPOKOD" />
+      <PropertyRef Name="DEPSTKOZKOD1" />
+      <PropertyRef Name="DEPSTKOZKOD2" />
+      <PropertyRef Name="DEPSTKOZKOD3" />
+      <PropertyRef Name="DEPSTKOZKOD4" />
+      <PropertyRef Name="DEPSTKOZKOD5" />
+      <PropertyRef Name="DEPSTKACIK1" />
+      <PropertyRef Name="DEPSTKACIK2" />
+      <PropertyRef Name="DEPSTKACIK3" />
+      <PropertyRef Name="DEPSTKACIK4" />
+      <PropertyRef Name="DEPSTKACIK5" />
+      <PropertyRef Name="DEPSTKBAKIYE" />
+      <PropertyRef Name="DEPSTKBAKIYE2" />
+      <PropertyRef Name="DEPSTKBAKIYE3" />
+      <PropertyRef Name="DEPSTKBAKIYE4" />
+      <PropertyRef Name="DEPSTKBAKIYE5" />
+      <PropertyRef Name="DEPSTKYAOFIYAT" />
+      <PropertyRef Name="DEPSTKKRITIKSEVIYE" />
+      <PropertyRef Name="DEPSTKOPTIMALSEVIYE" />
+      <PropertyRef Name="DEPSTKBOLKODU" />
+      <PropertyRef Name="DEPSTKREYKODU" />
+      <PropertyRef Name="DEPSTKRAFKODU" />
+      <PropertyRef Name="DEPSTKCALFLAG" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE2" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE3" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE4" />
+      <PropertyRef Name="DEPSTKOZELBAKIYE5" />
+      <PropertyRef Name="DEPSTKREZGIRSIPMIK" />
+      <PropertyRef Name="DEPSTKREZGIRSIPTUT" />
+      <PropertyRef Name="DEPSTKREZCIKSIPMIK" />
+      <PropertyRef Name="DEPSTKREZCIKSIPTUT" />
+      <PropertyRef Name="DEPSTKREZGIRURTMIK" />
+      <PropertyRef Name="DEPSTKREZGIRURTTUT" />
+      <PropertyRef Name="DEPSTKREZCIKURTMIK" />
+      <PropertyRef Name="DEPSTKREZCIKURTTUT" />
+    </Key>
+    <Property Name="DEPSTKSTKKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKDEPOKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKOZKOD1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKOZKOD2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKOZKOD3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKOZKOD4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKOZKOD5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKACIK1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKACIK2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKACIK3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKACIK4" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKACIK5" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBAKIYE5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKYAOFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKKRITIKSEVIYE" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOPTIMALSEVIYE" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKBOLKODU" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKREYKODU" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKRAFKODU" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DEPSTKCALFLAG" Type="Int32" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKOZELBAKIYE5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZGIRSIPMIK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZGIRSIPTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZCIKSIPMIK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZCIKSIPTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZGIRURTMIK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZGIRURTTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZCIKURTMIK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="DEPSTKREZCIKURTTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FATFIS">
+    <Key>
+      <PropertyRef Name="FATFISTAR" />
+      <PropertyRef Name="FATFISREFNO" />
+      <PropertyRef Name="FATFISTIPI" />
+      <PropertyRef Name="FATFISGCFLAG" />
+      <PropertyRef Name="FATFISKAYONC" />
+      <PropertyRef Name="FATFISIPTALFLAG" />
+      <PropertyRef Name="FATFISKAYNAK" />
+      <PropertyRef Name="FATFISSTKREFNO" />
+      <PropertyRef Name="FATFISCARREFNO" />
+      <PropertyRef Name="FATFISMUHREFNO" />
+      <PropertyRef Name="FATFISKASREFNO" />
+      <PropertyRef Name="FATFISBANREFNO" />
+      <PropertyRef Name="FATFISKAPFLAG" />
+      <PropertyRef Name="FATFISBASFLAG" />
+      <PropertyRef Name="FATFISOZELFIS" />
+      <PropertyRef Name="FATFISDEPOFLAG" />
+      <PropertyRef Name="FATFISIADEFLAG" />
+      <PropertyRef Name="FATFISKDVDAHILFLAG" />
+      <PropertyRef Name="FATFISTEVKIFATFLAG" />
+      <PropertyRef Name="FATFISANADEPO" />
+      <PropertyRef Name="FATFISPARTIKOD" />
+      <PropertyRef Name="FATFISODEMEKOD" />
+      <PropertyRef Name="FATFISSATKOD" />
+      <PropertyRef Name="FATFISMASMER" />
+      <PropertyRef Name="FATFISCARKOD" />
+      <PropertyRef Name="FATFISCARUNVAN" />
+      <PropertyRef Name="FATFISADRESNO" />
+      <PropertyRef Name="FATFISADRES1" />
+      <PropertyRef Name="FATFISADRES2" />
+      <PropertyRef Name="FATFISADRES3" />
+      <PropertyRef Name="FATFISPOSTAKOD" />
+      <PropertyRef Name="FATFISULKE" />
+      <PropertyRef Name="FATFISIL" />
+      <PropertyRef Name="FATFISILCE" />
+      <PropertyRef Name="FATFISVERDAIRE" />
+      <PropertyRef Name="FATFISVERHESNO" />
+      <PropertyRef Name="FATFISSAAT" />
+      <PropertyRef Name="FATFISVADETAR" />
+      <PropertyRef Name="FATFISKDVVADETAR" />
+      <PropertyRef Name="FATFISIRSTAR" />
+      <PropertyRef Name="FATFISIRSNO" />
+      <PropertyRef Name="FATFISEVRAKNO1" />
+      <PropertyRef Name="FATFISEVRAKNO2" />
+      <PropertyRef Name="FATFISEVRAKNO3" />
+      <PropertyRef Name="FATFISOZKOD1" />
+      <PropertyRef Name="FATFISOZKOD2" />
+      <PropertyRef Name="FATFISOZKOD3" />
+      <PropertyRef Name="FATFISACIKLAMA1" />
+      <PropertyRef Name="FATFISACIKLAMA2" />
+      <PropertyRef Name="FATFISACIKLAMA3" />
+      <PropertyRef Name="FATFISHAZKOD" />
+      <PropertyRef Name="FATFISHAZTAR" />
+      <PropertyRef Name="FATFISHAZNOT" />
+      <PropertyRef Name="FATFISKONTKOD" />
+      <PropertyRef Name="FATFISKONTTAR" />
+      <PropertyRef Name="FATFISKONTNOT" />
+      <PropertyRef Name="FATFISONAYKOD" />
+      <PropertyRef Name="FATFISONAYTAR" />
+      <PropertyRef Name="FATFISONAYNOT" />
+      <PropertyRef Name="FATFISKDVORANI" />
+      <PropertyRef Name="FATFISMALTOP" />
+      <PropertyRef Name="FATFISKALINDYTOP" />
+      <PropertyRef Name="FATFISKALINDTTOP" />
+      <PropertyRef Name="FATFISSATINDTOP" />
+      <PropertyRef Name="FATFISGENINDTOP" />
+      <PropertyRef Name="FATFISSATMASTOP" />
+      <PropertyRef Name="FATFISGENMASTOP" />
+      <PropertyRef Name="FATFISBRUTTOPLAM" />
+      <PropertyRef Name="FATFISKDVMATRAHI" />
+      <PropertyRef Name="FATFISKDVTUTARI" />
+      <PropertyRef Name="FATFISARATOPLAM" />
+      <PropertyRef Name="FATFISKDVALTIINDTOP" />
+      <PropertyRef Name="FATFISKDVALTIEKTOP" />
+      <PropertyRef Name="FATFISGENTOPLAM" />
+      <PropertyRef Name="FATFISTEVTUTAR" />
+      <PropertyRef Name="FATFISDOVTAR" />
+      <PropertyRef Name="FATFISDOVKOD" />
+      <PropertyRef Name="FATFISDOVTUR" />
+      <PropertyRef Name="FATFISDOVKUR" />
+      <PropertyRef Name="FATFISGENDOVTOP" />
+      <PropertyRef Name="FATFISTEVNO" />
+      <PropertyRef Name="FATFISTEVORAN" />
+      <PropertyRef Name="FATFISSEVNO" />
+      <PropertyRef Name="FATFISISYKOD" />
+      <PropertyRef Name="FATFISOTVFLAG" />
+      <PropertyRef Name="FATFISOTVKDVBLOKAJ" />
+      <PropertyRef Name="FATFISTOPOTV" />
+      <PropertyRef Name="FATFISTOPOTUT" />
+      <PropertyRef Name="FATFISTCKIMLIKNO" />
+      <PropertyRef Name="FATFISTRNTAR" />
+      <PropertyRef Name="FATFISTRNREFNO" />
+      <PropertyRef Name="FATFISTRNTIPI" />
+      <PropertyRef Name="FATFISEFATFLAG" />
+      <PropertyRef Name="FATFISEKVERGIINDTOP" />
+      <PropertyRef Name="FATFISEKVERGIILVTOP" />
+      <PropertyRef Name="FATFISEKVERGITOP" />
+    </Key>
+    <Property Name="FATFISTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATFISREFNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISTIPI" Type="Int32" Nullable="false" />
+    <Property Name="FATFISGCFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISKAYONC" Type="Int32" Nullable="false" />
+    <Property Name="FATFISIPTALFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISKAYNAK" Type="Int32" Nullable="false" />
+    <Property Name="FATFISSTKREFNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISCARREFNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISMUHREFNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISKASREFNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISBANREFNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISKAPFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISBASFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISOZELFIS" Type="Int32" Nullable="false" />
+    <Property Name="FATFISDEPOFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISIADEFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISKDVDAHILFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISTEVKIFATFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISANADEPO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISPARTIKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISODEMEKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISSATKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISMASMER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISCARKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISCARUNVAN" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISADRESNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISADRES1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISADRES2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISADRES3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISPOSTAKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISULKE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISIL" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISILCE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISVERDAIRE" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISVERHESNO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISSAAT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISVADETAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATFISKDVVADETAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATFISIRSTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATFISIRSNO" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISEVRAKNO1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISEVRAKNO2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISEVRAKNO3" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISOZKOD1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISOZKOD2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISOZKOD3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISACIKLAMA1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISACIKLAMA2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISACIKLAMA3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISHAZKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISHAZTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATFISHAZNOT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISKONTKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISKONTTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATFISKONTNOT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISONAYKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISONAYTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATFISONAYNOT" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISKDVORANI" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISMALTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKALINDYTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKALINDTTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISSATINDTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISGENINDTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISSATMASTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISGENMASTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISBRUTTOPLAM" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKDVMATRAHI" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKDVTUTARI" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISARATOPLAM" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKDVALTIINDTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISKDVALTIEKTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISGENTOPLAM" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISTEVTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISDOVTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATFISDOVKOD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISDOVTUR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISDOVKUR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISGENDOVTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISTEVNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISTEVORAN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISSEVNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISISYKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISOTVFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISOTVKDVBLOKAJ" Type="Int32" Nullable="false" />
+    <Property Name="FATFISTOPOTV" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISTOPOTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISTCKIMLIKNO" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFISTRNTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATFISTRNREFNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFISTRNTIPI" Type="Int32" Nullable="false" />
+    <Property Name="FATFISEFATFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFISEKVERGIINDTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISEKVERGIILVTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FATFISEKVERGITOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FATFISTIP">
+    <Key>
+      <PropertyRef Name="FATFTMODUL" />
+      <PropertyRef Name="FATFTNO" />
+      <PropertyRef Name="FATFTKOD" />
+      <PropertyRef Name="FATFTACIKLAMA" />
+      <PropertyRef Name="FATFTONAY" />
+      <PropertyRef Name="FATFTEVRAKNO" />
+      <PropertyRef Name="FATFTDIZDOS" />
+      <PropertyRef Name="FATFTMUHGRUP" />
+      <PropertyRef Name="FATFTSTKFTNO" />
+      <PropertyRef Name="FATFTCARFTNO" />
+      <PropertyRef Name="FATFTMUHFTNO" />
+      <PropertyRef Name="FATFTKASFTNO" />
+      <PropertyRef Name="FATFTBANFTNO" />
+      <PropertyRef Name="FATFTKDVDAHIL" />
+      <PropertyRef Name="FATFTKAPALI" />
+      <PropertyRef Name="FATFTTEVNO" />
+      <PropertyRef Name="FATFTISLGRPNO" />
+      <PropertyRef Name="FATFTCARMUHGRUP" />
+      <PropertyRef Name="FATFTMAXSATIR" />
+      <PropertyRef Name="FATFTOTVFLAG" />
+      <PropertyRef Name="FATFTKDVOTVBLOKAJ" />
+      <PropertyRef Name="FATFTEEVRAKNO" />
+    </Key>
+    <Property Name="FATFTMODUL" Type="Int32" Nullable="false" />
+    <Property Name="FATFTNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFTKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFTACIKLAMA" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFTONAY" Type="Int32" Nullable="false" />
+    <Property Name="FATFTEVRAKNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFTDIZDOS" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFTMUHGRUP" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFTSTKFTNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFTCARFTNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFTMUHFTNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFTKASFTNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFTBANFTNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFTKDVDAHIL" Type="Int32" Nullable="false" />
+    <Property Name="FATFTKAPALI" Type="Int32" Nullable="false" />
+    <Property Name="FATFTTEVNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFTISLGRPNO" Type="Int32" Nullable="false" />
+    <Property Name="FATFTCARMUHGRUP" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FATFTMAXSATIR" Type="Int32" Nullable="false" />
+    <Property Name="FATFTOTVFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATFTKDVOTVBLOKAJ" Type="Int32" Nullable="false" />
+    <Property Name="FATFTEEVRAKNO" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FATFISTOPLAM">
+    <Key>
+      <PropertyRef Name="FFTTAR" />
+      <PropertyRef Name="FFTREFNO" />
+      <PropertyRef Name="FFTTIPI" />
+      <PropertyRef Name="FFTGCFLAG" />
+      <PropertyRef Name="FFTKAYONC" />
+      <PropertyRef Name="FFTIPTALFLAG" />
+      <PropertyRef Name="FFTKAYNAK" />
+      <PropertyRef Name="FFTIADEFLAG" />
+      <PropertyRef Name="FFTKDVDAHILFLAG" />
+      <PropertyRef Name="FFTCARKOD" />
+      <PropertyRef Name="FFTEVRAKNO1" />
+      <PropertyRef Name="FFTEVRAKNO2" />
+      <PropertyRef Name="FFTEVRAKNO3" />
+      <PropertyRef Name="FFTKONU" />
+      <PropertyRef Name="FFTBASLIK" />
+      <PropertyRef Name="FFTTUTAR" />
+      <PropertyRef Name="FFTONCELIK" />
+      <PropertyRef Name="FFTFORMUL" />
+      <PropertyRef Name="FFTMATRAH" />
+      <PropertyRef Name="FFTORAN" />
+      <PropertyRef Name="FFTKDVORAN" />
+      <PropertyRef Name="FFTDOVKOD" />
+      <PropertyRef Name="FFTDOVTUR" />
+      <PropertyRef Name="FFTDOVTUTAR" />
+      <PropertyRef Name="FFTVADETAR" />
+      <PropertyRef Name="FFTTAMSAYI1" />
+      <PropertyRef Name="FFTTAMSAYI2" />
+      <PropertyRef Name="FFTTAMSAYI3" />
+      <PropertyRef Name="FFTKOSUL" />
+      <PropertyRef Name="FFTACIKLAMA1" />
+      <PropertyRef Name="FFTSAYI1" />
+      <PropertyRef Name="FFTVADESAYI" />
+      <PropertyRef Name="FFTKARTKOD" />
+      <PropertyRef Name="FFTEFATFLAG" />
+    </Key>
+    <Property Name="FFTTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FFTREFNO" Type="Int32" Nullable="false" />
+    <Property Name="FFTTIPI" Type="Int32" Nullable="false" />
+    <Property Name="FFTGCFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FFTKAYONC" Type="Int32" Nullable="false" />
+    <Property Name="FFTIPTALFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FFTKAYNAK" Type="Int32" Nullable="false" />
+    <Property Name="FFTIADEFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FFTKDVDAHILFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FFTCARKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTEVRAKNO1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTEVRAKNO2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTEVRAKNO3" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTKONU" Type="Int32" Nullable="false" />
+    <Property Name="FFTBASLIK" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTONCELIK" Type="Int32" Nullable="false" />
+    <Property Name="FFTFORMUL" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTMATRAH" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTORAN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTKDVORAN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTDOVKOD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTDOVTUR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTDOVTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTVADETAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FFTTAMSAYI1" Type="Int32" Nullable="false" />
+    <Property Name="FFTTAMSAYI2" Type="Int32" Nullable="false" />
+    <Property Name="FFTTAMSAYI3" Type="Int32" Nullable="false" />
+    <Property Name="FFTKOSUL" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTACIKLAMA1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTSAYI1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="FFTVADESAYI" Type="Int32" Nullable="false" />
+    <Property Name="FFTKARTKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FFTEFATFLAG" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HARREFNO">
+    <Key>
+      <PropertyRef Name="HARREFMODUL" />
+      <PropertyRef Name="HARREFKONU" />
+      <PropertyRef Name="HARREFDEGER" />
+    </Key>
+    <Property Name="HARREFMODUL" Type="Int32" Nullable="false" />
+    <Property Name="HARREFKONU" Type="Int32" Nullable="false" />
+    <Property Name="HARREFDEGER" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SIRKETLOG">
+    <Key>
+      <PropertyRef Name="SIRLOGMODUL" />
+      <PropertyRef Name="SIRLOGKONU" />
+      <PropertyRef Name="SIRLOGKYTTIPI" />
+      <PropertyRef Name="SIRLOGKYTKODU" />
+      <PropertyRef Name="SIRLOGKYTKODU2" />
+      <PropertyRef Name="SIRLOGKYTREFNO" />
+      <PropertyRef Name="SIRLOGKYTREFNO2" />
+      <PropertyRef Name="SIRLOGILKKULKOD" />
+      <PropertyRef Name="SIRLOGILKTAR" />
+      <PropertyRef Name="SIRLOGSONKULKOD" />
+      <PropertyRef Name="SIRLOGSONTAR" />
+      <PropertyRef Name="SIRLOGMUHINT1" />
+      <PropertyRef Name="SIRLOGMUHINT2" />
+      <PropertyRef Name="SIRLOGMUHINT3" />
+      <PropertyRef Name="SIRLOGMUHINT4" />
+      <PropertyRef Name="SIRLOGMUHINT5" />
+      <PropertyRef Name="SIRLOGMUHNUM1" />
+      <PropertyRef Name="SIRLOGMUHNUM2" />
+      <PropertyRef Name="SIRLOGMUHNUM3" />
+      <PropertyRef Name="SIRLOGMUHNUM4" />
+      <PropertyRef Name="SIRLOGMUHNUM5" />
+      <PropertyRef Name="SIRLOGMUHTAR1" />
+      <PropertyRef Name="SIRLOGMUHTAR2" />
+      <PropertyRef Name="SIRLOGMUHTAR3" />
+      <PropertyRef Name="SIRLOGMUHTAR4" />
+      <PropertyRef Name="SIRLOGMUHTAR5" />
+      <PropertyRef Name="SIRLOGMUHACK1" />
+      <PropertyRef Name="SIRLOGMUHACK2" />
+      <PropertyRef Name="SIRLOGMUHACK3" />
+      <PropertyRef Name="SIRLOGMUHACK4" />
+      <PropertyRef Name="SIRLOGMUHACK5" />
+    </Key>
+    <Property Name="SIRLOGMODUL" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGKONU" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGKYTTIPI" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGKYTKODU" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SIRLOGKYTKODU2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SIRLOGKYTREFNO" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGKYTREFNO2" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGILKKULKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SIRLOGILKTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SIRLOGSONKULKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SIRLOGSONTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SIRLOGMUHINT1" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGMUHINT2" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGMUHINT3" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGMUHINT4" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGMUHINT5" Type="Int32" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHNUM5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="SIRLOGMUHTAR1" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SIRLOGMUHTAR2" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SIRLOGMUHTAR3" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SIRLOGMUHTAR4" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SIRLOGMUHTAR5" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SIRLOGMUHACK1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SIRLOGMUHACK2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SIRLOGMUHACK3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SIRLOGMUHACK4" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SIRLOGMUHACK5" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STKFIS">
+    <Key>
+      <PropertyRef Name="STKFISTAR" />
+      <PropertyRef Name="STKFISREFNO" />
+      <PropertyRef Name="STKFISTIPI" />
+      <PropertyRef Name="STKFISGCFLAG" />
+      <PropertyRef Name="STKFISKAYONC" />
+      <PropertyRef Name="STKFISDEPO" />
+      <PropertyRef Name="STKFISOZELFIS" />
+      <PropertyRef Name="STKFISIADE" />
+      <PropertyRef Name="STKFISKAYNAK" />
+      <PropertyRef Name="STKFISCARKOD" />
+      <PropertyRef Name="STKFISREFNO2" />
+      <PropertyRef Name="STKFISANADEPO" />
+      <PropertyRef Name="STKFISKARDEPO" />
+      <PropertyRef Name="STKFISOZKOD1" />
+      <PropertyRef Name="STKFISOZKOD2" />
+      <PropertyRef Name="STKFISOZKOD3" />
+      <PropertyRef Name="STKFISACIKLAMA1" />
+      <PropertyRef Name="STKFISACIKLAMA2" />
+      <PropertyRef Name="STKFISACIKLAMA3" />
+      <PropertyRef Name="STKFISEVRAKNO1" />
+      <PropertyRef Name="STKFISEVRAKNO2" />
+      <PropertyRef Name="STKFISEVRAKNO3" />
+      <PropertyRef Name="STKFISDOVTAR" />
+      <PropertyRef Name="STKFISPARTIKOD" />
+      <PropertyRef Name="STKFISMASMER" />
+      <PropertyRef Name="STKFISTOPBTUT" />
+      <PropertyRef Name="STKFISTOPISK" />
+      <PropertyRef Name="STKFISTOPNTUT" />
+      <PropertyRef Name="STKFISTOPKDV" />
+      <PropertyRef Name="STKFISTOPKTUT" />
+      <PropertyRef Name="STKFISSEVNO" />
+      <PropertyRef Name="STKFISISYKOD" />
+      <PropertyRef Name="STKFISOTVFLAG" />
+      <PropertyRef Name="STKFISTOPOTV" />
+      <PropertyRef Name="STKFISTOPOTUT" />
+      <PropertyRef Name="STKFISDOVKOD" />
+      <PropertyRef Name="STKFISDOVTUR" />
+      <PropertyRef Name="STKFISDOVKUR" />
+      <PropertyRef Name="STKFISDOVTOP" />
+      <PropertyRef Name="STKFISTRNTAR" />
+      <PropertyRef Name="STKFISTRNREFNO" />
+      <PropertyRef Name="STKFISTRNTIPI" />
+    </Key>
+    <Property Name="STKFISTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKFISREFNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFISTIPI" Type="Int32" Nullable="false" />
+    <Property Name="STKFISGCFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKFISKAYONC" Type="Int32" Nullable="false" />
+    <Property Name="STKFISDEPO" Type="Int32" Nullable="false" />
+    <Property Name="STKFISOZELFIS" Type="Int32" Nullable="false" />
+    <Property Name="STKFISIADE" Type="Int32" Nullable="false" />
+    <Property Name="STKFISKAYNAK" Type="Int32" Nullable="false" />
+    <Property Name="STKFISCARKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISREFNO2" Type="Int32" Nullable="false" />
+    <Property Name="STKFISANADEPO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISKARDEPO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISOZKOD1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISOZKOD2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISOZKOD3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISACIKLAMA1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISACIKLAMA2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISACIKLAMA3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISEVRAKNO1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISEVRAKNO2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISEVRAKNO3" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISDOVTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKFISPARTIKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISMASMER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISTOPBTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPISK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPNTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPKDV" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPKTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISSEVNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFISISYKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISOTVFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKFISTOPOTV" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTOPOTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISDOVKOD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISDOVTUR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFISDOVKUR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISDOVTOP" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFISTRNTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKFISTRNREFNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFISTRNTIPI" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STKFISTIP">
+    <Key>
+      <PropertyRef Name="STKFTMODUL" />
+      <PropertyRef Name="STKFTNO" />
+      <PropertyRef Name="STKFTKOD" />
+      <PropertyRef Name="STKFTACIKLAMA" />
+      <PropertyRef Name="STKFTONAY" />
+      <PropertyRef Name="STKFTEVRAKNO" />
+      <PropertyRef Name="STKFTDIZDOS" />
+      <PropertyRef Name="STKFTFIYTIP" />
+      <PropertyRef Name="STKFTMAXSATIR" />
+      <PropertyRef Name="STKFTOTVFLAG" />
+    </Key>
+    <Property Name="STKFTMODUL" Type="Int32" Nullable="false" />
+    <Property Name="STKFTNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFTKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTACIKLAMA" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTONAY" Type="Int32" Nullable="false" />
+    <Property Name="STKFTEVRAKNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFTDIZDOS" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTFIYTIP" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTMAXSATIR" Type="Int32" Nullable="false" />
+    <Property Name="STKFTOTVFLAG" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STKFIYAT">
+    <Key>
+      <PropertyRef Name="STKFIYSTKKOD" />
+      <PropertyRef Name="STKFIYDEPKOD" />
+      <PropertyRef Name="STKFIYNO" />
+      <PropertyRef Name="STKFIYITEMNO" />
+      <PropertyRef Name="STKFIYTUTAR" />
+      <PropertyRef Name="STKFIYDOVKOD" />
+      <PropertyRef Name="STKFIYDOVTUR" />
+      <PropertyRef Name="STKFIYISKYUZ1" />
+      <PropertyRef Name="STKFIYISKYUZ2" />
+      <PropertyRef Name="STKFIYISKYUZ3" />
+      <PropertyRef Name="STKFIYISKYUZ4" />
+      <PropertyRef Name="STKFIYISKYUZ5" />
+      <PropertyRef Name="STKFIYISKTUT1" />
+      <PropertyRef Name="STKFIYISKTUT2" />
+      <PropertyRef Name="STKFIYISKTUT3" />
+      <PropertyRef Name="STKFIYISKTUT4" />
+      <PropertyRef Name="STKFIYISKTUT5" />
+      <PropertyRef Name="STKFIYKDVNO" />
+      <PropertyRef Name="STKFIYKDVFLAG" />
+      <PropertyRef Name="STKFIYODEGUN" />
+      <PropertyRef Name="STKFIYBASTAR" />
+      <PropertyRef Name="STKFIYBASSAAT" />
+      <PropertyRef Name="STKFIYBITTAR" />
+      <PropertyRef Name="STKFIYBITSAAT" />
+      <PropertyRef Name="STKFIYKONTFLAG" />
+      <PropertyRef Name="STKFIYODEKOD" />
+    </Key>
+    <Property Name="STKFIYSTKKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFIYDEPKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFIYNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYITEMNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYDOVKOD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFIYDOVTUR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFIYISKYUZ1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKYUZ2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKYUZ3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKYUZ4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKYUZ5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYISKTUT5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKDVNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYKDVFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYODEGUN" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYBASTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKFIYBASSAAT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFIYBITTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKFIYBITSAAT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFIYKONTFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYODEKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STKFIYTIP">
+    <Key>
+      <PropertyRef Name="STKFTFIYNO" />
+      <PropertyRef Name="STKFTFIYADI" />
+      <PropertyRef Name="STKFTFIYACK" />
+      <PropertyRef Name="STKFTFIYTIPI" />
+      <PropertyRef Name="STKFTFIYDOVKOD" />
+      <PropertyRef Name="STKFTFIYDOVTUR" />
+      <PropertyRef Name="STKFTFIYISKYUZ1" />
+      <PropertyRef Name="STKFTFIYISKYUZ2" />
+      <PropertyRef Name="STKFTFIYISKYUZ3" />
+      <PropertyRef Name="STKFTFIYISKYUZ4" />
+      <PropertyRef Name="STKFTFIYISKYUZ5" />
+      <PropertyRef Name="STKFTFIYKDVNO" />
+      <PropertyRef Name="STKFTFIYKDVFLAG" />
+      <PropertyRef Name="STKFTFIYODEGUN" />
+      <PropertyRef Name="STKFTFIYBASTAR" />
+      <PropertyRef Name="STKFTFIYBASSAAT" />
+      <PropertyRef Name="STKFTFIYBITTAR" />
+      <PropertyRef Name="STKFTFIYBITSAAT" />
+      <PropertyRef Name="STKFTFIYKONTFLAG" />
+      <PropertyRef Name="STKFTFIYDEPO" />
+      <PropertyRef Name="STKFTFIYKULFLAG" />
+    </Key>
+    <Property Name="STKFTFIYNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFTFIYADI" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTFIYACK" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTFIYTIPI" Type="Int32" Nullable="false" />
+    <Property Name="STKFTFIYDOVKOD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTFIYDOVTUR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYISKYUZ5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFTFIYKDVNO" Type="Int32" Nullable="false" />
+    <Property Name="STKFTFIYKDVFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKFTFIYODEGUN" Type="Int32" Nullable="false" />
+    <Property Name="STKFTFIYBASTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKFTFIYBASSAAT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTFIYBITTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKFTFIYBITSAAT" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKFTFIYKONTFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKFTFIYDEPO" Type="Int32" Nullable="false" />
+    <Property Name="STKFTFIYKULFLAG" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STKHAR">
+    <Key>
+      <PropertyRef Name="STKHARTAR" />
+      <PropertyRef Name="STKHARREFNO" />
+      <PropertyRef Name="STKHARTIPI" />
+      <PropertyRef Name="STKHARGCFLAG" />
+      <PropertyRef Name="STKHARKAYONC" />
+      <PropertyRef Name="STKHARDEPO" />
+      <PropertyRef Name="STKHAROZELFIS" />
+      <PropertyRef Name="STKHARIADE" />
+      <PropertyRef Name="STKHARKAYNAK" />
+      <PropertyRef Name="STKHARCARKOD" />
+      <PropertyRef Name="STKHARREFNO2" />
+      <PropertyRef Name="STKHARANADEPO" />
+      <PropertyRef Name="STKHARKARDEPO" />
+      <PropertyRef Name="STKHARSTKKOD" />
+      <PropertyRef Name="STKHARSTKCINS" />
+      <PropertyRef Name="STKHARSTKBRM" />
+      <PropertyRef Name="STKHARBARKOD" />
+      <PropertyRef Name="STKHAROZDESKOD" />
+      <PropertyRef Name="STKHARBENZERKOD" />
+      <PropertyRef Name="STKHARMIKTAR" />
+      <PropertyRef Name="STKHARMIKTAR2" />
+      <PropertyRef Name="STKHARMIKTAR3" />
+      <PropertyRef Name="STKHARMIKTAR4" />
+      <PropertyRef Name="STKHARMIKTAR5" />
+      <PropertyRef Name="STKHARFIYAT" />
+      <PropertyRef Name="STKHARTUTAR" />
+      <PropertyRef Name="STKHARDOVKOD" />
+      <PropertyRef Name="STKHARDOVTUR" />
+      <PropertyRef Name="STKHARDOVTUTAR" />
+      <PropertyRef Name="STKHAROZKOD" />
+      <PropertyRef Name="STKHARACIKLAMA" />
+      <PropertyRef Name="STKHARKDVYUZ" />
+      <PropertyRef Name="STKHARISKYUZ1" />
+      <PropertyRef Name="STKHARISKYUZ2" />
+      <PropertyRef Name="STKHARISKYUZ3" />
+      <PropertyRef Name="STKHARISKYUZ4" />
+      <PropertyRef Name="STKHARISKYUZ5" />
+      <PropertyRef Name="STKHARISKYTUT1" />
+      <PropertyRef Name="STKHARISKYTUT2" />
+      <PropertyRef Name="STKHARISKYTUT3" />
+      <PropertyRef Name="STKHARISKYTUT4" />
+      <PropertyRef Name="STKHARISKYTUT5" />
+      <PropertyRef Name="STKHARISKGTUT1" />
+      <PropertyRef Name="STKHARISKGTUT2" />
+      <PropertyRef Name="STKHARISKGTUT3" />
+      <PropertyRef Name="STKHARISKGTUT4" />
+      <PropertyRef Name="STKHARISKGTUT5" />
+      <PropertyRef Name="STKHARDIGERIND" />
+      <PropertyRef Name="STKHARTOPLAMIND" />
+      <PropertyRef Name="STKHARKDVMATRAH" />
+      <PropertyRef Name="STKHARKDVTUTAR" />
+      <PropertyRef Name="STKHARTOPLAMTUT" />
+      <PropertyRef Name="STKHARVADETAR" />
+      <PropertyRef Name="STKHARACIKLAMA1" />
+      <PropertyRef Name="STKHARACIKLAMA2" />
+      <PropertyRef Name="STKHARACIKLAMA3" />
+      <PropertyRef Name="STKHARPARTINO" />
+      <PropertyRef Name="STKHARMASMER" />
+      <PropertyRef Name="STKHARSERINO1" />
+      <PropertyRef Name="STKHARSERINO2" />
+      <PropertyRef Name="STKHARRB1" />
+      <PropertyRef Name="STKHARRB2" />
+      <PropertyRef Name="STKHARRB3" />
+      <PropertyRef Name="STKHARRB4" />
+      <PropertyRef Name="STKHARRB5" />
+      <PropertyRef Name="STKHARFIYTIP" />
+      <PropertyRef Name="STKHARSIRANO" />
+      <PropertyRef Name="STKHARTOPLAMMAS" />
+      <PropertyRef Name="STKHARNETTUTAR" />
+      <PropertyRef Name="STKHARNETFIYAT" />
+      <PropertyRef Name="STKHARMALIYET" />
+      <PropertyRef Name="STKHAROTVMATRAH" />
+      <PropertyRef Name="STKHAROTVORAN" />
+      <PropertyRef Name="STKHAROTVFIYAT" />
+      <PropertyRef Name="STKHARTOPOTV" />
+      <PropertyRef Name="STKHAROTVTUTAR" />
+      <PropertyRef Name="STKHARDOVFIYAT" />
+      <PropertyRef Name="STKHAREBTEN" />
+      <PropertyRef Name="STKHAREBTBOY" />
+      <PropertyRef Name="STKHAREBTYUK" />
+      <PropertyRef Name="STKHAREBTHCM" />
+      <PropertyRef Name="STKHAREBTAGR" />
+      <PropertyRef Name="STKHAREKCHAR1" />
+      <PropertyRef Name="STKHAREKCHAR2" />
+      <PropertyRef Name="STKHAREKINT1" />
+      <PropertyRef Name="STKHAREKINT2" />
+      <PropertyRef Name="STKHAREKDATE1" />
+      <PropertyRef Name="STKHAREKDATE2" />
+      <PropertyRef Name="STKHAREKTUT1" />
+      <PropertyRef Name="STKHAREKTUT2" />
+      <PropertyRef Name="STKHAREKMIK1" />
+      <PropertyRef Name="STKHAREKMIK2" />
+      <PropertyRef Name="STKHAREKDOVTUT1" />
+      <PropertyRef Name="STKHAREKDOVTUT2" />
+      <PropertyRef Name="STKHAREKORAN1" />
+      <PropertyRef Name="STKHAREKORAN2" />
+      <PropertyRef Name="STKHARDOVKUR" />
+    </Key>
+    <Property Name="STKHARTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKHARREFNO" Type="Int32" Nullable="false" />
+    <Property Name="STKHARTIPI" Type="Int32" Nullable="false" />
+    <Property Name="STKHARGCFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKHARKAYONC" Type="Int32" Nullable="false" />
+    <Property Name="STKHARDEPO" Type="Int32" Nullable="false" />
+    <Property Name="STKHAROZELFIS" Type="Int32" Nullable="false" />
+    <Property Name="STKHARIADE" Type="Int32" Nullable="false" />
+    <Property Name="STKHARKAYNAK" Type="Int32" Nullable="false" />
+    <Property Name="STKHARCARKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARREFNO2" Type="Int32" Nullable="false" />
+    <Property Name="STKHARANADEPO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARKARDEPO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARSTKKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARSTKCINS" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARSTKBRM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARBARKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHAROZDESKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARBENZERKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARMIKTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMIKTAR2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMIKTAR3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMIKTAR4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMIKTAR5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARDOVKOD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARDOVTUR" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARDOVTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROZKOD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARACIKLAMA" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARKDVYUZ" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYUZ5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKYTUT5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARISKGTUT5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARDIGERIND" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARTOPLAMIND" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARKDVMATRAH" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARKDVTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARTOPLAMTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARVADETAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKHARACIKLAMA1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARACIKLAMA2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARACIKLAMA3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARPARTINO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARMASMER" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARSERINO1" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARSERINO2" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARRB1" Type="Int32" Nullable="false" />
+    <Property Name="STKHARRB2" Type="Int32" Nullable="false" />
+    <Property Name="STKHARRB3" Type="Int32" Nullable="false" />
+    <Property Name="STKHARRB4" Type="Int32" Nullable="false" />
+    <Property Name="STKHARRB5" Type="Int32" Nullable="false" />
+    <Property Name="STKHARFIYTIP" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHARSIRANO" Type="Int32" Nullable="false" />
+    <Property Name="STKHARTOPLAMMAS" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARNETTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARNETFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARMALIYET" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROTVMATRAH" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROTVORAN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROTVFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARTOPOTV" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAROTVTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARDOVFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTEN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTBOY" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTYUK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTHCM" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREBTAGR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKCHAR1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHAREKCHAR2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKHAREKINT1" Type="Int32" Nullable="false" />
+    <Property Name="STKHAREKINT2" Type="Int32" Nullable="false" />
+    <Property Name="STKHAREKDATE1" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKHAREKDATE2" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKHAREKTUT1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKTUT2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKMIK1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKMIK2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKDOVTUT1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKDOVTUT2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKORAN1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHAREKORAN2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKHARDOVKUR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STKKART">
+    <Key>
+      <PropertyRef Name="STKKOD" />
+      <PropertyRef Name="STKCINSI" />
+      <PropertyRef Name="STKCINSI2" />
+      <PropertyRef Name="STKCINSI3" />
+      <PropertyRef Name="STKBIRIM" />
+      <PropertyRef Name="STKBIRIM2" />
+      <PropertyRef Name="STKBRM2CAR" />
+      <PropertyRef Name="STKBRM2BOL" />
+      <PropertyRef Name="STKBIRIM3" />
+      <PropertyRef Name="STKBRM3CAR" />
+      <PropertyRef Name="STKBRM3BOL" />
+      <PropertyRef Name="STKBIRIM4" />
+      <PropertyRef Name="STKBRM4CAR" />
+      <PropertyRef Name="STKBRM4BOL" />
+      <PropertyRef Name="STKBIRIM5" />
+      <PropertyRef Name="STKBRM5CAR" />
+      <PropertyRef Name="STKBRM5BOL" />
+      <PropertyRef Name="STKOZKOD1" />
+      <PropertyRef Name="STKOZKOD2" />
+      <PropertyRef Name="STKOZKOD3" />
+      <PropertyRef Name="STKOZKOD4" />
+      <PropertyRef Name="STKOZKOD5" />
+      <PropertyRef Name="STKKARTTIP1" />
+      <PropertyRef Name="STKKARTTIP2" />
+      <PropertyRef Name="STKKARTTIP3" />
+      <PropertyRef Name="STKKARTTIP4" />
+      <PropertyRef Name="STKKARTTIP5" />
+      <PropertyRef Name="STKKARTTIP6" />
+      <PropertyRef Name="STKKARTTIP7" />
+      <PropertyRef Name="STKKARTTIP8" />
+      <PropertyRef Name="STKKARTTIP9" />
+      <PropertyRef Name="STKKARTTIP10" />
+      <PropertyRef Name="STKKARTTIP11" />
+      <PropertyRef Name="STKKARTTIP12" />
+      <PropertyRef Name="STKKARTTIP13" />
+      <PropertyRef Name="STKKARTTIP14" />
+      <PropertyRef Name="STKBAKIYE" />
+      <PropertyRef Name="STKBAKIYE2" />
+      <PropertyRef Name="STKBAKIYE3" />
+      <PropertyRef Name="STKBAKIYE4" />
+      <PropertyRef Name="STKBAKIYE5" />
+      <PropertyRef Name="STKYAOFIYAT" />
+      <PropertyRef Name="STKACIK1" />
+      <PropertyRef Name="STKACIK2" />
+      <PropertyRef Name="STKACIK3" />
+      <PropertyRef Name="STKACIK4" />
+      <PropertyRef Name="STKACIK5" />
+      <PropertyRef Name="STKGENKDVNO" />
+      <PropertyRef Name="STKGENISK1" />
+      <PropertyRef Name="STKGENISK2" />
+      <PropertyRef Name="STKGENISK3" />
+      <PropertyRef Name="STKGENISK4" />
+      <PropertyRef Name="STKGENISK5" />
+      <PropertyRef Name="STKKRITIKSEVIYE" />
+      <PropertyRef Name="STKOPTIMALSEVIYE" />
+      <PropertyRef Name="STKODEGUN" />
+      <PropertyRef Name="STKPROKOD" />
+      <PropertyRef Name="STKSYFTARIHI" />
+      <PropertyRef Name="STKSYFSAATI" />
+      <PropertyRef Name="STKBOZULMASURESI" />
+      <PropertyRef Name="STKKULLANIMSURESI" />
+      <PropertyRef Name="STKEKSAHA1" />
+      <PropertyRef Name="STKEKSAHA2" />
+      <PropertyRef Name="STKEUAFIYAT" />
+      <PropertyRef Name="STKEPAFIYAT" />
+      <PropertyRef Name="STKEUSFIYAT" />
+      <PropertyRef Name="STKEPSFIYAT" />
+      <PropertyRef Name="STKURTSNKOD" />
+      <PropertyRef Name="STKURTBRTIP" />
+      <PropertyRef Name="STKBOLKODU" />
+      <PropertyRef Name="STKREYKODU" />
+      <PropertyRef Name="STKRAFKODU" />
+      <PropertyRef Name="STKCALFLAG" />
+      <PropertyRef Name="STKINDKONT" />
+      <PropertyRef Name="STKFIYDEGALFLAG" />
+      <PropertyRef Name="STKFIYDEGSATFLAG" />
+      <PropertyRef Name="STKIADEALFLAG" />
+      <PropertyRef Name="STKIADESATFLAG" />
+      <PropertyRef Name="STKMIKKONTALFLAG" />
+      <PropertyRef Name="STKMIKKONTALMIN" />
+      <PropertyRef Name="STKMIKKONTALMAX" />
+      <PropertyRef Name="STKMIKKONTSATFLAG" />
+      <PropertyRef Name="STKMIKKONTSATMIN" />
+      <PropertyRef Name="STKMIKKONTSATMAX" />
+      <PropertyRef Name="STKFIYKONTALFLAG" />
+      <PropertyRef Name="STKFIYKONTALMIN" />
+      <PropertyRef Name="STKFIYKONTALMAX" />
+      <PropertyRef Name="STKFIYKONTSATFLAG" />
+      <PropertyRef Name="STKFIYKONTSATMIN" />
+      <PropertyRef Name="STKFIYKONTSATMAX" />
+      <PropertyRef Name="STKOTOGIRFIY" />
+      <PropertyRef Name="STKOTOCIKFIY" />
+      <PropertyRef Name="STKDOVKOD1" />
+      <PropertyRef Name="STKDOVTUR1" />
+      <PropertyRef Name="STKDOVKOD2" />
+      <PropertyRef Name="STKDOVTUR2" />
+      <PropertyRef Name="STKDOVKOD3" />
+      <PropertyRef Name="STKDOVTUR3" />
+      <PropertyRef Name="STKDOVKOD4" />
+      <PropertyRef Name="STKDOVTUR4" />
+      <PropertyRef Name="STKDOVKOD5" />
+      <PropertyRef Name="STKDOVTUR5" />
+      <PropertyRef Name="STKURUNSOR" />
+      <PropertyRef Name="STKURETKOD" />
+      <PropertyRef Name="STKURETADI" />
+      <PropertyRef Name="STKTEDARIKKOD" />
+      <PropertyRef Name="STKTEDARIKADI" />
+      <PropertyRef Name="STKKALKONTKOD" />
+      <PropertyRef Name="STKSN1EVRAKNO" />
+      <PropertyRef Name="STKSN2EVRAKNO" />
+      <PropertyRef Name="STKGRUPKOD" />
+      <PropertyRef Name="STKSEVNO" />
+      <PropertyRef Name="STKOZELBAKIYE" />
+      <PropertyRef Name="STKOZELBAKIYE2" />
+      <PropertyRef Name="STKOZELBAKIYE3" />
+      <PropertyRef Name="STKOZELBAKIYE4" />
+      <PropertyRef Name="STKOZELBAKIYE5" />
+      <PropertyRef Name="STKREZGIRSIPMIK" />
+      <PropertyRef Name="STKREZGIRSIPTUT" />
+      <PropertyRef Name="STKREZCIKSIPMIK" />
+      <PropertyRef Name="STKREZCIKSIPTUT" />
+      <PropertyRef Name="STKREZGIRURTMIK" />
+      <PropertyRef Name="STKREZGIRURTTUT" />
+      <PropertyRef Name="STKREZCIKURTMIK" />
+      <PropertyRef Name="STKREZCIKURTTUT" />
+      <PropertyRef Name="STKOTVORAN" />
+      <PropertyRef Name="STKOTVTUTAR" />
+      <PropertyRef Name="STKFIREORAN" />
+      <PropertyRef Name="STKKARORAN" />
+      <PropertyRef Name="STKPARTIEVRAKNO" />
+      <PropertyRef Name="STKOTVVERGIKOD" />
+      <PropertyRef Name="STKEKVERGIKOD" />
+      <PropertyRef Name="STKURESTKKOD" />
+      <PropertyRef Name="STKTEDSTKKOD" />
+      <PropertyRef Name="STKEKCHAR1" />
+      <PropertyRef Name="STKEKCHAR2" />
+      <PropertyRef Name="STKEKINT1" />
+      <PropertyRef Name="STKEKINT2" />
+      <PropertyRef Name="STKEKDATE1" />
+      <PropertyRef Name="STKEKDATE2" />
+      <PropertyRef Name="STKEKDBL1" />
+      <PropertyRef Name="STKEKDBL2" />
+    </Key>
+    <Property Name="STKKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKCINSI" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKCINSI2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKCINSI3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKBIRIM" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKBIRIM2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKBRM2CAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBRM2BOL" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBIRIM3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKBRM3CAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBRM3BOL" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBIRIM4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKBRM4CAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBRM4BOL" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBIRIM5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKBRM5CAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBRM5BOL" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZKOD1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKOZKOD2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKOZKOD3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKOZKOD4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKOZKOD5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKKARTTIP1" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP2" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP3" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP4" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP5" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP6" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP7" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP8" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP9" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP10" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP11" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP12" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP13" Type="Int32" Nullable="false" />
+    <Property Name="STKKARTTIP14" Type="Int32" Nullable="false" />
+    <Property Name="STKBAKIYE" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBAKIYE2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBAKIYE3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBAKIYE4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKBAKIYE5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKYAOFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKACIK1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKACIK2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKACIK3" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKACIK4" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKACIK5" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKGENKDVNO" Type="Int32" Nullable="false" />
+    <Property Name="STKGENISK1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKGENISK2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKGENISK3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKGENISK4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKGENISK5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKKRITIKSEVIYE" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOPTIMALSEVIYE" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKODEGUN" Type="Int32" Nullable="false" />
+    <Property Name="STKPROKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKSYFTARIHI" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKSYFSAATI" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKBOZULMASURESI" Type="Int32" Nullable="false" />
+    <Property Name="STKKULLANIMSURESI" Type="Int32" Nullable="false" />
+    <Property Name="STKEKSAHA1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEKSAHA2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEUAFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEPAFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEUSFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEPSFIYAT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKURTSNKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKURTBRTIP" Type="Int32" Nullable="false" />
+    <Property Name="STKBOLKODU" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKREYKODU" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKRAFKODU" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKCALFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKINDKONT" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYDEGALFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYDEGSATFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKIADEALFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKIADESATFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKMIKKONTALFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKMIKKONTALMIN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKMIKKONTALMAX" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKMIKKONTSATFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKMIKKONTSATMIN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKMIKKONTSATMAX" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKONTALFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYKONTALMIN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKONTALMAX" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKONTSATFLAG" Type="Int32" Nullable="false" />
+    <Property Name="STKFIYKONTSATMIN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIYKONTSATMAX" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOTOGIRFIY" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKOTOCIKFIY" Type="String" MaxLength="7" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVKOD1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVTUR1" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVKOD2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVTUR2" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVKOD3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVTUR3" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVKOD4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVTUR4" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVKOD5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKDOVTUR5" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKURUNSOR" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKURETKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKURETADI" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKTEDARIKKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKTEDARIKADI" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKKALKONTKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKSN1EVRAKNO" Type="Int32" Nullable="false" />
+    <Property Name="STKSN2EVRAKNO" Type="Int32" Nullable="false" />
+    <Property Name="STKGRUPKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKSEVNO" Type="Int32" Nullable="false" />
+    <Property Name="STKOZELBAKIYE" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZELBAKIYE2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZELBAKIYE3" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZELBAKIYE4" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOZELBAKIYE5" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZGIRSIPMIK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZGIRSIPTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZCIKSIPMIK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZCIKSIPTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZGIRURTMIK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZGIRURTTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZCIKURTMIK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKREZCIKURTTUT" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOTVORAN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKOTVTUTAR" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKFIREORAN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKKARORAN" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKPARTIEVRAKNO" Type="Int32" Nullable="false" />
+    <Property Name="STKOTVVERGIKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKEKVERGIKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKURESTKKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKTEDSTKKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKEKCHAR1" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKEKCHAR2" Type="String" MaxLength="80" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKEKINT1" Type="Int32" Nullable="false" />
+    <Property Name="STKEKINT2" Type="Int32" Nullable="false" />
+    <Property Name="STKEKDATE1" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKEKDATE2" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="STKEKDBL1" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKEKDBL2" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STKMIZDEGER">
+    <Key>
+      <PropertyRef Name="STKKOD" />
+      <PropertyRef Name="STKYIL" />
+      <PropertyRef Name="STKAY" />
+      <PropertyRef Name="STKRAKTIP" />
+      <PropertyRef Name="STKDOVKOD" />
+      <PropertyRef Name="STKBORC" />
+      <PropertyRef Name="STKALACAK" />
+      <PropertyRef Name="STKDEPO" />
+    </Key>
+    <Property Name="STKKOD" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKYIL" Type="Int32" Nullable="false" />
+    <Property Name="STKAY" Type="Int32" Nullable="false" />
+    <Property Name="STKRAKTIP" Type="Int32" Nullable="false" />
+    <Property Name="STKDOVKOD" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="STKBORC" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKALACAK" Type="Decimal" Precision="28" Scale="9" Nullable="false" />
+    <Property Name="STKDEPO" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="ETA_DENEME_2016Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="DEPSTKKART" EntityType="Self.DEPSTKKART" />
+    <EntitySet Name="FATFIS" EntityType="Self.FATFIS" />
+    <EntitySet Name="FATFISTIP" EntityType="Self.FATFISTIP" />
+    <EntitySet Name="FATFISTOPLAM" EntityType="Self.FATFISTOPLAM" />
+    <EntitySet Name="HARREFNO" EntityType="Self.HARREFNO" />
+    <EntitySet Name="SIRKETLOG" EntityType="Self.SIRKETLOG" />
+    <EntitySet Name="STKFIS" EntityType="Self.STKFIS" />
+    <EntitySet Name="STKFISTIP" EntityType="Self.STKFISTIP" />
+    <EntitySet Name="STKFIYAT" EntityType="Self.STKFIYAT" />
+    <EntitySet Name="STKFIYTIP" EntityType="Self.STKFIYTIP" />
+    <EntitySet Name="STKHAR" EntityType="Self.STKHAR" />
+    <EntitySet Name="STKKART" EntityType="Self.STKKART" />
+    <EntitySet Name="STKMIZDEGER" EntityType="Self.STKMIZDEGER" />
+    <EntitySet Name="FATHAR" EntityType="ETA_DENEME_2016Model.FATHAR" />
+    <EntitySet Name="STKBARKOD" EntityType="ETA_DENEME_2016Model.STKBARKOD" />
+    <EntitySet Name="STKBIRIM" EntityType="ETA_DENEME_2016Model.STKBIRIM" />
+    <EntitySet Name="STKBOYFIYAT" EntityType="ETA_DENEME_2016Model.STKBOYFIYAT" />
+    <EntitySet Name="STKBOYUT" EntityType="ETA_DENEME_2016Model.STKBOYUT" />
+    <EntitySet Name="STKDETAY" EntityType="ETA_DENEME_2016Model.STKDETAY" />
+  </EntityContainer>
+  <EntityType Name="FATHAR">
+    <Key>
+      <PropertyRef Name="FATHARTAR" />
+      <PropertyRef Name="FATHARREFNO" />
+      <PropertyRef Name="FATHARTIPI" />
+      <PropertyRef Name="FATHARGCFLAG" />
+      <PropertyRef Name="FATHARKAYONC" />
+      <PropertyRef Name="FATHARIPTALFLAG" />
+      <PropertyRef Name="FATHARKAYNAK" />
+      <PropertyRef Name="FATHARIADE" />
+      <PropertyRef Name="FATHARCARKOD" />
+      <PropertyRef Name="FATHARSIRANO" />
+      <PropertyRef Name="FATHARKODTIP" />
+      <PropertyRef Name="FATHARSTKKOD" />
+      <PropertyRef Name="FATHARSTKCINS" />
+      <PropertyRef Name="FATHARSTKBRM" />
+      <PropertyRef Name="FATHARDEPOKOD" />
+      <PropertyRef Name="FATHARBARKOD" />
+      <PropertyRef Name="FATHAROZDESKOD" />
+      <PropertyRef Name="FATHARBENZERKOD" />
+      <PropertyRef Name="FATHARMIKTAR" />
+      <PropertyRef Name="FATHARMIKTAR2" />
+      <PropertyRef Name="FATHARMIKTAR3" />
+      <PropertyRef Name="FATHARMIKTAR4" />
+      <PropertyRef Name="FATHARMIKTAR5" />
+      <PropertyRef Name="FATHARFIYTIP" />
+      <PropertyRef Name="FATHARFIYAT" />
+      <PropertyRef Name="FATHARTUTAR" />
+      <PropertyRef Name="FATHARDOVKOD" />
+      <PropertyRef Name="FATHARDOVTUR" />
+      <PropertyRef Name="FATHARDOVTUTAR" />
+      <PropertyRef Name="FATHAROZKOD" />
+      <PropertyRef Name="FATHARACIKLAMA" />
+      <PropertyRef Name="FATHARKDVYUZ" />
+      <PropertyRef Name="FATHARISKYUZ1" />
+      <PropertyRef Name="FATHARISKYUZ2" />
+      <PropertyRef Name="FATHARISKYUZ3" />
+      <PropertyRef Name="FATHARISKYUZ4" />
+      <PropertyRef Name="FATHARISKYUZ5" />
+      <PropertyRef Name="FATHARISKYTUT1" />
+      <PropertyRef Name="FATHARISKYTUT2" />
+      <PropertyRef Name="FATHARISKYTUT3" />
+      <PropertyRef Name="FATHARISKYTUT4" />
+      <PropertyRef Name="FATHARISKYTUT5" />
+      <PropertyRef Name="FATHARISKGTUT1" />
+      <PropertyRef Name="FATHARISKGTUT2" />
+      <PropertyRef Name="FATHARISKGTUT3" />
+      <PropertyRef Name="FATHARISKGTUT4" />
+      <PropertyRef Name="FATHARISKGTUT5" />
+      <PropertyRef Name="FATHARDIGERIND" />
+      <PropertyRef Name="FATHARTOPLAMIND" />
+      <PropertyRef Name="FATHARKDVMATRAH" />
+      <PropertyRef Name="FATHARKDVTUTAR" />
+      <PropertyRef Name="FATHARTOPLAMTUT" />
+      <PropertyRef Name="FATHARVADETAR" />
+      <PropertyRef Name="FATHARACIKLAMA1" />
+      <PropertyRef Name="FATHARACIKLAMA2" />
+      <PropertyRef Name="FATHARACIKLAMA3" />
+      <PropertyRef Name="FATHARPARTINO" />
+      <PropertyRef Name="FATHARMASMER" />
+      <PropertyRef Name="FATHARSERINO1" />
+      <PropertyRef Name="FATHARSERINO2" />
+      <PropertyRef Name="FATHARRB1" />
+      <PropertyRef Name="FATHARRB2" />
+      <PropertyRef Name="FATHARRB3" />
+      <PropertyRef Name="FATHARRB4" />
+      <PropertyRef Name="FATHARRB5" />
+      <PropertyRef Name="FATHARSATKOD" />
+      <PropertyRef Name="FATHARODEMEKOD" />
+      <PropertyRef Name="FATHARTOPLAMMAS" />
+      <PropertyRef Name="FATHARNETTUTAR" />
+      <PropertyRef Name="FATHARNETFIYAT" />
+      <PropertyRef Name="FATHARMALIYET" />
+      <PropertyRef Name="FATHAROTVMATRAH" />
+      <PropertyRef Name="FATHAROTVORAN" />
+      <PropertyRef Name="FATHAROTVFIYAT" />
+      <PropertyRef Name="FATHARTOPOTV" />
+      <PropertyRef Name="FATHAROTVTUTAR" />
+      <PropertyRef Name="FATHARMUHKOD" />
+      <PropertyRef Name="FATHARMUHYANIND" />
+      <PropertyRef Name="FATHARMUHYANMAS" />
+      <PropertyRef Name="FATHARDOVFIYAT" />
+      <PropertyRef Name="FATHAREBTEN" />
+      <PropertyRef Name="FATHAREBTBOY" />
+      <PropertyRef Name="FATHAREBTYUK" />
+      <PropertyRef Name="FATHAREBTHCM" />
+      <PropertyRef Name="FATHAREBTAGR" />
+      <PropertyRef Name="FATHAREKCHAR1" />
+      <PropertyRef Name="FATHAREKCHAR2" />
+      <PropertyRef Name="FATHAREKINT1" />
+      <PropertyRef Name="FATHAREKINT2" />
+      <PropertyRef Name="FATHAREKDATE1" />
+      <PropertyRef Name="FATHAREKDATE2" />
+      <PropertyRef Name="FATHAREKTUT1" />
+      <PropertyRef Name="FATHAREKTUT2" />
+      <PropertyRef Name="FATHAREKMIK1" />
+      <PropertyRef Name="FATHAREKMIK2" />
+      <PropertyRef Name="FATHAREKDOVTUT1" />
+      <PropertyRef Name="FATHAREKDOVTUT2" />
+      <PropertyRef Name="FATHAREKORAN1" />
+      <PropertyRef Name="FATHAREKORAN2" />
+      <PropertyRef Name="FATHARDOVKUR" />
+      <PropertyRef Name="FATHAREFATFLAG" />
+      <PropertyRef Name="FATHAROTVVERKOD" />
+      <PropertyRef Name="FATHAREKVERGI" />
+    </Key>
+    <Property Name="FATHARTAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATHARREFNO" Type="Int32" Nullable="false" />
+    <Property Name="FATHARTIPI" Type="Int32" Nullable="false" />
+    <Property Name="FATHARGCFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATHARKAYONC" Type="Int32" Nullable="false" />
+    <Property Name="FATHARIPTALFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATHARKAYNAK" Type="Int32" Nullable="false" />
+    <Property Name="FATHARIADE" Type="Int32" Nullable="false" />
+    <Property Name="FATHARCARKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARSIRANO" Type="Int32" Nullable="false" />
+    <Property Name="FATHARKODTIP" Type="Int32" Nullable="false" />
+    <Property Name="FATHARSTKKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARSTKCINS" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARSTKBRM" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARDEPOKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARBARKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHAROZDESKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARBENZERKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARMIKTAR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARMIKTAR2" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARMIKTAR3" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARMIKTAR4" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARMIKTAR5" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARFIYTIP" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARFIYAT" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARTUTAR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARDOVKOD" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARDOVTUR" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARDOVTUTAR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAROZKOD" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARACIKLAMA" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARKDVYUZ" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYUZ1" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYUZ2" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYUZ3" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYUZ4" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYUZ5" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYTUT1" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYTUT2" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYTUT3" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYTUT4" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKYTUT5" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKGTUT1" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKGTUT2" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKGTUT3" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKGTUT4" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARISKGTUT5" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARDIGERIND" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARTOPLAMIND" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARKDVMATRAH" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARKDVTUTAR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARTOPLAMTUT" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARVADETAR" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATHARACIKLAMA1" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARACIKLAMA2" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARACIKLAMA3" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARPARTINO" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARMASMER" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARSERINO1" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARSERINO2" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARRB1" Type="Int32" Nullable="false" />
+    <Property Name="FATHARRB2" Type="Int32" Nullable="false" />
+    <Property Name="FATHARRB3" Type="Int32" Nullable="false" />
+    <Property Name="FATHARRB4" Type="Int32" Nullable="false" />
+    <Property Name="FATHARRB5" Type="Int32" Nullable="false" />
+    <Property Name="FATHARSATKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARODEMEKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARTOPLAMMAS" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARNETTUTAR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARNETFIYAT" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARMALIYET" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAROTVMATRAH" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAROTVORAN" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAROTVFIYAT" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARTOPOTV" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAROTVTUTAR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARMUHKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHARMUHYANIND" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARMUHYANMAS" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARDOVFIYAT" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREBTEN" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREBTBOY" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREBTYUK" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREBTHCM" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREBTAGR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREKCHAR1" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="FATHAREKCHAR2" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="FATHAREKINT1" Type="Int32" Nullable="false" />
+    <Property Name="FATHAREKINT2" Type="Int32" Nullable="false" />
+    <Property Name="FATHAREKDATE1" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATHAREKDATE2" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="FATHAREKTUT1" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREKTUT2" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREKMIK1" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREKMIK2" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREKDOVTUT1" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREKDOVTUT2" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREKORAN1" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREKORAN2" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHARDOVKUR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="FATHAREFATFLAG" Type="Int32" Nullable="false" />
+    <Property Name="FATHAROTVVERKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="FATHAREKVERGI" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="STKBARKOD">
+    <Key>
+      <PropertyRef Name="STKBARKOD1" />
+      <PropertyRef Name="STKBARSTKKOD" />
+      <PropertyRef Name="STKBARBRMNO" />
+      <PropertyRef Name="STKBARKATSAYI" />
+      <PropertyRef Name="STKBARTIP" />
+      <PropertyRef Name="STKBARYAPINO" />
+      <PropertyRef Name="STKBARBOYUT1" />
+      <PropertyRef Name="STKBARBOYUT2" />
+      <PropertyRef Name="STKBARBOYUT3" />
+      <PropertyRef Name="STKBARBOYUT4" />
+      <PropertyRef Name="STKBARBOYUT5" />
+      <PropertyRef Name="STKBARFIYTIP" />
+      <PropertyRef Name="STKBARITEMNO" />
+    </Key>
+    <Property Name="STKBARKOD1" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="STKBARSTKKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="STKBARBRMNO" Type="Int32" Nullable="false" />
+    <Property Name="STKBARKATSAYI" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="STKBARTIP" Type="Int32" Nullable="false" />
+    <Property Name="STKBARYAPINO" Type="Int32" Nullable="false" />
+    <Property Name="STKBARBOYUT1" Type="Int32" Nullable="false" />
+    <Property Name="STKBARBOYUT2" Type="Int32" Nullable="false" />
+    <Property Name="STKBARBOYUT3" Type="Int32" Nullable="false" />
+    <Property Name="STKBARBOYUT4" Type="Int32" Nullable="false" />
+    <Property Name="STKBARBOYUT5" Type="Int32" Nullable="false" />
+    <Property Name="STKBARFIYTIP" Type="String" Nullable="false" MaxLength="7" FixedLength="false" Unicode="false" />
+    <Property Name="STKBARITEMNO" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="STKBIRIM">
+    <Key>
+      <PropertyRef Name="STKBIRIMKOD" />
+      <PropertyRef Name="STKBIRIMAD" />
+      <PropertyRef Name="STKBIRIMCARPAN" />
+      <PropertyRef Name="STKBIRIMBOLEN" />
+    </Key>
+    <Property Name="STKBIRIMKOD" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STKBIRIMAD" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="STKBIRIMCARPAN" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="STKBIRIMBOLEN" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+  </EntityType>
+  <EntityType Name="STKBOYFIYAT">
+    <Key>
+      <PropertyRef Name="STKBOYFIYSTKKOD" />
+      <PropertyRef Name="STKBOYFIYDEPKOD" />
+      <PropertyRef Name="STKBOYFIYBOYUT1" />
+      <PropertyRef Name="STKBOYFIYBOYUT2" />
+      <PropertyRef Name="STKBOYFIYBOYUT3" />
+      <PropertyRef Name="STKBOYFIYBOYUT4" />
+      <PropertyRef Name="STKBOYFIYBOYUT5" />
+      <PropertyRef Name="STKBOYFIYNO" />
+      <PropertyRef Name="STKBOYFIYTUTAR" />
+    </Key>
+    <Property Name="STKBOYFIYSTKKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="STKBOYFIYDEPKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="STKBOYFIYBOYUT1" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYFIYBOYUT2" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYFIYBOYUT3" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYFIYBOYUT4" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYFIYBOYUT5" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYFIYNO" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYFIYTUTAR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+  </EntityType>
+  <EntityType Name="STKBOYUT">
+    <Key>
+      <PropertyRef Name="STKBOYSTOKKOD" />
+      <PropertyRef Name="STKBOYDEPOKOD" />
+      <PropertyRef Name="STKBOYBOYUT1" />
+      <PropertyRef Name="STKBOYBOYUT2" />
+      <PropertyRef Name="STKBOYBOYUT3" />
+      <PropertyRef Name="STKBOYBOYUT4" />
+      <PropertyRef Name="STKBOYBOYUT5" />
+      <PropertyRef Name="STKBOYDEVIR" />
+      <PropertyRef Name="STKBOYGIREN" />
+      <PropertyRef Name="STKBOYCIKAN" />
+      <PropertyRef Name="STKBOYBAKIYE" />
+      <PropertyRef Name="STKBOYACIKLAMA" />
+      <PropertyRef Name="STKBOYOZELKOD" />
+      <PropertyRef Name="STKBOYGIRSIPMIK" />
+      <PropertyRef Name="STKBOYCIKSIPMIK" />
+      <PropertyRef Name="STKBOYGIRURTMIK" />
+      <PropertyRef Name="STKBOYCIKURTMIK" />
+    </Key>
+    <Property Name="STKBOYSTOKKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="STKBOYDEPOKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="STKBOYBOYUT1" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYBOYUT2" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYBOYUT3" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYBOYUT4" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYBOYUT5" Type="Int32" Nullable="false" />
+    <Property Name="STKBOYDEVIR" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="STKBOYGIREN" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="STKBOYCIKAN" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="STKBOYBAKIYE" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="STKBOYACIKLAMA" Type="String" Nullable="false" MaxLength="80" FixedLength="false" Unicode="false" />
+    <Property Name="STKBOYOZELKOD" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="STKBOYGIRSIPMIK" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="STKBOYCIKSIPMIK" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="STKBOYGIRURTMIK" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+    <Property Name="STKBOYCIKURTMIK" Type="Decimal" Nullable="false" Precision="28" Scale="9" />
+  </EntityType>
+  <EntityType Name="STKDETAY">
+    <Key>
+      <PropertyRef Name="STKDETBKOD" />
+      <PropertyRef Name="STKDETSKOD" />
+      <PropertyRef Name="STKDETTIP" />
+      <PropertyRef Name="STKDETITEMNO" />
+    </Key>
+    <Property Name="STKDETBKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="STKDETSKOD" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="STKDETTIP" Type="Int32" Nullable="false" />
+    <Property Name="STKDETITEMNO" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>
