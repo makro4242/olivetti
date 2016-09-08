@@ -24,3 +24,5 @@ C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\O
 C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\bin\Debug\EntityFramework.dll
 C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\bin\Debug\EntityFramework.xml
 C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\obj\Debug\Olivetti.csprojResolveAssemblyReference.cache
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\bin\Debug\myLibrary.dll
+C:\Users\zizoumurat\Desktop\projeler\olivetti\form\Olivetti\Olivetti\bin\Debug\myLibrary.pdb

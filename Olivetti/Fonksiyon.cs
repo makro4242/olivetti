@@ -20,13 +20,28 @@ namespace Olivetti
             StreamReader sw = new StreamReader(fs);
             return sw;
         }
+
+
+        public static void dosyayaYaz(string metin)
+        {
+            string dosya_yolu = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\URUN.GTF";
+            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\URUN.GTF"))
+            {
+                FileStream fs = File.Create(dosya_yolu);
+                fs.Close();
+            }
+            StreamWriter sw = new StreamWriter(dosya_yolu,true);
+            sw.WriteLine(metin);
+            sw.Flush();
+            sw.Close();
+        }
         public static void kasaDoldur(ListBox lstKasalar)
         {
             if (Properties.Settings.Default.Kasalar != null)
             {
                 foreach (string item in Properties.Settings.Default.Kasalar)
                 {
-                    lstKasalar.Items.Add("Kasa "+item.Split('*')[0]);
+                    lstKasalar.Items.Add("Kasa " + item.Split('*')[0]);
                 }
             }
         }

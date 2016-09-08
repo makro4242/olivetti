@@ -13,10 +13,10 @@ namespace Olivetti
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ETA_DENEME_2016Entities : DbContext
+    public partial class myEntities : DbContext
     {
-        public ETA_DENEME_2016Entities()
-            : base("name=ETA_DENEME_2016Entities")
+        public myEntities()
+            : base("name=myEntities")
         {
         }
     
@@ -25,24 +25,26 @@ namespace Olivetti
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<DEPSTKKART> DEPSTKKART { get; set; }
+        public DbSet<DEPO> DEPO { get; set; }
+        public DbSet<STKKART> STKKART { get; set; }
+        public DbSet<CARHAR> CARHAR { get; set; }
         public DbSet<FATFIS> FATFIS { get; set; }
         public DbSet<FATFISTIP> FATFISTIP { get; set; }
         public DbSet<FATFISTOPLAM> FATFISTOPLAM { get; set; }
-        public DbSet<HARREFNO> HARREFNO { get; set; }
-        public DbSet<SIRKETLOG> SIRKETLOG { get; set; }
-        public DbSet<STKFIS> STKFIS { get; set; }
-        public DbSet<STKFISTIP> STKFISTIP { get; set; }
-        public DbSet<STKFIYAT> STKFIYAT { get; set; }
-        public DbSet<STKFIYTIP> STKFIYTIP { get; set; }
-        public DbSet<STKHAR> STKHAR { get; set; }
-        public DbSet<STKKART> STKKART { get; set; }
-        public DbSet<STKMIZDEGER> STKMIZDEGER { get; set; }
         public DbSet<FATHAR> FATHAR { get; set; }
+        public DbSet<HARREFNO> HARREFNO { get; set; }
+        public DbSet<SATFIS> SATFIS { get; set; }
+        public DbSet<SATFISTIP> SATFISTIP { get; set; }
+        public DbSet<SATFISTOPLAM> SATFISTOPLAM { get; set; }
+        public DbSet<SATHAR> SATHAR { get; set; }
+        public DbSet<SATKART> SATKART { get; set; }
         public DbSet<STKBARKOD> STKBARKOD { get; set; }
         public DbSet<STKBIRIM> STKBIRIM { get; set; }
         public DbSet<STKBOYFIYAT> STKBOYFIYAT { get; set; }
-        public DbSet<STKBOYUT> STKBOYUT { get; set; }
-        public DbSet<STKDETAY> STKDETAY { get; set; }
+        public DbSet<STKFIS> STKFIS { get; set; }
+        public DbSet<STKFISTIP> STKFISTIP { get; set; }
+        public DbSet<STKFIYAT> STKFIYAT { get; set; }
+        public DbSet<STKHAR> STKHAR { get; set; }
+        public DbSet<STKMIZDEGER> STKMIZDEGER { get; set; }
     }
 }

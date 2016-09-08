@@ -3,13 +3,14 @@ using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
 using System.Linq;
+using System.Text;
 
 namespace Olivetti
 {
     public partial class frmAnaForm : Form
     {
         Fonksiyon f = new Fonksiyon();
-        ETA_DENEME_2016Entities db = new ETA_DENEME_2016Entities();
+        myEntities db = new myEntities();
         public frmAnaForm()
         {
             InitializeComponent();
@@ -31,51 +32,138 @@ namespace Olivetti
 
         private void frmAnaForm_Load(object sender, EventArgs e)
         {
-            string t = "01  04275                    4275                    BLADE DEO 150ML FASTER                                                          BLADE DEO 150ML FASTBLADE DEO 150ML FASTBLADE DEO 150ML 1       1       1                                                                            01                                                                                  4,89           4,89           4,89           4,89                                                                                                                      3                                                    0     2                                                                                             0                                                                                                         0              0                                      ";
-            MessageBox.Show(t.Substring(828, 15));
-            FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\alanlar.txt", FileMode.OpenOrCreate, FileAccess.Write);
-            //Bir file stream nesnesi oluşturuyoruz. 1.parametre dosya yolunu,
-            //2.parametre dosya varsa açılacağını yoksa oluşturulacağını belirtir,
-            //3.parametre dosyaya erişimin veri yazmak için olacağını gösterir.
-            StreamWriter sw = new StreamWriter(fs);
-            //Yazma işlemi için bir StreamWriter nesnesi oluşturduk.
-            sw.WriteLine("stok kodu " + t.Substring(5, 24));
-            sw.WriteLine("stok açıklaması " + t.Substring(53, 40));
-            sw.WriteLine("extra açıklama " + t.Substring(93, 40));
-            sw.WriteLine("pos açıklama " + t.Substring(133, 20));
-            sw.WriteLine("raf etiketi açıklama " + t.Substring(153, 20));
-            sw.WriteLine("terazi etiketi açıklama " + t.Substring(173, 16));
-            sw.WriteLine("stok bölümü " + t.Substring(189, 8));
-            sw.WriteLine("reyon tanımı " + t.Substring(197, 8));
-            sw.WriteLine("ürün tipi " + t.Substring(205, 8));
-            sw.WriteLine("indirim grubu " + t.Substring(213, 8));
-            sw.WriteLine("indirim durum kodu " + t.Substring(221, 1));
-            sw.WriteLine("indirim yüzdesi " + t.Substring(222, 15));
-            sw.WriteLine("indirim tutarı " + t.Substring(237, 15));
-            sw.WriteLine("reserved " + t.Substring(252, 6));
-            sw.WriteLine("Bağlı stok kodu " + t.Substring(258, 24));
-            sw.WriteLine("birim " + t.Substring(282, 1));
-            sw.WriteLine("birim böleni " + t.Substring(283, 15));
-            sw.WriteLine("birim çarpanı " + t.Substring(298, 15));
-            sw.WriteLine("satış fiyatı " + t.Substring(335, 15));
-            sw.WriteLine("satış fiyatı2 " + t.Substring(370, 15));
-            sw.WriteLine("satış fiyatı3 " + t.Substring(385, 15));
-            sw.WriteLine("alış fiyatı " + t.Substring(430, 15));
-            sw.WriteLine("0-39 fiyatın indexi " + t.Substring(505, 2));
-            sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 2. " + t.Substring(505, 2));
-            sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 3. " + t.Substring(507, 2));
-            sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 4. " + t.Substring(509, 2));
 
-            sw.WriteLine("KDV'ler fiyatlara dahil (1)/hariç (0) bit flagleri (1-5 satış fiyatlarına,6-10 alış fiyatlarına) Örnek:Tüm fiyatların KDV dahil olması için (alış ve satış) 1023 olarak gönderilmeli  :" + t.Substring(525, 5));
-            sw.WriteLine("Satış KDV grup numarası (0’dan başlar. Max 9) KDV yüzdesi (%0,%1,%8..) değildir. ", t.Substring(531, 3));
+            /* FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\alanlar.txt", FileMode.OpenOrCreate, FileAccess.Write);
+
+             StreamWriter sw = new StreamWriter(fs);
+             string dosya_yolu = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\projeler\\olivetti\\URUN.GTF";
+             FileStream fsRead = new FileStream(dosya_yolu, FileMode.Open, FileAccess.Read);
+
+             StreamReader swRead = new StreamReader(fsRead);
+             string t = swRead.ReadLine();*/
+            // t = swRead.ReadLine();
+            /*
+            while (t != null)
+            {
+                
+                if (t.Substring(0, 2) == "01")
+                {
+                    sw.WriteLine("stok kodu " + t.Substring(5, 24));
+                    sw.WriteLine("eski stok kodu " + t.Substring(29, 24));
+                    sw.WriteLine("stok açıklaması " + t.Substring(53, 40));
+                    sw.WriteLine("extra açıklama " + t.Substring(93, 40));
+                    sw.WriteLine("pos açıklama " + t.Substring(133, 20));
+                    sw.WriteLine("raf etiketi açıklama " + t.Substring(153, 20));
+                    sw.WriteLine("terazi etiketi açıklama " + t.Substring(173, 16));
+                    sw.WriteLine("stok bölümü " + t.Substring(189, 8));
+                    sw.WriteLine("reyon tanımı " + t.Substring(197, 8));
+                    sw.WriteLine("ürün tipi " + t.Substring(205, 8));
+                    sw.WriteLine("indirim grubu " + t.Substring(213, 8));
+                    sw.WriteLine("indirim durum kodu " + t.Substring(221, 1));
+                    sw.WriteLine("indirim yüzdesi " + t.Substring(222, 15));
+                    sw.WriteLine("indirim tutarı " + t.Substring(237, 15));
+                    sw.WriteLine("reserved " + t.Substring(252, 6));
+                    sw.WriteLine("Bağlı stok kodu " + t.Substring(258, 24));
+                    sw.WriteLine("birim " + t.Substring(282, 1));
+                    sw.WriteLine("birim böleni " + t.Substring(283, 15));
+                    sw.WriteLine("birim çarpanı " + t.Substring(298, 15));
+                    sw.WriteLine("İkinci birim kodu " + t.Substring(313, 8));
+                    sw.WriteLine("üçüncü birim kodu " + t.Substring(321, 8));
+
+                    sw.WriteLine("Birinci birimden ikinci birime geçiş katsayısı " + t.Substring(329, 12));
+                    sw.WriteLine("Birinci birimden üçüncü birime geçiş katsayısı " + t.Substring(341, 12));
+                    sw.WriteLine("Birinci birimden ikinci birime geçiş katsayısı çarpar (1)/böler (0) flag " + t.Substring(353, 1));
+                    sw.WriteLine("Birinci birimden üçüncü birime geçiş katsayısı çarpar (1)/böler (0) flag " + t.Substring(354, 1));
+
+                    sw.WriteLine("Satış fiyatı 1 " + t.Substring(355, 15));
+                    sw.WriteLine("Satış fiyatı 2 " + t.Substring(370, 15));
+                    sw.WriteLine("Satış fiyatı 3 " + t.Substring(385, 15));
+                    sw.WriteLine("Satış fiyatı 4 " + t.Substring(400, 15));
+                    sw.WriteLine("Satış fiyatı 5 " + t.Substring(415, 15));
+                    sw.WriteLine("Alış fiyatı 1 " + t.Substring(430, 15));
+                    sw.WriteLine("Alış fiyatı 2 " + t.Substring(445, 15));
+                    sw.WriteLine("Alış fiyatı 3 " + t.Substring(460, 15));
+                    sw.WriteLine("Alış fiyatı 4 " + t.Substring(475, 15));
+                    sw.WriteLine("Alış fiyatı 5 " + t.Substring(490, 15));
+
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 1. (Ödeme türü olarak girilen bilgilerin hangisinin seçildiği) " + t.Substring(505, 2));
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 2. " + t.Substring(507, 2));
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 3. " + t.Substring(509, 2));
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 4. " + t.Substring(511, 2));
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 5. " + t.Substring(513, 2));
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 1. " + t.Substring(515, 2));
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 2. " + t.Substring(517, 2));
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 3. " + t.Substring(519, 2));
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 4. " + t.Substring(521, 2));
+                    sw.WriteLine("0-39 fiyatın indexi(TL-4-v.s.) 5. " + t.Substring(523, 2));
+
+                    sw.WriteLine("KDV'ler fiyatlara dahil (1)/hariç (0) bit flagleri (1-5 satış fiyatlarına,6-10 alış fiyatlarına) Örnek:Tüm fiyatların KDV dahil olması için (alış ve satış) 1023 olarak gönderilmeli " + t.Substring(525, 6));
 
 
+
+                    sw.WriteLine("Satış KDV grup numarası (0’dan başlar. Max 9) KDV yüzdesi (%0,%1,%8..) değildir. " + t.Substring(531, 3));
+                    sw.WriteLine("Alış KDV grup numarası (0’dan başlar) " + t.Substring(534, 3));
+                    sw.WriteLine("KDV Kullanım şekli  " + t.Substring(537, 1));
+
+                    sw.WriteLine("İzin verilen min. satış adedi, 0: Kontrol etme  " + t.Substring(538, 15));
+                    sw.WriteLine("İzin verilen max. satış adedi, 0: Kontrol etme  " + t.Substring(553, 15));
+                    sw.WriteLine("Kasiyerin yapabileceği max. indirim yüzdesi  " + t.Substring(568, 3));
+                    sw.WriteLine("Kasiyerin yapabileceği max. indirim (TL)  " + t.Substring(571, 15));
+
+
+                    sw.WriteLine("Satış durumu   " + t.Substring(586, 1));
+                    sw.WriteLine("Adetli satış durumu  " + t.Substring(587, 1));
+                    sw.WriteLine("Fiyatlı satış durumu,   " + t.Substring(588, 1));
+                    sw.WriteLine("İade edilebilirlik,   " + t.Substring(589, 1));
+
+                    sw.WriteLine("Satıcı girişi,  " + t.Substring(590, 1));
+                    sw.WriteLine("Kod ile satış,   " + t.Substring(591, 1));
+                    sw.WriteLine("İndirimli satış,   " + t.Substring(592, 1));
+                    sw.WriteLine("Ürün siparişi verilebilir,   " + t.Substring(593, 1));
+
+                    sw.WriteLine("Teminci Kodu,   " + t.Substring(594, 20));
+
+
+
+                    sw.WriteLine("Kredi Şablonu (Taksitli Satış şablonu),   " + t.Substring(614, 6));
+                    sw.WriteLine("Kaç gün içinde temin edilebildiği,   " + t.Substring(620, 15));
+                    sw.WriteLine("Sipariş katsayısı, ortalama sipariş sayısına oranı,   " + t.Substring(635, 6));
+                    sw.WriteLine("Depo sipariş seviyesi   " + t.Substring(641, 15));
+                    sw.WriteLine("Depo kritik seviyesi   " + t.Substring(656, 15));
+                    sw.WriteLine("Depo maksimum seviyesi   " + t.Substring(671, 15));
+                    sw.WriteLine("Terazi Durumu   " + t.Substring(686, 1));
+                    sw.WriteLine("Katsayı1   " + t.Substring(687, 15));
+                    sw.WriteLine("Katsayı2   " + t.Substring(702, 15));
+                    sw.WriteLine("Katsayı3   " + t.Substring(717, 15));
+                    sw.WriteLine("Katsayı4   " + t.Substring(732, 15));
+                    sw.WriteLine("Katsayı5   " + t.Substring(747, 15));
+                    sw.WriteLine("Katsayı6   " + t.Substring(762, 15));
+                    sw.WriteLine("Katsayı7   " + t.Substring(777, 15));
+                    sw.WriteLine("Katsayı8   " + t.Substring(792, 15));
+
+                    sw.WriteLine("Stok kartı puan bilgisi   " + t.Substring(807, 15));
+                    sw.WriteLine("Üretim bilgisi. OR Flag.   " + t.Substring(822, 6));
+
+                    sw.WriteLine("Etikete (Birim Fiyat/Birim) şeklinde yazilacak satirdaki birim fiyat (Örn:330 Cl Coke 250.000 TL ise birim lt ve birim fiyat 800.000 TL olacak)  " + t.Substring(828, 15));
+                    sw.WriteLine("Etikete (Birim Fiyat/Birim) şeklinde yazilacak satirdaki birim         (Örn:330 Cl Coke 250.000 TL ise birim lt ve birim fiyat 800.000 TL olacak)  " + t.Substring(843, 5));
+
+                }
+
+
+
+
+                sw.WriteLine("-------------------------------------------------------------------------------------------------\n\n");
+                 
+                t = swRead.ReadLine();
+
+            }
+            * */
 
             //Dosyaya ekleyeceğimiz iki satırlık yazıyı WriteLine() metodu ile yazacağız.
-            sw.Flush();
+            //sw.Flush();
             //Veriyi tampon bölgeden dosyaya aktardık.
-            sw.Close();
-            fs.Close();
+            //sw.Close();
+            //fs.Close();
             kasalariGetir();
         }
         public void hareketAktar(bool hepsi, DateTime tarih1, DateTime tarih2, int kasaIndex)
@@ -357,100 +445,183 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
 
         private void btnAktar_Click(object sender, EventArgs e)
         {
+            stokAktar();
+        }
+
+        public void birinciSatir(STKKART item)
+        {
+            StringBuilder sb = new StringBuilder();
+            string satirNo = "01".boslukTamamla(4);
+            string islemTuru = "0";
+            string stkKodu = item.STKKOD.ToString().boslukTamamla(24);
+            string eskiStkKodu = item.STKKOD.ToString().boslukTamamla(24);
+            string stokAciklama = item.STKCINSI.ToString().boslukTamamla(40);
+            string extraAciklama = item.STKCINSI.boslukTamamla(40);
+            string posEkraniAciklama = item.STKCINSI.boslukTamamla(20);
+            string rafEtiketiAciklama = item.STKCINSI.boslukTamamla(20);
+            string teraziAciklama = item.STKCINSI.boslukTamamla(16);
+            string stokBolumu = "1".boslukTamamla(8);
+            string reyonTanimi = "1".boslukTamamla(8);
+            string urunTipi = "1".boslukTamamla(8);
+            string indirimGrubu = "".boslukTamamla(8);
+            string indirimDurumu = "".boslukTamamla(1);//0 indirim yok,1 yüzde,2 bölüm,3 grup
+            string indirimYuzdesi = "".boslukTamamla(15);//burası hangi tablodan alınacak
+            string indirimTutari = "".boslukTamamla(15);//||
+            string reserved = "".boslukTamamla(6);
+            string bagliStokKodu = "".boslukTamamla(24);//bilinmiyor;
+
+            sb.Append(satirNo + islemTuru + stkKodu + eskiStkKodu + stokAciklama + extraAciklama + posEkraniAciklama + rafEtiketiAciklama + teraziAciklama + stokBolumu + reyonTanimi + urunTipi + indirimGrubu + indirimDurumu + indirimYuzdesi + indirimTutari + reserved
+                + bagliStokKodu);
+            string birim = "0";//0 adet,1 ağırlık,2uzunluk,3litre
+
+            string birimBoleni = "".boslukTamamla(15);//!=0
+            string birimCarpani = "".boslukTamamla(15);//!=0
+            string ikinciBirimKodu = item.STKBIRIM2.boslukTamamla(15);
+            string ucuncuBirimKodu = item.STKBIRIM.boslukTamamla(15);
+            string gecisKatSayisi1 = "".boslukTamamla(12);
+            string gecisKatSayisi2 = "".boslukTamamla(12);
+            string gecisKatSayisiCarpar1 = "".boslukTamamla(1);//1 çarpar,0 böler
+            string gecisKatSayisiCarpar2 = "".boslukTamamla(1);
+
+            sb.Append(birim + birimBoleni + birimCarpani + ikinciBirimKodu + ucuncuBirimKodu + gecisKatSayisi1 + gecisKatSayisi2 + gecisKatSayisiCarpar1 + gecisKatSayisiCarpar2);
+            var satisFiyat=from d in db.STKFIYAT.Where(d=>d.STKFIYSTKKOD==item.STKKOD && d.STKFIYNO==1)
+                           select new
+                           {
+                               d.STKFIYTUTAR,
+                               d.STKFIYISKYUZ1
+                           };
+            string satisFiyatGelen = "";
+            foreach (var itemFiyat in satisFiyat)
+            {
+                satisFiyatGelen = itemFiyat.STKFIYTUTAR.ToString();
+            }
+            string satisFiyati = satisFiyatGelen.boslukTamamla(1);
+            string satisFiyati2 = "".boslukTamamla(1);
+            string satisFiyati3 = "".boslukTamamla(1);
+            string satisFiyati4 = "".boslukTamamla(1);
+            string satisFiyati5 = "".boslukTamamla(1);
+            string alisFiyati = "".boslukTamamla(1);
+            string alisFiyati1 = "".boslukTamamla(1);
+            string alisFiyati2 = "".boslukTamamla(1);
+            string alisFiyati3 = "".boslukTamamla(1);
+            string alisFiyati4 = "".boslukTamamla(1);
+            string alisFiyati5 = "".boslukTamamla(1);
+            sb.Append(satisFiyati + satisFiyati2 + satisFiyati3 + satisFiyati4 + satisFiyati5 + alisFiyati + alisFiyati1 + alisFiyati2 + alisFiyati3 + alisFiyati4 + alisFiyati5);
+            string fiyatinIndexi = "".boslukTamamla(1);
+            string fiyatinIndexi2 = "".boslukTamamla(1);
+            string fiyatinIndexi3 = "".boslukTamamla(1);
+            string fiyatinIndexi4 = "".boslukTamamla(1);
+            string fiyatinIndexi5 = "".boslukTamamla(1);
+            string fiyatinIndexi6 = "".boslukTamamla(1);
+            string fiyatinIndexi7 = "".boslukTamamla(1);
+            string fiyatinIndexi8 = "".boslukTamamla(1);
+            string fiyatinIndexi9 = "".boslukTamamla(1);
+            string fiyatinIndexi10 = "".boslukTamamla(1);
+            sb.Append(fiyatinIndexi + fiyatinIndexi2 + fiyatinIndexi3 + fiyatinIndexi4 + fiyatinIndexi5 + fiyatinIndexi6 + fiyatinIndexi7 + fiyatinIndexi8 + fiyatinIndexi9 + fiyatinIndexi10);
+            string kdvlerFiyataDahil = "".boslukTamamla(1);//haric (0) bit flagları (1-5 satış fiyatlarına ,6-10 alış fiyatlarına)
+            string satisKdvGrupNo = item.STKGENKDVNO.boslukTamamla(1);
+            string alisKdvGrupNo = "".boslukTamamla(1);
+            string kdvKullanimSekli = "".boslukTamamla(1);//0 kendi kdvsi,1 bölüm kdvsi, 2 reyon kdvsi
+            string izinVerMinSatAdedi = "".boslukTamamla(1);//0 kontrolEtme
+            string izinVerMaxSatAdedi = "".boslukTamamla(1);//0 kontrolEtme
+            string kasMaxIndYuzde = "".boslukTamamla(1);
+            string kasMaxInd = "".boslukTamamla(1);
+            string satisDurumu = "".boslukTamamla(1);//0.satılabilr,1:satış durduruldu
+            string adetliSatisDurumu = "".boslukTamamla(1);
+            string fiyatliSatisDurumu = "".boslukTamamla(1);
+            sb.Append(kdvlerFiyataDahil + satisKdvGrupNo + alisKdvGrupNo + kdvKullanimSekli + izinVerMinSatAdedi + izinVerMaxSatAdedi + kasMaxIndYuzde + kasMaxInd + satisDurumu + adetliSatisDurumu + fiyatliSatisDurumu);
+            string iadeEdilebilirlik = "".boslukTamamla(1);
+            string saticiGirisi = "".boslukTamamla(1);
+            string kodlaSatis = "".boslukTamamla(1);
+            string indirimliSatis = "".boslukTamamla(1);
+            string siparisVerilebilir = "".boslukTamamla(1);
+            string teminciKodu = "".boslukTamamla(1);
+            string krediSablonu = "".boslukTamamla(1);
+            string teminGunSayisi = "".boslukTamamla(1);
+            string siparisKatSayisi = "".boslukTamamla(1);
+            string depoSiparis = "".boslukTamamla(1);
+            string depoKritik = "".boslukTamamla(1);
+            string depoMaxSeviye = "".boslukTamamla(1);
+            string terazi = "".boslukTamamla(1);
+            string katSayi1 = "".boslukTamamla(1);
+            string katSayi2 = "".boslukTamamla(1);
+            string katSayi3 = "".boslukTamamla(1);
+            string katSayi4 = "".boslukTamamla(1);
+            string katSayi5 = "".boslukTamamla(1);
+            string katSayi6 = "".boslukTamamla(1);
+            string katSayi7 = "".boslukTamamla(1);
+            string katSayi8 = "".boslukTamamla(1);
+            string stokKartiPuan = "".boslukTamamla(1);
+            string uretimBilgisi = "".boslukTamamla(1);
+            string etiketeYazilacakFiyat = "".boslukTamamla(1);
+            string etiketeFiyat = "".boslukTamamla(1);
+            sb.Append(iadeEdilebilirlik + saticiGirisi + kodlaSatis + indirimliSatis + siparisVerilebilir + teminciKodu + krediSablonu + teminGunSayisi + siparisKatSayisi + depoSiparis + depoKritik + depoMaxSeviye + terazi + katSayi1 + katSayi2 + katSayi3 + katSayi4 + katSayi5 + katSayi6 + katSayi7 + katSayi8 + stokKartiPuan + uretimBilgisi + etiketeYazilacakFiyat + etiketeFiyat);
+            Fonksiyon.dosyayaYaz(sb.ToString());
+            var q = from D in db.STKBARKOD.Where(d => d.STKBARSTKKOD == item.STKKOD)
+                    select new
+                    {
+                        D.STKBARKOD1,
+                        D.STKBARSTKKOD,
+                        D.STKBARBRMNO,
+                        D.STKBARTIP
+                    };
+            int sirano = 0;
+            foreach (var item2 in q)
+            {
+                sirano++;
+                STKBARKOD sbr = new STKBARKOD();
+                sbr.STKBARKOD1 = item2.STKBARKOD1;
+                sbr.STKBARSTKKOD = item2.STKBARSTKKOD;
+                sbr.STKBARBRMNO = item2.STKBARBRMNO;
+                sbr.STKBARTIP = item2.STKBARTIP;
+                ikinciSatir(sbr, sirano);
+            }
+        }
+
+        public void ikinciSatir(STKBARKOD stk, int sirano)
+        {
+            string satirKodu = "02".boslukTamamla(4);
+            string islemTuru = "1".boslukTamamla(1);
+            string iliskiliStkKodu = stk.STKBARSTKKOD.boslukTamamla(24);
+            string barkodu = stk.STKBARKOD1.boslukTamamla(24);
+            string eskiBarkodu = stk.STKBARKOD1.boslukTamamla(24);
+            string birimMiktar = "".boslukTamamla(6);
+            string barkodTipi = stk.STKBARTIP.boslukTamamla(1);
+            string fiyatBilgisi = "0".boslukTamamla(1);
+            string siraNo = sirano.ToString().boslukTamamla(2);
+            string barkodFiyati = "".boslukTamamla(15);
+            StringBuilder sb = new StringBuilder();
+            sb.Append(satirKodu + islemTuru + iliskiliStkKodu + barkodu + eskiBarkodu + birimMiktar + barkodTipi + fiyatBilgisi + sirano + barkodFiyati);
+            Fonksiyon.dosyayaYaz(sb.ToString());
 
         }
         public void stokAktar()
         {
-            var stkList = db.STKKART.ToList();
-            foreach (STKKART item in stkList)
+            var stklar = from C in db.STKKART.Take(10)
+                         select new
+                         {
+                             C.STKBIRIM,
+                             C.STKBIRIM2,
+                             C.STKBIRIM3,
+                             C.STKKOD,
+                             C.STKCINSI,
+                             C.STKCINSI2,
+                             C.STKCINSI3
+                         };
+
+            STKKART stk = new STKKART();
+
+            foreach (var item in stklar)
             {
-                string satirNo = "01".boslukTamamla(4);
-                string islemTuru = "0";
-                string stkKodu = item.STKKOD.ToString().boslukTamamla(24);
-                string eskiStkKodu = item.STKKOD.ToString().boslukTamamla(24);
-                string stokAciklama = item.STKCINSI.ToString().boslukTamamla(40);
-                string extraAciklama = item.STKCINSI.boslukTamamla(40);
-                string posEkraniAciklama = item.STKCINSI.boslukTamamla(20);
-                string rafEtiketiAciklama = item.STKCINSI.boslukTamamla(20);
-                string teraziAciklama = item.STKCINSI.boslukTamamla(16);
-                string stokBolumu = "1".boslukTamamla(8);
-                string reyonTanimi = "1".boslukTamamla(8);
-                string urunTipi = "1".boslukTamamla(8);
-                string indirimGrubu = "".boslukTamamla(8);
-                string indirimDurumu = "".boslukTamamla(1);//0 indirim yok,1 yüzde,2 bölüm,3 grup
-                string indirimYuzdesi = "".boslukTamamla(15);//burası hangi tablodan alınacak
-                string indirimTutari = "".boslukTamamla(15);//||
-                string reserved = "".boslukTamamla(6);
-                string bagliStokKodu = "".boslukTamamla(24);//bilinmiyor;
-                string birim = "0";//0 adet,1 ağırlık,2uzunluk,3litre
+                stk.STKBIRIM = item.STKBIRIM;
+                stk.STKBIRIM2 = item.STKBIRIM2;
+                stk.STKBIRIM3 = item.STKBIRIM3;
+                stk.STKKOD = item.STKKOD;
+                stk.STKCINSI = item.STKCINSI;
+                stk.STKCINSI2 = item.STKCINSI2;
+                stk.STKCINSI3 = item.STKCINSI3;
+                birinciSatir(stk);
 
-                var d = from c in db.STKBIRIM select new { c.STKBIRIMBOLEN, c.STKBIRIMCARPAN, c.STKBIRIMAD };
-
-                string birimBoleni = "".boslukTamamla(15);//!=0
-                string birimCarpani = d.boslukTamamla(15);//!=0
-                string ikinciBirimKodu = item.STKBIRIM2.boslukTamamla(15);
-                string ucuncuBirimKodu = item.STKBIRIM.boslukTamamla(15);
-                string gecisKatSayisi1 = "";
-                string gecisKatSayisi2 = "";
-                string gecisKatSayisiCarpar1 = "";//1 çarpar,0 böler
-                string gecisKatSayisiCarpar2 = "";
-                string satisFiyati = "";
-                string satisFiyati2 = "";
-                string satisFiyati3 = "";
-                string satisFiyati4 = "";
-                string satisFiyati5 = "";
-                string alisFiyati = "";
-                string alisFiyati1 = "";
-                string alisFiyati2 = "";
-                string alisFiyati3 = "";
-                string alisFiyati4 = "";
-                string alisFiyati5 = "";
-                string fiyatinIndexi = "";
-                string fiyatinIndexi2 = "";
-                string fiyatinIndexi3 = "";
-                string fiyatinIndexi4 = "";
-                string fiyatinIndexi5 = "";
-                string fiyatinIndexi6 = "";
-                string fiyatinIndexi7 = "";
-                string fiyatinIndexi8 = "";
-                string fiyatinIndexi9 = "";
-                string fiyatinIndexi10 = "";
-                string kdvlerFiyataDahil = "";//haric (0) bit flagları (1-5 satış fiyatlarına ,6-10 alış fiyatlarına)
-                string satisKdvGrupNo = "";
-                string alisKdvGrupNo = "";
-                string kdvKullanimSekli = "";//0 kendi kdvsi,1 bölüm kdvsi, 2 reyon kdvsi
-                string izinVerMinSatAdedi = "";//0 kontrolEtme
-                string izinVerMaxSatAdedi = "";//0 kontrolEtme
-                string kasMaxIndYuzde = "";
-                string kasMaxInd = "";
-                string satisDurumu = "";//0.satılabilr,1:satış durduruldu
-                string adetliSatisDurumu = "";
-                string fiyatliSatisDurumu = "";
-                string iadeEdilebilirlik = "";
-                string saticiGirisi = "";
-                string kodlaSatis = "";
-                string indirimliSatis = "";
-                string siparisVerilebilir = "";
-                string teminciKodu = "";
-                string krediSablonu = "";
-                string teminGunSayisi = "";
-                string siparisKatSayisi = "";
-                string depoSiparis = "";
-                string depoKritik = "";
-                string depoMaxSeviye = "";
-                string terazi = "";
-                string katSayi1 = "";
-                string katSayi2 = "";
-                string katSayi3 = "";
-                string katSayi4 = "";
-                string katSayi5 = "";
-                string katSayi6 = "";
-                string katSayi7 = "";
-                string katSayi8 = "";
-                string stokKartiPuan = "";
-                string uretimBilgisi = "";
-                string etiketeYazilacakFiyat = "";
-                string etiketeFiyat = "";
             }
         }
 
@@ -460,6 +631,10 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
         public static string boslukTamamla(this object o, int uzunluk)
         {
             string str = o.ToString();
+            if (str.Length > uzunluk)
+            {
+                str = str.Substring(0, uzunluk);
+            }
             while (str.Length < uzunluk)
             {
                 str += " ";
