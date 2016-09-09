@@ -1,6 +1,6 @@
 ﻿namespace Olivetti
 {
-    partial class frmAnaForm
+    partial class frmAktar
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAnaForm));
-            this.btnayarlar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlkartaktarmagrubu = new System.Windows.Forms.Panel();
             this.rdbtnHepsi = new System.Windows.Forms.RadioButton();
@@ -42,26 +39,16 @@
             this.dtHareket2 = new System.Windows.Forms.DateTimePicker();
             this.dtHareket1 = new System.Windows.Forms.DateTimePicker();
             this.lblkasalarahareketaktarimi = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnHareketAktar = new System.Windows.Forms.Button();
             this.grpKasalar = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.btnAktar = new System.Windows.Forms.Button();
+            this.btnKartAktar = new System.Windows.Forms.Button();
             this.lblHareketAktarma = new System.Windows.Forms.Label();
             this.lblkasalarabilgigonder = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.btnayarlar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlkartaktarmagrubu.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // btnayarlar
-            // 
-            this.btnayarlar.Location = new System.Drawing.Point(591, 9);
-            this.btnayarlar.Name = "btnayarlar";
-            this.btnayarlar.Size = new System.Drawing.Size(75, 23);
-            this.btnayarlar.TabIndex = 0;
-            this.btnayarlar.Text = "Ayarlar";
-            this.btnayarlar.UseVisualStyleBackColor = true;
-            this.btnayarlar.Click += new System.EventHandler(this.btnayarlar_Click);
             // 
             // panel1
             // 
@@ -72,17 +59,16 @@
             this.panel1.Controls.Add(this.dtHareket2);
             this.panel1.Controls.Add(this.dtHareket1);
             this.panel1.Controls.Add(this.lblkasalarahareketaktarimi);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnHareketAktar);
             this.panel1.Controls.Add(this.grpKasalar);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.btnAktar);
+            this.panel1.Controls.Add(this.btnKartAktar);
             this.panel1.Controls.Add(this.lblHareketAktarma);
             this.panel1.Controls.Add(this.lblkasalarabilgigonder);
-            this.panel1.Location = new System.Drawing.Point(0, 38);
+            this.panel1.Location = new System.Drawing.Point(1, 35);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(677, 315);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel1.Size = new System.Drawing.Size(594, 315);
+            this.panel1.TabIndex = 5;
             // 
             // pnlkartaktarmagrubu
             // 
@@ -116,7 +102,6 @@
             this.rdbtnTarihsel.TabStop = true;
             this.rdbtnTarihsel.Text = "Tarihsel";
             this.rdbtnTarihsel.UseVisualStyleBackColor = true;
-            this.rdbtnTarihsel.CheckedChanged += new System.EventHandler(this.rdbtnTarihsel_CheckedChanged);
             // 
             // dateTimePicker1
             // 
@@ -148,7 +133,6 @@
             this.rdbtnTarihsel2.TabStop = true;
             this.rdbtnTarihsel2.Text = "Tarihsel";
             this.rdbtnTarihsel2.UseVisualStyleBackColor = true;
-            this.rdbtnTarihsel2.CheckedChanged += new System.EventHandler(this.rdbtnTarihsel2_CheckedChanged);
             // 
             // rdbtnHepsi2
             // 
@@ -190,15 +174,14 @@
             this.lblkasalarahareketaktarimi.TabIndex = 18;
             this.lblkasalarahareketaktarimi.Text = "Kasalardan Satış Hareketlerini Aktarma";
             // 
-            // button1
+            // btnHareketAktar
             // 
-            this.button1.Location = new System.Drawing.Point(319, 286);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "Aktar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnHareketAktar.Location = new System.Drawing.Point(319, 286);
+            this.btnHareketAktar.Name = "btnHareketAktar";
+            this.btnHareketAktar.Size = new System.Drawing.Size(75, 23);
+            this.btnHareketAktar.TabIndex = 17;
+            this.btnHareketAktar.Text = "Aktar";
+            this.btnHareketAktar.UseVisualStyleBackColor = true;
             // 
             // grpKasalar
             // 
@@ -219,15 +202,15 @@
             this.label2.TabIndex = 10;
             this.label2.Text = "Kart Aktarma";
             // 
-            // btnAktar
+            // btnKartAktar
             // 
-            this.btnAktar.Location = new System.Drawing.Point(14, 286);
-            this.btnAktar.Name = "btnAktar";
-            this.btnAktar.Size = new System.Drawing.Size(75, 23);
-            this.btnAktar.TabIndex = 6;
-            this.btnAktar.Text = "Aktar";
-            this.btnAktar.UseVisualStyleBackColor = true;
-            this.btnAktar.Click += new System.EventHandler(this.btnAktar_Click);
+            this.btnKartAktar.Location = new System.Drawing.Point(15, 284);
+            this.btnKartAktar.Name = "btnKartAktar";
+            this.btnKartAktar.Size = new System.Drawing.Size(75, 23);
+            this.btnKartAktar.TabIndex = 6;
+            this.btnKartAktar.Text = "Aktar";
+            this.btnKartAktar.UseVisualStyleBackColor = true;
+            this.btnKartAktar.Click += new System.EventHandler(this.btnKartAktar_Click);
             // 
             // lblHareketAktarma
             // 
@@ -248,23 +231,26 @@
             this.lblkasalarabilgigonder.TabIndex = 3;
             this.lblkasalarabilgigonder.Text = "Kasalara Stok Kartı Gönderme";
             // 
-            // contextMenuStrip1
+            // btnayarlar
             // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.btnayarlar.Location = new System.Drawing.Point(511, 6);
+            this.btnayarlar.Name = "btnayarlar";
+            this.btnayarlar.Size = new System.Drawing.Size(75, 23);
+            this.btnayarlar.TabIndex = 4;
+            this.btnayarlar.Text = "Ayarlar";
+            this.btnayarlar.UseVisualStyleBackColor = true;
+            this.btnayarlar.Click += new System.EventHandler(this.btnayarlar_Click);
             // 
-            // frmAnaForm
+            // frmAktar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(678, 356);
+            this.ClientSize = new System.Drawing.Size(596, 356);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnayarlar);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmAnaForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Olivetti";
-            this.Load += new System.EventHandler(this.frmAnaForm_Load);
+            this.Name = "frmAktar";
+            this.Text = "frmAktar";
+            this.Load += new System.EventHandler(this.frmAktar_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.pnlkartaktarmagrubu.ResumeLayout(false);
@@ -275,25 +261,23 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnayarlar;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblHareketAktarma;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label lblkasalarabilgigonder;
-        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.RadioButton rdbtnTarihsel;
+        private System.Windows.Forms.Panel pnlkartaktarmagrubu;
         private System.Windows.Forms.RadioButton rdbtnHepsi;
-        private System.Windows.Forms.Button btnAktar;
-        private System.Windows.Forms.GroupBox grpKasalar;
-        private System.Windows.Forms.Label lblkasalarahareketaktarimi;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rdbtnTarihsel;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.RadioButton rdbtnTarihsel2;
         private System.Windows.Forms.RadioButton rdbtnHepsi2;
         private System.Windows.Forms.DateTimePicker dtHareket2;
         private System.Windows.Forms.DateTimePicker dtHareket1;
-        private System.Windows.Forms.Panel pnlkartaktarmagrubu;
+        private System.Windows.Forms.Label lblkasalarahareketaktarimi;
+        private System.Windows.Forms.Button btnHareketAktar;
+        private System.Windows.Forms.GroupBox grpKasalar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnKartAktar;
+        private System.Windows.Forms.Label lblHareketAktarma;
+        private System.Windows.Forms.Label lblkasalarabilgigonder;
+        private System.Windows.Forms.Button btnayarlar;
     }
 }
-

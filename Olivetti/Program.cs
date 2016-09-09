@@ -13,7 +13,7 @@ namespace Olivetti
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmAnaForm());
+            Application.Run(new frmAktar());
         }
     }
 }

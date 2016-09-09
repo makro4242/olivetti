@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Windows.Forms;
 namespace Olivetti
 {
@@ -6,7 +7,7 @@ namespace Olivetti
     {
         Fonksiyon f = new Fonksiyon();
         int kasaid = -1;
-        frmAnaForm frm;
+        frmAktar frm;
    
         public void kasagetir(int kasaid)
         {
@@ -24,12 +25,32 @@ namespace Olivetti
             {
             }
         }
-        public frmAyarlar(frmAnaForm frm)
+        public frmAyarlar(frmAktar frm)
         {
             this.frm = frm;
             InitializeComponent();
         }
+        static void AddConnectionStrings()
+        {
 
+            string csName = "baglanti";
+
+            // Get the configuration file.
+            System.Configuration.Configuration config =
+                ConfigurationManager.OpenExeConfiguration(
+                ConfigurationUserLevel.None);
+
+            // Add the connection string.
+            ConnectionStringsSection csSection =
+                config.ConnectionStrings;
+            csSection.ConnectionStrings["baglanti"].ConnectionString =
+                   "data source=" + Properties.Settings.Default.SqlServeripinstancename + ";Initial Catalog=" + Properties.Settings.Default.SqlDatabase + ";User ID=" + Properties.Settings.Default.SqlUser + ";Password=" + Properties.Settings.Default.SqlPassword;
+
+            // Save the configuration file.
+            config.Save(ConfigurationSaveMode.Modified);
+
+
+        }
         private void btnVeriTabaniAyarlariKaydet_Click(object sender, EventArgs e)
         {
 
@@ -41,6 +62,8 @@ namespace Olivetti
                 Properties.Settings.Default.SqlUser = txtSqlUser.Text;
                 Properties.Settings.Default.SqlPassword = txtSqlPassword.Text;
                 Properties.Settings.Default.Save();
+
+                AddConnectionStrings();
                 MessageBox.Show("Bağlantı Kuruldu, Ayarlar Kaydedildi.");
             }
             else

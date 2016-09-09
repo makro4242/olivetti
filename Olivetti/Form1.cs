@@ -4,6 +4,7 @@ using System.IO;
 using System.Windows.Forms;
 using System.Linq;
 using System.Text;
+using System.Configuration;
 
 namespace Olivetti
 {
@@ -30,10 +31,34 @@ namespace Olivetti
                 dateTimePicker2.Visible = false;
             }
         }
-
+        static void AddUpdateAppSettings(string key, string value)
+        {
+            try
+            {
+                var configFile = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                var settings = configFile.AppSettings.Settings;
+                if (settings[key] == null)
+                {
+                    settings.Add(key, value);
+                }
+                else
+                {
+                    settings[key].Value = value;
+                }
+                configFile.Save(ConfigurationSaveMode.Modified);
+                ConfigurationManager.RefreshSection(configFile.AppSettings.SectionInformation.Name);
+            }
+            catch (ConfigurationErrorsException)
+            {
+                Console.WriteLine("Error writing app settings");
+            }
+        }
         private void frmAnaForm_Load(object sender, EventArgs e)
         {
+
             db.Database.Connection.ConnectionString = "data source=" + Properties.Settings.Default.SqlServeripinstancename + ";initial catalog=" + Properties.Settings.Default.SqlDatabase + ";user ID=" + Properties.Settings.Default.SqlUser + ";Password=" + Properties.Settings.Default.SqlPassword + ";MultipleActiveResultSets=True;App=EntityFramework";
+
+        
 
             /* FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\alanlar.txt", FileMode.OpenOrCreate, FileAccess.Write);
 
@@ -250,6 +275,7 @@ namespace Olivetti
                             h.yuvarlama = satir.Substring(196, 15).Trim();
                             h.musteriNo = satir.Substring(211, 24).Trim();
                             h.taksitliSatis = satir.Substring(235, 1).Trim();
+                            satir = sr.ReadLine();
                         }
                         else if (islemKodu == "02")
                         {
@@ -274,13 +300,14 @@ namespace Olivetti
                             stk.odemeTipiReferansi = satir.Substring(221, 2);
                             stk.satisTipi = satir.Substring(225, 1);//0:barkodlusatış,1:stok kodu
                             h.lstStokHareket.Add(stk);
+                            satir = sr.ReadLine();
                         }
                         else
                         {
                             FATFIS myFatFis = new FATFIS();
                             HARREFNO fatFisHarRefNo = db.HARREFNO.FirstOrDefault(c => c.HARREFMODUL == 3 && c.HARREFKONU == 1);
                             int fatFisRefNo = fatFisHarRefNo.HARREFDEGER;
-                            fatFisHarRefNo.HARREFDEGER++;
+                           // fatFisHarRefNo.HARREFDEGER = fatFisHarRefNo.HARREFDEGER + 1;
                             myFatFis.FATFISTAR = Convert.ToDateTime(h.tarih);
                             myFatFis.FATFISREFNO = fatFisRefNo;
                             myFatFis.FATFISTIPI = Convert.ToInt32(kasaKodu);
@@ -305,6 +332,7 @@ namespace Olivetti
                             myFatFis.FATFISSEVNO = 1;
                             myFatFis.FATFISTOPOTUT = Convert.ToDecimal(h.genelToplam);//ötv'li fiş toplamı
                             db.FATFIS.Add(myFatFis);
+                            db.SaveChanges();
                             //0.89 indirim, 5.01 indirimli fiyat., 5.9 doğal fiyat,
                             int fatHarTipi = 13;
                             int fatHarSiraNo = 1;
@@ -352,7 +380,7 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
                             //stok hareketleri
                             HARREFNO harRefStkFisRef = db.HARREFNO.FirstOrDefault(c => c.HARREFMODUL == 1 && c.HARREFKONU == 1);
                             int STKFISREFNO = harRefStkFisRef.HARREFDEGER;
-                            harRefStkFisRef.HARREFDEGER++;
+                            //harRefStkFisRef.HARREFDEGER++;
 
                             STKFIS myStkFis = new STKFIS();
                             myStkFis.STKFISTAR = myFatFis.FATFISTAR;
@@ -372,6 +400,10 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
 
                         }
                     }
+                    else
+                    {
+                        satir = sr.ReadLine();
+                    }
                 }
                 sr.Close();
             }
@@ -389,7 +421,8 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
         public bool hareketKayitKontrol(string fatfistar, string fatfistip, string fatfiskasrefno)
         {
             DateTime dtFisTar = Convert.ToDateTime(fatfistar);
-            int adet = (from fis in db.FATFIS where fis.FATFISTAR == dtFisTar select fis).ToList().Count;
+            int adet = db.FATFIS.ToList().Where(d => d.FATFISTAR == dtFisTar).Count();
+           
             return true ? adet == 0 : false;
         }
         public void hareketKayit()
@@ -415,8 +448,10 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
         }
         private void btnayarlar_Click(object sender, EventArgs e)
         {
+            /*
             frmAyarlar frm = new frmAyarlar(this);
             frm.ShowDialog();
+             * */
         }
 
         private void rdbtnTarihsel2_CheckedChanged(object sender, EventArgs e)
@@ -440,13 +475,14 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
                 if (item is CheckBox && (item as CheckBox).Checked)
                 {
                     int kasaIndex = Convert.ToInt32(item.Text.Replace("Kasa ", "")) - 1;
-                    hareketAktar(rdbtnHepsi.Checked, dtHareket1.Value, dtHareket2.Value, kasaIndex);
+                    hareketAktar(rdbtnHepsi2.Checked, dtHareket1.Value, dtHareket2.Value, kasaIndex);
                 }
             }
         }
 
         private void btnAktar_Click(object sender, EventArgs e)
         {
+            
             stokAktar();
         }
 
@@ -625,6 +661,11 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
                 birinciSatir(stk);
 
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
     }
