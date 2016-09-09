@@ -13,6 +13,7 @@ namespace Olivetti
         myEntities db = new myEntities();
         public frmAnaForm()
         {
+
             InitializeComponent();
         }
 
@@ -32,6 +33,7 @@ namespace Olivetti
 
         private void frmAnaForm_Load(object sender, EventArgs e)
         {
+            db.Database.Connection.ConnectionString = "data source=" + Properties.Settings.Default.SqlServeripinstancename + ";initial catalog=" + Properties.Settings.Default.SqlDatabase + ";user ID=" + Properties.Settings.Default.SqlUser + ";Password=" + Properties.Settings.Default.SqlPassword + ";MultipleActiveResultSets=True;App=EntityFramework";
 
             /* FileStream fs = new FileStream(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\alanlar.txt", FileMode.OpenOrCreate, FileAccess.Write);
 
@@ -484,12 +486,12 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
             string gecisKatSayisiCarpar2 = "".boslukTamamla(1);
 
             sb.Append(birim + birimBoleni + birimCarpani + ikinciBirimKodu + ucuncuBirimKodu + gecisKatSayisi1 + gecisKatSayisi2 + gecisKatSayisiCarpar1 + gecisKatSayisiCarpar2);
-            var satisFiyat=from d in db.STKFIYAT.Where(d=>d.STKFIYSTKKOD==item.STKKOD && d.STKFIYNO==1)
-                           select new
-                           {
-                               d.STKFIYTUTAR,
-                               d.STKFIYISKYUZ1
-                           };
+            var satisFiyat = from d in db.STKFIYAT.Where(d => d.STKFIYSTKKOD == item.STKKOD && d.STKFIYNO == 1)
+                             select new
+                             {
+                                 d.STKFIYTUTAR,
+                                 d.STKFIYISKYUZ1
+                             };
             string satisFiyatGelen = "";
             foreach (var itemFiyat in satisFiyat)
             {
