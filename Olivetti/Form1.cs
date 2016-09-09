@@ -170,7 +170,7 @@ namespace Olivetti
         }
         public void hareketAktar(bool hepsi, DateTime tarih1, DateTime tarih2, int kasaIndex)
         {
-            string dosya_yolu = Properties.Settings.Default.Kasalar[kasaIndex].Split('*')[2];
+            string dosya_yolu = Properties.Settings.Default.Kasalar[kasaIndex].Split('*')[2] + "\\SATIS.GTF";
             string kasaKodu = Properties.Settings.Default.Kasalar[kasaIndex].Split('*')[0];
             StreamReader sr = f.dosyaOkuyucu(dosya_yolu);
 
@@ -367,7 +367,7 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
                                FATFISREFNO=101771
                              ,FATFISTIPI=13,FATFISGCFLAG=2,FATFISKAYONC=1,FATFISKAYNAK=3,FATFISKAPFLAG=1,FATFISKDVDAHILFLAG=1,FATFISANADEPO=D-01,FATFISADRESNO=1,FATFISSAAT=20:34,FATFISEVRAKNO1=34,FATFISKDVORANI=8,FATFISMALTOP=5.9,FATFISKALINDYTOP=0.89,FATFISBRUTTOPLAM=5.01,FATFISKDVMATRAHI=4.64,FATFISKDVTUTARI=0.37,FATFISARATOPLAM=5.01,FATFISGENTOPLAM=5.01,FATFISDOVTAR=20160826,FATFISSEVNO=1,FATFISTOPOTUT=5.01 */
 
-                            // db.SaveChanges();
+                            db.SaveChanges();
                             satir = sonrakiKayitaGit(satir, sr);
 
                         }
