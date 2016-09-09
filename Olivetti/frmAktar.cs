@@ -414,7 +414,7 @@ namespace Olivetti
                                 myFatFisToplam.FFTBASLIK = "Kal.İnd.1 (%)";
                                 myFatFisToplam.FFTTUTAR = Convert.ToDecimal(0);//3.88 değerinin ne olduğunu anlamadım //FATHARISKYTUT1 değerleri toplamı
                                 myFatFisToplam.FFTMATRAH = Convert.ToDecimal(h.toplamIndirim);
-                                db.FATFISTOPLAM.Add(myFatFisToplam);
+                                //db.FATFISTOPLAM.Add(myFatFisToplam);
                                 /* insert into FATFISTOPLAM
     ( ,,,FFTBASLIK,FFTTUTAR,FFTMATRAH ) 
     values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
@@ -422,13 +422,13 @@ namespace Olivetti
                                 FATFISTOPLAM myFatFisToplam2 = new FATFISTOPLAM();
 
                                 //stok hareketleri
-                                HARREFNO harRefStkFisRef = db.HARREFNO.FirstOrDefault(c => c.HARREFMODUL == 1 && c.HARREFKONU == 1);
-                                int STKFISREFNO = harRefStkFisRef.HARREFDEGER;
+                              //  HARREFNO harRefStkFisRef = db.HARREFNO.FirstOrDefault(c => c.HARREFMODUL == 1 && c.HARREFKONU == 1);
+                              //  int STKFISREFNO = harRefStkFisRef.HARREFDEGER;
                                 //harRefStkFisRef.HARREFDEGER++;
 
                                 STKFIS myStkFis = new STKFIS();
                                 myStkFis.STKFISTAR = myFatFis.FATFISTAR;
-                                myStkFis.STKFISREFNO = STKFISREFNO;
+                              //  myStkFis.STKFISREFNO = STKFISREFNO;
                                 myStkFis.STKFISTIPI = 32;//kasaya göre değişiyor..
                                 myStkFis.STKFISGCFLAG = 2;
                                 /*
@@ -439,7 +439,7 @@ namespace Olivetti
                                    FATFISREFNO=101771
                                  ,FATFISTIPI=13,FATFISGCFLAG=2,FATFISKAYONC=1,FATFISKAYNAK=3,FATFISKAPFLAG=1,FATFISKDVDAHILFLAG=1,FATFISANADEPO=D-01,FATFISADRESNO=1,FATFISSAAT=20:34,FATFISEVRAKNO1=34,FATFISKDVORANI=8,FATFISMALTOP=5.9,FATFISKALINDYTOP=0.89,FATFISBRUTTOPLAM=5.01,FATFISKDVMATRAHI=4.64,FATFISKDVTUTARI=0.37,FATFISARATOPLAM=5.01,FATFISGENTOPLAM=5.01,FATFISDOVTAR=20160826,FATFISSEVNO=1,FATFISTOPOTUT=5.01 */
 
-                                db.SaveChanges();
+                               // db.SaveChanges();
                                 satir = sonrakiKayitaGit(satir, sr);
                             }
                             catch (Exception ex)

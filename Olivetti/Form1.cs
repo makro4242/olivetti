@@ -594,7 +594,7 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
             string etiketeYazilacakFiyat = "".boslukTamamla(1);
             string etiketeFiyat = "".boslukTamamla(1);
             sb.Append(iadeEdilebilirlik + saticiGirisi + kodlaSatis + indirimliSatis + siparisVerilebilir + teminciKodu + krediSablonu + teminGunSayisi + siparisKatSayisi + depoSiparis + depoKritik + depoMaxSeviye + terazi + katSayi1 + katSayi2 + katSayi3 + katSayi4 + katSayi5 + katSayi6 + katSayi7 + katSayi8 + stokKartiPuan + uretimBilgisi + etiketeYazilacakFiyat + etiketeFiyat);
-            Fonksiyon.dosyayaYaz(sb.ToString());
+           // Fonksiyon.dosyayaYaz(sb.ToString());
             var q = from D in db.STKBARKOD.Where(d => d.STKBARSTKKOD == item.STKKOD)
                     select new
                     {
@@ -630,7 +630,7 @@ values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
             string barkodFiyati = "".boslukTamamla(15);
             StringBuilder sb = new StringBuilder();
             sb.Append(satirKodu + islemTuru + iliskiliStkKodu + barkodu + eskiBarkodu + birimMiktar + barkodTipi + fiyatBilgisi + sirano + barkodFiyati);
-            Fonksiyon.dosyayaYaz(sb.ToString());
+            //Fonksiyon.dosyayaYaz(sb.ToString());
 
         }
         public void stokAktar()
