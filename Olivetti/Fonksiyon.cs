@@ -22,15 +22,15 @@ namespace Olivetti
         }
 
 
-        public static void dosyayaYaz(string metin)
+        public static void dosyayaYaz(string metin, string dosya_yolu)
         {
-            string dosya_yolu = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\URUN.GTF";
-            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + "\\URUN.GTF"))
+
+            if (!File.Exists(dosya_yolu))
             {
                 FileStream fs = File.Create(dosya_yolu);
                 fs.Close();
             }
-            StreamWriter sw = new StreamWriter(dosya_yolu,true);
+            StreamWriter sw = new StreamWriter(dosya_yolu, true);
             sw.WriteLine(metin);
             sw.Flush();
             sw.Close();

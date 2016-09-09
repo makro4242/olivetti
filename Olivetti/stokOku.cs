@@ -19,8 +19,9 @@ namespace Olivetti
         public string stokBolumu { get; set; }
         public string reyonTanimi { get; set; }
         public string urunTipi { get; set; }
-   
 
+
+        public string birim { get; set; }
 
         public string birimBoleni { get; set; }
 

@@ -182,6 +182,7 @@
             this.btnHareketAktar.TabIndex = 17;
             this.btnHareketAktar.Text = "Aktar";
             this.btnHareketAktar.UseVisualStyleBackColor = true;
+            this.btnHareketAktar.Click += new System.EventHandler(this.btnHareketAktar_Click);
             // 
             // grpKasalar
             // 

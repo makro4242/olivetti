@@ -63,7 +63,12 @@ namespace Olivetti
                 Properties.Settings.Default.SqlPassword = txtSqlPassword.Text;
                 Properties.Settings.Default.Save();
 
-                AddConnectionStrings();
+
+                string HostName = System.Environment.MachineName;
+                System.Configuration.Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+                config.ConnectionStrings.ConnectionStrings["baglanti"].ConnectionString = ("data source=" + Properties.Settings.Default.SqlServeripinstancename + ";Initial Catalog=" + Properties.Settings.Default.SqlDatabase + ";User ID=" + Properties.Settings.Default.SqlUser + ";Password=" + Properties.Settings.Default.SqlPassword);
+                config.Save(ConfigurationSaveMode.Modified, true);
+                ConfigurationManager.RefreshSection("connectionStrings");
                 MessageBox.Show("Bağlantı Kuruldu, Ayarlar Kaydedildi.");
             }
             else
