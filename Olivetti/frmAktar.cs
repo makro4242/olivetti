@@ -209,9 +209,11 @@ namespace Olivetti
                 if (item is CheckBox && (item as CheckBox).Checked)
                 {
                     int kasaIndex = Convert.ToInt32(item.Text.Replace("Kasa ", "")) - 1;
-                    //hareketAktar(rdbtnHepsi2.Checked, dtHareket1.Value, dtHareket2.Value, kasaIndex);
+                    hareketAktar(rdbtnHepsi2.Checked, dtHareket1.Value, dtHareket2.Value, kasaIndex);
+                    MessageBox.Show(kasaIndex + 1 + " . Kasa Aktarıldı");
                 }
             }
+
         }
         public void hareketAktar(bool hepsi, DateTime tarih1, DateTime tarih2, int kasaIndex)
         {
@@ -287,13 +289,13 @@ namespace Olivetti
                             h.magazaNo = satir.Substring(47, 6).Trim();
                             h.belgeTipi = (satir.Substring(61, 1)).Trim();
                             h.belgeDurumu = (satir.Substring(62, 1)).Trim();
-                            h.genelToplam = satir.Substring(91, 15).Trim();
-                            h.kdvToplam = satir.Substring(106, 15).Trim();
-                            h.toplamIndirim = satir.Substring(121, 15).Trim();
-                            h.satirlarToplamIndirim = satir.Substring(136, 15).Trim();
-                            h.otomatikIndirim = satir.Substring(151, 15).Trim();
-                            h.promosyonIndirim = satir.Substring(181, 15).Trim();
-                            h.yuvarlama = satir.Substring(196, 15).Trim();
+                            h.genelToplam = satir.Substring(91, 15).Trim().Replace(",", "."); ;
+                            h.kdvToplam = satir.Substring(106, 15).Trim().Replace(",", "."); ;
+                            h.toplamIndirim = satir.Substring(121, 15).Trim().Replace(",", "."); ;
+                            h.satirlarToplamIndirim = satir.Substring(136, 15).Trim().Replace(",", "."); ;
+                            h.otomatikIndirim = satir.Substring(151, 15).Trim().Replace(",", "."); ;
+                            h.promosyonIndirim = satir.Substring(181, 15).Trim().Replace(",", "."); ;
+                            h.yuvarlama = satir.Substring(196, 15).Trim().Replace(",", "."); ;
                             h.musteriNo = satir.Substring(211, 24).Trim();
                             h.taksitliSatis = satir.Substring(235, 1).Trim();
 
@@ -309,14 +311,14 @@ namespace Olivetti
                             stk.KDVYuzde = Convert.ToByte(satir.Substring(42, 3));
                             stk.miktar = Convert.ToInt32(satir.Substring(45, 15)).ToString();
                             stk.birim = satir.Substring(60, 1);//0:adet,1:kilogram,2:metre,3:litre,4:metre^2,metre^3;
-                            stk.birimFiyat = satir.Substring(61, 15);
-                            stk.toplamFiyat = satir.Substring(76, 15);
-                            stk.toplamKDV = satir.Substring(91, 15);
-                            stk.toplamIndirim = satir.Substring(106, 15);
-                            stk.kasiyerIndirim = satir.Substring(121, 15);
-                            stk.otomatikIndirim = satir.Substring(136, 15);
-                            stk.musteriIndirimi = satir.Substring(151, 15);
-                            stk.promosyonIndirimi = satir.Substring(166, 15);
+                            stk.birimFiyat = satir.Substring(61, 15).Replace(",", ".");
+                            stk.toplamFiyat = satir.Substring(76, 15).Replace(",", ".");
+                            stk.toplamKDV = satir.Substring(91, 15).Replace(",", ".");
+                            stk.toplamIndirim = satir.Substring(106, 15).Replace(",", ".");
+                            stk.kasiyerIndirim = satir.Substring(121, 15).Replace(",", ".");
+                            stk.otomatikIndirim = satir.Substring(136, 15).Replace(",", ".");
+                            stk.musteriIndirimi = satir.Substring(151, 15).Replace(",", ".");
+                            stk.promosyonIndirimi = satir.Substring(166, 15).Replace(",", ".");
                             stk.satisDurumu = satir.Substring(181, 1);//0:normal satış,1:bağlantılı satış,2:mix&match olarak satıldı ,
                             stk.barkodSatis = satir.Substring(182, 24);
                             stk.odemeTipiReferansi = satir.Substring(221, 2);
@@ -326,20 +328,17 @@ namespace Olivetti
                         }
                         else
                         {
-                            FATFIS myFatFis = new FATFIS();
                             string strFatFis = db.exReaderTekSutun(CommandType.Text, "select harrefdeger from HARREFNO where harrefmodul=3 and harrefkonu=1", "").ToString();
                             int fatFisHarRefNo = 0;
-                            try
+                            //  try
                             {
                                 fatFisHarRefNo = Convert.ToInt32(strFatFis);
-
-
                                 db.nonQuery(CommandType.Text, "update harrefno set harrefdeger=(harrefdeger+1) where harrefmodul=3 and harrefkonu=1");
                                 StringBuilder sbInsertFatFis = new StringBuilder();
 
                                 sbInsertFatFis.Append("insert into FATFIS");
-                                sbInsertFatFis.Append("( FATFISTAR,FATFISREFNO,FATFISTIPI,FATFISGCFLAG,FATFISKAYONC,FATFISKAYNAK,FATFISKAPFLAG,FATFISKDVDAHILFLAG,FATFISANADEPO,FATFISADRESNO,FATFISSAAT,FATFISEVRAKNO1,FATFISKDVORANI,FATFISMALTOP,FATFISKALINDYTOP,FATFISBRUTTOPLAM,FATFISKDVMATRAHI,FATFISKDVTUTARI,FATFISARATOPLAM,FATFISGENTOPLAM,FATFISSEVNO,FATFISTOPOTUT )");
-                                sbInsertFatFis.Append("values ( @FatFisTar,@FATFISREFNO,@FATFISTIPI,2,1,@FATFISKAYNAK,1,@FATFISKDVDAHILFLAG,'D-01',1,'@FATFISSAAT','@FATFISEVRAKNO1',@FATFISKDVORANI,@FATFISMALTOP,@FATFISKALINDYTOP,@FATFISBRUTTOPLAM,@FATFISKDVMATRAHI,@FATFISKDVTUTARI,@FATFISARATOPLAM,@FATFISGENTOPLAM,1,@FATFISTOPOTUT)");
+                                sbInsertFatFis.Append("(FATFISTAR,FATFISREFNO,FATFISTIPI,FATFISGCFLAG,FATFISKAYONC,FATFISKAYNAK,FATFISKAPFLAG,FATFISKDVDAHILFLAG,FATFISANADEPO,FATFISADRESNO,FATFISSAAT,FATFISEVRAKNO1,FATFISKDVORANI,FATFISMALTOP,FATFISKALINDYTOP,FATFISBRUTTOPLAM,FATFISKDVMATRAHI,FATFISKDVTUTARI,FATFISARATOPLAM,FATFISGENTOPLAM,FATFISSEVNO,FATFISTOPOTUT )");
+                                sbInsertFatFis.Append("values ( @FatFisTar,@FATFISREFNO,@FATFISTIPI,2,1,@FATFISKAYNAK,1,@FATFISKDVDAHILFLAG,'D-01',1,@FATFISSAAT,@FATFISEVRAKNO1,@FATFISKDVORANI,@FATFISMALTOP,@FATFISKALINDYTOP,@FATFISBRUTTOPLAM,@FATFISKDVMATRAHI,@FATFISKDVTUTARI,@FATFISARATOPLAM,@FATFISGENTOPLAM,1,@FATFISTOPOTUT)");
                                 // values ( '20160829',101790,13,2,1,3,1,1,'D-01',1,'11:26','4299',8,22.4,4.19,18.21,16.86,1.35,18.21,18.21,1,18.21 )
 
                                 string FatFisTar = Convert.ToDateTime(h.tarih).ToString("yyyMMdd");
@@ -347,106 +346,195 @@ namespace Olivetti
                                 string FATFISTIPI = kasaKodu;
                                 string FATFISKAYNAK = "3";//kasadan alınacak
                                 string FATFISKDVDAHILFLAG = "1";
+                                string FATFISSAAT = h.saat.Substring(0, 2) + ":" + h.saat.Substring(2, 2);
+                                string FATFISEVRAKNO1 = h.fisKodu.stringKaldir();//doğrulunu kontrol et
+                                string FATFISKDVORANI = "8";//burası fişte yok , her ürün için ayrı ayrı var.
+                                string FATFISMALTOP = h.genelToplam.stringKaldir();//maltoplam
+                                string FATFISKALINDYTOP = h.satirlarToplamIndirim.stringKaldir();//toplam indirim
+                                string FATFISBRUTTOPLAM = h.genelToplam.stringKaldir();//brut toplam
+                                string FATFISKDVMATRAHI = h.genelToplam.stringKaldir();//kdv matrahı
+                                string FATFISKDVTUTARI = "10";
+                                string FATFISARATOPLAM = h.genelToplam.stringKaldir();//aratoplam fiyatı bulunacak
+                                string FATFISGENTOPLAM = h.genelToplam.stringKaldir();
+                                string FATFISTOPOTUT = h.genelToplam.stringKaldir();
+                                string prmFatFis = "FatFisTar=" + FatFisTar + ",FATFISREFNO=" + FATFISREFNO + ",FATFISTIPI=" + FATFISTIPI + ",FATFISKAYNAK=" + FATFISKAYNAK + ",FATFISKDVDAHILFLAG=" + FATFISKDVDAHILFLAG + ",FATFISSAAT=" + FATFISSAAT + ",FATFISEVRAKNO1=" + FATFISEVRAKNO1 + ",FATFISKDVORANI=" + FATFISKDVORANI + ",FATFISMALTOP=" + FATFISMALTOP + ",FATFISKALINDYTOP=" + FATFISKALINDYTOP + ",FATFISBRUTTOPLAM=" + FATFISBRUTTOPLAM + ",FATFISKDVMATRAHI=" + FATFISKDVMATRAHI + ",FATFISKDVTUTARI=" + FATFISKDVTUTARI + ",FATFISARATOPLAM=" + FATFISARATOPLAM + ",FATFISGENTOPLAM=" + FATFISGENTOPLAM + ",FATFISTOPOTUT=" + FATFISTOPOTUT;
 
-                                //FATFISKAYNAK=1 kaynak programı modül no???
-                                //HARREFNO fatFisHarRefNo = db.FirstOrDefault(c => c.HARREFMODUL == 3 && c.HARREFKONU == 1);
-                                int fatFisRefNo = 0;
-                                // fatFisHarRefNo.HARREFDEGER = fatFisHarRefNo.HARREFDEGER + 1;
-                                myFatFis.FATFISTAR = Convert.ToDateTime(h.tarih);
-                                myFatFis.FATFISREFNO = fatFisRefNo;
-                                myFatFis.FATFISTIPI = Convert.ToInt32(kasaKodu);
-                                myFatFis.FATFISGCFLAG = 2;
-                                myFatFis.FATFISKAYONC = 1;
-                                myFatFis.FATFISKAYNAK = 3; //kasadan gelecek
-                                myFatFis.FATFISKAPFLAG = 1;
-                                myFatFis.FATFISKDVDAHILFLAG = 1;
-                                myFatFis.FATFISANADEPO = "D-01";
-                                myFatFis.FATFISADRESNO = 1;
-                                myFatFis.FATFISSAAT = h.saat.Substring(0, 2) + ":" + h.saat.Substring(2, 2);
-                                myFatFis.FATFISEVRAKNO1 = h.fisKodu; //fiş kodu
-                                myFatFis.FATFISKDVORANI = 8; // burası fişte yok, her ürün için ayrı ayrı var
-                                myFatFis.FATFISMALTOP = Convert.ToDecimal(h.genelToplam);//brüt toplam(5.46+0.44) ham fiyat + kdv
-                                myFatFis.FATFISKALINDYTOP = Convert.ToDecimal(h.satirlarToplamIndirim); //
-                                myFatFis.FATFISBRUTTOPLAM = Convert.ToDecimal(h.genelToplam);//indirimden sonraki fiyat
-                                myFatFis.FATFISKDVMATRAHI = Convert.ToDecimal(h.genelToplam); //kdvsiz fiyat
-                                myFatFis.FATFISKDVTUTARI = Convert.ToDecimal(h.kdvToplam);
-                                myFatFis.FATFISARATOPLAM = Convert.ToDecimal(h.genelToplam);//aratoplam fiyatı bulunacak
-                                myFatFis.FATFISGENTOPLAM = Convert.ToDecimal(h.genelToplam);
-                                myFatFis.FATFISDOVTAR = Convert.ToDateTime(h.tarih);
-                                myFatFis.FATFISSEVNO = 1;
-                                myFatFis.FATFISTOPOTUT = Convert.ToDecimal(h.genelToplam);//ötv'li fiş toplamı
-                                //db.FATFIS.Add(myFatFis);
-                                // db.SaveChanges();
-                                //0.89 indirim, 5.01 indirimli fiyat., 5.9 doğal fiyat,
-                                int fatHarTipi = 13;
-                                int fatHarSiraNo = 1;
-                                foreach (stokHareket item in h.lstStokHareket)
+                                int sonuc = db.nonQuery(CommandType.Text, sbInsertFatFis.ToString(), prmFatFis);
+                                if (sonuc == 1)
                                 {
-                                    FATHAR myFatHar = new FATHAR();
-                                    myFatHar.FATHARTAR = myFatFis.FATFISTAR;
-                                    myFatHar.FATHARREFNO = myFatFis.FATFISREFNO;
-                                    myFatHar.FATHARTIPI = fatHarTipi;//13 nerden geliyor bakılacak, kasadan geliyor
-                                    myFatHar.FATHARGCFLAG = myFatFis.FATFISGCFLAG;
-                                    myFatHar.FATHARKAYONC = myFatFis.FATFISKAYONC;
-                                    myFatHar.FATHARKAYNAK = myFatFis.FATFISKAYNAK;
-                                    myFatHar.FATHARSIRANO = fatHarSiraNo;//for içinde düzenle
-                                    myFatHar.FATHARKODTIP = 1;//1=stok kartı,2=hizmet kartı, 3=açıklama s., 4=indirim s.,5=masraf,6=paket,7=paket/stok, 8=paket/hiz,9=demirbaş
-                                    myFatHar.FATHARSTKKOD = item.stokKodu;
-                                    myFatHar.FATHARSTKCINS = "stok açıklaması";
-                                    myFatHar.FATHARSTKBRM = "AD.";
-                                    myFatHar.FATHARDEPOKOD = "D-01";
-                                    myFatHar.FATHARBARKOD = item.barkodSatis;
-                                    myFatHar.FATHARMIKTAR = Convert.ToInt32(item.miktar);
-                                    myFatHar.FATHARFIYTIP = "1";
-                                    fatHarSiraNo++;
+                                    int fatHarTipi = 13;
+                                    int fatHarSiraNo = 0;
+                                    foreach (stokHareket item in h.lstStokHareket)
+                                    {
+                                        #region fatura-hareket-kayıt
+                                        fatHarSiraNo++;
+                                        StringBuilder sbInsertFatHar = new StringBuilder();
+                                        sbInsertFatHar.Append("insert into FATHAR(");
+                                        sbInsertFatHar.Append("FATHARTAR,FATHARREFNO,FATHARTIPI,FATHARGCFLAG,FATHARKAYONC,FATHARKAYNAK,FATHARSIRANO,FATHARKODTIP,FATHARSTKKOD,FATHARSTKCINS,FATHARSTKBRM,FATHARDEPOKOD,FATHARBARKOD,FATHARMIKTAR,FATHARFIYTIP,FATHARFIYAT,FATHARTUTAR,FATHARKDVYUZ,FATHARISKYUZ1,FATHARISKYTUT1,FATHARTOPLAMIND,FATHARKDVMATRAH,FATHARKDVTUTAR,FATHARTOPLAMTUT,FATHARNETTUTAR,FATHARNETFIYAT,FATHAROTVMATRAH,FATHAROTVTUTAR)");
+                                        sbInsertFatHar.Append("values (@FATHARTAR,@FATHARREFNO,@FATHARTIPI,2,1,@FATHARKAYNAK,@FATHARSIRANO,@FATHARKODTIP,@FATHARSTKKOD,@FATHARSTKCINS,'AD.','D-01',@FATHARBARKOD,@FATHARMIKTAR,@FATHARFIYTIP,@FATHARFIYAT,@FATHARTUTAR,@FATHARKDVYUZ,@FATHARISKYUZ1,@FATHARISKYTUT1,@FATHARTOPLAMIND,@FATHARKDVMATRAH,@FATHARKDVTUTAR,@FATHARTOPLAMTUT,@FATHARNETTUTAR,@FATHARNETFIYAT,@FATHAROTVMATRAH,@FATHAROTVTUTAR)");
+                                        string FATHARTAR = FatFisTar.stringKaldir();
+                                        string FATHARREFNO = FATFISREFNO.stringKaldir();
+                                        string FATHARTIPI = fatHarTipi.ToString().stringKaldir();//nerden geldiğine bakılacak;
+                                        string FATHARKAYNAK = FATFISKAYNAK.stringKaldir();
+                                        string FATHARSIRANO = fatHarSiraNo.ToString().stringKaldir();
+                                        string FATHARKODTIP = "1";//1=stok kartı,2=hizmet kartı, 3=açıklama s., 4=indirim s.,5=masraf,6=paket,7=paket/stok, 8=paket/hiz,9=demirbaş
+                                        string FATHARSTKKOD = item.stokKodu.stringKaldir();
+                                        string FATHARSTKCINS = db.exReaderTekSutun(CommandType.Text, "select STKCINSI from stkKart where STKKOD=@stkKod", "stkKod=" + item.stokKodu).stringKaldir();
+                                        string FATHARBARKOD = item.barkodSatis.Trim().stringKaldir();
+                                        string FATHARMIKTAR = item.miktar.Trim().stringKaldir();
+                                        string FATHARFIYTIP = "1";
+                                        string FATHARFIYAT = item.toplamFiyat.Trim().Replace(",", ".").stringKaldir();
+                                        string FATHARTUTAR = item.toplamFiyat.Trim().Replace(",", ".").stringKaldir();
+                                        string FATHARKDVYUZ = item.KDVYuzde.ToString().Replace(",", ".").Trim().stringKaldir();
+                                        string FATHARISKYUZ1 = item.toplamIndirim.Trim().Replace(",", ".").stringKaldir();
+                                        string FATHARISKYTUT1 = item.toplamIndirim.Trim().Replace(",", ".").stringKaldir();
+                                        string FATHARTOPLAMIND = item.toplamIndirim.Trim().Replace(",", ".").stringKaldir();
+                                        string FATHARKDVMATRAH = item.toplamFiyat.Trim().Replace(",", ".").stringKaldir(); //düzenlenecek.fiyat-kdv 
+                                        string FATHARKDVTUTAR = item.toplamKDV.Trim().Replace(",", ".").stringKaldir();
+                                        string FATHARTOPLAMTUT = item.toplamFiyat.Trim().Replace(",", ".").stringKaldir();//kdv eklenmiş tutar
+                                        string FATHARNETTUTAR = item.toplamFiyat.Trim().Replace(",", ".").stringKaldir();
+                                        string FATHARNETFIYAT = item.toplamFiyat.Trim().Replace(",", ".").stringKaldir();
+                                        string FATHAROTVMATRAH = item.toplamFiyat.Trim().Replace(",", ".").stringKaldir();
+                                        string FATHAROTVTUTAR = item.toplamFiyat.Trim().Replace(",", ".").stringKaldir();
+
+                                        string prmFatHar = "FATHARTAR=" + FATHARTAR + "," + "FATHARREFNO=" + FATHARREFNO + "," + "FATHARTIPI=" + FATHARTIPI + "," + "FATHARKAYNAK=" + FATHARKAYNAK + "," + "FATHARSIRANO=" + FATHARSIRANO + "," + "FATHARKODTIP=" + FATHARKODTIP + "," + "FATHARSTKKOD=" + FATHARSTKKOD + "," + "FATHARSTKCINS=" + FATHARSTKCINS + "," + "FATHARBARKOD=" + FATHARBARKOD + "," + "FATHARMIKTAR=" + FATHARMIKTAR + "," + "FATHARFIYTIP=" + FATHARFIYTIP + "," + "FATHARFIYAT=" + FATHARFIYAT + "," + "FATHARTUTAR=" + FATHARTUTAR + "," + "FATHARKDVYUZ=" + FATHARKDVYUZ + "," + "FATHARISKYUZ1=" + FATHARISKYUZ1 + "," + "FATHARISKYTUT1=" + FATHARISKYTUT1 + "," + "FATHARTOPLAMIND=" + FATHARTOPLAMIND + "," + "FATHARKDVMATRAH=" + FATHARKDVMATRAH + "," + "FATHARKDVTUTAR=" + FATHARKDVTUTAR + "," + "FATHARTOPLAMTUT=" + FATHARTOPLAMTUT + "," + "FATHARNETTUTAR=" + FATHARNETTUTAR + "," + "FATHARNETFIYAT=" + FATHARNETFIYAT + "," + "FATHAROTVMATRAH=" + FATHAROTVMATRAH + "," + "FATHAROTVTUTAR=" + FATHAROTVTUTAR;
+                                        sonuc = db.nonQuery(CommandType.Text, sbInsertFatHar.ToString(), prmFatHar);
+                                        if (sonuc == 0)
+                                        {
+                                            MessageBox.Show("Kayıt yapılamadı");
+                                            break;
+                                        }
+                                        #endregion
+                                    }
+
+                                    #region FATFISTOPLAM kayıt
+                                    StringBuilder sbFatFisToplam = new StringBuilder();
+                                    string FFTTAR = "";
+                                    string FFTREFNO = "";
+                                    string FFTTIPI = "";
+                                    string FFTKAYNAK = "";
+                                    string FFTKDVDAHILFLAG = "";
+                                    string FFTEVRAKNO1 = "";
+                                    string FFTKONU = "";
+                                    string FFTBASLIK = "";
+                                    decimal kdvBol = 1.08M;//fatura kdv oranı
+                                    string FFTTUTAR = "";
+                                    string FFTMATRAH = "";
+                                    string prmFatFisToplam = "";
+                                    FFTTAR = FatFisTar.stringKaldir();
+                                    FFTREFNO = fatFisHarRefNo.ToString().stringKaldir();
+                                    FFTTIPI = kasaKodu.stringKaldir();
+                                    FFTKAYNAK = FATFISKAYNAK.stringKaldir();
+                                    FFTKDVDAHILFLAG = "1";
+                                    FFTEVRAKNO1 = h.fisKodu.stringKaldir();
+                                    kdvBol = 1.08M;//fatura kdv oranı
+                                    if (h.toplamIndirim.Trim().Length > 0 && h.toplamIndirim.Trim() != "0")
+                                    {
+                                        sbFatFisToplam.Append("insert into FATFISTOPLAM");
+                                        sbFatFisToplam.Append("( FFTTAR,FFTREFNO,FFTTIPI,FFTGCFLAG,FFTKAYONC,FFTKAYNAK,FFTKDVDAHILFLAG,FFTEVRAKNO1,FFTKONU,FFTBASLIK,FFTTUTAR,FFTMATRAH)");
+                                        sbFatFisToplam.Append("values ( @FFTTAR,@FFTREFNO,@FFTTIPI,2,1,@FFTKAYNAK,@FFTKDVDAHILFLAG,@FFTEVRAKNO1,@FFTKONU,@FFTBASLIK,@FFTTUTAR,@FFTMATRAH )");
+
+                                        FFTKONU = "1";
+                                        FFTBASLIK = "Kal.İnd.1 (%)";
+                                        FFTTUTAR = (Convert.ToDecimal(h.toplamIndirim) / kdvBol).ToString().stringKaldir();
+                                        FFTMATRAH = h.toplamIndirim.stringKaldir();
+                                        prmFatFisToplam = "FFTTAR=" + FFTTAR + "," + "FFTREFNO=" + FFTREFNO + "," + "FFTTIPI=" + FFTTIPI + "," + "FFTKAYNAK=" + FFTKAYNAK + "," + "FFTKDVDAHILFLAG=" + FFTKDVDAHILFLAG + "," + "FFTEVRAKNO1=" + FFTEVRAKNO1 + "," + "FFTKONU=" + FFTKONU + "," + "FFTBASLIK=" + FFTBASLIK + "," + "FFTTUTAR=" + FFTTUTAR + "," + "FFTMATRAH=" + FFTMATRAH;
+                                        db.nonQuery(CommandType.Text, sbFatFisToplam.ToString(), prmFatFisToplam);
+                                    }
+                                    sbFatFisToplam.Clear();
+                                    string FFTKDVORAN = "8";//burası çözülecek
+                                    FFTKONU = "101";
+                                    FFTBASLIK = "KDV(%8)";
+                                    FFTTUTAR = h.genelToplam.stringKaldir();
+                                    FFTMATRAH = h.genelToplam.stringKaldir();
+                                    sbFatFisToplam.Append("insert into FATFISTOPLAM");
+                                    sbFatFisToplam.Append("( FFTTAR,FFTREFNO,FFTTIPI,FFTGCFLAG,FFTKAYONC,FFTKAYNAK,FFTKDVDAHILFLAG,FFTEVRAKNO1,FFTKONU,FFTBASLIK,FFTTUTAR,FFTMATRAH,FFTKDVORAN )");
+                                    sbFatFisToplam.Append("values(@FFTTAR,@FFTREFNO,@FFTTIPI,2,1,@FFTKAYNAK,@FFTKDVDAHILFLAG,@FFTEVRAKNO1,@FFTKONU,@FFTBASLIK,@FFTTUTAR,@FFTMATRAH,@FFTKDVORAN)");
+
+                                    prmFatFisToplam = "FFTTAR=" + FFTTAR + "," + "FFTREFNO=" + FFTREFNO + "," + "FFTTIPI=" + FFTTIPI + "," + "FFTKAYNAK=" + FFTKAYNAK + "," + "FFTKDVDAHILFLAG=" + FFTKDVDAHILFLAG + "," + "FFTEVRAKNO1=" + FFTEVRAKNO1 + "," + "FFTKONU=" + FFTKONU + "," + "FFTBASLIK=" + FFTBASLIK + "," + "FFTTUTAR=" + FFTTUTAR + "," + "FFTMATRAH=" + FFTMATRAH + ",FFTKDVORAN=" + FFTKDVORAN;
+                                    db.nonQuery(CommandType.Text, sbFatFisToplam.ToString(), prmFatFisToplam);
+                                    #endregion
+
+                                    string strStkFis = db.exReaderTekSutun(CommandType.Text, "select harrefdeger from HARREFNO where harrefmodul=1 and harrefkonu=1", "").ToString();
+                                    int stkFisRefNo = Convert.ToInt32(strStkFis);
+                                    db.nonQuery(CommandType.Text, "update harrefno set harrefdeger=(harrefdeger+1) where harrefmodul=1 and harrefkonu=1");
+
+                                    #region stkFis kayıt
+                                    StringBuilder sbStkFis = new StringBuilder();
+                                    sbStkFis.Append("insert into STKFIS");
+                                    sbStkFis.Append("(STKFISTAR,STKFISREFNO,STKFISTIPI,STKFISGCFLAG,STKFISKAYONC,STKFISKAYNAK,STKFISANADEPO,STKFISEVRAKNO1,STKFISEVRAKNO2,STKFISDOVTAR,STKFISTOPBTUT,STKFISTOPISK,STKFISTOPNTUT,STKFISTOPKDV,STKFISTOPKTUT,STKFISSEVNO,STKFISTOPOTUT )");
+                                    sbStkFis.Append("values(@STKFISTAR,@STKFISREFNO,@STKFISTIPI,2,2,@STKFISKAYNAK,'D-01',@STKFISEVRAKNO1,@STKFISEVRAKNO2,@STKFISDOVTAR,@STKFISTOPBTUT,@STKFISTOPISK,@STKFISTOPNTUT,@STKFISTOPKDV,@STKFISTOPKTUT,1,@STKFISTOPOTUT)");
+                                    string STKFISTAR = FatFisTar.stringKaldir();
+                                    string STKFISREFNO = stkFisRefNo.ToString().stringKaldir();
+                                    string STKFISTIPI = "32";
+                                    string STKFISKAYNAK = "3";//kasadan;
+                                    string STKFISEVRAKNO1 = DateTime.Now.ToString("yyyyMMdd") + h.fisKodu;
+                                    string STKFISEVRAKNO2 = DateTime.Now.ToString("yyyyMMdd") + h.fisKodu;//?????
+                                    string STKFISDOVTAR = FatFisTar.stringKaldir();
+                                    string STKFISTOPBTUT = h.genelToplam.stringKaldir();
+                                    string STKFISTOPISK = h.toplamIndirim.stringKaldir();
+                                    string STKFISTOPNTUT = (Convert.ToDecimal(h.genelToplam) - Convert.ToDecimal(h.toplamIndirim)).ToString().stringKaldir();
+                                    string STKFISTOPKDV = h.kdvToplam.stringKaldir();
+                                    string STKFISTOPKTUT = h.genelToplam.stringKaldir();//buralara detaylı bakılacak.
+                                    string STKFISTOPOTUT = h.genelToplam.stringKaldir();
+                                    string prmStkFis = "STKFISTAR=" + STKFISTAR + "," + "STKFISREFNO=" + STKFISREFNO + "," + "STKFISTIPI=" + STKFISTIPI + "," + "STKFISKAYNAK=" + STKFISKAYNAK + ",STKFISEVRAKNO1=" + STKFISEVRAKNO1 + "," + "STKFISEVRAKNO2=" + STKFISEVRAKNO2 + "," + "STKFISDOVTAR=" + STKFISDOVTAR + "," + "STKFISTOPBTUT=" + STKFISTOPBTUT + "," + "STKFISTOPISK=" + STKFISTOPISK + "," + "STKFISTOPNTUT=" + STKFISTOPNTUT + "," + "STKFISTOPKDV=" + STKFISTOPKDV + "," + "STKFISTOPKTUT=" + STKFISTOPKTUT + ",STKFISTOPOTUT=" + STKFISTOPOTUT;
+                                    db.nonQuery(CommandType.Text, sbStkFis.ToString(), prmStkFis);
+                                    #endregion
+                                    #region stkHareketKayit
+                                    int gridSira = 0;
+                                    foreach (stokHareket item in h.lstStokHareket)
+                                    {
+                                        gridSira++;
+                                        StringBuilder sbStkHar = new StringBuilder();
+                                        sbStkHar.Append("insert into STKHAR");
+                                        sbStkHar.Append("(STKHARTAR,STKHARREFNO,STKHARTIPI,STKHARGCFLAG,STKHARKAYONC,STKHARKAYNAK,STKHARANADEPO,STKHARSTKKOD,STKHARSTKCINS,STKHARSTKBRM,STKHARBARKOD,STKHARMIKTAR,STKHARFIYAT,STKHARTUTAR,STKHARKDVYUZ,STKHARISKYUZ1,STKHARISKYTUT1,STKHARTOPLAMIND,STKHARKDVMATRAH,STKHARKDVTUTAR,STKHARTOPLAMTUT,STKHARFIYTIP,STKHARSIRANO,STKHARNETTUTAR,STKHARNETFIYAT,STKHAROTVMATRAH,STKHAROTVTUTAR)");
+                                        sbStkHar.Append("values(@STKHARTAR,@STKHARREFNO,@STKHARTIPI,2,2,@STKHARKAYNAK,'D-01',@STKHARSTKKOD,@STKHARSTKCINS,'AD.',@STKHARBARKOD,@STKHARMIKTAR,@STKHARFIYAT,@STKHARTUTAR,@STKHARKDVYUZ,@STKHARISKYUZ1,@STKHARISKYTUT1,@STKHARTOPLAMIND,@STKHARKDVMATRAH,@STKHARKDVTUTAR,@STKHARTOPLAMTUT,'1',@STKHARSIRANO,@STKHARNETTUTAR,@STKHARNETFIYAT,@STKHAROTVMATRAH,@STKHAROTVTUTAR)");
+                                        string STKHARTAR = FatFisTar.stringKaldir();
+                                        string STKHARREFNO = stkFisRefNo.ToString().stringKaldir();
+                                        string STKHARTIPI = STKFISKAYNAK.stringKaldir();
+
+                                        string STKHARKAYNAK = FATFISKAYNAK.stringKaldir();
+                                        string STKHARSTKKOD = item.stokKodu.stringKaldir();
+                                        string STKHARSTKCINS = db.exReaderTekSutun(CommandType.Text, "select STKCINSI from stkKart where STKKOD=@stkKod", "stkKod=" + item.stokKodu).stringKaldir();
+                                        string STKHARBARKOD = item.barkodSatis.stringKaldir();
+                                        string STKHARMIKTAR = item.miktar.stringKaldir();
+                                        string STKHARFIYAT = item.toplamFiyat.stringKaldir();
+                                        string STKHARTUTAR = item.toplamFiyat.stringKaldir();
+                                        string STKHARKDVYUZ = item.KDVYuzde.ToString().stringKaldir();
+                                        string STKHARISKYUZ1 = "0";
+                                        string STKHARISKYTUT1 = item.kasiyerIndirim.stringKaldir();
+                                        string STKHARTOPLAMIND = item.toplamIndirim.stringKaldir();
+                                        string STKHARKDVMATRAH = item.toplamFiyat.stringKaldir();
+                                        string STKHARKDVTUTAR = item.toplamKDV.stringKaldir();
+                                        string STKHARTOPLAMTUT = item.toplamFiyat.stringKaldir();
+                                        string STKHARSIRANO = gridSira.ToString().stringKaldir();
+                                        string STKHARNETTUTAR = item.toplamFiyat.stringKaldir();
+                                        string STKHARNETFIYAT = item.toplamFiyat.stringKaldir();
+                                        string STKHAROTVMATRAH = item.toplamFiyat.stringKaldir();
+                                        string STKHAROTVTUTAR = item.toplamFiyat.stringKaldir();
+                                        string prmStkHar = "";
+                                        prmStkHar += "STKHARTAR=" + STKHARTAR + ",STKHARREFNO=" + STKHARREFNO + ",STKHARTIPI=" + STKHARTIPI + ",STKHARKAYNAK=" + STKHARKAYNAK + ",STKHARSTKKOD=" + STKHARSTKKOD + ",STKHARSTKCINS=" + STKHARSTKCINS + ",STKHARBARKOD=" + STKHARBARKOD + ",STKHARMIKTAR=" + STKHARMIKTAR + ",STKHARFIYAT=" + STKHARFIYAT + ",STKHARTUTAR=" + STKHARTUTAR + ",STKHARKDVYUZ=" + STKHARKDVYUZ + ",STKHARISKYUZ1=" + STKHARISKYUZ1 + ",STKHARISKYTUT1=" + STKHARISKYTUT1 + ",STKHARTOPLAMIND=" + STKHARTOPLAMIND + ",STKHARKDVMATRAH=" + STKHARKDVMATRAH + ",STKHARKDVTUTAR=" + STKHARKDVTUTAR + ",STKHARTOPLAMTUT=" + STKHARTOPLAMTUT + ",STKHARSIRANO=" + STKHARSIRANO + ",STKHARNETTUTAR=" + STKHARNETTUTAR + ",STKHARNETFIYAT=" + STKHARNETFIYAT + ",STKHAROTVMATRAH=" + STKHAROTVMATRAH + ",STKHAROTVTUTAR=" + STKHAROTVTUTAR;
+                                        db.nonQuery(CommandType.Text, sbStkHar.ToString(), prmStkHar);
+                                    }
+                                    #endregion
+
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Kayıt Yapılamadı");
+                                    break;
                                 }
 
-                                FATFISTOPLAM myFatFisToplam = new FATFISTOPLAM();
-                                myFatFisToplam.FFTTAR = myFatFis.FATFISTAR;
-                                myFatFisToplam.FFTREFNO = myFatFis.FATFISREFNO;
-                                myFatFisToplam.FFTTIPI = fatHarTipi;
-                                myFatFisToplam.FFTGCFLAG = myFatFis.FATFISGCFLAG;
-                                myFatFisToplam.FFTKAYONC = 1;
-                                myFatFisToplam.FFTKAYNAK = myFatFis.FATFISKAYNAK;
-                                myFatFisToplam.FFTKDVDAHILFLAG = 1;
-                                myFatFisToplam.FFTEVRAKNO1 = myFatFis.FATFISEVRAKNO1;
-                                myFatFisToplam.FFTKONU = 1;
-                                myFatFisToplam.FFTBASLIK = "Kal.İnd.1 (%)";
-                                myFatFisToplam.FFTTUTAR = Convert.ToDecimal(0);//3.88 değerinin ne olduğunu anlamadım //FATHARISKYTUT1 değerleri toplamı
-                                myFatFisToplam.FFTMATRAH = Convert.ToDecimal(h.toplamIndirim);
-                                //db.FATFISTOPLAM.Add(myFatFisToplam);
-                                /* insert into FATFISTOPLAM
-    ( ,,,FFTBASLIK,FFTTUTAR,FFTMATRAH ) 
-    values ( ,'','Kal.İnd.1 (%)',3.88,4.19 )*/
 
-                                FATFISTOPLAM myFatFisToplam2 = new FATFISTOPLAM();
 
-                                //stok hareketleri
-                              //  HARREFNO harRefStkFisRef = db.HARREFNO.FirstOrDefault(c => c.HARREFMODUL == 1 && c.HARREFKONU == 1);
-                              //  int STKFISREFNO = harRefStkFisRef.HARREFDEGER;
-                                //harRefStkFisRef.HARREFDEGER++;
-
-                                STKFIS myStkFis = new STKFIS();
-                                myStkFis.STKFISTAR = myFatFis.FATFISTAR;
-                              //  myStkFis.STKFISREFNO = STKFISREFNO;
-                                myStkFis.STKFISTIPI = 32;//kasaya göre değişiyor..
-                                myStkFis.STKFISGCFLAG = 2;
-                                /*
-                                 *   //0.89 indirim, 5.01 indirimli fiyat., 5.9 doğal fiyat,
-
-                                /*insert into FATFIS
-                                    FATFISTAR=20160826+
-                                   FATFISREFNO=101771
-                                 ,FATFISTIPI=13,FATFISGCFLAG=2,FATFISKAYONC=1,FATFISKAYNAK=3,FATFISKAPFLAG=1,FATFISKDVDAHILFLAG=1,FATFISANADEPO=D-01,FATFISADRESNO=1,FATFISSAAT=20:34,FATFISEVRAKNO1=34,FATFISKDVORANI=8,FATFISMALTOP=5.9,FATFISKALINDYTOP=0.89,FATFISBRUTTOPLAM=5.01,FATFISKDVMATRAHI=4.64,FATFISKDVTUTARI=0.37,FATFISARATOPLAM=5.01,FATFISGENTOPLAM=5.01,FATFISDOVTAR=20160826,FATFISSEVNO=1,FATFISTOPOTUT=5.01 */
-
-                               // db.SaveChanges();
                                 satir = sonrakiKayitaGit(satir, sr);
                             }
-                            catch (Exception ex)
-                            {
+                            /*
+                             catch (Exception ex)
+                             {
 
-                                MessageBox.Show("Bir hata oluştu." + Environment.NewLine + ex.Message);
-                            }
+                                 MessageBox.Show("Bir hata oluştu." + Environment.NewLine + ex.Message);
+                             }**/
                         }
                     }
                     else
