@@ -159,6 +159,9 @@ namespace Olivetti
                     stk.satisKDVGrupNo = STKFIYKDVNO.boslukTamamla(3);
                     stk.ekle(531, stk.satisKDVGrupNo);
 
+                    stk.ekle(534, stk.satisKDVGrupNo);
+
+
                     stk.satisDurumu = "0".boslukTamamla(1);
                     stk.ekle(586, stk.satisDurumu);
 
