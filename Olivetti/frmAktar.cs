@@ -17,6 +17,7 @@ namespace Olivetti
         Fonksiyon f = new Fonksiyon();
         public frmAktar()
         {
+            CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
         }
         private void btnayarlar_Click(object sender, EventArgs e)
@@ -44,6 +45,8 @@ namespace Olivetti
 
         private void frmAktar_Load(object sender, EventArgs e)
         {
+            rdbtnHepsi.Checked = true;
+            rdbtnHepsi2.Checked = true;
 
             if (Properties.Settings.Default.SqlDatabase.Trim().Length > 0)
             {
@@ -56,8 +59,7 @@ namespace Olivetti
                 frm.ShowDialog();
             }
         }
-
-        private void btnKartAktar_Click(object sender, EventArgs e)
+        public void stokKartiAktar()
         {
             string dosyaYolu = Properties.Settings.Default.Kasalar[0].Split('*')[2] + "\\URUN.GTF";
             if (File.Exists(dosyaYolu))
@@ -65,15 +67,28 @@ namespace Olivetti
                 File.Delete(dosyaYolu);
             }
             Fonksiyon.dosyayaYaz("<SIGNATURE=GNDPLU.GDF><VERSION=0223000>", dosyaYolu);
+            string where = "";
+            string prm = "";
+            if (rdbtnTarihsel.Checked)
+            {
+                string date1 = dtAktar1.Value.ToString("yyyy-MM-dd");
+                string date2 = dtAktar2.Value.ToString("yyyy-MM-dd");
+                where += " and STKSYFTARIHI between @tarih1 and @tarih2";
+                prm = "tarih1=" + date1 + ",tarih2=" + date2;
 
+            }
             myDbHelper db = new myDbHelper(new sqlDbHelper());
-            DataTable dt = db.exReaderDT(CommandType.Text, "select top 10 * from stkkart where len(stkkod)>2");
+            string adet = db.exReaderTekSutun(CommandType.Text, "select count(*) from stkkart where len(stkkod)>2" + where, prm);
+            lblKartAktarBilgi.Text = "Toplam " + adet + " kart bilgisi veritabanından çekiliyor...";
+            DataTable dt = db.exReaderDT(CommandType.Text, "select * from stkkart where len(stkkod)>2" + where, prm);
             if (dt != null)
             {
+
+                int yapilanIslem = 0;
                 foreach (DataRow item in dt.Rows)
                 {
-                    DataTable dtStkFiyat = db.exReaderDT(CommandType.Text, "select STKFIYKDVNO,STKFIYTUTAR,STKFIYISKYUZ1  from STKFIYAT where STKFIYSTKKOD=@stokKodu and STKFIYNO=@stkFiyNo", "stokKodu=" + item["STKKOD"] + ",stkFiyNo=" + item["STKOTOGIRFIY"]);
-                    DataTable dtBarkodlar = db.exReaderDT(CommandType.Text, "select STKBARKOD,STKBARSTKKOD,STKBARBRMNO,STKBARTIP,STKBARITEMNO from stkbarkod where stkbarstkkod=@stokKodu order by STKBARITEMNO", "stokKodu=" + item["STKKOD"]);
+                    DataTable dtStkFiyat = db.exReaderDT(CommandType.Text, "select STKFIYKDVNO,STKFIYTUTAR,STKFIYISKYUZ1  from STKFIYAT where STKFIYSTKKOD=@stokKodu and STKFIYNO=@stkFiyNo", "stokKodu=" + item["STKKOD"].ToString().stringKaldir() + ",stkFiyNo=" + item["STKOTOGIRFIY"].ToString().stringKaldir());
+                    DataTable dtBarkodlar = db.exReaderDT(CommandType.Text, "select STKBARKOD,STKBARSTKKOD,STKBARBRMNO,STKBARTIP,STKBARITEMNO from stkbarkod where stkbarstkkod=@stokKodu order by STKBARITEMNO", "stokKodu=" + item["STKKOD"].ToString().stringKaldir());
                     string STKFIYKDVNO = "";
                     string STKFIYTUTAR = "";
                     string STKFIYISKYUZ1 = "";
@@ -196,9 +211,17 @@ namespace Olivetti
                             Fonksiyon.dosyayaYaz(brkd.yaz, dosyaYolu);
                         }
                     }
-
+                    yapilanIslem++;
+                    lblKartAktarBilgi.Text = adet + " /  " + yapilanIslem + " kart aktarıldı";
                 }
+                MessageBox.Show("Aktarma tamamlandı.Toplam " + yapilanIslem + " başarıyla aktarıldı");
+                btnKartAktar.Enabled = true;
             }
+        }
+        private void btnKartAktar_Click(object sender, EventArgs e)
+        {
+            btnKartAktar.Enabled = false;
+            backgroundWorker1.RunWorkerAsync();
 
         }
 
@@ -563,6 +586,25 @@ namespace Olivetti
 
 
             return true ? adet == 0 : false;
+        }
+
+        private void rdbtnTarihsel_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdbtnTarihsel.Checked)
+            {
+                dtAktar1.Visible = true;
+                dtAktar2.Visible = true;
+            }
+            else
+            {
+                dtAktar1.Visible = false;
+                dtAktar2.Visible = false;
+            }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            stokKartiAktar();
         }
     }
 }

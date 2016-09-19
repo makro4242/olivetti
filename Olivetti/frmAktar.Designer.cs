@@ -32,8 +32,8 @@
             this.pnlkartaktarmagrubu = new System.Windows.Forms.Panel();
             this.rdbtnHepsi = new System.Windows.Forms.RadioButton();
             this.rdbtnTarihsel = new System.Windows.Forms.RadioButton();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtAktar1 = new System.Windows.Forms.DateTimePicker();
+            this.dtAktar2 = new System.Windows.Forms.DateTimePicker();
             this.rdbtnTarihsel2 = new System.Windows.Forms.RadioButton();
             this.rdbtnHepsi2 = new System.Windows.Forms.RadioButton();
             this.dtHareket2 = new System.Windows.Forms.DateTimePicker();
@@ -46,6 +46,8 @@
             this.lblHareketAktarma = new System.Windows.Forms.Label();
             this.lblkasalarabilgigonder = new System.Windows.Forms.Label();
             this.btnayarlar = new System.Windows.Forms.Button();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lblKartAktarBilgi = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.pnlkartaktarmagrubu.SuspendLayout();
             this.SuspendLayout();
@@ -53,6 +55,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lblKartAktarBilgi);
             this.panel1.Controls.Add(this.pnlkartaktarmagrubu);
             this.panel1.Controls.Add(this.rdbtnTarihsel2);
             this.panel1.Controls.Add(this.rdbtnHepsi2);
@@ -74,8 +77,8 @@
             // 
             this.pnlkartaktarmagrubu.Controls.Add(this.rdbtnHepsi);
             this.pnlkartaktarmagrubu.Controls.Add(this.rdbtnTarihsel);
-            this.pnlkartaktarmagrubu.Controls.Add(this.dateTimePicker1);
-            this.pnlkartaktarmagrubu.Controls.Add(this.dateTimePicker2);
+            this.pnlkartaktarmagrubu.Controls.Add(this.dtAktar1);
+            this.pnlkartaktarmagrubu.Controls.Add(this.dtAktar2);
             this.pnlkartaktarmagrubu.Location = new System.Drawing.Point(15, 57);
             this.pnlkartaktarmagrubu.Name = "pnlkartaktarmagrubu";
             this.pnlkartaktarmagrubu.Size = new System.Drawing.Size(288, 54);
@@ -102,26 +105,27 @@
             this.rdbtnTarihsel.TabStop = true;
             this.rdbtnTarihsel.Text = "Tarihsel";
             this.rdbtnTarihsel.UseVisualStyleBackColor = true;
+            this.rdbtnTarihsel.CheckedChanged += new System.EventHandler(this.rdbtnTarihsel_CheckedChanged);
             // 
-            // dateTimePicker1
+            // dtAktar1
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(81, 30);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(94, 20);
-            this.dateTimePicker1.TabIndex = 6;
-            this.dateTimePicker1.Value = new System.DateTime(2016, 8, 13, 16, 10, 50, 0);
-            this.dateTimePicker1.Visible = false;
+            this.dtAktar1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtAktar1.Location = new System.Drawing.Point(81, 30);
+            this.dtAktar1.Name = "dtAktar1";
+            this.dtAktar1.Size = new System.Drawing.Size(94, 20);
+            this.dtAktar1.TabIndex = 6;
+            this.dtAktar1.Value = new System.DateTime(2016, 8, 13, 16, 10, 50, 0);
+            this.dtAktar1.Visible = false;
             // 
-            // dateTimePicker2
+            // dtAktar2
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(181, 30);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(94, 20);
-            this.dateTimePicker2.TabIndex = 7;
-            this.dateTimePicker2.Value = new System.DateTime(2016, 8, 13, 16, 10, 50, 0);
-            this.dateTimePicker2.Visible = false;
+            this.dtAktar2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtAktar2.Location = new System.Drawing.Point(181, 30);
+            this.dtAktar2.Name = "dtAktar2";
+            this.dtAktar2.Size = new System.Drawing.Size(94, 20);
+            this.dtAktar2.TabIndex = 7;
+            this.dtAktar2.Value = new System.DateTime(2016, 8, 13, 16, 10, 50, 0);
+            this.dtAktar2.Visible = false;
             // 
             // rdbtnTarihsel2
             // 
@@ -242,6 +246,19 @@
             this.btnayarlar.UseVisualStyleBackColor = true;
             this.btnayarlar.Click += new System.EventHandler(this.btnayarlar_Click);
             // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
+            // lblKartAktarBilgi
+            // 
+            this.lblKartAktarBilgi.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKartAktarBilgi.ForeColor = System.Drawing.Color.Maroon;
+            this.lblKartAktarBilgi.Location = new System.Drawing.Point(9, 166);
+            this.lblKartAktarBilgi.Name = "lblKartAktarBilgi";
+            this.lblKartAktarBilgi.Size = new System.Drawing.Size(304, 80);
+            this.lblKartAktarBilgi.TabIndex = 24;
+            // 
             // frmAktar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,8 +283,8 @@
         private System.Windows.Forms.Panel pnlkartaktarmagrubu;
         private System.Windows.Forms.RadioButton rdbtnHepsi;
         private System.Windows.Forms.RadioButton rdbtnTarihsel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtAktar1;
+        private System.Windows.Forms.DateTimePicker dtAktar2;
         private System.Windows.Forms.RadioButton rdbtnTarihsel2;
         private System.Windows.Forms.RadioButton rdbtnHepsi2;
         private System.Windows.Forms.DateTimePicker dtHareket2;
@@ -280,5 +297,7 @@
         private System.Windows.Forms.Label lblHareketAktarma;
         private System.Windows.Forms.Label lblkasalarabilgigonder;
         private System.Windows.Forms.Button btnayarlar;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lblKartAktarBilgi;
     }
 }
