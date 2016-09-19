@@ -45,6 +45,7 @@ namespace Olivetti
 
         private void frmAktar_Load(object sender, EventArgs e)
         {
+      
             rdbtnHepsi.Checked = true;
             rdbtnHepsi2.Checked = true;
 
@@ -89,9 +90,9 @@ namespace Olivetti
                 {
                     DataTable dtStkFiyat = db.exReaderDT(CommandType.Text, "select STKFIYKDVNO,STKFIYTUTAR,STKFIYISKYUZ1  from STKFIYAT where STKFIYSTKKOD=@stokKodu and STKFIYNO=@stkFiyNo", "stokKodu=" + item["STKKOD"].ToString().stringKaldir() + ",stkFiyNo=" + item["STKOTOGIRFIY"].ToString().stringKaldir());
                     DataTable dtBarkodlar = db.exReaderDT(CommandType.Text, "select STKBARKOD,STKBARSTKKOD,STKBARBRMNO,STKBARTIP,STKBARITEMNO from stkbarkod where stkbarstkkod=@stokKodu order by STKBARITEMNO", "stokKodu=" + item["STKKOD"].ToString().stringKaldir());
-                    string STKFIYKDVNO = "";
-                    string STKFIYTUTAR = "";
-                    string STKFIYISKYUZ1 = "";
+                    string STKFIYKDVNO = "0";
+                    string STKFIYTUTAR = "0";
+                    string STKFIYISKYUZ1 = "0";
                     if (dtStkFiyat != null && dtStkFiyat.Rows.Count > 0)
                     {
                         STKFIYKDVNO = dtStkFiyat.Rows[0]["STKFIYKDVNO"].ToString();
