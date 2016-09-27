@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblBarko2 = new System.Windows.Forms.Label();
+            this.lblBarkodSayisi = new System.Windows.Forms.Label();
+            this.lblKartAktarBilgi = new System.Windows.Forms.Label();
             this.pnlkartaktarmagrubu = new System.Windows.Forms.Panel();
             this.rdbtnHepsi = new System.Windows.Forms.RadioButton();
             this.rdbtnTarihsel = new System.Windows.Forms.RadioButton();
@@ -47,7 +51,8 @@
             this.lblkasalarabilgigonder = new System.Windows.Forms.Label();
             this.btnayarlar = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.lblKartAktarBilgi = new System.Windows.Forms.Label();
+            this.lblSure = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.pnlkartaktarmagrubu.SuspendLayout();
             this.SuspendLayout();
@@ -55,6 +60,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.lblBarko2);
+            this.panel1.Controls.Add(this.lblBarkodSayisi);
             this.panel1.Controls.Add(this.lblKartAktarBilgi);
             this.panel1.Controls.Add(this.pnlkartaktarmagrubu);
             this.panel1.Controls.Add(this.rdbtnTarihsel2);
@@ -72,6 +79,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(594, 315);
             this.panel1.TabIndex = 5;
+            // 
+            // lblBarko2
+            // 
+            this.lblBarko2.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBarko2.ForeColor = System.Drawing.Color.Maroon;
+            this.lblBarko2.Location = new System.Drawing.Point(11, 239);
+            this.lblBarko2.Name = "lblBarko2";
+            this.lblBarko2.Size = new System.Drawing.Size(304, 27);
+            this.lblBarko2.TabIndex = 24;
+            // 
+            // lblBarkodSayisi
+            // 
+            this.lblBarkodSayisi.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBarkodSayisi.ForeColor = System.Drawing.Color.Maroon;
+            this.lblBarkodSayisi.Location = new System.Drawing.Point(11, 193);
+            this.lblBarkodSayisi.Name = "lblBarkodSayisi";
+            this.lblBarkodSayisi.Size = new System.Drawing.Size(304, 27);
+            this.lblBarkodSayisi.TabIndex = 24;
+            // 
+            // lblKartAktarBilgi
+            // 
+            this.lblKartAktarBilgi.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblKartAktarBilgi.ForeColor = System.Drawing.Color.Maroon;
+            this.lblKartAktarBilgi.Location = new System.Drawing.Point(11, 124);
+            this.lblKartAktarBilgi.Name = "lblKartAktarBilgi";
+            this.lblKartAktarBilgi.Size = new System.Drawing.Size(304, 69);
+            this.lblKartAktarBilgi.TabIndex = 24;
             // 
             // pnlkartaktarmagrubu
             // 
@@ -250,20 +284,26 @@
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             // 
-            // lblKartAktarBilgi
+            // lblSure
             // 
-            this.lblKartAktarBilgi.Font = new System.Drawing.Font("Arial Narrow", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKartAktarBilgi.ForeColor = System.Drawing.Color.Maroon;
-            this.lblKartAktarBilgi.Location = new System.Drawing.Point(9, 166);
-            this.lblKartAktarBilgi.Name = "lblKartAktarBilgi";
-            this.lblKartAktarBilgi.Size = new System.Drawing.Size(304, 80);
-            this.lblKartAktarBilgi.TabIndex = 24;
+            this.lblSure.AutoSize = true;
+            this.lblSure.ForeColor = System.Drawing.Color.DarkRed;
+            this.lblSure.Location = new System.Drawing.Point(18, 11);
+            this.lblSure.Name = "lblSure";
+            this.lblSure.Size = new System.Drawing.Size(0, 13);
+            this.lblSure.TabIndex = 6;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmAktar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(596, 356);
+            this.Controls.Add(this.lblSure);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnayarlar);
             this.Name = "frmAktar";
@@ -274,6 +314,7 @@
             this.pnlkartaktarmagrubu.ResumeLayout(false);
             this.pnlkartaktarmagrubu.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -299,5 +340,9 @@
         private System.Windows.Forms.Button btnayarlar;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Label lblKartAktarBilgi;
+        private System.Windows.Forms.Label lblBarkodSayisi;
+        private System.Windows.Forms.Label lblBarko2;
+        private System.Windows.Forms.Label lblSure;
+        private System.Windows.Forms.Timer timer1;
     }
 }

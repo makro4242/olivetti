@@ -45,7 +45,11 @@ namespace Olivetti
 
         private void frmAktar_Load(object sender, EventArgs e)
         {
-      
+            dtAktar1.Value = DateTime.Now;
+            dtAktar2.Value = DateTime.Now;
+            dtHareket1.Value = DateTime.Now;
+            dtHareket2.Value = DateTime.Now;
+
             rdbtnHepsi.Checked = true;
             rdbtnHepsi2.Checked = true;
 
@@ -59,9 +63,14 @@ namespace Olivetti
                 frmAyarlar frm = new frmAyarlar(this);
                 frm.ShowDialog();
             }
+            timer1.Interval = 60000 * 5;
+            timer1.Start();
         }
         public void stokKartiAktar()
         {
+            DateTime dtBaslangic = DateTime.Now;
+
+            string yazilanBarkodlar = "";
             string dosyaYolu = Properties.Settings.Default.Kasalar[0].Split('*')[2] + "\\URUN.GTF";
             if (File.Exists(dosyaYolu))
             {
@@ -74,30 +83,34 @@ namespace Olivetti
             {
                 string date1 = dtAktar1.Value.ToString("yyyy-MM-dd");
                 string date2 = dtAktar2.Value.ToString("yyyy-MM-dd");
-                where += " and STKSYFTARIHI between @tarih1 and @tarih2";
+                where += " where STKSYFTARIHI between @tarih1 and @tarih2";
                 prm = "tarih1=" + date1 + ",tarih2=" + date2;
 
             }
             myDbHelper db = new myDbHelper(new sqlDbHelper());
-            string adet = db.exReaderTekSutun(CommandType.Text, "select count(*) from stkkart where len(stkkod)>2" + where, prm);
+            string adet = db.exReaderTekSutun(CommandType.Text, "select count(*) from stkkart" + where, prm);
+            int toplamBarkod = 0;
             lblKartAktarBilgi.Text = "Toplam " + adet + " kart bilgisi veritabanından çekiliyor...";
-            DataTable dt = db.exReaderDT(CommandType.Text, "select * from stkkart where len(stkkod)>2" + where, prm);
+            DataTable dt = db.exReaderDT(CommandType.Text, "select STKKOD,STKCINSI,STKOTOGIRFIY  from stkkart" + where, prm);
             if (dt != null)
             {
 
                 int yapilanIslem = 0;
                 foreach (DataRow item in dt.Rows)
                 {
-                    DataTable dtStkFiyat = db.exReaderDT(CommandType.Text, "select STKFIYKDVNO,STKFIYTUTAR,STKFIYISKYUZ1  from STKFIYAT where STKFIYSTKKOD=@stokKodu and STKFIYNO=@stkFiyNo", "stokKodu=" + item["STKKOD"].ToString().stringKaldir() + ",stkFiyNo=" + item["STKOTOGIRFIY"].ToString().stringKaldir());
-                    DataTable dtBarkodlar = db.exReaderDT(CommandType.Text, "select STKBARKOD,STKBARSTKKOD,STKBARBRMNO,STKBARTIP,STKBARITEMNO from stkbarkod where stkbarstkkod=@stokKodu order by STKBARITEMNO", "stokKodu=" + item["STKKOD"].ToString().stringKaldir());
-                    string STKFIYKDVNO = "0";
-                    string STKFIYTUTAR = "0";
-                    string STKFIYISKYUZ1 = "0";
+                    DataTable dtStkFiyat = db.exReaderDT(CommandType.Text, "select top 1 STKFIYKDVNO,STKFIYTUTAR,STKFIYISKYUZ1  from STKFIYAT where STKFIYSTKKOD=@stokKodu and STKFIYNO=1 order by STKFIYNO", "stokKodu=" + item["STKKOD"].ToString().stringKaldir() + ",stkFiyNo=" + item["STKOTOGIRFIY"].ToString().stringKaldir());
+                    DataTable dtBarkodlar = db.exReaderDT(CommandType.Text, "select STKBARKOD,STKBARSTKKOD,STKBARBRMNO,STKBARTIP,STKBARITEMNO,STKBARKATSAYI from stkbarkod where stkbarstkkod=@stokKodu order by STKBARITEMNO", "stokKodu=" + item["STKKOD"].ToString().stringKaldir());
+                    string strBarkodSayisi = dtBarkodlar.Rows.Count.ToString();
+                    lblBarkodSayisi.Text = item["stkkod"].ToString() + " kartına ait " + strBarkodSayisi + " barkod aktarılıyor..";
+                    float STKFIYKDVNO = 0;
+                    float STKFIYTUTAR = 0;
+                    float STKFIYISKYUZ1 = 0;
                     if (dtStkFiyat != null && dtStkFiyat.Rows.Count > 0)
                     {
-                        STKFIYKDVNO = dtStkFiyat.Rows[0]["STKFIYKDVNO"].ToString();
-                        STKFIYTUTAR = dtStkFiyat.Rows[0]["STKFIYTUTAR"].ToString();
-                        STKFIYISKYUZ1 = dtStkFiyat.Rows[0]["STKFIYISKYUZ1"].ToString();
+                        STKFIYKDVNO = dtStkFiyat.Rows[0]["STKFIYKDVNO"].ToString().Length > 0 ? (float)Convert.ToDecimal(dtStkFiyat.Rows[0]["STKFIYKDVNO"]) : 0;
+
+                        STKFIYTUTAR = dtStkFiyat.Rows[0]["STKFIYTUTAR"].ToString().Length > 0 ? (float)Convert.ToDecimal(dtStkFiyat.Rows[0]["STKFIYTUTAR"]) : 0;
+                        STKFIYISKYUZ1 = dtStkFiyat.Rows[0]["STKFIYISKYUZ1"].ToString().Length > 0 ? (float)Convert.ToDecimal(dtStkFiyat.Rows[0]["STKFIYISKYUZ1"]) : 0;
                     }
 
                     stokOku stk = new stokOku();
@@ -108,22 +121,31 @@ namespace Olivetti
                     stk.islemTuru = "0".boslukTamamla(1);
                     stk.ekle(4, stk.islemTuru);
 
-                    stk.stokKodu = item["STKKOD"].boslukTamamla(24);
+
+                    string stkCinsi = item["STKCINSI"].ToString();
+
+                    if (item["STKCINSI"].ToString().Trim().Length == 0)
+                    {
+                        stkCinsi = "Yok";
+                    }
+
+                    stk.stokKodu = item["STKKOD"].ToString().Length > 0 ? item["STKKOD"].boslukTamamla(24) : "Yok".boslukTamamla(24);
                     stk.ekle(5, stk.stokKodu);
                     stk.eskiStokKodu = stk.stokKodu;
                     stk.ekle(29, stk.eskiStokKodu);
 
-                    stk.stokAciklama = item["STKCINSI"].boslukTamamla(40);
+                    stk.stokAciklama = stkCinsi.boslukTamamla(40);
+
                     stk.ekle(53, stk.stokAciklama);
 
 
-                    stk.posAciklama = item["STKCINSI"].boslukTamamla(20);
+                    stk.posAciklama = stkCinsi.boslukTamamla(20);
                     stk.ekle(133, stk.posAciklama);
 
                     stk.rafAciklama = stk.posAciklama;
                     stk.ekle(153, stk.rafAciklama);
 
-                    stk.teraziAciklama = item["STKCINSI"].boslukTamamla(16);
+                    stk.teraziAciklama = stkCinsi.boslukTamamla(16);
                     stk.ekle(173, stk.teraziAciklama);
 
 
@@ -136,6 +158,17 @@ namespace Olivetti
                     stk.urunTipi = "1".boslukTamamla(8);
                     stk.ekle(205, stk.urunTipi);
 
+                    stk.ekle(221, "1");
+                    stk.ekle(222, STKFIYISKYUZ1.boslukTamamla(15));
+
+                    float indirimMiktari = 0;
+                    indirimMiktari = (STKFIYTUTAR * STKFIYISKYUZ1) / 100;
+
+                    stk.ekle(237, indirimMiktari.boslukTamamla(15));
+                    stk.ekle(252, "0".boslukTamamla(6));
+
+
+
 
                     stk.birim = "0".boslukTamamla(1);
                     stk.ekle(282, stk.birim);
@@ -144,7 +177,20 @@ namespace Olivetti
                     stk.birimBoleni = "1".boslukTamamla(15);
                     stk.ekle(283, stk.birimBoleni);
 
-                    stk.satisFiyati = STKFIYTUTAR.boslukTamamla(15);
+
+                    stk.ekle(298, "1".boslukTamamla(15));
+
+                    stk.ekle(329, "1".boslukTamamla(12));
+
+                    stk.ekle(341, "1".boslukTamamla(12));
+
+
+
+
+                    stk.ekle(353, "1".boslukTamamla(1));
+                    stk.ekle(354, "1".boslukTamamla(1));
+
+                    stk.satisFiyati = (STKFIYTUTAR - indirimMiktari).boslukTamamla(15);
                     stk.ekle(355, stk.satisFiyati);
 
                     stk.satisFiyati2 = stk.satisFiyati;
@@ -156,74 +202,210 @@ namespace Olivetti
                     stk.satisFiyati4 = stk.satisFiyati;
                     stk.ekle(400, stk.satisFiyati4);
 
+
+                    stk.ekle(415, "0".boslukTamamla(15));
+
+                    stk.ekle(430, "0".boslukTamamla(15));
+                    stk.ekle(445, "0".boslukTamamla(15));
+                    stk.ekle(460, "0".boslukTamamla(15));
+                    stk.ekle(475, "0".boslukTamamla(15));
+                    stk.ekle(490, "0".boslukTamamla(15));
+
+                    stk.ekle(505, "0".boslukTamamla(2));
+                    stk.ekle(507, "0".boslukTamamla(2));
+                    stk.ekle(509, "0".boslukTamamla(2));
+                    stk.ekle(511, "0".boslukTamamla(2));
+                    stk.ekle(513, "0".boslukTamamla(2));
+
+                    stk.ekle(515, "0".boslukTamamla(2));
+                    stk.ekle(517, "0".boslukTamamla(2));
+                    stk.ekle(519, "0".boslukTamamla(2));
+                    stk.ekle(521, "0".boslukTamamla(2));
+                    stk.ekle(523, "0".boslukTamamla(2));
+
+                    stk.ekle(525, "1023".boslukTamamla(6));
+
+
+
+
+
+
+
+
+
+
+
+
+
                     stk.satisKDVGrupNo = STKFIYKDVNO.boslukTamamla(3);
                     stk.ekle(531, stk.satisKDVGrupNo);
 
                     stk.ekle(534, stk.satisKDVGrupNo);
 
 
+                    stk.ekle(537, "0".boslukTamamla(1));
+                    stk.ekle(538, "0".boslukTamamla(15));
+                    stk.ekle(553, "0".boslukTamamla(15));
+
+                    stk.ekle(568, "0".boslukTamamla(3));
+                    stk.ekle(571, "0".boslukTamamla(15));
+
+
+
+
+
+
+
+
                     stk.satisDurumu = "0".boslukTamamla(1);
                     stk.ekle(586, stk.satisDurumu);
+
+                    stk.ekle(587, "0".boslukTamamla(1));
+                    stk.ekle(588, "0".boslukTamamla(1));
+                    stk.ekle(589, "0".boslukTamamla(1));
+                    stk.ekle(590, "0".boslukTamamla(1));
+                    stk.ekle(591, "0".boslukTamamla(1));
+
+
+
+
+
+
+
+
+
+
 
                     stk.indirimliSatis = "2".boslukTamamla(1);
                     stk.ekle(592, stk.satisDurumu);
 
+
+
+
+                    stk.ekle(593, "0".boslukTamamla(1));
+
+                    stk.ekle(594, "".boslukTamamla(20));
+                    stk.ekle(614, "0".boslukTamamla(6));
+                    stk.ekle(620, "0".boslukTamamla(15));
+
+                    stk.ekle(635, "0".boslukTamamla(6));
+
+                    stk.ekle(641, "0".boslukTamamla(15));
+
+                    stk.ekle(656, "0".boslukTamamla(15));
+
+                    stk.ekle(671, "0".boslukTamamla(15));
+
+
                     stk.teraziDurumu = "0".boslukTamamla(1);
                     stk.ekle(686, stk.teraziDurumu);
+
+
+                    stk.ekle(687, "0".boslukTamamla(15));
+
+                    stk.ekle(702, "0".boslukTamamla(15));
+
+                    stk.ekle(717, "0".boslukTamamla(15));
+                    stk.ekle(732, "0".boslukTamamla(15));
+                    stk.ekle(747, "0".boslukTamamla(15));
+                    stk.ekle(762, "0".boslukTamamla(15));
+                    stk.ekle(777, "0".boslukTamamla(15));
+                    stk.ekle(792, "0".boslukTamamla(15));
+
+
+
+
+
+
+
+
+
+
+
 
                     stk.stokKartiPuanBilgisi = "0".boslukTamamla(15);
                     stk.ekle(807, stk.stokKartiPuanBilgisi);
 
+
+                    stk.ekle(822, "0".boslukTamamla(6));
+
+                    stk.ekle(828, "0".boslukTamamla(15));
+
+                    stk.ekle(843, "0".boslukTamamla(5));
+
+
                     stk.yaz = stk.yaz.boslukTamamla(850);
 
                     Fonksiyon.dosyayaYaz(stk.yaz, dosyaYolu);
+                    int aktarilanBarkod = 0;
                     if (dtBarkodlar != null)
                     {
                         foreach (DataRow barkod in dtBarkodlar.Rows)
                         {
-                            barkodOku brkd = new barkodOku();
-                            brkd.sirano = "02".boslukTamamla(4);
-                            brkd.ekle(0, brkd.sirano);
+                            if (!yazilanBarkodlar.Contains(barkod["STKBARKOD"].ToString()))
+                            {
+                                barkodOku brkd = new barkodOku();
+                                brkd.sirano = "02".boslukTamamla(4);
+                                brkd.ekle(0, brkd.sirano);
 
-                            brkd.islemTuru = "0".boslukTamamla(1);
-                            brkd.ekle(4, brkd.islemTuru);
+                                brkd.islemTuru = "0".boslukTamamla(1);
+                                brkd.ekle(4, brkd.islemTuru);
 
-                            brkd.iliskiliStkKodu = stk.stokKodu.boslukTamamla(24);
-                            brkd.ekle(5, brkd.iliskiliStkKodu);
+                                brkd.iliskiliStkKodu = stk.stokKodu.boslukTamamla(24);
+                                brkd.ekle(5, brkd.iliskiliStkKodu);
 
-                            brkd.barkodu = barkod["STKBARKOD"].boslukTamamla(24);
-                            brkd.ekle(29, brkd.barkodu);
+                                brkd.barkodu = barkod["STKBARKOD"].boslukTamamla(24);
+                                brkd.ekle(29, brkd.barkodu);
 
-                            brkd.eskiBarkodu = brkd.barkodu;
-                            brkd.ekle(53, brkd.eskiBarkodu);
+                                brkd.eskiBarkodu = brkd.barkodu;
+                                brkd.ekle(53, brkd.eskiBarkodu);
 
-                            brkd.birimMiktar = "1".boslukTamamla(6);//buraya bakılacak
-                            brkd.ekle(77, brkd.birimMiktar);
+                                brkd.birimMiktar = barkod["STKBARKATSAYI"].boslukTamamla(6);//buraya bakılacak
+                                brkd.ekle(77, brkd.birimMiktar);
+                                string stkBarTip = "0";
+                                if (barkod["STKBARTIP"].ToString().Trim().Length > 0)
+                                {
+                                    stkBarTip = barkod["STKBARTIP"].ToString();
+                                }
+                                brkd.barkodTipi = stkBarTip.boslukTamamla(1);
+                                brkd.ekle(83, brkd.barkodTipi);
 
-                            brkd.barkodTipi = barkod["STKBARTIP"].ToString().boslukTamamla(1);
-                            brkd.ekle(83, brkd.barkodTipi);
+                                brkd.fiyatBilgisi = "0".boslukTamamla(1);
+                                brkd.ekle(84, brkd.fiyatBilgisi);
 
-                            brkd.fiyatBilgisi = "0".boslukTamamla(1);
-                            brkd.ekle(84, brkd.fiyatBilgisi);
+                                brkd.sirano = barkod["STKBARITEMNO"].ToString().Length > 0 ? barkod["STKBARITEMNO"].boslukTamamla(2) : "0".boslukTamamla(2);
+                                brkd.ekle(85, brkd.sirano);
+                                float barkodFiyati = STKFIYTUTAR - indirimMiktari;
+                                barkodFiyati = barkodFiyati * (float)Convert.ToDouble(barkod["STKBARKATSAYI"]);
+                                brkd.barkodFiyati = barkodFiyati.boslukTamamla(15);
+                                brkd.ekle(87, brkd.barkodFiyati);
 
-                            brkd.sirano = barkod["STKBARITEMNO"].boslukTamamla(2);
-                            brkd.ekle(85, brkd.sirano);
-
-                            brkd.barkodFiyati = "".boslukTamamla(15);
-                            brkd.ekle(87, brkd.barkodFiyati);
-
-                            Fonksiyon.dosyayaYaz(brkd.yaz, dosyaYolu);
+                                Fonksiyon.dosyayaYaz(brkd.yaz, dosyaYolu);
+                                toplamBarkod++;
+                                aktarilanBarkod++;
+                                lblBarko2.Text = strBarkodSayisi + " / " + aktarilanBarkod + " adet aktarıldı";
+                                yazilanBarkodlar += barkod["STKBARKOD"] + ",";
+                            }
                         }
                     }
                     yapilanIslem++;
                     lblKartAktarBilgi.Text = adet + " /  " + yapilanIslem + " kart aktarıldı";
                 }
-                MessageBox.Show("Aktarma tamamlandı.Toplam " + yapilanIslem + " başarıyla aktarıldı");
+                MessageBox.Show("Aktarma tamamlandı.Toplam " + yapilanIslem + " stok kartı başarıyla aktarıldı.Aktarılan barkod sayısı : " + toplamBarkod);
                 btnKartAktar.Enabled = true;
+                DateTime dtBitis = DateTime.Now;
+                TimeSpan islemSuresi = dtBitis - dtBaslangic;
+                string sureYaz = "";
+                sureYaz += islemSuresi.Hours > 0 ? " " + islemSuresi.Hours + " Saat" : "";
+                sureYaz += islemSuresi.Minutes > 0 ? " " + islemSuresi.Minutes + " Dakika" : "";
+                sureYaz += islemSuresi.Seconds > 0 ? " " + islemSuresi.Seconds + " Saniye" : "";
+
+                lblSure.Text = "İşlem Süresi : " + sureYaz;
             }
         }
         private void btnKartAktar_Click(object sender, EventArgs e)
         {
+
             btnKartAktar.Enabled = false;
             backgroundWorker1.RunWorkerAsync();
 
@@ -244,6 +426,7 @@ namespace Olivetti
         }
         public void hareketAktar(bool hepsi, DateTime tarih1, DateTime tarih2, int kasaIndex)
         {
+
             myDbHelper db = new myDbHelper(new sqlDbHelper());
             string dosya_yolu = Properties.Settings.Default.Kasalar[kasaIndex].Split('*')[2] + "\\SATIS.GTF";
             string kasaKodu = Properties.Settings.Default.Kasalar[kasaIndex].Split('*')[0];
@@ -606,9 +789,23 @@ namespace Olivetti
             }
         }
 
+        bool islem = false;
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+            islem = true;
             stokKartiAktar();
+            islem = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (!islem)
+            {
+                rdbtnTarihsel.Checked = true;
+                dtAktar1.Value = DateTime.Now;
+                dtAktar2.Value = DateTime.Now;
+                backgroundWorker1.RunWorkerAsync();
+            }
         }
     }
 }
