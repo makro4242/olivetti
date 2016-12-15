@@ -144,7 +144,6 @@ D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\DevExpress.Sparkline
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\DevExpress.Utils.v15.1.xml
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\DevExpress.XtraEditors.v15.1.xml
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\EntityFramework.xml
-D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\myLibrary.pdb
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\de\DevExpress.Data.v15.1.resources.dll
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\es\DevExpress.Data.v15.1.resources.dll
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\ja\DevExpress.Data.v15.1.resources.dll
@@ -165,11 +164,10 @@ D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\de\DevExpress.XtraEd
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\es\DevExpress.XtraEditors.v15.1.resources.dll
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\ja\DevExpress.XtraEditors.v15.1.resources.dll
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\bin\Debug\ru\DevExpress.XtraEditors.v15.1.resources.dll
-D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\obj\Debug\Olivetti.csprojResolveAssemblyReference.cache
-D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\obj\Debug\Olivetti.frmAnaForm.resources
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\obj\Debug\Olivetti.frmAktar.resources
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\obj\Debug\Olivetti.frmAyarlar.resources
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\obj\Debug\Olivetti.frmKasalar.resources
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\obj\Debug\Olivetti.Properties.Resources.resources
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\obj\Debug\Olivetti.csproj.GenerateResource.Cache
 D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\obj\Debug\Olivetti.exe.licenses
+D:\Users\Admin\Documents\GitHub\olivetti\Olivetti\obj\Debug\Olivetti.csprojResolveAssemblyReference.cache

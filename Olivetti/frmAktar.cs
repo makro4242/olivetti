@@ -15,6 +15,8 @@ namespace Olivetti
     public partial class frmAktar : Form
     {
         Fonksiyon f = new Fonksiyon();
+
+
         public frmAktar()
         {
             CheckForIllegalCrossThreadCalls = false;
@@ -63,8 +65,6 @@ namespace Olivetti
                 frmAyarlar frm = new frmAyarlar(this);
                 frm.ShowDialog();
             }
-            timer1.Interval = 60000 * 5;
-            timer1.Start();
         }
         public void stokKartiAktar()
         {
@@ -193,7 +193,7 @@ namespace Olivetti
                     stk.satisFiyati = (STKFIYTUTAR - indirimMiktari).boslukTamamla(15);
                     stk.ekle(355, stk.satisFiyati);
 
-                    stk.satisFiyati2 = stk.satisFiyati;
+                    stk.satisFiyati2 = (STKFIYTUTAR).ToString();
                     stk.ekle(370, stk.satisFiyati2);
 
                     stk.satisFiyati3 = stk.satisFiyati;
@@ -807,5 +807,47 @@ namespace Olivetti
                 backgroundWorker1.RunWorkerAsync();
             }
         }
+
+        private void rdBtnBesDakika_CheckedChanged(object sender, EventArgs e)
+        {
+            timer1.Interval = 60000 * 5; //5 dakika
+            timer1.Start();
+        }
+
+        private void rdBtnOnDakika_CheckedChanged(object sender, EventArgs e)
+        {
+            timer1.Interval = 60000 * 10; //10 dakika
+            timer1.Start();
+
+        }
+
+        private void rdBtnOtuzDakika_CheckedChanged(object sender, EventArgs e)
+        {
+            timer1.Interval = 60000 * 30; //30 dakika
+            timer1.Start();
+        }
+
+        private void rdBtnBirSaat_CheckedChanged(object sender, EventArgs e)
+        {
+            timer1.Interval = 60000 * 60; //60 dakika
+            timer1.Start();
+        }
+    }
+    public static class bosluk
+    {
+        public static string boslukTamamla(this object o, int uzunluk)
+        {
+            string str = o.ToString();
+            if (str.Length > uzunluk)
+            {
+                str = str.Substring(0, uzunluk);
+            }
+            while (str.Length < uzunluk)
+            {
+                str += " ";
+            }
+            return str;
+        }
     }
 }
+
