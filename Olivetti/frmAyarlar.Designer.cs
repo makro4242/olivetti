@@ -39,6 +39,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grpKasaTanimlari = new System.Windows.Forms.GroupBox();
+            this.txtKasaEta = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.btneditKasaKodu = new DevExpress.XtraEditors.ButtonEdit();
             this.txtKasaDosyaYolu = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@
             this.txtKasaAciklama = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtKasaEta = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.grpboxHedefVeriTabaniAyarlari.SuspendLayout();
             this.grpKasaTanimlari.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btneditKasaKodu.Properties)).BeginInit();
@@ -69,7 +69,7 @@
             this.grpboxHedefVeriTabaniAyarlari.Size = new System.Drawing.Size(387, 148);
             this.grpboxHedefVeriTabaniAyarlari.TabIndex = 1;
             this.grpboxHedefVeriTabaniAyarlari.TabStop = false;
-            this.grpboxHedefVeriTabaniAyarlari.Text = "Hedef Veri Tabanı Ayarları";
+            this.grpboxHedefVeriTabaniAyarlari.Text = "Kaynak Veri Tabanı Ayarları";
             // 
             // btnVeriTabaniAyarlariKaydet
             // 
@@ -163,6 +163,22 @@
             this.grpKasaTanimlari.TabStop = false;
             this.grpKasaTanimlari.Text = "Kasa Tanımları";
             // 
+            // txtKasaEta
+            // 
+            this.txtKasaEta.Location = new System.Drawing.Point(166, 102);
+            this.txtKasaEta.Name = "txtKasaEta";
+            this.txtKasaEta.Size = new System.Drawing.Size(143, 20);
+            this.txtKasaEta.TabIndex = 10;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(10, 105);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(78, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Kasa Eta Kodu";
+            // 
             // btneditKasaKodu
             // 
             this.btneditKasaKodu.Location = new System.Drawing.Point(166, 28);
@@ -223,22 +239,6 @@
             this.label8.Size = new System.Drawing.Size(59, 13);
             this.label8.TabIndex = 0;
             this.label8.Text = "Kasa Kodu";
-            // 
-            // txtKasaEta
-            // 
-            this.txtKasaEta.Location = new System.Drawing.Point(166, 102);
-            this.txtKasaEta.Name = "txtKasaEta";
-            this.txtKasaEta.Size = new System.Drawing.Size(143, 20);
-            this.txtKasaEta.TabIndex = 10;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(10, 105);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Kasa Eta Kodu";
             // 
             // frmAyarlar
             // 

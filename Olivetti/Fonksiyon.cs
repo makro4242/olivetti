@@ -24,7 +24,6 @@ namespace Olivetti
 
         public static void dosyayaYaz(string metin, string dosya_yolu)
         {
-
             if (!File.Exists(dosya_yolu))
             {
                 FileStream fs = File.Create(dosya_yolu);
