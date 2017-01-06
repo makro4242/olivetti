@@ -94,7 +94,6 @@ namespace Olivetti
             DataTable dt = db.exReaderDT(CommandType.Text, "select STKKOD,STKCINSI,STKOTOGIRFIY  from stkkart" + where, prm);
             if (dt != null)
             {
-
                 int yapilanIslem = 0;
                 foreach (DataRow item in dt.Rows)
                 {
@@ -108,7 +107,6 @@ namespace Olivetti
                     if (dtStkFiyat != null && dtStkFiyat.Rows.Count > 0)
                     {
                         STKFIYKDVNO = dtStkFiyat.Rows[0]["STKFIYKDVNO"].ToString().Length > 0 ? (float)Convert.ToDecimal(dtStkFiyat.Rows[0]["STKFIYKDVNO"]) : 0;
-
                         STKFIYTUTAR = dtStkFiyat.Rows[0]["STKFIYTUTAR"].ToString().Length > 0 ? (float)Convert.ToDecimal(dtStkFiyat.Rows[0]["STKFIYTUTAR"]) : 0;
                         STKFIYISKYUZ1 = dtStkFiyat.Rows[0]["STKFIYISKYUZ1"].ToString().Length > 0 ? (float)Convert.ToDecimal(dtStkFiyat.Rows[0]["STKFIYISKYUZ1"]) : 0;
                     }
@@ -135,7 +133,6 @@ namespace Olivetti
                     stk.ekle(29, stk.eskiStokKodu);
 
                     stk.stokAciklama = stkCinsi.boslukTamamla(40);
-
                     stk.ekle(53, stk.stokAciklama);
 
 
@@ -167,16 +164,11 @@ namespace Olivetti
                     stk.ekle(237, indirimMiktari.boslukTamamla(15));
                     stk.ekle(252, "0".boslukTamamla(6));
 
-
-
-
                     stk.birim = "0".boslukTamamla(1);
                     stk.ekle(282, stk.birim);
 
-
                     stk.birimBoleni = "1".boslukTamamla(15);
                     stk.ekle(283, stk.birimBoleni);
-
 
                     stk.ekle(298, "1".boslukTamamla(15));
 
@@ -224,11 +216,6 @@ namespace Olivetti
                     stk.ekle(523, "0".boslukTamamla(2));
 
                     stk.ekle(525, "1023".boslukTamamla(6));
-
-
-
-
-
 
 
 
@@ -316,13 +303,6 @@ namespace Olivetti
 
 
 
-
-
-
-
-
-
-
                     stk.stokKartiPuanBilgisi = "0".boslukTamamla(15);
                     stk.ekle(807, stk.stokKartiPuanBilgisi);
 
@@ -360,8 +340,9 @@ namespace Olivetti
                                 brkd.eskiBarkodu = brkd.barkodu;
                                 brkd.ekle(53, brkd.eskiBarkodu);
 
-                                brkd.birimMiktar = barkod["STKBARKATSAYI"].boslukTamamla(6);//buraya bakılacak
+                                brkd.birimMiktar = "1".boslukTamamla(6); //buraya bakılacak
                                 brkd.ekle(77, brkd.birimMiktar);
+
                                 string stkBarTip = "0";
                                 if (barkod["STKBARTIP"].ToString().Trim().Length > 0)
                                 {
@@ -375,9 +356,13 @@ namespace Olivetti
 
                                 brkd.sirano = barkod["STKBARITEMNO"].ToString().Length > 0 ? barkod["STKBARITEMNO"].boslukTamamla(2) : "0".boslukTamamla(2);
                                 brkd.ekle(85, brkd.sirano);
+
                                 float barkodFiyati = STKFIYTUTAR - indirimMiktari;
                                 barkodFiyati = barkodFiyati * (float)Convert.ToDouble(barkod["STKBARKATSAYI"]);
+                                brkd.barkodFiyati = "1".boslukTamamla(15);
+
                                 brkd.barkodFiyati = barkodFiyati.boslukTamamla(15);
+
                                 brkd.ekle(87, brkd.barkodFiyati);
 
                                 Fonksiyon.dosyayaYaz(brkd.yaz, dosyaYolu);
